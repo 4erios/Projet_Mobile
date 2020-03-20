@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63264c0044614164ab02233d8adf93b7, type: 3}
+  m_Name: Event 2
+  m_EditorClassIdentifier: 
+  personnage: {fileID: 11400000, guid: 0e26c7baccd4e3f43a85f0b71d038d46, type: 2}
+  dialogue: {fileID: 11400000, guid: c5953e0ca4904154abe8b3e176b686b9, type: 2}
+  carteBonus: {fileID: 0}
+  preset: 1
+  eventSuivant: {fileID: 0}
