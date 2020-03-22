@@ -29,6 +29,8 @@ public class MonstreEventManager : MonoBehaviour
 
     private List<string> representationForJournal;
 
+    public int monstreHp = 3;
+
     void Awake()
     {
         eventsPool = eventsDepart;
@@ -113,28 +115,30 @@ public class MonstreEventManager : MonoBehaviour
     public void GetResponse(EmotionMonstre reponse)
     {
         PresetRole rolePreset = actualEvent.personnage.role.presets[actualEvent.preset];
+        int damage = 0;
+        Reactions emot = rolePreset.GetReact(reponse.emotion, out damage);
         if (reponse.bonusRole.Contains(actualEvent.personnage.role))
         {
             //Réponse Bonus
-            ChangeSpritePerso(rolePreset.GetReact(reponse.emotion));
+            ChangeSpritePerso(emot);
             monoDial.ShowDialogue(actualEvent.dialogue.reponseBonus);
-            ChangeScoreCommu(actualEvent.personnage.communaute, rolePreset.GetReact(reponse.emotion), 1);
+            ChangeScoreCommu(actualEvent.personnage.communaute, emot, 1);
         }
         else if (reponse.malusRole.Contains(actualEvent.personnage.role))
         {
             //Réponse Malus
-            ChangeSpritePerso(rolePreset.GetReact(reponse.emotion));
+            ChangeSpritePerso(emot);
             monoDial.ShowDialogue(actualEvent.dialogue.reponseMalus);
-            ChangeScoreCommu(actualEvent.personnage.communaute, rolePreset.GetReact(reponse.emotion), -1);
+            ChangeScoreCommu(actualEvent.personnage.communaute, emot, -1);
             //Panique ?
             Panique.AddPanic(5);
         }
         else
         {
-            ChangeSpritePerso(rolePreset.GetReact(reponse.emotion));
-            ReponseChoice(rolePreset.GetReact(reponse.emotion));
-            ChangeScoreCommu(actualEvent.personnage.communaute, rolePreset.GetReact(reponse.emotion), 0);
-            switch (rolePreset.GetReact(reponse.emotion))
+            ChangeSpritePerso(emot);
+            ReponseChoice(emot);
+            ChangeScoreCommu(actualEvent.personnage.communaute, emot, 0);
+            switch (emot)
             {
                 case Reactions.degout:
                     Panique.AddPanic(1);
@@ -149,6 +153,11 @@ public class MonstreEventManager : MonoBehaviour
         }
         needTap = true;
     }
+
+    private void GetDamage(int dmg)
+    {
+        monstreHp -= dmg;
+    }
     
     public void AddRepresentationForJournal(string phrase)
     {
@@ -161,7 +170,7 @@ public class MonstreEventManager : MonoBehaviour
         {
             StartNextEvent(actualEvent.eventSuivant);
         }
-        else if (Panique.value >= 100)
+        else if (monstreHp <= 0) //Voir pour d'autres manières de finir le jeu
         {
             EndGameEvent();
         }
