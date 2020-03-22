@@ -5,23 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-    [SerializeField]
-    private int gameScene;
-
     private bool sceneLoading = false;
 
-    public void LaunchGame()
+    public void LoadScene(int nbScene)
     {
         if (!sceneLoading)
         {
             sceneLoading = true;
-            StartCoroutine(LoadGame());
+            StartCoroutine(LoadGame(nbScene));
         }
     }
 
-    IEnumerator LoadGame()
+    IEnumerator LoadGame(int nb)
     {
-        AsyncOperation asnc = SceneManager.LoadSceneAsync(gameScene);
+        AsyncOperation asnc = SceneManager.LoadSceneAsync(nb);
 
         while(!asnc.isDone)
         {

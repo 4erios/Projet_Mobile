@@ -131,7 +131,7 @@ public class MonstreEventManager : MonoBehaviour
             monoDial.ShowDialogue(actualEvent.dialogue.reponseMalus);
             ChangeScoreCommu(actualEvent.personnage.communaute, emot, -1);
             //Panique ?
-            Panique.AddPanic(5);
+            Panique.AddPanic(10);
         }
         else
         {
@@ -141,13 +141,13 @@ public class MonstreEventManager : MonoBehaviour
             switch (emot)
             {
                 case Reactions.degout:
-                    Panique.AddPanic(1);
-                    break;
-                case Reactions.peur:
                     Panique.AddPanic(3);
                     break;
+                case Reactions.peur:
+                    Panique.AddPanic(6);
+                    break;
                 case Reactions.haine:
-                    Panique.AddPanic(1);
+                    Panique.AddPanic(3);
                     break;
             }
         }
