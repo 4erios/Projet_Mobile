@@ -32,6 +32,8 @@ public class CartesManager : MonoBehaviour
     private int mainCard;
     private Vector2 currentPosition, lastTouchPosition;
 
+    public Dictionary<EmotionMonstre, int> RemovedCard = new Dictionary<EmotionMonstre, int>();
+
     private void Start()
     {
         cards = new List<EmotionMonstre>();
@@ -65,30 +67,25 @@ public class CartesManager : MonoBehaviour
             {
                 if (Mathf.Abs(touch.position.x - touchStartPos.x) > 100) //Fait bouger la liste de carte
                 {
-                    Debug.Log("Test 5.1");
                     movingList = true;
                 }
                 else if(Mathf.Abs(touch.position.y - touchStartPos.y) > 70) //Fait bouger la carte principale
                 {
-                    Debug.Log("Test 5.2");
                     movingCard = true;
                     cartesJoueur[mainCard].colid.enabled = true;
                 }
             }
             else if (movingList)
             {
-                Debug.Log("Test 4");
                 DeplacementCartes(touch.position.x - lastTouchPosition.x);
             }
             else if(movingCard)
             {
-                
                 cartesJoueur[mainCard].transform.position = cam.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0));
                 cartesJoueur[mainCard].transform.position = new Vector3(cartesJoueur[mainCard].transform.position.x, cartesJoueur[mainCard].transform.position.y, 0);
                 Vector3 pos = cartesJoueur[mainCard].transform.position;
                 if ((pos.x < dialogueTransf.position.x+dialogueTransf.sizeDelta.x/2 || pos.x > dialogueTransf.position.x - dialogueTransf.sizeDelta.x / 2) && (pos.y < dialogueTransf.position.y + dialogueTransf.sizeDelta.y / 2 || pos.y > dialogueTransf.position.y - dialogueTransf.sizeDelta.y / 2))
                 {
-                    Debug.Log("Test 6");
                     if (touch.phase == TouchPhase.Ended && isTouch)
                     {
                         dialogueTransf.GetComponent<MonoDialogue>().GetCard(cartesJoueur[mainCard].emotion);
@@ -117,6 +114,25 @@ public class CartesManager : MonoBehaviour
             newCard.transform.localPosition = Vector3.zero;
             newCard.emotion = cardToAdd;
             cartesJoueur.Add(newCard);
+            ResetCardPosition();
+        }
+    }
+
+    public void RemoveCard(EmotionMonstre cardToRemove)
+    {
+        if (cards.Contains(cardToRemove))
+        {
+            RemovedCard.Add(cardToRemove, 3);
+            cards.Remove(cardToRemove);
+            MonoCartes monoCardToRemove = default;
+            foreach(MonoCartes cart in cartesJoueur)
+            {
+                if(cart.emotion == cardToRemove)
+                {
+                    monoCardToRemove = cart;
+                }
+            }
+            cartesJoueur.Remove(monoCardToRemove);
             ResetCardPosition();
         }
     }

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
-public class MenuScript : MonoBehaviour
+public class MenuScript : EventTrigger
 {
     private bool sceneLoading = false;
 

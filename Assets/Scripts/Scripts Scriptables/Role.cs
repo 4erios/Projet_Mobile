@@ -14,7 +14,6 @@ public struct RoleReaction
 [System.Serializable]
 public class PresetRole
 {
-    
     public Reactions ReactionDepart;
     public RoleReaction interet;
     public RoleReaction affection;

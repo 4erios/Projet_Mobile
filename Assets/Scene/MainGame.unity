@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -296,9 +296,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cartesBases:
-  - {fileID: 11400000, guid: cfe337cfe3ca51249a03173125deb525, type: 2}
-  - {fileID: 11400000, guid: 40719ec7c85cd054a9ecdae61a35962c, type: 2}
-  - {fileID: 11400000, guid: f0123fb999312ea44a745aa0ef62eccf, type: 2}
+  - {fileID: 11400000, guid: 43501bd07cfd95648be7ce1c834cb8a5, type: 2}
+  - {fileID: 11400000, guid: 5a4e14a6f092ed54e96f9562b80b1d4c, type: 2}
+  - {fileID: 11400000, guid: 6ad6911bc7ae07b4d9bf266ab1f9af77, type: 2}
+  - {fileID: 11400000, guid: 01f316a3c34b6084089a4824b1e2d4b8, type: 2}
+  - {fileID: 11400000, guid: 606aefa762f203a488ef65b5119d7a79, type: 2}
+  - {fileID: 11400000, guid: a599995b897f0f842b51181d77d3060d, type: 2}
   cam: {fileID: 2063545777}
   distanceBetweenCards: 280
   positionCentrale: {x: 0, y: 0}
@@ -443,11 +446,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 45328b9a7dec44e4781abe35ddb7a3f6, type: 2}
   - {fileID: 11400000, guid: e824a21c077a52b4ea12bca4215f03cf, type: 2}
   - {fileID: 11400000, guid: f39c38e1fba5787408a418a2fa85dde7, type: 2}
+  commus:
+  - {fileID: 11400000, guid: b748d2f27a6991b4a9c80912efec977b, type: 2}
+  - {fileID: 11400000, guid: eb86752a0915205459ec860c38e7d4da, type: 2}
+  - {fileID: 11400000, guid: 87436ca911a096b44bd7ce66a1ef9d84, type: 2}
+  - {fileID: 11400000, guid: 193c86c924813984fbeb3359fddf55a1, type: 2}
   monoPerso: {fileID: 177643486}
   monoDial: {fileID: 2032892226}
-  monoJourn: {fileID: 0}
+  monoJourn: {fileID: 1976817514}
   cardManager: {fileID: 482265138}
   needTap: 0
+  monstreHp: 3
 --- !u!4 &696124073
 Transform:
   m_ObjectHideFlags: 0
@@ -717,7 +726,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0

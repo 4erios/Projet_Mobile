@@ -97,6 +97,20 @@ public class MonstreEventManager : MonoBehaviour
     {
         if (actualEvent == null)
         {
+            List<EmotionMonstre> emotionsToAdd = new List<EmotionMonstre>();
+            foreach(KeyValuePair<EmotionMonstre,int> dict in cardManager.RemovedCard)
+            {
+                cardManager.RemovedCard[dict.Key] -= 1;
+                if(cardManager.RemovedCard[dict.Key] <= 0)
+                {
+                    emotionsToAdd.Add(dict.Key);
+                }
+            }
+            foreach(EmotionMonstre emot in emotionsToAdd)
+            {
+                cardManager.RemovedCard.Remove(emot);
+                cardManager.AddCard(emot);
+            }
             //Save de l'Etat actuel du jeu
             actualEvent = newEvent;
             StartEvent(actualEvent);
@@ -130,7 +144,7 @@ public class MonstreEventManager : MonoBehaviour
             ChangeSpritePerso(emot);
             monoDial.ShowDialogue(actualEvent.dialogue.reponseMalus);
             ChangeScoreCommu(actualEvent.personnage.communaute, emot, -1);
-            //Panique ?
+            //Panique
             Panique.AddPanic(10);
         }
         else
@@ -152,6 +166,19 @@ public class MonstreEventManager : MonoBehaviour
             }
         }
         needTap = true;
+        if(reponse.emotion == actualEvent.killPersonnage)
+        {
+            actualEvent.personnage.Die();
+        }
+
+        if(actualEvent.effetBonus == reponse)
+        {
+            cardManager.AddCard(actualEvent.carteBonus);
+        }
+        else if (actualEvent.effetMalus == reponse)
+        {
+            cardManager.RemoveCard(actualEvent.carteMalus);
+        }
     }
 
     private void GetDamage(int dmg)
@@ -206,8 +233,6 @@ public class MonstreEventManager : MonoBehaviour
         {
             actualEvent = null;
             StartNextEvent(EndingEventChoice());
-            //Choix de l'Event de fin
-            //StartNextEvent(eventDeFin);
         }
     }
 
@@ -226,47 +251,52 @@ public class MonstreEventManager : MonoBehaviour
                 goto continueWhile;
             }
 
+            if(!newEvent.personnage.isAlive) //Vérifie si le personnage est en vie
+            {
+                goto continueWhile;
+            }
+
             #region Communautés
             for(int i = 0; i < 5; i++)
             {
-                switch(futurEvents[i].personnage.communaute.name) //Mettre les bon nom de Communauté
+                switch(futurEvents[i].personnage.communaute.name)
                 {
-                    case "Commu1":
+                    case "Dirigeants":
                         compteCommu[0]++;
                         break;
-                    case "Commu2":
+                    case "Habitants":
                         compteCommu[1]++;
                         break;
-                    case "Commu3":
+                    case "Mendiants":
                         compteCommu[2]++;
                         break;
-                    case "Commu4":
+                    case "Représentants de l'ordre":
                         compteCommu[3]++;
                         break;
                 }
             }
 
-            switch (newEvent.personnage.communaute.name) //Mettre les bon nom de Communauté
+            switch (newEvent.personnage.communaute.name)
             {
-                case "Commu1":
-                    if(compteCommu[0] > 2)
+                case "Dirigeants":
+                    if (compteCommu[0] > 2)
                     {
                         goto continueWhile;
                     }
                     break;
-                case "Commu2":
+                case "Habitants":
                     if (compteCommu[1] > 2)
                     {
                         goto continueWhile;
                     }
                     break;
-                case "Commu3":
+                case "Mendiants":
                     if (compteCommu[2] > 2)
                     {
                         goto continueWhile;
                     }
                     break;
-                case "Commu4":
+                case "Représentants de l'ordre":
                     if (compteCommu[3] > 2)
                     {
                         goto continueWhile;

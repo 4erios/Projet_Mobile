@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personnage: {fileID: 11400000, guid: 0bd5e7e4718357649bb790cd5167c1ec, type: 2}
   dialogue: {fileID: 11400000, guid: 849de7cb648d7604b820c43b70fd03e9, type: 2}
+  effetBonus: {fileID: 0}
   carteBonus: {fileID: 0}
+  effetMalus: {fileID: 0}
+  carteMalus: {fileID: 0}
   preset: 0
+  killPersonnage: 0
   eventSuivant: {fileID: 0}
   endGame: 0

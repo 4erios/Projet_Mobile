@@ -15,7 +15,6 @@ public class MonoDialogue : MonoBehaviour
     public void ShowDialogue(string dial)
     {
         zoneText.text = dial;
-        //Mettre les cartes intéractible
     }
 
     public void GetCard(EmotionMonstre carte)
@@ -26,7 +25,6 @@ public class MonoDialogue : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("Test trigger");
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);

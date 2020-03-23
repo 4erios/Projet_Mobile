@@ -43,7 +43,6 @@ public class Panique : MonoBehaviour
 
     void AffichagePanique()
     {
-        //Mettre à jour l'affichage
         paniqueSliderDroite.fillAmount = value / 100f;
         paniqueSliderGauche.fillAmount = value / 100f;
         Debug.Log("La panique est à : " + paniqueSliderDroite.fillAmount);
