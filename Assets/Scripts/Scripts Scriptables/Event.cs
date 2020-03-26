@@ -14,5 +14,4 @@ public class Event : ScriptableObject
     public int preset;
     public Emotions killPersonnage;
     public Event eventSuivant;
-    public bool endGame;
 }

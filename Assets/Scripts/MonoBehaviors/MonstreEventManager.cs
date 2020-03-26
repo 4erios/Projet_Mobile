@@ -19,6 +19,8 @@ public class MonstreEventManager : MonoBehaviour
     private MonoJournal monoJourn;
     [SerializeField]
     private CartesManager cardManager;
+    [SerializeField]
+    private MonoEndAffichage monoEnd;
 
     private static List<Event> eventsPool;
     private List<Event> futurEvents;
@@ -170,8 +172,9 @@ public class MonstreEventManager : MonoBehaviour
         {
             actualEvent.personnage.Die();
         }
+        GetDamage(damage);
 
-        if(actualEvent.effetBonus == reponse)
+        if (actualEvent.effetBonus == reponse)
         {
             cardManager.AddCard(actualEvent.carteBonus);
         }
@@ -199,8 +202,24 @@ public class MonstreEventManager : MonoBehaviour
         }
         else if (monstreHp <= 0) //Voir pour d'autres manières de finir le jeu
         {
-            EndGameEvent();
+            StartEndEvent(actualEvent.personnage.communaute.badEnding);
         }
+        else if(commus[0].acceptation.valeur > 10 || commus[0].desir.valeur > 10 || commus[0].pitie.valeur > 10)
+        {
+            StartEndEvent(commus[0].goodEnding);
+        }
+        /*else if (commus[1].acceptation.valeur > 10 || commus[1].desir.valeur > 10 || commus[1].pitie.valeur > 10)
+        {
+            StartEndEvent(commus[1].goodEnding);
+        }
+        else if (commus[2].acceptation.valeur > 10 || commus[2].desir.valeur > 10 || commus[2].pitie.valeur > 10)
+        {
+            StartEndEvent(commus[2].goodEnding);
+        }
+        else if (commus[3].acceptation.valeur > 10 || commus[3].desir.valeur > 10 || commus[3].pitie.valeur > 10)
+        {
+            StartEndEvent(commus[3].goodEnding);
+        }*/
         else
         {
             futurEvents.Remove(actualEvent);
@@ -225,15 +244,16 @@ public class MonstreEventManager : MonoBehaviour
         {
             StartNextEvent(actualEvent.eventSuivant);
         }
-        else if(actualEvent.endGame)
-        {
-            //Ecran de fin du jeu
-        }
         else
         {
             actualEvent = null;
-            StartNextEvent(EndingEventChoice());
+            
         }
+    }
+
+    EndEvent EndingEventCommu(Communaute commu)
+    {
+        return commu.goodEnding;
     }
 
     void EventChoice()
@@ -318,41 +338,12 @@ public class MonstreEventManager : MonoBehaviour
         }
     }
 
-    Event EndingEventChoice()
+    void StartEndEvent(EndEvent eventToEnd)
     {
-        int maxScore = 0;
-        Event finalEvent = commus[0].goodEnding;
-        for(int i = 0; i < commus.Count; i++) //Pour les Commu, les mettre de la moins prioritaire à la plus prioritaire
-        {
-            int commuScore = 0;
-            string tmpStr = commus[i].GetHighestRepresentation(out commuScore);
-            if(commuScore>=maxScore)
-            {
-                maxScore = commuScore;
-                switch(tmpStr)
-                {
-                    case "Pitie":
-                        finalEvent = commus[i].goodEnding;
-                        break;
-                    case "Acceptation":
-                        finalEvent = commus[i].goodEnding;
-                        break;
-                    case "Desir":
-                        finalEvent = commus[i].goodEnding;
-                        break;
-                    case "Jalousie":
-                        finalEvent = commus[i].badEnding;
-                        break;
-                    case "Agressivite":
-                        finalEvent = commus[i].badEnding;
-                        break;
-                    case "Repulsion":
-                        finalEvent = commus[i].badEnding;
-                        break;
-                }
-            }
-        }
-        return finalEvent;
+        monoEnd.showEnd.SetActive(true);
+        monoEnd.fond.sprite = eventToEnd.imageFin;
+        monoEnd.text.text = eventToEnd.texteFin;
+        monoEnd.canEnd = true;
     }
 
     void ReponseChoice(Reactions react)

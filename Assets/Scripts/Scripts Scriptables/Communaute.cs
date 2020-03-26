@@ -34,7 +34,7 @@ public class Representation
 public class Communaute : ScriptableObject
 {
     public Representation repulsion, agressivite, jalousie, desir, acceptation, pitie;
-    public Event goodEnding, badEnding;
+    public EndEvent goodEnding, badEnding;
 
     public string GetHighestRepresentation(out int nb)
     {
