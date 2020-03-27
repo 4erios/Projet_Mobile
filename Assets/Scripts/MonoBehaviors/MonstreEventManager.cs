@@ -9,6 +9,8 @@ public class MonstreEventManager : MonoBehaviour
     private List<Event> eventsDepart;
     [SerializeField]
     private List<Communaute> commus;
+    [SerializeField]
+    private List<GameObject> fonds;
 
     [Header("Pour la Prog - Pas Touche")]
     [SerializeField]
@@ -29,7 +31,7 @@ public class MonstreEventManager : MonoBehaviour
     [HideInInspector]
     public bool needTap;
 
-    private List<string> representationForJournal;
+    private List<string> representationForJournal = new List<string>();
 
     public int monstreHp = 3;
 
@@ -55,8 +57,9 @@ public class MonstreEventManager : MonoBehaviour
 
     private void Update() //Tests rapide pour PC
     {
-        if(Input.GetKeyDown(KeyCode.D))
+        if(Input.GetKeyDown(KeyCode.Y))
         {
+            Debug.Log("Test-1");
             EndEvent();
         }
         if (Input.GetKeyDown(KeyCode.Z))
@@ -121,7 +124,19 @@ public class MonstreEventManager : MonoBehaviour
 
     void StartEvent(Event eventToStart)
     {
-        //Changement du Décor en fond
+        foreach(GameObject gm in fonds)
+        {
+            gm.SetActive(false);
+        }
+        switch (eventToStart.lieux)
+        {
+            case Lieux.ruelle:
+                fonds[0].SetActive(true);
+                break;
+            case Lieux.pontDeSeine:
+                fonds[1].SetActive(true);
+                break;
+        }
         ChangeSpritePerso(eventToStart.personnage.role.presets[eventToStart.preset].ReactionDepart);
         monoDial.ShowDialogue(eventToStart.dialogue.dialogueDepart);
         cardManager.canPlayCards = true;
@@ -196,16 +211,20 @@ public class MonstreEventManager : MonoBehaviour
 
     public void EndEvent()
     {
+        Debug.Log("Test0.25" + actualEvent);
         if (actualEvent.eventSuivant != null)
         {
+            Debug.Log("Test0.5");
             StartNextEvent(actualEvent.eventSuivant);
         }
         else if (monstreHp <= 0) //Voir pour d'autres manières de finir le jeu
         {
+            Debug.Log("Test");
             StartEndEvent(actualEvent.personnage.communaute.badEnding);
         }
         else if(commus[0].acceptation.valeur > 10 || commus[0].desir.valeur > 10 || commus[0].pitie.valeur > 10)
         {
+            Debug.Log("Test2");
             StartEndEvent(commus[0].goodEnding);
         }
         /*else if (commus[1].acceptation.valeur > 10 || commus[1].desir.valeur > 10 || commus[1].pitie.valeur > 10)
@@ -222,6 +241,7 @@ public class MonstreEventManager : MonoBehaviour
         }*/
         else
         {
+            Debug.Log("Test3");
             futurEvents.Remove(actualEvent);
             actualEvent = null;
             EventChoice();
@@ -261,8 +281,10 @@ public class MonstreEventManager : MonoBehaviour
         //Règles de Choix d'un événement
         Debug.Log(futurEvents.Count);
         futurEvents.Add(futurEvents[3]);
-        while (futurEvents[4] == futurEvents[3])
+        int count = 0;
+        while (futurEvents[4] == futurEvents[3] && count < 100)
         {
+            count++;
             Event newEvent = eventsPool[Random.Range(0, eventsPool.Count)];
             List<int> compteCommu = new List<int>(4);
 
@@ -277,22 +299,25 @@ public class MonstreEventManager : MonoBehaviour
             }
 
             #region Communautés
-            for(int i = 0; i < 5; i++)
+            if (count > 75)
             {
-                switch(futurEvents[i].personnage.communaute.name)
+                for (int i = 0; i < 5; i++)
                 {
-                    case "Dirigeants":
-                        compteCommu[0]++;
-                        break;
-                    case "Habitants":
-                        compteCommu[1]++;
-                        break;
-                    case "Mendiants":
-                        compteCommu[2]++;
-                        break;
-                    case "Représentants de l'ordre":
-                        compteCommu[3]++;
-                        break;
+                    switch (futurEvents[i].personnage.communaute.name)
+                    {
+                        case "Dirigeants":
+                            compteCommu[0]++;
+                            break;
+                        case "Habitants":
+                            compteCommu[1]++;
+                            break;
+                        case "Mendiants":
+                            compteCommu[2]++;
+                            break;
+                        case "Représentants de l'ordre":
+                            compteCommu[3]++;
+                            break;
+                    }
                 }
             }
 

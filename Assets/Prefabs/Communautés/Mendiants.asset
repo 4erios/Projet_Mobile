@@ -17,42 +17,54 @@ MonoBehaviour:
     seuilHaut: 0
     seuilBas: 0
     eventsPhase2: []
-    journalPhrasesUp: []
-    journalPhrasesDown: []
+    journalPhrasesUp:
+    - Mendiant Repulsion +
+    journalPhrasesDown:
+    - Mendiant Repulsion -
   agressivite:
     valeur: 0
     seuilHaut: 0
     seuilBas: 0
     eventsPhase2: []
-    journalPhrasesUp: []
-    journalPhrasesDown: []
+    journalPhrasesUp:
+    - Mendiant Agro +
+    journalPhrasesDown:
+    - Mendiant Agro -
   jalousie:
     valeur: 0
     seuilHaut: 0
     seuilBas: 0
     eventsPhase2: []
-    journalPhrasesUp: []
-    journalPhrasesDown: []
+    journalPhrasesUp:
+    - Mendiant Jalousie +
+    journalPhrasesDown:
+    - Mendiant Jalousie -
   desir:
     valeur: 0
     seuilHaut: 0
     seuilBas: 0
     eventsPhase2: []
-    journalPhrasesUp: []
-    journalPhrasesDown: []
+    journalPhrasesUp:
+    - Mendiant Desir +
+    journalPhrasesDown:
+    - Mendiant Desir -
   acceptation:
     valeur: 0
     seuilHaut: 0
     seuilBas: 0
     eventsPhase2: []
-    journalPhrasesUp: []
-    journalPhrasesDown: []
+    journalPhrasesUp:
+    - Mendiant Acceptation +
+    journalPhrasesDown:
+    - Mendiant Acceptation -
   pitie:
     valeur: 0
     seuilHaut: 0
     seuilBas: 0
     eventsPhase2: []
-    journalPhrasesUp: []
-    journalPhrasesDown: []
+    journalPhrasesUp:
+    - Mendiant Pitie +
+    journalPhrasesDown:
+    - Mendiant Pitie -
   goodEnding: {fileID: 0}
   badEnding: {fileID: 0}

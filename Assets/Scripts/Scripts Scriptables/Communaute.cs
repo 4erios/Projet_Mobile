@@ -14,13 +14,13 @@ public class Representation
         int ancientValue = valeur;
         valeur += value;
 
-        if(ancientValue < valeur && valeur > seuilHaut)
+        if(ancientValue < valeur && valeur > seuilHaut && journalPhrasesUp.Count>0)
         {
             MonstreEventManager.AddEvent(eventsPhase2);
             manag.AddRepresentationForJournal(journalPhrasesUp[Random.Range(0,journalPhrasesUp.Count)]);
             return 1;
         }
-        else if(ancientValue > valeur && valeur < seuilBas)
+        else if(ancientValue > valeur && valeur < seuilBas && journalPhrasesDown.Count > 0)
         {
             MonstreEventManager.RemoveEvent(eventsPhase2);
             manag.AddRepresentationForJournal(journalPhrasesDown[Random.Range(0, journalPhrasesDown.Count)]);

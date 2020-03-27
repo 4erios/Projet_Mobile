@@ -17,42 +17,54 @@ MonoBehaviour:
     seuilHaut: 0
     seuilBas: 0
     eventsPhase2: []
-    journalPhrasesUp: []
-    journalPhrasesDown: []
+    journalPhrasesUp:
+    - "Dirigeant R\xE9pulsion +"
+    journalPhrasesDown:
+    - "Dirigeant R\xE9pulsion -"
   agressivite:
     valeur: 0
     seuilHaut: 0
     seuilBas: 0
     eventsPhase2: []
-    journalPhrasesUp: []
-    journalPhrasesDown: []
+    journalPhrasesUp:
+    - Dirigeant Agro +
+    journalPhrasesDown:
+    - Dirigeant Agro -
   jalousie:
     valeur: 0
     seuilHaut: 0
     seuilBas: 0
     eventsPhase2: []
-    journalPhrasesUp: []
-    journalPhrasesDown: []
+    journalPhrasesUp:
+    - Dirigeant Jalousie +
+    journalPhrasesDown:
+    - Dirigeant Jalousie -
   desir:
     valeur: 0
     seuilHaut: 0
     seuilBas: 0
     eventsPhase2: []
-    journalPhrasesUp: []
-    journalPhrasesDown: []
+    journalPhrasesUp:
+    - "Dirigeant D\xE9sir +"
+    journalPhrasesDown:
+    - "Dirigeant D\xE9sir -"
   acceptation:
     valeur: 0
     seuilHaut: 0
     seuilBas: 0
     eventsPhase2: []
-    journalPhrasesUp: []
-    journalPhrasesDown: []
+    journalPhrasesUp:
+    - Dirigeant Acceptation +
+    journalPhrasesDown:
+    - Dirigeant Acceptation -
   pitie:
     valeur: 0
     seuilHaut: 0
     seuilBas: 0
     eventsPhase2: []
-    journalPhrasesUp: []
-    journalPhrasesDown: []
+    journalPhrasesUp:
+    - Dirigeant Pitie +
+    journalPhrasesDown:
+    - Dirigeant Pitie -
   goodEnding: {fileID: 0}
   badEnding: {fileID: 0}
