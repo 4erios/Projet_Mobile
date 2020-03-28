@@ -21,6 +21,12 @@ public class MonoJournal : MonoBehaviour
                 manag.EndEvent();
             }
         }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            gameObject.SetActive(false);
+            manag.EndEvent();
+        }
     }
 
     public void ShowText(string text)

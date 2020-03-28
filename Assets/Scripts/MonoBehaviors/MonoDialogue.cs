@@ -34,6 +34,12 @@ public class MonoDialogue : MonoBehaviour
                 cardManager.canPlayCards = false;
             }
         }
+
+        if (collision.tag == "Card" && Input.GetMouseButtonUp(0))
+        {
+            GetCard(collision.GetComponent<MonoCartes>().emotion);
+            cardManager.canPlayCards = false;
+        }
     }
 
     private void Update()
@@ -45,6 +51,11 @@ public class MonoDialogue : MonoBehaviour
             {
                 NextDialogue();
             }
+        }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            NextDialogue();
         }
     }
 

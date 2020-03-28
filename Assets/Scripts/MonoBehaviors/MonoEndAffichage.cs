@@ -21,5 +21,11 @@ public class MonoEndAffichage : MonoBehaviour
                 canEnd = false;
             }
         }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            //Retour à l'écran principal
+            canEnd = false;
+        }
     }
 }

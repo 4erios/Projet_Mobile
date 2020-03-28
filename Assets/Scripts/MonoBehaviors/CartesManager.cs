@@ -103,6 +103,66 @@ public class CartesManager : MonoBehaviour
                 ResetCardPosition();
             }
         }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            touchStartPos = cam.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hitinfo = Physics2D.Raycast(touchStartPos, cam.transform.forward);
+            if (hitinfo.collider != null && hitinfo.collider.name == "ZoneCarte")
+            {
+                isTouch = true;
+            }
+            touchStartPos = Input.mousePosition;
+        }
+        else if(Input.GetMouseButton(0))
+        {
+            if (isTouch && !(movingCard || movingList))
+            {
+                if (Mathf.Abs(Input.mousePosition.x - touchStartPos.x) > 100) //Fait bouger la liste de carte
+                {
+                    movingList = true;
+                }
+                else if (Mathf.Abs(Input.mousePosition.y - touchStartPos.y) > 70) //Fait bouger la carte principale
+                {
+                    movingCard = true;
+                    cartesJoueur[mainCard].colid.enabled = true;
+                }
+            }
+            else if (movingList)
+            {
+                DeplacementCartes(Input.mousePosition.x - lastTouchPosition.x);
+            }
+            else if (movingCard)
+            {
+                cartesJoueur[mainCard].transform.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+                cartesJoueur[mainCard].transform.position = new Vector3(cartesJoueur[mainCard].transform.position.x, cartesJoueur[mainCard].transform.position.y, 0);
+                Vector3 pos = cartesJoueur[mainCard].transform.position;
+                if ((pos.x < dialogueTransf.position.x + 9 / 2 && pos.x > dialogueTransf.position.x - 9 / 2) && (pos.y < dialogueTransf.position.y + 4 / 2 && pos.y > dialogueTransf.position.y - 4 / 2))
+                {
+                    if (Input.GetMouseButtonUp(0) && isTouch)
+                    {
+                        Debug.Log("Test");
+                        dialogueTransf.GetComponent<MonoDialogue>().GetCard(cartesJoueur[mainCard].emotion);
+                    }
+                }
+            }
+
+            lastTouchPosition = Input.mousePosition;
+        }
+        else if (Input.GetMouseButtonUp(0) && isTouch)
+        {
+            Vector3 pos = cartesJoueur[mainCard].transform.position;
+            Debug.Log(cartesJoueur[mainCard].transform.position + "Dial : " + dialogueTransf.position + dialogueTransf.sizeDelta);
+            if ((pos.x < dialogueTransf.position.x + 9 / 2 && pos.x > dialogueTransf.position.x - 9 / 2) && (pos.y < dialogueTransf.position.y + 4 / 2 && pos.y > dialogueTransf.position.y - 4 / 2))
+            {
+                Debug.Log("Test");
+                dialogueTransf.GetComponent<MonoDialogue>().GetCard(cartesJoueur[mainCard].emotion);
+            }
+            isTouch = false;
+            movingCard = false;
+            movingList = false;
+            ResetCardPosition();
+        }
     }
 
     public void AddCard(EmotionMonstre cardToAdd)
