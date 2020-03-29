@@ -21,4 +21,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 03c848ed4bbd53949aaadcf545854685, type: 3}
   - {fileID: 21300000, guid: f551069ee837f484abb8f3ccc442b4af, type: 3}
   - {fileID: 21300000, guid: 3686feda435271947bdab5d4fa95b980, type: 3}
-  isAlive: 0
+  isAlive: 1
