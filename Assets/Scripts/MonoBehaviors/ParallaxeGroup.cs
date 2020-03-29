@@ -17,9 +17,9 @@ public class ParallaxeGroup : MonoBehaviour
     float x, y;
     IEnumerator ChangePosition()
     {
-        x += Random.Range(-0.5f, 0.5f);
-        y += Random.Range(-0.6f, 0.6f);
-        if(x>2)
+        x += Random.Range(-1f, 1f);
+        y += Random.Range(-1.5f, 1.5f);
+        if (x>2)
         {
             x = 2;
         }
