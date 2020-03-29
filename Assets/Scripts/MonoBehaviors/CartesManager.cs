@@ -151,8 +151,7 @@ public class CartesManager : MonoBehaviour
         else if (Input.GetMouseButtonUp(0) && isTouch)
         {
             Vector3 pos = cartesJoueur[mainCard].transform.position;
-            Debug.Log(cartesJoueur[mainCard].transform.position + "Dial : " + dialogueTransf.position + dialogueTransf.sizeDelta);
-            if ((pos.x < dialogueTransf.position.x + 9 / 2 && pos.x > dialogueTransf.position.x - 9 / 2) && (pos.y < dialogueTransf.position.y + 4 / 2 && pos.y > dialogueTransf.position.y - 4 / 2))
+            if ((pos.x < dialogueTransf.position.x + 9 / 2 && pos.x > dialogueTransf.position.x - 9 / 2) && (pos.y < dialogueTransf.position.y + 1.5f + 4 / 2 && pos.y > dialogueTransf.position.y + 1.5f - 4 / 2))
             {
                 Debug.Log("Test");
                 dialogueTransf.GetComponent<MonoDialogue>().GetCard(cartesJoueur[mainCard].emotion);

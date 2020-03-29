@@ -8,7 +8,7 @@ public class Personnage : ScriptableObject
     public Role role;
     public Communaute communaute;
     public List<Sprite> spriteReaction; //Voir si on met une Anim ou une liste de Sprites
-    public bool isAlive;
+    public bool isAlive = true;
 
     public void Die()
     {
