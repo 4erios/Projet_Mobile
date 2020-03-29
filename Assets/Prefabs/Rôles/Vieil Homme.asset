@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Vieil Homme
   m_EditorClassIdentifier: 
   presets:
-  - ReactionDepart: 0
+  - ReactionDepart: 1
     interet:
       emot: 0
       doesDamage: 0
@@ -32,22 +32,22 @@ MonoBehaviour:
     haine:
       emot: 5
       doesDamage: 0
-  - ReactionDepart: 0
+  - ReactionDepart: 5
     interet:
-      emot: 0
+      emot: 5
       doesDamage: 0
     affection:
       emot: 0
       doesDamage: 0
     compassion:
-      emot: 0
+      emot: 2
       doesDamage: 0
     degout:
-      emot: 0
+      emot: 3
       doesDamage: 0
     peur:
-      emot: 0
+      emot: 4
       doesDamage: 0
     haine:
-      emot: 0
-      doesDamage: 0
+      emot: 1
+      doesDamage: 3
