@@ -276,21 +276,21 @@ public class MonstreEventManager : MonoBehaviour
         int count = 0;
         while (futurEvents[4] == futurEvents[3] && count < 100)
         {
-            Debug.Log("Test1");
             count++;
             Event newEvent = eventsPool[Random.Range(0, eventsPool.Count)];
-            List<int> compteCommu = new List<int>(4);
+            List<int> compteCommu = new List<int>();
+            for(int k = 0; k < 4; k++)
+            {
+                compteCommu.Add(0);
+            }
             if (futurEvents.Contains(newEvent)) // Vérification de Doublon
             {
-                Debug.Log("TestContains");
                 goto continueWhile;
             }
-
-            if(newEvent.personnage.isAlive) //Vérifie si le personnage est en vie
+            if(!newEvent.personnage.isAlive) //Vérifie si le personnage est en vie
             {
                 goto continueWhile;
             }
-            Debug.Log("Test2");
             #region Communautés
             if (count < 75)
             {
@@ -314,35 +314,34 @@ public class MonstreEventManager : MonoBehaviour
                 }
             }
 
-            switch (newEvent.personnage.communaute.name)
+            switch (newEvent.personnage.communaute.name) //A remodifier après la Slice
             {
                 case "Dirigeants":
-                    if (compteCommu[0] > 2)
+                    if (compteCommu[0] > 4)
                     {
                         goto continueWhile;
                     }
                     break;
                 case "Habitants":
-                    if (compteCommu[1] > 2)
+                    if (compteCommu[1] > 4)
                     {
                         goto continueWhile;
                     }
                     break;
                 case "Mendiants":
-                    if (compteCommu[2] > 2)
+                    if (compteCommu[2] > 4)
                     {
                         goto continueWhile;
                     }
                     break;
                 case "Représentants de l'ordre":
-                    if (compteCommu[3] > 2)
+                    if (compteCommu[3] > 4)
                     {
                         goto continueWhile;
                     }
                     break;
             }
             #endregion
-            Debug.Log("Test3");
             for (int i = 0; i < 4; i++) // Vérification d'un Event spécial présent
             {
                 if(futurEvents[i].eventSuivant != null)
@@ -351,7 +350,6 @@ public class MonstreEventManager : MonoBehaviour
                 }
             }
             futurEvents[4] = newEvent;
-            Debug.Log("Test4 : " + futurEvents[4] + "Et le 3 : " + futurEvents[3]);
             continueWhile:;
         }
     }

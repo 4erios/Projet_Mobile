@@ -37,10 +37,18 @@ public class CartesManager : MonoBehaviour
     private void Start()
     {
         cards = new List<EmotionMonstre>();
-        while(cards.Count < 3)
+        /*while(cards.Count < 3)
         {
             EmotionMonstre cart = cartesBases[Random.Range(0, cartesBases.Count)];
             if(!cards.Contains(cart))
+            {
+                AddCard(cart);
+            }
+        }*/
+        for(int i = 0; i< 6; i++)
+        {
+            EmotionMonstre cart = cartesBases[i];
+            if (!cards.Contains(cart))
             {
                 AddCard(cart);
             }
