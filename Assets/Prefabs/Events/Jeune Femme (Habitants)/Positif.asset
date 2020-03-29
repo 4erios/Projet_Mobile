@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63264c0044614164ab02233d8adf93b7, type: 3}
   m_Name: Positif
   m_EditorClassIdentifier: 
-  personnage: {fileID: 11400000, guid: 0bd5e7e4718357649bb790cd5167c1ec, type: 2}
-  dialogue: {fileID: 11400000, guid: 716db36203840c541b31b23a1cdadd99, type: 2}
-  lieux: 0
-  effetBonus: {fileID: 11400000, guid: 606aefa762f203a488ef65b5119d7a79, type: 2}
-  carteBonus: {fileID: 11400000, guid: 9b1123b42eb05304985469ca4a08d7be, type: 2}
+  personnage: {fileID: 11400000, guid: 757b4b4d7cd8e5045b7605033d2d4abd, type: 2}
+  dialogue: {fileID: 11400000, guid: 30786a8d16b9a164f882c6159c7500c7, type: 2}
+  lieux: 1
+  effetBonus: {fileID: 0}
+  carteBonus: {fileID: 0}
   effetMalus: {fileID: 0}
   carteMalus: {fileID: 0}
-  preset: 0
-  killPersonnage: 1
+  preset: 1
+  killPersonnage: 6
   eventSuivant: {fileID: 0}

@@ -20,5 +20,5 @@ MonoBehaviour:
   effetMalus: {fileID: 0}
   carteMalus: {fileID: 0}
   preset: 0
-  killPersonnage: 0
+  killPersonnage: 6
   eventSuivant: {fileID: 0}

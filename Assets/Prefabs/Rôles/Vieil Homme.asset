@@ -28,7 +28,7 @@ MonoBehaviour:
       doesDamage: 0
     peur:
       emot: 1
-      doesDamage: 0
+      doesDamage: 1
     haine:
       emot: 5
       doesDamage: 0
@@ -51,3 +51,22 @@ MonoBehaviour:
     haine:
       emot: 1
       doesDamage: 3
+  - ReactionDepart: 4
+    interet:
+      emot: 0
+      doesDamage: 0
+    affection:
+      emot: 4
+      doesDamage: 0
+    compassion:
+      emot: 3
+      doesDamage: 0
+    degout:
+      emot: 2
+      doesDamage: 0
+    peur:
+      emot: 1
+      doesDamage: 1
+    haine:
+      emot: 5
+      doesDamage: 0

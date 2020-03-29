@@ -12,12 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: Positif
   m_EditorClassIdentifier: 
-  dialogueDepart: 
-  reponseInteret: 
-  reponseAffection: 
-  reponseCompassion: 
-  reponseDegout: 
-  reponsePeur: 
-  reponseHaine: 
+  dialogueDepart: "Again, your hunger pushed you to search the trashes for food.
+    You tear the garabage bags hastily, hoping to find something to eat. \n\"Hey
+    there! Did you find something edible? If not, I can share what I found!\""
+  reponseInteret: 'Always warry aren''t you? Well, I''ll leave you some food over
+    here, so don''t be afraid next time ok? '
+  reponseAffection: Ah! I'm happy to see you too! Come and eat, it's on me!
+  reponseCompassion: 'Hey don''t cry. Why didn''t you come to see me if you were
+    that hungry? You knowI will always share my food with you. '
+  reponseDegout: 'You know you don''t need to act like this with me right? I really
+    dislike it when you try to get food from me like this. '
+  reponsePeur: '"Are you alright? Ouch! What are yo.. ARRGGGGHHHHH!!!"
+
+    Your
+    hunger was too strong, and so you devoured the old man. '
+  reponseHaine: Aaaaahh.. And here I thought you accepted me... Seems like you only
+    needed me because I gave you food...
   reponseBonus: 
   reponseMalus: 
