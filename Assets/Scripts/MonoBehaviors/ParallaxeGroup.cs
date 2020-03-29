@@ -6,29 +6,41 @@ public class ParallaxeGroup : MonoBehaviour
 {
     public List<Parallaxe> items;
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        StopAllCoroutines();
+        x = 0;
+        y = 0;
+        StartCoroutine(ChangePosition());
+    }
+
+    float x, y;
+    IEnumerator ChangePosition()
+    {
+        x += Random.Range(-0.5f, 0.5f);
+        y += Random.Range(-0.6f, 0.6f);
+        if(x>2)
         {
-            foreach(Parallaxe item in items)
-            {
-                item.Move(new Vector2(4, 3));
-            }
+            x = 2;
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        else if (x<-2)
         {
-            foreach (Parallaxe item in items)
-            {
-                item.Move(new Vector2(-4, -3));
-            }
+            x = -2;
         }
-        if (Input.GetKeyDown(KeyCode.P))
+        if (y > 3)
         {
-            foreach (Parallaxe item in items)
-            {
-                item.Move(new Vector2(-4, 3));
-            }
+            y = 3;
         }
+        else if (y < -3)
+        {
+            y = -3;
+        }
+        Debug.Log(x + y);
+        foreach (Parallaxe item in items)
+        {
+            item.Move(new Vector2(x, y));
+        }
+        yield return new WaitForSeconds(Random.Range(1, 3));
+        StartCoroutine(ChangePosition());
     }
 }

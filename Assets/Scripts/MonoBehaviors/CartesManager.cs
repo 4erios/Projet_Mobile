@@ -141,7 +141,6 @@ public class CartesManager : MonoBehaviour
                 {
                     if (Input.GetMouseButtonUp(0) && isTouch)
                     {
-                        Debug.Log("Test");
                         dialogueTransf.GetComponent<MonoDialogue>().GetCard(cartesJoueur[mainCard].emotion);
                     }
                 }

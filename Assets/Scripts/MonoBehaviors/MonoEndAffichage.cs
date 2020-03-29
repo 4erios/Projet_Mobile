@@ -9,6 +9,8 @@ public class MonoEndAffichage : MonoBehaviour
     public Image fond;
     public Text text;
     public bool canEnd;
+    [SerializeField]
+    private MenuScript menus;
 
     private void Update()
     {
@@ -17,14 +19,14 @@ public class MonoEndAffichage : MonoBehaviour
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
-                //Retour à l'écran principal
+                menus.LoadScene(0);
                 canEnd = false;
             }
         }
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && canEnd)
         {
-            //Retour à l'écran principal
+            menus.LoadScene(0);
             canEnd = false;
         }
     }
