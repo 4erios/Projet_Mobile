@@ -100,6 +100,7 @@ public class MonstreEventManager : MonoBehaviour
 
     public void StartNextEvent(Event newEvent)
     {
+        Debug.Log("Test3 : " + newEvent);
         if (actualEvent == null)
         {
             List<EmotionMonstre> emotionsToAdd = new List<EmotionMonstre>();
@@ -211,20 +212,16 @@ public class MonstreEventManager : MonoBehaviour
 
     public void EndEvent()
     {
-        Debug.Log("Test0.25" + actualEvent);
         if (actualEvent.eventSuivant != null)
         {
-            Debug.Log("Test0.5");
             StartNextEvent(actualEvent.eventSuivant);
         }
         else if (monstreHp <= 0) //Voir pour d'autres manières de finir le jeu
         {
-            Debug.Log("Test");
             StartEndEvent(actualEvent.personnage.communaute.badEnding);
         }
         else if(commus[0].acceptation.valeur > 10 || commus[0].desir.valeur > 10 || commus[0].pitie.valeur > 10)
         {
-            Debug.Log("Test2");
             StartEndEvent(commus[0].goodEnding);
         }
         /*else if (commus[1].acceptation.valeur > 10 || commus[1].desir.valeur > 10 || commus[1].pitie.valeur > 10)
@@ -239,22 +236,18 @@ public class MonstreEventManager : MonoBehaviour
         {
             StartEndEvent(commus[3].goodEnding);
         }*/
+        else if (representationForJournal.Count > 0)
+        {
+            monoJourn.gameObject.SetActive(true);
+            monoJourn.ShowText(representationForJournal[0]);
+            representationForJournal.RemoveAt(0);
+        }
         else
         {
-            Debug.Log("Test3");
             futurEvents.Remove(actualEvent);
             actualEvent = null;
             EventChoice();
-            if (representationForJournal.Count > 0)
-            {
-                monoJourn.gameObject.SetActive(true);
-                monoJourn.ShowText(representationForJournal[0]);
-                representationForJournal.RemoveAt(0);
-            }
-            else
-            {
-                StartNextEvent(futurEvents[0]);
-            }
+            StartNextEvent(futurEvents[0]);
         }
     }
 
@@ -279,7 +272,6 @@ public class MonstreEventManager : MonoBehaviour
     void EventChoice()
     {
         //Règles de Choix d'un événement
-        Debug.Log(futurEvents.Count);
         futurEvents.Add(futurEvents[3]);
         int count = 0;
         while (futurEvents[4] == futurEvents[3] && count < 100)

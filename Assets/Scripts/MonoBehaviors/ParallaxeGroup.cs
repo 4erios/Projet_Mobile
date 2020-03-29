@@ -35,7 +35,6 @@ public class ParallaxeGroup : MonoBehaviour
         {
             y = -3;
         }
-        Debug.Log(x + y);
         foreach (Parallaxe item in items)
         {
             item.Move(new Vector2(x, y));
