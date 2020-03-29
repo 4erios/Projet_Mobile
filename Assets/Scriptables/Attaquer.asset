@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Attaquer
   m_EditorClassIdentifier: 
   emotion: 1
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 88424443a74ce72469a39b6b969fe12e, type: 3}
   bonusRole: []
   malusRole: []
