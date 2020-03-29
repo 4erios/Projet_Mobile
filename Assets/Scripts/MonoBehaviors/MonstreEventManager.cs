@@ -25,7 +25,7 @@ public class MonstreEventManager : MonoBehaviour
     private MonoEndAffichage monoEnd;
 
     private static List<Event> eventsPool;
-    private List<Event> futurEvents;
+    public List<Event> futurEvents;
 
     private Event actualEvent;
     [HideInInspector]
@@ -276,22 +276,23 @@ public class MonstreEventManager : MonoBehaviour
         int count = 0;
         while (futurEvents[4] == futurEvents[3] && count < 100)
         {
+            Debug.Log("Test1");
             count++;
             Event newEvent = eventsPool[Random.Range(0, eventsPool.Count)];
             List<int> compteCommu = new List<int>(4);
-
-            if(futurEvents.Contains(newEvent)) // Vérification de Doublon
+            if (futurEvents.Contains(newEvent)) // Vérification de Doublon
             {
+                Debug.Log("TestContains");
                 goto continueWhile;
             }
 
-            if(!newEvent.personnage.isAlive) //Vérifie si le personnage est en vie
+            if(newEvent.personnage.isAlive) //Vérifie si le personnage est en vie
             {
                 goto continueWhile;
             }
-
+            Debug.Log("Test2");
             #region Communautés
-            if (count > 75)
+            if (count < 75)
             {
                 for (int i = 0; i < 5; i++)
                 {
@@ -341,7 +342,7 @@ public class MonstreEventManager : MonoBehaviour
                     break;
             }
             #endregion
-
+            Debug.Log("Test3");
             for (int i = 0; i < 4; i++) // Vérification d'un Event spécial présent
             {
                 if(futurEvents[i].eventSuivant != null)
@@ -349,8 +350,8 @@ public class MonstreEventManager : MonoBehaviour
                     goto continueWhile;
                 }
             }
-
             futurEvents[4] = newEvent;
+            Debug.Log("Test4 : " + futurEvents[4] + "Et le 3 : " + futurEvents[3]);
             continueWhile:;
         }
     }
