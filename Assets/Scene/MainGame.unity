@@ -527,6 +527,7 @@ GameObject:
   - component: {fileID: 696124073}
   - component: {fileID: 696124072}
   - component: {fileID: 696124074}
+  - component: {fileID: 696124075}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -598,6 +599,19 @@ MonoBehaviour:
   lateGameEvent: []
   paniqueSliderDroite: {fileID: 547154719}
   paniqueSliderGauche: {fileID: 2138485282}
+--- !u!114 &696124075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696124071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ee43bd5620a354ba4ec76a9c6fc68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
 --- !u!1 &724766697
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,8 +642,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae0327c9d401384cb2e31c60e59fb6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 0
-  lerpCoef: 0.2
+  distance: 1
+  lerpCoef: 0.005
   newPosition: {x: 0, y: 0}
 --- !u!212 &724766699
 SpriteRenderer:
@@ -818,6 +832,7 @@ MonoBehaviour:
   fond: {fileID: 1728858312}
   text: {fileID: 407511005}
   canEnd: 0
+  menus: {fileID: 696124075}
 --- !u!224 &860647480 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5100201457793925958, guid: 42ba7107bbcaac6409378f64fce5db22,
@@ -1122,8 +1137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae0327c9d401384cb2e31c60e59fb6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 0
-  lerpCoef: 0.2
+  distance: 3
+  lerpCoef: 0.005
   newPosition: {x: 0, y: 0}
 --- !u!212 &1088139143
 SpriteRenderer:
@@ -1219,8 +1234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae0327c9d401384cb2e31c60e59fb6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 0
-  lerpCoef: 0.2
+  distance: 2
+  lerpCoef: 0.005
   newPosition: {x: 0, y: 0}
 --- !u!212 &1244737131
 SpriteRenderer:
@@ -1698,8 +1713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae0327c9d401384cb2e31c60e59fb6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 0
-  lerpCoef: 0.2
+  distance: 4
+  lerpCoef: 0.005
   newPosition: {x: 0, y: 0}
 --- !u!212 &2051549391
 SpriteRenderer:

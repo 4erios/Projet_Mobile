@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Caresser
   m_EditorClassIdentifier: 
   emotion: 4
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: a605226998b06f342a6f59568f8cf942, type: 3}
   bonusRole: []
   malusRole: []
