@@ -8,18 +8,48 @@ public class MonoDialogue : MonoBehaviour
     [SerializeField]
     private Text zoneText;
     [SerializeField]
+    private GameObject zoneAccroche;
+    [SerializeField]
+    private Text textAccroche;
+    [SerializeField]
     private MonstreEventManager manager;
     [SerializeField]
     private CartesManager cardManager;
+    private bool isDialShowing;
+    private string dial;
 
-    public void ShowDialogue(string dial)
+    public void ShowAccroche(string txt, string dialog)
     {
-        zoneText.text = dial;
+        dial = dialog;
+        zoneAccroche.SetActive(true);
+        textAccroche.text = txt;
+    }
+
+    public void ShowDialogue(string dialogue)
+    {
+        dial = dialogue;
+        StartCoroutine(AffichageDialogue());
+    }
+
+    IEnumerator AffichageDialogue()
+    {
+        isDialShowing = true;
+        Debug.Log(dial);
+        string tmpStr = "";
+        for(int i = 0; i < dial.Length; i++)
+        {
+            tmpStr += dial[i];
+            zoneText.text = tmpStr;
+            yield return new WaitForSeconds(Time.fixedDeltaTime);
+        }
+        isDialShowing = false;
+        cardManager.canPlayCards = true;
     }
 
     public void GetCard(EmotionMonstre carte)
     {
         cardManager.canPlayCards = false;
+        //Mettre les faces caché des cartes
         manager.GetResponse(carte);
     }
 
@@ -31,31 +61,57 @@ public class MonoDialogue : MonoBehaviour
             if (collision.tag == "Card" && touch.phase == TouchPhase.Ended)
             {
                 GetCard(collision.GetComponent<MonoCartes>().emotion);
-                cardManager.canPlayCards = false;
             }
         }
 
         if (collision.tag == "Card" && Input.GetMouseButtonUp(0))
         {
             GetCard(collision.GetComponent<MonoCartes>().emotion);
-            cardManager.canPlayCards = false;
         }
     }
 
-    private void Update()
+    float time = 0;
+
+    private void Update() //En faire un Enumerator, qui n'est appelé qu'après un certains temps après avoir joué la carte  ??
     {
+        time += Time.deltaTime;
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
-                NextDialogue();
+                DoOnDown();
             }
         }
 
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            NextDialogue();
+            DoOnDown();
+        }
+    }
+
+    void DoOnDown()
+    {
+        if (time > 1.5f)
+        {
+            if (isDialShowing)
+            {
+                StopAllCoroutines();
+                zoneText.text = dial;
+                isDialShowing = false;
+                cardManager.canPlayCards = true;
+            }
+        
+            if (zoneAccroche.activeSelf)
+            {
+                ShowDialogue(dial);
+                zoneAccroche.SetActive(false);
+            }
+            else
+            {
+                NextDialogue();
+            }
+            time = 0;
         }
     }
 

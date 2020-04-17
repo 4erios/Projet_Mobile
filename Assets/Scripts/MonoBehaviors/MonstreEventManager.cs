@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MonstreEventManager : MonoBehaviour
 {
@@ -34,6 +35,13 @@ public class MonstreEventManager : MonoBehaviour
     private List<string> representationForJournal = new List<string>();
 
     public int monstreHp = 3;
+    private int nbDeadPeople;
+    [SerializeField]
+    private List<Sprite> blessuresSprites;
+    [SerializeField]
+    private Image affichageBlessure;
+    [SerializeField]
+    private EndEvent finCarnage;
 
     void Awake()
     {
@@ -100,23 +108,29 @@ public class MonstreEventManager : MonoBehaviour
 
     public void StartNextEvent(Event newEvent)
     {
-        Debug.Log("Test3 : " + newEvent);
         if (actualEvent == null)
         {
             List<EmotionMonstre> emotionsToAdd = new List<EmotionMonstre>();
-            foreach(KeyValuePair<EmotionMonstre,int> dict in cardManager.RemovedCard)
+            List<EmotionMonstre> keys = new List<EmotionMonstre>();
+            foreach(KeyValuePair<EmotionMonstre,int> dict in cardManager.removedCard)  //Problème de modification d'un valeur du dictionaire, il aime pas
             {
-                cardManager.RemovedCard[dict.Key] -= 1;
-                if(cardManager.RemovedCard[dict.Key] <= 0)
+                Debug.Log("Test retire");
+                keys.Add(dict.Key);
+            }
+            for (int i = 0; i < cardManager.removedCard.Count; i++)
+            {
+                cardManager.removedCard[keys[i]] -= 1;
+                if (cardManager.removedCard[keys[i]] <= 0)
                 {
-                    emotionsToAdd.Add(dict.Key);
+                    emotionsToAdd.Add(keys[i]);
                 }
             }
-            foreach(EmotionMonstre emot in emotionsToAdd)
+            foreach (EmotionMonstre emot in emotionsToAdd)
             {
-                cardManager.RemovedCard.Remove(emot);
+                cardManager.removedCard.Remove(emot);
                 cardManager.AddCard(emot);
             }
+
             //Save de l'Etat actuel du jeu
             actualEvent = newEvent;
             StartEvent(actualEvent);
@@ -125,7 +139,7 @@ public class MonstreEventManager : MonoBehaviour
 
     void StartEvent(Event eventToStart)
     {
-        foreach(GameObject gm in fonds)
+        foreach (GameObject gm in fonds)
         {
             gm.SetActive(false);
         }
@@ -139,8 +153,11 @@ public class MonstreEventManager : MonoBehaviour
                 break;
         }
         ChangeSpritePerso(eventToStart.personnage.role.presets[eventToStart.preset].ReactionDepart);
-        monoDial.ShowDialogue(eventToStart.dialogue.dialogueDepart);
-        cardManager.canPlayCards = true;
+        monoDial.ShowAccroche(eventToStart.accroche, eventToStart.dialogue.dialogueDepart);
+        //monoDial.ShowDialogue(eventToStart.dialogue.dialogueDepart);
+        //cardManager.canPlayCards = true; //Modifier la position, pour le mettre à la fin de l'afficage du dialogue
+
+        //Mettre le côté Animation des Cartes
         //Augmentation du Score de Panique au fil de la Partie
     }
 
@@ -186,7 +203,8 @@ public class MonstreEventManager : MonoBehaviour
         needTap = true;
         if(reponse.emotion == actualEvent.killPersonnage)
         {
-            actualEvent.personnage.Die();
+            Debug.Log("Kill with : " + reponse.emotion);
+            KillPersonnage();
         }
         GetDamage(damage);
 
@@ -200,9 +218,17 @@ public class MonstreEventManager : MonoBehaviour
         }
     }
 
+    void KillPersonnage()
+    {
+        actualEvent.personnage.Die();
+        nbDeadPeople++;
+    }
+
     private void GetDamage(int dmg)
     {
+        //Animation de prise de blessure
         monstreHp -= dmg;
+        affichageBlessure.sprite = blessuresSprites[monstreHp];
     }
     
     public void AddRepresentationForJournal(string phrase)
@@ -219,6 +245,10 @@ public class MonstreEventManager : MonoBehaviour
         else if (monstreHp <= 0) //Voir pour d'autres manières de finir le jeu
         {
             StartEndEvent(actualEvent.personnage.communaute.badEnding);
+        }
+        else if(nbDeadPeople>5)
+        {
+            StartEndEvent(finCarnage);
         }
         else if(commus[0].acceptation.valeur > 10 || commus[0].desir.valeur > 10 || commus[0].pitie.valeur > 10)
         {
@@ -262,11 +292,6 @@ public class MonstreEventManager : MonoBehaviour
             actualEvent = null;
             
         }
-    }
-
-    EndEvent EndingEventCommu(Communaute commu)
-    {
-        return commu.goodEnding;
     }
 
     void EventChoice()
@@ -357,7 +382,11 @@ public class MonstreEventManager : MonoBehaviour
     void StartEndEvent(EndEvent eventToEnd)
     {
         monoEnd.showEnd.SetActive(true);
-        monoEnd.fond.sprite = eventToEnd.imageFin;
+        Debug.Log(eventToEnd);
+        if (eventToEnd.imageFin != null)
+        {
+            monoEnd.fond.sprite = eventToEnd.imageFin;
+        }
         monoEnd.text.text = eventToEnd.texteFin;
         monoEnd.canEnd = true;
     }

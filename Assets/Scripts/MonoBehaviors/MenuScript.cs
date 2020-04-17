@@ -17,6 +17,29 @@ public class MenuScript : EventTrigger
         }
     }
 
+    public void ChangeMenu(int menuId)
+    {
+        switch (menuId)
+        {
+            case 1:
+                MenuNavigation.mainMenuEvent.Invoke();
+                break;
+            case 2:
+                MenuNavigation.achievementEvent.Invoke();
+                break;
+            case 3:
+                MenuNavigation.settingsEvent.Invoke();
+                break;
+            case 4:
+                MenuNavigation.creditEvent.Invoke();
+                break;
+            case 5:
+                MenuNavigation.successEvent.Invoke();
+                break;
+        }
+    }
+
+
     IEnumerator LoadGame(int nb)
     {
         AsyncOperation asnc = SceneManager.LoadSceneAsync(nb);

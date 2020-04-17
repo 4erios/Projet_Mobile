@@ -7,9 +7,23 @@ public class MonoCartes : MonoBehaviour
 {
     public EmotionMonstre emotion;
     public Collider2D colid;
+    public SpriteRenderer spritePrincipal, titre;
+    public Animator animNoire, animBlanche;
 
     private void Start()
     {
-        GetComponent<Image>().sprite = emotion.sprite;
+        spritePrincipal.sprite = emotion.sprite;
+        if (emotion.titre != null)
+        {
+            titre.sprite = emotion.titre;
+        }
+        if (emotion.animNoire != null)
+        {
+            animNoire.runtimeAnimatorController = emotion.animNoire;
+        }
+        if (emotion.animBlanche != null)
+        {
+            animBlanche.runtimeAnimatorController = emotion.animBlanche;
+        }
     }
 }

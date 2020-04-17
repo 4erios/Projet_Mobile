@@ -6,12 +6,40 @@ public class ParallaxeGroup : MonoBehaviour
 {
     public List<Parallaxe> items;
 
+    private Gyroscope gyro;
+
+    void Start()
+    {
+        if (SystemInfo.supportsGyroscope)
+        {
+            gyro = Input.gyro;
+            gyro.enabled = true;
+        }
+    }
+    void OnGUI()
+    {
+        if (gyro != null)
+        {
+            GUILayout.Label("Gyroscope attitude : " + gyro.attitude);
+            GUILayout.Label("Gyroscope gravity : " + gyro.gravity);
+            GUILayout.Label("Gyroscope rotationRate : " + gyro.rotationRate);
+            GUILayout.Label("Gyroscope rotationRateUnbiased : " + gyro.rotationRateUnbiased);
+            GUILayout.Label("Gyroscope updateInterval : " + gyro.updateInterval);
+            GUILayout.Label("Gyroscope userAcceleration : " + gyro.userAcceleration);
+        }
+    }
+
     private void OnEnable()
     {
         StopAllCoroutines();
         x = 0;
         y = 0;
         StartCoroutine(ChangePosition());
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
 
     float x, y;
@@ -39,7 +67,7 @@ public class ParallaxeGroup : MonoBehaviour
         {
             item.Move(new Vector2(x, y));
         }
-        yield return new WaitForSeconds(Random.Range(1, 3));
+        yield return new WaitForSeconds(0.05f);
         StartCoroutine(ChangePosition());
     }
 }

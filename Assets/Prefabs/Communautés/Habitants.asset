@@ -54,5 +54,5 @@ MonoBehaviour:
     eventsPhase2: []
     journalPhrasesUp: []
     journalPhrasesDown: []
-  goodEnding: {fileID: 0}
+  goodEnding: {fileID: 11400000, guid: bcb70a9219c152e42956d96becc46dac, type: 2}
   badEnding: {fileID: 0}

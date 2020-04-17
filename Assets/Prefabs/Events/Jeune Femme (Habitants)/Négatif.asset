@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: "N\xE9gatif"
   m_EditorClassIdentifier: 
   personnage: {fileID: 11400000, guid: 757b4b4d7cd8e5045b7605033d2d4abd, type: 2}
+  accroche: Test Accroche
   dialogue: {fileID: 11400000, guid: 57a0197a04e44f14791a830d6164956e, type: 2}
   lieux: 1
   effetBonus: {fileID: 0}

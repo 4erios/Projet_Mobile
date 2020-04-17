@@ -12,7 +12,9 @@ public class Panique : MonoBehaviour
     private static List<Event> midEvent, lateEvent;
     private static UnityEvent addPanicEvent = new UnityEvent();
     [SerializeField]
-    private Image paniqueSliderDroite,paniqueSliderGauche;
+    private Image paniqueAffichage;
+    [SerializeField]
+    private List<Sprite> paniqueSprites;
 
     private void Start()
     {
@@ -43,8 +45,25 @@ public class Panique : MonoBehaviour
 
     void AffichagePanique()
     {
-        paniqueSliderDroite.fillAmount = value / 100f;
-        paniqueSliderGauche.fillAmount = value / 100f;
-        Debug.Log("La panique est à : " + paniqueSliderDroite.fillAmount);
+        if(value>=100)
+        {
+            paniqueAffichage.sprite = paniqueSprites[4];
+        }
+        else if(value>=75)
+        {
+            paniqueAffichage.sprite = paniqueSprites[3];
+        }
+        else if (value >= 50)
+        {
+            paniqueAffichage.sprite = paniqueSprites[2];
+        }
+        else if (value >= 25)
+        {
+            paniqueAffichage.sprite = paniqueSprites[1];
+        }
+        else if (value >= 0)
+        {
+            paniqueAffichage.sprite = paniqueSprites[0];
+        }
     }
 }

@@ -32,19 +32,19 @@ public class CartesManager : MonoBehaviour
     private int mainCard;
     private Vector2 currentPosition, lastTouchPosition;
 
-    public Dictionary<EmotionMonstre, int> RemovedCard = new Dictionary<EmotionMonstre, int>();
+    public Dictionary<EmotionMonstre, int> removedCard = new Dictionary<EmotionMonstre, int>();
 
     private void Start()
     {
         cards = new List<EmotionMonstre>();
-        /*while(cards.Count < 3)
+        while(cards.Count < 3)
         {
             EmotionMonstre cart = cartesBases[Random.Range(0, cartesBases.Count)];
             if(!cards.Contains(cart))
             {
                 AddCard(cart);
             }
-        }*/
+        }/*
         for(int i = 0; i< 6; i++)
         {
             EmotionMonstre cart = cartesBases[i];
@@ -52,7 +52,7 @@ public class CartesManager : MonoBehaviour
             {
                 AddCard(cart);
             }
-        }
+        }*/
     }
 
     private void Update()
@@ -92,7 +92,7 @@ public class CartesManager : MonoBehaviour
                 cartesJoueur[mainCard].transform.position = cam.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0));
                 cartesJoueur[mainCard].transform.position = new Vector3(cartesJoueur[mainCard].transform.position.x, cartesJoueur[mainCard].transform.position.y, 0);
                 Vector3 pos = cartesJoueur[mainCard].transform.position;
-                if ((pos.x < dialogueTransf.position.x+dialogueTransf.sizeDelta.x/2 || pos.x > dialogueTransf.position.x - dialogueTransf.sizeDelta.x / 2) && (pos.y < dialogueTransf.position.y + dialogueTransf.sizeDelta.y / 2 || pos.y > dialogueTransf.position.y - dialogueTransf.sizeDelta.y / 2))
+                if ((pos.x < dialogueTransf.position.x + 9 / 2 && pos.x > dialogueTransf.position.x - 9 / 2) && (pos.y < dialogueTransf.position.y + 4 / 2 && pos.y > dialogueTransf.position.y - 4 / 2))
                 {
                     if (touch.phase == TouchPhase.Ended && isTouch)
                     {
@@ -112,7 +112,7 @@ public class CartesManager : MonoBehaviour
             }
         }
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && canPlayCards)
         {
             touchStartPos = cam.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hitinfo = Physics2D.Raycast(touchStartPos, cam.transform.forward);
@@ -188,7 +188,7 @@ public class CartesManager : MonoBehaviour
     {
         if (cards.Contains(cardToRemove))
         {
-            RemovedCard.Add(cardToRemove, 3);
+            removedCard.Add(cardToRemove, 3);
             cards.Remove(cardToRemove);
             MonoCartes monoCardToRemove = default;
             foreach(MonoCartes cart in cartesJoueur)
@@ -221,6 +221,7 @@ public class CartesManager : MonoBehaviour
                 cartesJoueur[(mainCard+i)% cartesJoueur.Count].transform.localPosition = currentPosition;
                 cartesJoueur[(mainCard + i) % cartesJoueur.Count].transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
             }
+            cartesJoueur[mainCard].transform.localScale = new Vector3(1f, 1f, 1f);
             cartesJoueur[i].colid.enabled = false;
         }
     }

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Perte fuite
   m_EditorClassIdentifier: 
   personnage: {fileID: 11400000, guid: 0bd5e7e4718357649bb790cd5167c1ec, type: 2}
+  accroche: Test Accroche
   dialogue: {fileID: 11400000, guid: 650fbaffac8874948ad1ffbbd8c9df21, type: 2}
   lieux: 0
   effetBonus: {fileID: 0}

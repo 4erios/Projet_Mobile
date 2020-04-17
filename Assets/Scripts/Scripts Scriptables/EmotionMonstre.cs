@@ -7,7 +7,8 @@ public enum Emotions { gronder, attaquer, yeuxDoux, pleurer, caresser, fuir, non
 public class EmotionMonstre : ScriptableObject
 {
     public Emotions emotion;
-    public Sprite sprite;
+    public Sprite sprite, titre;
+    public RuntimeAnimatorController animNoire, animBlanche;
     public List<Role> bonusRole;
     public List<Role> malusRole;
 }
