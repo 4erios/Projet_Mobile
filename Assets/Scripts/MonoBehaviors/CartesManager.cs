@@ -34,9 +34,27 @@ public class CartesManager : MonoBehaviour
 
     public Dictionary<EmotionMonstre, int> removedCard = new Dictionary<EmotionMonstre, int>();
 
-    private void Start()
+    private void Awake()
     {
         cards = new List<EmotionMonstre>();
+        string[] cardName = SaveLoadSystem.LoadCards();
+        foreach(string name in cardName)
+        {
+            foreach(EmotionMonstre em in cartesBases)
+            {
+                if(em.name == name)
+                {
+                    AddCard(em);
+                }
+                break;
+            }
+        }
+        //Mettre les RemovedCards
+    }
+
+    private void Start()
+    {
+
         while(cards.Count < 3)
         {
             EmotionMonstre cart = cartesBases[Random.Range(0, cartesBases.Count)];
@@ -253,5 +271,11 @@ public class CartesManager : MonoBehaviour
             currentPosition = new Vector2(newX, currentPosition.y);
             cartesJoueur[i].transform.localPosition = currentPosition;
         }
+    }
+
+    public void SaveCards()
+    {
+        SaveLoadSystem.SaveCards(cards);
+        SaveLoadSystem.SaveRemovedCards(removedCard);
     }
 }

@@ -21,6 +21,7 @@ public class Panique : MonoBehaviour
         midEvent = middleGameEvent;
         lateEvent = lateGameEvent;
         addPanicEvent.AddListener(AffichagePanique);
+        //Mettre à jour l'affichage de la panique
     }
 
     [ContextMenu("AddPoint")]

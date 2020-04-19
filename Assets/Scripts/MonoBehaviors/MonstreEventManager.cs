@@ -43,15 +43,56 @@ public class MonstreEventManager : MonoBehaviour
     [SerializeField]
     private EndEvent finCarnage;
 
+    [SerializeField]
+    private List<Event> allEvents;
+
+    private int saveCount;
+
     void Awake()
     {
+        //Load Communautés
+        SaveLoadSystem.LoadCommunauteScore(commus);
+
+        //Load Game State
+        string eventName = "";
+        List<string> pool = new List<string>();
+        int paniqueToAdd = 0;
+        int damage = 0;
+        bool didLoad = SaveLoadSystem.LoadGameState(out eventName, out paniqueToAdd, out damage, out pool);
+
+        futurEvents = new List<Event>();
+        if (didLoad)
+        {
+            Panique.AddPanic(paniqueToAdd);
+            GetDamage(monstreHp-damage);
+
+            foreach (string name in pool)
+            {
+                foreach (Event evt in allEvents)
+                {
+                    if (evt.name == name)
+                    {
+                        eventsDepart.Add(evt);
+                    }
+                    if(evt.name == eventName)
+                    {
+                        futurEvents.Add(evt);
+                    }
+                    break;
+                }
+            }
+        }
         eventsPool = eventsDepart;
     }
 
     private void Start()
     {
-        futurEvents = new List<Event>();
-        for(int i = 0; i < 5; i++) //Voir pour rajouter les Règles de Choix des Events en début de Partie
+        int start = 0;
+        if(futurEvents.Count>0 && futurEvents[0]!=null)
+        {
+            start = 1;
+        }
+        for(int i = start; i < 5; i++) //Voir pour rajouter les Règles de Choix des Events en début de Partie
         {
             Event newEvent = eventsPool[Random.Range(0, eventsPool.Count)];
             while (futurEvents.Contains(newEvent))
@@ -279,6 +320,15 @@ public class MonstreEventManager : MonoBehaviour
             EventChoice();
             StartNextEvent(futurEvents[0]);
         }
+
+        saveCount++;
+        if(saveCount >= 3)
+        {
+            saveCount = 0;
+            SaveLoadSystem.SaveGameState(actualEvent, Panique.value, monstreHp, eventsPool);
+            SaveLoadSystem.SaveCommunauteScore(commus);
+            cardManager.SaveCards();
+        }
     }
 
     public void EndGameEvent()
@@ -381,6 +431,7 @@ public class MonstreEventManager : MonoBehaviour
 
     void StartEndEvent(EndEvent eventToEnd)
     {
+        SaveLoadSystem.ResetGameSate();
         monoEnd.showEnd.SetActive(true);
         Debug.Log(eventToEnd);
         if (eventToEnd.imageFin != null)
