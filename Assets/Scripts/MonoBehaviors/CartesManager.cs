@@ -45,8 +45,8 @@ public class CartesManager : MonoBehaviour
                 if(em.name == name)
                 {
                     AddCard(em);
+                    break;
                 }
-                break;
             }
         }
         //Mettre les RemovedCards

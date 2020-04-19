@@ -63,6 +63,7 @@ public class MonstreEventManager : MonoBehaviour
         futurEvents = new List<Event>();
         if (didLoad)
         {
+            Debug.Log("DidLoad");
             Panique.AddPanic(paniqueToAdd);
             GetDamage(monstreHp-damage);
 
@@ -73,12 +74,14 @@ public class MonstreEventManager : MonoBehaviour
                     if (evt.name == name)
                     {
                         eventsDepart.Add(evt);
+                        Debug.Log(evt.name + " == " + eventName);
+                        if (evt.name == eventName)
+                        {
+                            futurEvents.Add(evt);
+                            Debug.Log(futurEvents);
+                        }
+                        break;
                     }
-                    if(evt.name == eventName)
-                    {
-                        futurEvents.Add(evt);
-                    }
-                    break;
                 }
             }
         }
