@@ -9,7 +9,7 @@ public class Event : ScriptableObject
 {
     public Personnage personnage;
     [TextArea(2, 3)]
-    public string accroche;
+    public Accroche accroche;
     public Dialogues dialogue;
     public Lieux lieux;
     public EmotionMonstre effetBonus;

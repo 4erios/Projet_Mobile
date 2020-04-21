@@ -48,6 +48,7 @@ public class MonstreEventManager : MonoBehaviour
 
     private int saveCount;
 
+    #region Load des sauvegardes
     void Awake()
     {
         //Load Communautés
@@ -87,9 +88,12 @@ public class MonstreEventManager : MonoBehaviour
         }
         eventsPool = eventsDepart;
     }
+    #endregion
 
+    #region Mise en place des Events de début de partie
     private void Start()
     {
+        LoadingScreen.HideLoadScreen();
         int start = 0;
         if(futurEvents.Count>0 && futurEvents[0]!=null)
         {
@@ -106,29 +110,9 @@ public class MonstreEventManager : MonoBehaviour
         }
         StartNextEvent(futurEvents[0]);
     }
+    #endregion
 
-    private void Update() //Tests rapide pour PC
-    {
-        if(Input.GetKeyDown(KeyCode.Y))
-        {
-            Debug.Log("Test-1");
-            EndEvent();
-        }
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            GetResponse(CartesManager.cards[0]);
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            GetResponse(CartesManager.cards[1]);
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            GetResponse(CartesManager.cards[2]);
-        }
-    }
-
-    public static void AddEvent(List<Event> eventToAdd)
+    public static void AddEvent(List<Event> eventToAdd) //Ajoute un Event au Pool
     {
         foreach(Event evt in eventToAdd)
         {
@@ -139,7 +123,7 @@ public class MonstreEventManager : MonoBehaviour
         }
     }
 
-    public static void RemoveEvent(List<Event> eventToRemove)
+    public static void RemoveEvent(List<Event> eventToRemove) //Enlève un Event du Pool
     {
         foreach (Event evt in eventToRemove)
         {
@@ -150,15 +134,15 @@ public class MonstreEventManager : MonoBehaviour
         }
     }
 
-    public void StartNextEvent(Event newEvent)
+    public void StartNextEvent(Event newEvent) //Lance l'Event en entrée de fonction (Fonction publique appelant la fonction privée)
     {
         if (actualEvent == null)
         {
+            #region Mise à jour des cartes retirées
             List<EmotionMonstre> emotionsToAdd = new List<EmotionMonstre>();
             List<EmotionMonstre> keys = new List<EmotionMonstre>();
-            foreach(KeyValuePair<EmotionMonstre,int> dict in cardManager.removedCard)  //Problème de modification d'un valeur du dictionaire, il aime pas
+            foreach(KeyValuePair<EmotionMonstre,int> dict in cardManager.removedCard)
             {
-                Debug.Log("Test retire");
                 keys.Add(dict.Key);
             }
             for (int i = 0; i < cardManager.removedCard.Count; i++)
@@ -174,15 +158,16 @@ public class MonstreEventManager : MonoBehaviour
                 cardManager.removedCard.Remove(emot);
                 cardManager.AddCard(emot);
             }
+            #endregion
 
-            //Save de l'Etat actuel du jeu
             actualEvent = newEvent;
             StartEvent(actualEvent);
         }
     }
 
-    void StartEvent(Event eventToStart)
+    void StartEvent(Event eventToStart) //Lance le nouvel Event (Fonction privée)
     {
+        #region Mise en place du nouveau fond
         foreach (GameObject gm in fonds)
         {
             gm.SetActive(false);
@@ -196,34 +181,29 @@ public class MonstreEventManager : MonoBehaviour
                 fonds[1].SetActive(true);
                 break;
         }
+        #endregion
         ChangeSpritePerso(eventToStart.personnage.role.presets[eventToStart.preset].ReactionDepart);
-        monoDial.ShowAccroche(eventToStart.accroche, eventToStart.dialogue.dialogueDepart);
-        //monoDial.ShowDialogue(eventToStart.dialogue.dialogueDepart);
-        //cardManager.canPlayCards = true; //Modifier la position, pour le mettre à la fin de l'afficage du dialogue
+        monoDial.ShowAccroche(eventToStart.accroche.texte, eventToStart.dialogue.dialogueDepart);
 
         //Mettre le côté Animation des Cartes
-        //Augmentation du Score de Panique au fil de la Partie
     }
 
-    public void GetResponse(EmotionMonstre reponse)
+    public void GetResponse(EmotionMonstre reponse) //Récupère la carte jouée par le Joueur
     {
         PresetRole rolePreset = actualEvent.personnage.role.presets[actualEvent.preset];
         int damage = 0;
         Reactions emot = rolePreset.GetReact(reponse.emotion, out damage);
-        if (reponse.bonusRole.Contains(actualEvent.personnage.role))
+        if (reponse.bonusRole.Contains(actualEvent.personnage.role)) //Pour la réponse Bonus
         {
-            //Réponse Bonus
             ChangeSpritePerso(emot);
             monoDial.ShowDialogue(actualEvent.dialogue.reponseBonus);
             ChangeScoreCommu(actualEvent.personnage.communaute, emot, 1);
         }
-        else if (reponse.malusRole.Contains(actualEvent.personnage.role))
+        else if (reponse.malusRole.Contains(actualEvent.personnage.role)) //Pour la réponse Malus
         {
-            //Réponse Malus
             ChangeSpritePerso(emot);
             monoDial.ShowDialogue(actualEvent.dialogue.reponseMalus);
             ChangeScoreCommu(actualEvent.personnage.communaute, emot, -1);
-            //Panique
             Panique.AddPanic(10);
         }
         else
@@ -286,15 +266,15 @@ public class MonstreEventManager : MonoBehaviour
         {
             StartNextEvent(actualEvent.eventSuivant);
         }
-        else if (monstreHp <= 0) //Voir pour d'autres manières de finir le jeu
+        else if (monstreHp <= 0) //Fin "Bad End"
         {
             StartEndEvent(actualEvent.personnage.communaute.badEnding);
         }
-        else if(nbDeadPeople>5)
+        else if(nbDeadPeople>5) //Fin "Carnage"
         {
             StartEndEvent(finCarnage);
         }
-        else if(commus[0].acceptation.valeur > 10 || commus[0].desir.valeur > 10 || commus[0].pitie.valeur > 10)
+        else if(commus[0].acceptation.valeur > 10 || commus[0].desir.valeur > 10 || commus[0].pitie.valeur > 10) //Fin "Good End"
         {
             StartEndEvent(commus[0].goodEnding);
         }
@@ -325,25 +305,10 @@ public class MonstreEventManager : MonoBehaviour
         }
 
         saveCount++;
-        if(saveCount >= 3)
+        if(saveCount >= 3) //Save de l'état de la partie
         {
             saveCount = 0;
-            SaveLoadSystem.SaveGameState(actualEvent, Panique.value, monstreHp, eventsPool);
-            SaveLoadSystem.SaveCommunauteScore(commus);
-            cardManager.SaveCards();
-        }
-    }
-
-    public void EndGameEvent()
-    {
-        if (actualEvent.eventSuivant != null)
-        {
-            StartNextEvent(actualEvent.eventSuivant);
-        }
-        else
-        {
-            actualEvent = null;
-            
+            SaveGameState();
         }
     }
 
@@ -363,18 +328,18 @@ public class MonstreEventManager : MonoBehaviour
             }
             if (futurEvents.Contains(newEvent)) // Vérification de Doublon
             {
-                goto continueWhile;
+                continue;
             }
             if(!newEvent.personnage.isAlive) //Vérifie si le personnage est en vie
             {
-                goto continueWhile;
+                continue;
             }
             #region Communautés
             if (count < 75)
             {
-                for (int i = 0; i < 5; i++)
+                for (int j = 0; j < 5; j++)
                 {
-                    switch (futurEvents[i].personnage.communaute.name)
+                    switch (futurEvents[j].personnage.communaute.name)
                     {
                         case "Dirigeants":
                             compteCommu[0]++;
@@ -397,38 +362,42 @@ public class MonstreEventManager : MonoBehaviour
                 case "Dirigeants":
                     if (compteCommu[0] > 4)
                     {
-                        goto continueWhile;
+                        continue;
                     }
                     break;
                 case "Habitants":
                     if (compteCommu[1] > 4)
                     {
-                        goto continueWhile;
+                        continue;
                     }
                     break;
                 case "Mendiants":
                     if (compteCommu[2] > 4)
                     {
-                        goto continueWhile;
+                        continue;
                     }
                     break;
                 case "Représentants de l'ordre":
                     if (compteCommu[3] > 4)
                     {
-                        goto continueWhile;
+                        continue;
                     }
                     break;
             }
             #endregion
-            for (int i = 0; i < 4; i++) // Vérification d'un Event spécial présent
+            int i = 0;
+            for (i = 0; i < 4; i++) // Vérification d'un Event spécial présent
             {
                 if(futurEvents[i].eventSuivant != null)
                 {
-                    goto continueWhile;
+                    break;
                 }
             }
-            futurEvents[4] = newEvent;
-            continueWhile:;
+            if (i >= 4)
+            {
+                futurEvents[4] = newEvent;
+            }
+            //continueWhile:;
         }
     }
 
@@ -573,5 +542,12 @@ public class MonstreEventManager : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    public void SaveGameState()
+    {
+        SaveLoadSystem.SaveGameState(actualEvent, Panique.value, monstreHp, eventsPool);
+        SaveLoadSystem.SaveCommunauteScore(commus);
+        cardManager.SaveCards();
     }
 }

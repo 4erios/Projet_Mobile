@@ -12,7 +12,7 @@ public class MenuNavigation : MonoBehaviour
     public static UnityEvent mainMenuEvent, achievementEvent, settingsEvent, creditEvent, successEvent;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         mainMenuEvent = new UnityEvent();
         achievementEvent = new UnityEvent();

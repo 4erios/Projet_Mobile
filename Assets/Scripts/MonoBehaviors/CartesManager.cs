@@ -206,7 +206,7 @@ public class CartesManager : MonoBehaviour
     {
         if (cards.Contains(cardToRemove))
         {
-            removedCard.Add(cardToRemove, 3);
+            removedCard.Add(cardToRemove, 1);
             cards.Remove(cardToRemove);
             MonoCartes monoCardToRemove = default;
             foreach(MonoCartes cart in cartesJoueur)

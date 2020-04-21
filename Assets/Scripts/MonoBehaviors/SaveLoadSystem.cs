@@ -55,7 +55,7 @@ public class SaveLoadSystem : MonoBehaviour
         Directory.Delete(direc);
     }
 
-    #region GameState
+    #region Save System
     public static void ResetGameSate()
     {
         DeleteFileInDirectory(GetPath("GameState"));
@@ -209,6 +209,52 @@ public class SaveLoadSystem : MonoBehaviour
         }
     }
     #endregion
+
+    public static void SaveHistoric(List<AncientGame> historic)
+    {
+        string fileContent = "";
+        foreach (AncientGame game in historic)
+        {
+            fileContent += game.titre + "\n";
+        }
+        SaveTextDoc("GameState/Historic", fileContent);
+    }
+    public static string[] LoadHistoric()
+    {
+        if (File.Exists(GetPath("GameState/Historic")))
+        {
+            string[] fileContent = File.ReadAllLines(GetPath("GameState/Historic"));
+            return fileContent;
+        }
+        else
+        {
+            Debug.Log("Echec Chargement Historique");
+            return new string[0];
+        }
+    }
+
+    public static void SaveSuccess(List<Success> successList)
+    {
+        string fileContent = "";
+        foreach (Success sucess in successList)
+        {
+            fileContent += sucess.titre + "\n";
+        }
+        SaveTextDoc("GameState/Success", fileContent);
+    }
+    public static string[] LoadSuccess()
+    {
+        if (File.Exists(GetPath("GameState/Success")))
+        {
+            string[] fileContent = File.ReadAllLines(GetPath("GameState/Success"));
+            return fileContent;
+        }
+        else
+        {
+            Debug.Log("Echec Chargement Succès");
+            return new string[0];
+        }
+    }
 
     //Representation repulsion, agressivite, jalousie, desir, acceptation, pitie;
 

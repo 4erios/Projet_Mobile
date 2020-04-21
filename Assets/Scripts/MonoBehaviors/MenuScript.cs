@@ -13,6 +13,7 @@ public class MenuScript : EventTrigger
         if (!sceneLoading)
         {
             sceneLoading = true;
+            LoadingScreen.ShowLoadScreen();
             StartCoroutine(LoadGame(nbScene));
         }
     }
