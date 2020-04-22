@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Accroche", menuName = "Create Accroche")]
-public class Accroche : MonoBehaviour
+public class Accroche : ScriptableObject
 {
     public string texte;
 }
