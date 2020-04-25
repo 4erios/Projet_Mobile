@@ -8,7 +8,6 @@ public enum Lieux { ruelle, pontDeSeine}
 public class Event : ScriptableObject
 {
     public Personnage personnage;
-    [TextArea(2, 3)]
     public Accroche accroche;
     public Dialogues dialogue;
     public Lieux lieux;

@@ -26,4 +26,9 @@ public class MonoCartes : MonoBehaviour
             animBlanche.runtimeAnimatorController = emotion.animBlanche;
         }
     }
+
+    public void ChangeLayerLevel(int newLevel)
+    {
+        spritePrincipal.sortingOrder = newLevel;
+    }
 }

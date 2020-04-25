@@ -174,6 +174,7 @@ public class MonstreEventManager : MonoBehaviour
         }
         switch (eventToStart.lieux)
         {
+            //Mettre une animation à la place d'un SetActive
             case Lieux.ruelle:
                 fonds[0].SetActive(true);
                 break;
@@ -182,7 +183,7 @@ public class MonstreEventManager : MonoBehaviour
                 break;
         }
         #endregion
-        ChangeSpritePerso(eventToStart.personnage.role.presets[eventToStart.preset].ReactionDepart);
+        ChangeSpritePerso(eventToStart.personnage.role.presets[eventToStart.preset].ReactionDepart); //Faire une autre fonction qui, en plus de choisir le sprite, lance une animation
         monoDial.ShowAccroche(eventToStart.accroche.texte, eventToStart.dialogue.dialogueDepart);
 
         //Mettre le côté Animation des Cartes
@@ -262,6 +263,7 @@ public class MonstreEventManager : MonoBehaviour
 
     public void EndEvent()
     {
+        //Animation de fin d'évènement OU est appelée à la fin de l'animation (Uniquement si l'instruction vien de MonoDialogue)
         if (actualEvent.eventSuivant != null)
         {
             StartNextEvent(actualEvent.eventSuivant);

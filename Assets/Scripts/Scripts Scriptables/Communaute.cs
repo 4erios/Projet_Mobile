@@ -14,7 +14,6 @@ public class Representation
     {
         int ancientValue = valeur;
         valeur += value;
-        Debug.Log("Ancient : " + ancientValue + " New : " + valeur);
 
         if(ancientValue < valeur && valeur > seuilHaut && journalPhrasesUp.Count>0 && firstState)
         {

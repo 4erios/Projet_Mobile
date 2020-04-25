@@ -34,7 +34,6 @@ public class MonoDialogue : MonoBehaviour
     IEnumerator AffichageDialogue()
     {
         isDialShowing = true;
-        Debug.Log(dial);
         string tmpStr = "";
         for(int i = 0; i < dial.Length; i++)
         {

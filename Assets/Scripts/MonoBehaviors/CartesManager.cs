@@ -55,14 +55,14 @@ public class CartesManager : MonoBehaviour
     private void Start()
     {
 
-        while(cards.Count < 3)
+        /*while(cards.Count < 3)
         {
             EmotionMonstre cart = cartesBases[Random.Range(0, cartesBases.Count)];
             if(!cards.Contains(cart))
             {
                 AddCard(cart);
             }
-        }/*
+        }*/
         for(int i = 0; i< 6; i++)
         {
             EmotionMonstre cart = cartesBases[i];
@@ -70,7 +70,7 @@ public class CartesManager : MonoBehaviour
             {
                 AddCard(cart);
             }
-        }*/
+        }
     }
 
     private void Update()
@@ -84,7 +84,30 @@ public class CartesManager : MonoBehaviour
                 RaycastHit2D hitinfo = Physics2D.Raycast(touchStartPos, cam.transform.forward);
                 if(hitinfo.collider != null && hitinfo.collider.name == "ZoneCarte")
                 {
-                    isTouch = true;
+                    if (touch.position.x - positionCentrale.x > 360 + distanceBetweenCards / 2 || touch.position.x - positionCentrale.x < 360 - distanceBetweenCards / 2)
+                    {
+                        if (touch.position.x - positionCentrale.x > 360 + (3 * distanceBetweenCards / 2))
+                        {
+                            DeplacementCartes(-distanceBetweenCards * 2);
+                        }
+                        else if (touch.position.x - positionCentrale.x < 360 - (3 * distanceBetweenCards / 2))
+                        {
+                            DeplacementCartes(distanceBetweenCards * 2);
+                        }
+                        else if (touch.position.x - positionCentrale.x > 360 + distanceBetweenCards / 2)
+                        {
+                            DeplacementCartes(-distanceBetweenCards);
+                        }
+                        else if (touch.position.x - positionCentrale.x < 360 - distanceBetweenCards / 2)
+                        {
+                            DeplacementCartes(distanceBetweenCards);
+                        }
+                        ResetCardPosition();
+                    }
+                    else
+                    {
+                        isTouch = true;
+                    }
                 }
                 touchStartPos = touch.position;
             }
@@ -136,7 +159,30 @@ public class CartesManager : MonoBehaviour
             RaycastHit2D hitinfo = Physics2D.Raycast(touchStartPos, cam.transform.forward);
             if (hitinfo.collider != null && hitinfo.collider.name == "ZoneCarte")
             {
-                isTouch = true;
+                if (Input.mousePosition.x - positionCentrale.x > 360 + distanceBetweenCards / 2 || Input.mousePosition.x - positionCentrale.x < 360 - distanceBetweenCards / 2)
+                {
+                    if (Input.mousePosition.x - positionCentrale.x > 360 + (3 * distanceBetweenCards / 2))
+                    {
+                        DeplacementCartes(-distanceBetweenCards * 2);
+                    }
+                    else if (Input.mousePosition.x - positionCentrale.x < 360 - (3 * distanceBetweenCards / 2))
+                    {
+                        DeplacementCartes(distanceBetweenCards * 2);
+                    }
+                    else if (Input.mousePosition.x - positionCentrale.x > 360 + distanceBetweenCards / 2)
+                    {
+                        DeplacementCartes(-distanceBetweenCards);
+                    }
+                    else if (Input.mousePosition.x - positionCentrale.x < 360 - distanceBetweenCards / 2)
+                    {
+                        DeplacementCartes(distanceBetweenCards);
+                    }
+                    ResetCardPosition();
+                }
+                else
+                {
+                    isTouch = true;
+                }
             }
             touchStartPos = Input.mousePosition;
         }
@@ -179,7 +225,6 @@ public class CartesManager : MonoBehaviour
             Vector3 pos = cartesJoueur[mainCard].transform.position;
             if ((pos.x < dialogueTransf.position.x + 9 / 2 && pos.x > dialogueTransf.position.x - 9 / 2) && (pos.y < dialogueTransf.position.y + 1.5f + 4 / 2 && pos.y > dialogueTransf.position.y + 1.5f - 4 / 2))
             {
-                Debug.Log("Test");
                 dialogueTransf.GetComponent<MonoDialogue>().GetCard(cartesJoueur[mainCard].emotion);
             }
             isTouch = false;
@@ -242,6 +287,7 @@ public class CartesManager : MonoBehaviour
             cartesJoueur[mainCard].transform.localScale = new Vector3(1f, 1f, 1f);
             cartesJoueur[i].colid.enabled = false;
         }
+        DeplacementCartes(0);
     }
 
     void DeplacementCartes(float speed)
@@ -252,11 +298,25 @@ public class CartesManager : MonoBehaviour
             if(Vector2.Distance(cartesJoueur[i].transform.localPosition, positionCentrale) < distanceBetweenCards/2)
             {
                 cartesJoueur[i].transform.localScale = Vector3.one * (1 - (0.3f * (Vector2.Distance(cartesJoueur[i].transform.localPosition, positionCentrale) / (distanceBetweenCards / 2))));
+                cartesJoueur[i].ChangeLayerLevel(10);
                 mainCard = i;
             }
             else
             {
+                if(Vector2.Distance(cartesJoueur[i].transform.localPosition, positionCentrale) <= 3*distanceBetweenCards / 2)
+                {
+                    cartesJoueur[i].ChangeLayerLevel(9);
+                }
+                else if(Vector2.Distance(cartesJoueur[i].transform.localPosition, positionCentrale) <= 5 * distanceBetweenCards / 2)
+                {
+                    cartesJoueur[i].ChangeLayerLevel(8);
+                }
+                else
+                {
+                    cartesJoueur[i].ChangeLayerLevel(7);
+                }
                 cartesJoueur[i].transform.localScale = Vector3.one * 0.7f;
+
             }
             currentPosition = cartesJoueur[i].transform.localPosition;
             float newX = currentPosition.x;
