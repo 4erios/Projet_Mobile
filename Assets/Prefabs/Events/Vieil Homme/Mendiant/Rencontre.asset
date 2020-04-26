@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rencontre
   m_EditorClassIdentifier: 
   personnage: {fileID: 11400000, guid: 0bd5e7e4718357649bb790cd5167c1ec, type: 2}
-  accroche: Test Accroche
+  accroche: {fileID: 11400000, guid: 51084463651787845b8c7072c4a7c450, type: 2}
   dialogue: {fileID: 11400000, guid: 849de7cb648d7604b820c43b70fd03e9, type: 2}
   lieux: 0
   effetBonus: {fileID: 0}

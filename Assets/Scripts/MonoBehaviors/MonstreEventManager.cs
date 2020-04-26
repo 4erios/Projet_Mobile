@@ -197,13 +197,13 @@ public class MonstreEventManager : MonoBehaviour
         if (reponse.bonusRole.Contains(actualEvent.personnage.role)) //Pour la réponse Bonus
         {
             ChangeSpritePerso(emot);
-            monoDial.ShowDialogue(actualEvent.dialogue.reponseBonus);
+            monoDial.ShowDialogue(actualEvent.dialogue.reponseBonus, true);
             ChangeScoreCommu(actualEvent.personnage.communaute, emot, 1);
         }
         else if (reponse.malusRole.Contains(actualEvent.personnage.role)) //Pour la réponse Malus
         {
             ChangeSpritePerso(emot);
-            monoDial.ShowDialogue(actualEvent.dialogue.reponseMalus);
+            monoDial.ShowDialogue(actualEvent.dialogue.reponseMalus, true);
             ChangeScoreCommu(actualEvent.personnage.communaute, emot, -1);
             Panique.AddPanic(10);
         }
@@ -421,22 +421,22 @@ public class MonstreEventManager : MonoBehaviour
         switch (react)
         {
             case Reactions.interet:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponseInteret);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponseInteret, true);
                 break;
             case Reactions.affection:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponseAffection);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponseAffection, true);
                 break;
             case Reactions.compassion:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponseCompassion);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponseCompassion, true);
                 break;
             case Reactions.degout:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponseDegout);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponseDegout, true);
                 break;
             case Reactions.peur:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponsePeur);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponsePeur, true);
                 break;
             case Reactions.haine:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponseHaine);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponseHaine, true);
                 break;
         }
     }

@@ -7,12 +7,12 @@ public class MonoCartes : MonoBehaviour
 {
     public EmotionMonstre emotion;
     public Collider2D colid;
-    public SpriteRenderer spritePrincipal, titre;
+    public SpriteRenderer spriteNoir, spriteBlanc, fond, titre;
     public Animator animNoire, animBlanche;
 
     private void Start()
     {
-        spritePrincipal.sprite = emotion.sprite;
+        spriteNoir.sprite = emotion.sprite;
         if (emotion.titre != null)
         {
             titre.sprite = emotion.titre;
@@ -29,6 +29,9 @@ public class MonoCartes : MonoBehaviour
 
     public void ChangeLayerLevel(int newLevel)
     {
-        spritePrincipal.sortingOrder = newLevel;
+        spriteNoir.sortingOrder = newLevel;
+        spriteBlanc.sortingOrder = newLevel + 1;
+        fond.sortingOrder = newLevel - 1;
+        titre.sortingOrder = newLevel + 2;
     }
 }

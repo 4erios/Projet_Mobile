@@ -379,7 +379,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotion: {fileID: 11400000, guid: f0123fb999312ea44a745aa0ef62eccf, type: 2}
   colid: {fileID: 8175669260088574203}
-  spritePrincipal: {fileID: 1392090219117885908}
+  spriteNoir: {fileID: 1392090219117885908}
+  spriteBlanc: {fileID: 2256616161386690753}
+  fond: {fileID: 4123123529062774251}
   titre: {fileID: 4123123529062774251}
   animNoire: {fileID: 6479537983728552359}
   animBlanche: {fileID: 6693651068886048107}

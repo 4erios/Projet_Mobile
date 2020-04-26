@@ -16,6 +16,7 @@ public class MonoDialogue : MonoBehaviour
     [SerializeField]
     private CartesManager cardManager;
     private bool isDialShowing;
+    private bool isResponseDial;
     private string dial;
 
     public void ShowAccroche(string txt, string dialog)
@@ -25,8 +26,9 @@ public class MonoDialogue : MonoBehaviour
         textAccroche.text = txt;
     }
 
-    public void ShowDialogue(string dialogue)
+    public void ShowDialogue(string dialogue, bool reponseDial)
     {
+        isResponseDial = reponseDial;
         dial = dialogue;
         StartCoroutine(AffichageDialogue());
     }
@@ -42,7 +44,10 @@ public class MonoDialogue : MonoBehaviour
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
         isDialShowing = false;
-        cardManager.canPlayCards = true;
+        if (!isResponseDial)
+        {
+            cardManager.canPlayCards = true;
+        }
     }
 
     public void GetCard(EmotionMonstre carte)
@@ -98,12 +103,15 @@ public class MonoDialogue : MonoBehaviour
                 StopAllCoroutines();
                 zoneText.text = dial;
                 isDialShowing = false;
-                cardManager.canPlayCards = true;
+                if (!isResponseDial)
+                {
+                    cardManager.canPlayCards = true;
+                }
             }
         
             if (zoneAccroche.activeSelf)
             {
-                ShowDialogue(dial);
+                ShowDialogue(dial, false);
                 zoneAccroche.SetActive(false);
             }
             else
