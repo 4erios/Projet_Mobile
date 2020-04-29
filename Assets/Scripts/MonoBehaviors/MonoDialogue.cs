@@ -23,6 +23,7 @@ public class MonoDialogue : MonoBehaviour
     {
         dial = dialog;
         zoneAccroche.SetActive(true);
+        manager.HideCards();
         textAccroche.text = txt;
     }
 
@@ -31,6 +32,11 @@ public class MonoDialogue : MonoBehaviour
         isResponseDial = reponseDial;
         dial = dialogue;
         StartCoroutine(AffichageDialogue());
+    }
+
+    public void SupprDial()
+    {
+        zoneText.text = "";
     }
 
     IEnumerator AffichageDialogue()
@@ -111,6 +117,8 @@ public class MonoDialogue : MonoBehaviour
         
             if (zoneAccroche.activeSelf)
             {
+                manager.ShowCards();
+                manager.AccrocheShowed();
                 ShowDialogue(dial, false);
                 zoneAccroche.SetActive(false);
             }
@@ -126,7 +134,8 @@ public class MonoDialogue : MonoBehaviour
     {
         if(manager.needTap)
         {
-            manager.EndEvent();
+            //manager.EndEvent();
+            manager.DisparitionPerso();
             manager.needTap = false;
         }
     }

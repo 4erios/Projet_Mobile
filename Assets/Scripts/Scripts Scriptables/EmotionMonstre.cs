@@ -8,7 +8,7 @@ public class EmotionMonstre : ScriptableObject
 {
     public Emotions emotion;
     public Sprite sprite, titre;
-    public RuntimeAnimatorController animNoire, animBlanche;
+    public RuntimeAnimatorController animNoire;
     public List<Role> bonusRole;
     public List<Role> malusRole;
 }

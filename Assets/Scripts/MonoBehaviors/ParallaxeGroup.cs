@@ -8,9 +8,17 @@ public class ParallaxeGroup : MonoBehaviour
 
     private Gyroscope gyro;
     private Vector2 acceleratorStart;
+    [SerializeField]
+    private Animator anim;
 
     private void OnEnable()
     {
+        /*Color baseColor = Color.white;
+        baseColor.a = 0;
+        foreach(Parallaxe item in items)
+        {
+            item.gameObject.GetComponent<SpriteRenderer>().color = baseColor;
+        }*/
         acceleratorStart = new Vector2(Input.acceleration.x, Input.acceleration.y);
         StopAllCoroutines();
         x = 0;
@@ -21,6 +29,11 @@ public class ParallaxeGroup : MonoBehaviour
     private void OnDisable()
     {
         StopAllCoroutines();
+    }
+
+    public void HideDecor()
+    {
+        gameObject.SetActive(false);
     }
 
     float x, y;

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repulsion:
     valeur: 0
-    seuilHaut: 2
-    seuilBas: -2
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp:
     - Mendiant Repulsion +
@@ -23,8 +23,8 @@ MonoBehaviour:
     - Mendiant Repulsion -
   agressivite:
     valeur: 0
-    seuilHaut: 2
-    seuilBas: -2
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp:
     - Mendiant Agro +
@@ -32,8 +32,8 @@ MonoBehaviour:
     - Mendiant Agro -
   jalousie:
     valeur: 0
-    seuilHaut: 2
-    seuilBas: -2
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp:
     - Mendiant Jalousie +
@@ -41,8 +41,8 @@ MonoBehaviour:
     - Mendiant Jalousie -
   desir:
     valeur: 0
-    seuilHaut: 2
-    seuilBas: -2
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp:
     - Mendiant Desir +
@@ -50,8 +50,8 @@ MonoBehaviour:
     - Mendiant Desir -
   acceptation:
     valeur: 0
-    seuilHaut: 2
-    seuilBas: -2
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp:
     - Mendiant Acceptation +
@@ -59,8 +59,8 @@ MonoBehaviour:
     - Mendiant Acceptation -
   pitie:
     valeur: 0
-    seuilHaut: 2
-    seuilBas: -2
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp:
     - Mendiant Pitie +

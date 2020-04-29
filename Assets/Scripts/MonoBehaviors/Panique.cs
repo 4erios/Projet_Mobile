@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Panique : MonoBehaviour
 {
-    public static int value;
+    public static float value, maxValue;
     [SerializeField]
     private List<Event> middleGameEvent, lateGameEvent;
     private static List<Event> midEvent, lateEvent;
@@ -15,11 +15,14 @@ public class Panique : MonoBehaviour
     private Image paniqueAffichage;
     [SerializeField]
     private List<Sprite> paniqueSprites;
+    [SerializeField]
+    private float max;
 
-    private void Start()
+    private void Awake()
     {
         midEvent = middleGameEvent;
         lateEvent = lateGameEvent;
+        maxValue = max;
         addPanicEvent.AddListener(AffichagePanique);
         //Mettre à jour l'affichage de la panique
     }
@@ -30,14 +33,18 @@ public class Panique : MonoBehaviour
         AddPanic(5);
     }
 
-    public static void AddPanic(int valueToAdd)
+    public static void AddPanic(float valueToAdd)
     {
+        if(maxValue==0)
+        {
+            maxValue = 10;
+        }
         value += valueToAdd;
-        if(value >= 80)
+        if(value >= 0.8f* maxValue)
         {
             MonstreEventManager.AddEvent(lateEvent);
         }
-        else if(value >= 50)
+        else if(value >= 0.5f* maxValue)
         {
             MonstreEventManager.AddEvent(midEvent);
         }
@@ -46,19 +53,19 @@ public class Panique : MonoBehaviour
 
     void AffichagePanique()
     {
-        if(value>=100)
+        if(value>= maxValue)
         {
             paniqueAffichage.sprite = paniqueSprites[4];
         }
-        else if(value>=75)
+        else if(value>=0.75* maxValue)
         {
             paniqueAffichage.sprite = paniqueSprites[3];
         }
-        else if (value >= 50)
+        else if (value >= 0.5* maxValue)
         {
             paniqueAffichage.sprite = paniqueSprites[2];
         }
-        else if (value >= 25)
+        else if (value >= 0.25* maxValue)
         {
             paniqueAffichage.sprite = paniqueSprites[1];
         }

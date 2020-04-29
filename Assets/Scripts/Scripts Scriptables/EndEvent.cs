@@ -8,4 +8,5 @@ public class EndEvent : ScriptableObject
     public Sprite imageFin;
     [TextArea(3, 5)]
     public string texteFin;
+    public Success success;
 }

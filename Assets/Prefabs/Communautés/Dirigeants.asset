@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repulsion:
     valeur: 0
-    seuilHaut: 0
-    seuilBas: 0
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp:
     - "Dirigeant R\xE9pulsion +"
@@ -23,8 +23,8 @@ MonoBehaviour:
     - "Dirigeant R\xE9pulsion -"
   agressivite:
     valeur: 0
-    seuilHaut: 0
-    seuilBas: 0
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp:
     - Dirigeant Agro +
@@ -32,8 +32,8 @@ MonoBehaviour:
     - Dirigeant Agro -
   jalousie:
     valeur: 0
-    seuilHaut: 0
-    seuilBas: 0
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp:
     - Dirigeant Jalousie +
@@ -41,8 +41,8 @@ MonoBehaviour:
     - Dirigeant Jalousie -
   desir:
     valeur: 0
-    seuilHaut: 0
-    seuilBas: 0
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp:
     - "Dirigeant D\xE9sir +"
@@ -50,8 +50,8 @@ MonoBehaviour:
     - "Dirigeant D\xE9sir -"
   acceptation:
     valeur: 0
-    seuilHaut: 0
-    seuilBas: 0
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp:
     - Dirigeant Acceptation +
@@ -59,8 +59,8 @@ MonoBehaviour:
     - Dirigeant Acceptation -
   pitie:
     valeur: 0
-    seuilHaut: 0
-    seuilBas: 0
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp:
     - Dirigeant Pitie +

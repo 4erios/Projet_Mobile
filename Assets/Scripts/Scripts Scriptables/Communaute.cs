@@ -15,6 +15,15 @@ public class Representation
         int ancientValue = valeur;
         valeur += value;
 
+        if(valeur < -6)
+        {
+            valeur = -6;
+        }
+        else if(valeur > 6)
+        {
+            valeur = 6;
+        }
+
         if(ancientValue < valeur && valeur > seuilHaut && journalPhrasesUp.Count>0 && firstState)
         {
             firstState = false;

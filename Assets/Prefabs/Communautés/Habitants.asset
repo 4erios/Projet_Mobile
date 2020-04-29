@@ -14,43 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repulsion:
     valeur: 0
-    seuilHaut: 0
-    seuilBas: 0
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp: []
     journalPhrasesDown: []
   agressivite:
     valeur: 0
-    seuilHaut: 0
-    seuilBas: 0
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp: []
     journalPhrasesDown: []
   jalousie:
     valeur: 0
-    seuilHaut: 0
-    seuilBas: 0
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp: []
     journalPhrasesDown: []
   desir:
     valeur: 0
-    seuilHaut: 0
-    seuilBas: 0
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp: []
     journalPhrasesDown: []
   acceptation:
     valeur: 0
-    seuilHaut: 0
-    seuilBas: 0
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp: []
     journalPhrasesDown: []
   pitie:
     valeur: 0
-    seuilHaut: 0
-    seuilBas: 0
+    seuilHaut: 3
+    seuilBas: -3
     eventsPhase2: []
     journalPhrasesUp: []
     journalPhrasesDown: []

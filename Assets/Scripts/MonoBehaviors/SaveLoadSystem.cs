@@ -8,6 +8,16 @@ public class SaveLoadSystem : MonoBehaviour
 {
     //https://www.youtube.com/watch?v=SNwPq01yHds
 
+    [SerializeField]
+    private List<Success> allSuccess;
+
+    private static List<Success> everySuccess;
+
+    private void Start()
+    {
+        everySuccess = allSuccess;
+    }
+
     static string GetPath(string name, string extension = ".txt") => Path.Combine(Application.persistentDataPath, name + extension);
 
     public static void Save(object objToSave, string name)
@@ -78,7 +88,7 @@ public class SaveLoadSystem : MonoBehaviour
     }
 
     #region GameState
-    public static void SaveGameState(Event actualEvent, int panique, int blessures, List<Event> pool)
+    public static void SaveGameState(Event actualEvent, float panique, int blessures, List<Event> pool)
     {
         string fileContent = "";
         fileContent += actualEvent.name + "\n";
@@ -233,7 +243,21 @@ public class SaveLoadSystem : MonoBehaviour
         }
     }
 
-    public static void SaveSuccess(List<Success> successList)
+    public static bool ValidateSuccess(Success succ)
+    {
+        List<Success> successList = GetSuccessList();
+        if(successList.Contains(succ))
+        {
+            return false;
+        }
+        else
+        {
+            successList.Add(succ);
+            SaveAllSuccess(successList);
+            return true;
+        }
+    }
+    public static void SaveAllSuccess(List<Success> successList)
     {
         string fileContent = "";
         foreach (Success sucess in successList)
@@ -254,6 +278,24 @@ public class SaveLoadSystem : MonoBehaviour
             Debug.Log("Echec Chargement Succès");
             return new string[0];
         }
+    }
+    private static List<Success> GetSuccessList()
+    {
+        string[] succesTitles = LoadSuccess();
+        List<Success> unlockedSucc = new List<Success>();
+
+        foreach(string title in succesTitles)
+        {
+            for(int i = 0; i < everySuccess.Count; i++)
+            {
+                if(everySuccess[i].titre == title)
+                {
+                    unlockedSucc.Add(everySuccess[i]);
+                    break;
+                }
+            }
+        }
+        return unlockedSucc;
     }
 
     //Representation repulsion, agressivite, jalousie, desir, acceptation, pitie;

@@ -12,22 +12,31 @@ public class MonoEndAffichage : MonoBehaviour
     [SerializeField]
     private MenuScript menus;
 
+    private float timeBeforeClic = 1.5f;
+
     private void Update()
     {
-        if (Input.touchCount > 0 && canEnd)
+        if (timeBeforeClic <= 0)
         {
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
+            if (Input.touchCount > 0 && canEnd)
+            {
+                Touch touch = Input.GetTouch(0);
+                if (touch.phase == TouchPhase.Began)
+                {
+                    menus.LoadScene(0);
+                    canEnd = false;
+                }
+            }
+
+            if (Input.GetMouseButtonDown(0) && canEnd)
             {
                 menus.LoadScene(0);
                 canEnd = false;
             }
         }
-
-        if(Input.GetMouseButtonDown(0) && canEnd)
+        else
         {
-            menus.LoadScene(0);
-            canEnd = false;
+            timeBeforeClic -= Time.fixedDeltaTime;
         }
     }
 }

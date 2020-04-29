@@ -56,14 +56,14 @@ public class CartesManager : MonoBehaviour
 
     private void Start()
     {
-        /*while(cards.Count < 3)
+        while(cards.Count < 3)
         {
             EmotionMonstre cart = cartesBases[Random.Range(0, cartesBases.Count)];
             if(!cards.Contains(cart))
             {
                 AddCard(cart);
             }
-        }*/
+        }/*
         for(int i = 0; i< 6; i++)
         {
             EmotionMonstre cart = cartesBases[i];
@@ -71,9 +71,8 @@ public class CartesManager : MonoBehaviour
             {
                 AddCard(cart);
             }
-        }
+        }*/
         screenSize = new Vector2(660, Screen.height);
-        Debug.Log("World pont : " + cam.ScreenToWorldPoint(screenSize));
         screenSize = cam.ScreenToWorldPoint(screenSize);
     }
 

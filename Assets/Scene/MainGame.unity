@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personnageActuel: {fileID: 0}
+  manager: {fileID: 696124072}
 --- !u!1 &216298784
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,7 +382,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: bf2a18f6699213f4dac5b34d7579bab3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -418,6 +419,7 @@ GameObject:
   - component: {fileID: 373258129}
   - component: {fileID: 373258131}
   - component: {fileID: 373258130}
+  - component: {fileID: 373258132}
   m_Layer: 5
   m_Name: Zone Accroche
   m_TagString: Untagged
@@ -442,8 +444,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.1999993, y: 504.99997}
-  m_SizeDelta: {x: 661.2, y: 219.5}
+  m_AnchoredPosition: {x: 5.199999, y: 468.2}
+  m_SizeDelta: {x: 827.8, y: 1525.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &373258130
 MonoBehaviour:
@@ -452,13 +454,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373258128}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -481,6 +483,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373258128}
   m_CullTransparentMesh: 0
+--- !u!95 &373258132
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373258128}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: edb886cfedab13341bf2dcfce91175d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &407511004
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +650,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 3f54cf7fa88a94f429e6101527775dc7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -793,6 +814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 513282778}
   - component: {fileID: 513282779}
+  - component: {fileID: 513282780}
   m_Layer: 0
   m_Name: Fond Ruelle
   m_TagString: Untagged
@@ -833,6 +855,26 @@ MonoBehaviour:
   - {fileID: 724766698}
   - {fileID: 437058028}
   - {fileID: 676766340}
+  anim: {fileID: 513282780}
+--- !u!95 &513282780
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513282777}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e62618095adc1e347a867d8f0eb0384b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &547154717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,7 +1292,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: 7d2acfc07f966374b9741b8266db2c3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1324,6 +1366,7 @@ MonoBehaviour:
   fonds:
   - {fileID: 513282777}
   - {fileID: 1286704867}
+  valeurFinCommu: 6
   monoPerso: {fileID: 177643486}
   monoDial: {fileID: 2032892226}
   monoJourn: {fileID: 1976817514}
@@ -1382,6 +1425,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 99752a885896c594d92eaf6f7f8c9a51, type: 3}
   - {fileID: 21300000, guid: 6ee8321a4aeab4e4d9040841a95532b7, type: 3}
   - {fileID: 21300000, guid: 675e9903b91ae56409a82074dc92f25e, type: 3}
+  max: 10
 --- !u!114 &696124075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1479,7 +1523,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 97d6ba9bba05022468566b43ba0fc49f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1656,8 +1700,8 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 720, y: 1480}
-  m_ScreenMatchMode: 1
-  m_MatchWidthOrHeight: 1
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1775,7 +1819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1818,7 +1862,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
+  m_AnchoredPosition: {x: -22, y: -331}
   m_SizeDelta: {x: 661.2, y: 219.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &860647480 stripped
@@ -2076,6 +2120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d828e617f5f2eac4eb25656fbc279192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allSuccess: []
 --- !u!4 &1215937000
 Transform:
   m_ObjectHideFlags: 0
@@ -2099,6 +2144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1283027728}
+  - component: {fileID: 1283027729}
   m_Layer: 5
   m_Name: EndGame
   m_TagString: Untagged
@@ -2127,6 +2173,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1283027729
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283027727}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78b7c553668af9648bede10238d9c752, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1286704867
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,6 +2202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1286704868}
   - component: {fileID: 1286704869}
+  - component: {fileID: 1286704870}
   m_Layer: 0
   m_Name: Fond Pont de Seine
   m_TagString: Untagged
@@ -2177,6 +2243,26 @@ MonoBehaviour:
   - {fileID: 747930137}
   - {fileID: 1323345515}
   - {fileID: 366837887}
+  anim: {fileID: 1286704870}
+--- !u!95 &1286704870
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286704867}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e62618095adc1e347a867d8f0eb0384b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1295947115
 GameObject:
   m_ObjectHideFlags: 0
@@ -2321,7 +2407,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 828561062355c9746b4737604521f48b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2745,6 +2831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1976817513}
   - component: {fileID: 1976817514}
+  - component: {fileID: 1976817515}
   m_Layer: 5
   m_Name: Journal
   m_TagString: Untagged
@@ -2787,6 +2874,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titre: {fileID: 975580051}
   manag: {fileID: 696124072}
+  anim: {fileID: 1976817515}
+--- !u!95 &1976817515
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976817512}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cfb0f57f3171b244e9fd84686f50bebe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1996480738
 GameObject:
   m_ObjectHideFlags: 0
@@ -3018,7 +3125,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 1

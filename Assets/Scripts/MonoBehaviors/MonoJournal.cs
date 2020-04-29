@@ -9,6 +9,8 @@ public class MonoJournal : MonoBehaviour
     private Text titre;
     [SerializeField]
     private MonstreEventManager manag;
+    [SerializeField]
+    private Animator anim;
 
     private void Update()
     {
@@ -17,21 +19,35 @@ public class MonoJournal : MonoBehaviour
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
+                manag.RemoveFromJournal();
                 manag.EndEvent();
             }
         }
 
         if(Input.GetMouseButtonDown(0))
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            manag.RemoveFromJournal();
             manag.EndEvent();
         }
     }
 
     public void ShowText(string text)
     {
+        manag.HideCards();
+        anim.SetBool("EndJournal", false);
         titre.text = text;
     }
 
+    public void Close()
+    {
+        anim.SetBool("EndJournal", true);
+    }
+
+    public void Disapear()
+    {
+        manag.ShowCards();
+        gameObject.SetActive(false);
+    }
 }

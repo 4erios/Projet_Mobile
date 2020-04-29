@@ -12,6 +12,8 @@ public class MonstreEventManager : MonoBehaviour
     private List<Communaute> commus;
     [SerializeField]
     private List<GameObject> fonds;
+    [SerializeField]
+    private int valeurFinCommu = 6;
 
     [Header("Pour la Prog - Pas Touche")]
     [SerializeField]
@@ -75,7 +77,6 @@ public class MonstreEventManager : MonoBehaviour
                     if (evt.name == name)
                     {
                         eventsDepart.Add(evt);
-                        Debug.Log(evt.name + " == " + eventName);
                         if (evt.name == eventName)
                         {
                             futurEvents.Add(evt);
@@ -112,13 +113,26 @@ public class MonstreEventManager : MonoBehaviour
     }
     #endregion
 
+    public void ShowCards()
+    {
+        cardManager.gameObject.SetActive(true);
+    }
+
+    public void HideCards()
+    {
+        cardManager.gameObject.SetActive(false);
+    }
+
     public static void AddEvent(List<Event> eventToAdd) //Ajoute un Event au Pool
     {
-        foreach(Event evt in eventToAdd)
+        if (eventToAdd.Count > 0 && eventToAdd[0] != null)
         {
-            if (!eventsPool.Contains(evt))
+            foreach (Event evt in eventToAdd)
             {
-                eventsPool.Add(evt);
+                if (!eventsPool.Contains(evt))
+                {
+                    eventsPool.Add(evt);
+                }
             }
         }
     }
@@ -170,7 +184,7 @@ public class MonstreEventManager : MonoBehaviour
         #region Mise en place du nouveau fond
         foreach (GameObject gm in fonds)
         {
-            gm.SetActive(false);
+            gm.GetComponent<ParallaxeGroup>().HideDecor();
         }
         switch (eventToStart.lieux)
         {
@@ -183,10 +197,14 @@ public class MonstreEventManager : MonoBehaviour
                 break;
         }
         #endregion
-        ChangeSpritePerso(eventToStart.personnage.role.presets[eventToStart.preset].ReactionDepart); //Faire une autre fonction qui, en plus de choisir le sprite, lance une animation
         monoDial.ShowAccroche(eventToStart.accroche.texte, eventToStart.dialogue.dialogueDepart);
 
         //Mettre le côté Animation des Cartes
+    }
+
+    public void AccrocheShowed()
+    {
+        ApparitionPerso(actualEvent.personnage.role.presets[actualEvent.preset].ReactionDepart);
     }
 
     public void GetResponse(EmotionMonstre reponse) //Récupère la carte jouée par le Joueur
@@ -205,7 +223,7 @@ public class MonstreEventManager : MonoBehaviour
             ChangeSpritePerso(emot);
             monoDial.ShowDialogue(actualEvent.dialogue.reponseMalus, true);
             ChangeScoreCommu(actualEvent.personnage.communaute, emot, -1);
-            Panique.AddPanic(10);
+            Panique.AddPanic(2);
         }
         else
         {
@@ -215,13 +233,13 @@ public class MonstreEventManager : MonoBehaviour
             switch (emot)
             {
                 case Reactions.degout:
-                    Panique.AddPanic(3);
+                    Panique.AddPanic(1);
                     break;
                 case Reactions.peur:
-                    Panique.AddPanic(6);
+                    Panique.AddPanic(2);
                     break;
                 case Reactions.haine:
-                    Panique.AddPanic(3);
+                    Panique.AddPanic(1);
                     break;
             }
         }
@@ -261,6 +279,15 @@ public class MonstreEventManager : MonoBehaviour
         representationForJournal.Add(phrase);
     }
 
+    [ContextMenu("TestJournal")]
+    void EndEventTestJournel()
+    {
+        AddRepresentationForJournal("Test Journal 1");
+        AddRepresentationForJournal("Test Journal 2");
+        AddRepresentationForJournal("Test Journal 3");
+        EndEvent();
+    }
+
     public void EndEvent()
     {
         //Animation de fin d'évènement OU est appelée à la fin de l'animation (Uniquement si l'instruction vien de MonoDialogue)
@@ -276,41 +303,48 @@ public class MonstreEventManager : MonoBehaviour
         {
             StartEndEvent(finCarnage);
         }
-        else if(commus[0].acceptation.valeur > 10 || commus[0].desir.valeur > 10 || commus[0].pitie.valeur > 10) //Fin "Good End"
+        else if(commus[0].acceptation.valeur > valeurFinCommu || commus[0].desir.valeur > valeurFinCommu || commus[0].pitie.valeur > valeurFinCommu) //Fin "Good End"
         {
             StartEndEvent(commus[0].goodEnding);
         }
-        /*else if (commus[1].acceptation.valeur > 10 || commus[1].desir.valeur > 10 || commus[1].pitie.valeur > 10)
+        else if (commus[1].acceptation.valeur > valeurFinCommu || commus[1].desir.valeur > valeurFinCommu || commus[1].pitie.valeur > valeurFinCommu)
         {
             StartEndEvent(commus[1].goodEnding);
         }
-        else if (commus[2].acceptation.valeur > 10 || commus[2].desir.valeur > 10 || commus[2].pitie.valeur > 10)
+        else if (commus[2].acceptation.valeur > valeurFinCommu || commus[2].desir.valeur > valeurFinCommu || commus[2].pitie.valeur > valeurFinCommu)
         {
             StartEndEvent(commus[2].goodEnding);
         }
-        else if (commus[3].acceptation.valeur > 10 || commus[3].desir.valeur > 10 || commus[3].pitie.valeur > 10)
+        else if (commus[3].acceptation.valeur > valeurFinCommu || commus[3].desir.valeur > valeurFinCommu || commus[3].pitie.valeur > valeurFinCommu)
         {
             StartEndEvent(commus[3].goodEnding);
-        }*/
+        }
         else if (representationForJournal.Count > 0)
         {
             monoJourn.gameObject.SetActive(true);
             monoJourn.ShowText(representationForJournal[0]);
-            representationForJournal.RemoveAt(0);
         }
         else
         {
+            saveCount++;
+            if (saveCount >= 3) //Save de l'état de la partie
+            {
+                saveCount = 0;
+                SaveGameState();
+            }
             futurEvents.Remove(actualEvent);
             actualEvent = null;
             EventChoice();
             StartNextEvent(futurEvents[0]);
         }
+    }
 
-        saveCount++;
-        if(saveCount >= 3) //Save de l'état de la partie
+    public void RemoveFromJournal()
+    {
+        representationForJournal.RemoveAt(0);
+        if(representationForJournal.Count<=0)
         {
-            saveCount = 0;
-            SaveGameState();
+            monoJourn.Close();
         }
     }
 
@@ -407,6 +441,11 @@ public class MonstreEventManager : MonoBehaviour
     {
         SaveLoadSystem.ResetGameSate();
         monoEnd.showEnd.SetActive(true);
+        if (eventToEnd.success != null)
+        {
+            eventToEnd.success.ValidateSuccess();
+        }
+        //Mettre un affichage pour les succès
         Debug.Log(eventToEnd);
         if (eventToEnd.imageFin != null)
         {
@@ -439,6 +478,18 @@ public class MonstreEventManager : MonoBehaviour
                 monoDial.ShowDialogue(actualEvent.dialogue.reponseHaine, true);
                 break;
         }
+    }
+
+    void ApparitionPerso(Reactions react)
+    {
+        ChangeSpritePerso(react);
+        monoPerso.Apparition();
+    }
+
+    public void DisparitionPerso()
+    {
+        monoPerso.Disparition();
+        monoDial.SupprDial();
     }
 
     void ChangeSpritePerso(Reactions react)
