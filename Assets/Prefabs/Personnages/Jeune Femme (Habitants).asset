@@ -15,10 +15,10 @@ MonoBehaviour:
   role: {fileID: 11400000, guid: fb1c96b7b8c4aec43a83e231b73e2336, type: 2}
   communaute: {fileID: 11400000, guid: eb86752a0915205459ec860c38e7d4da, type: 2}
   spriteReaction:
-  - {fileID: 21300000, guid: 117678363cf863540b5ad705594845b3, type: 3}
-  - {fileID: 21300000, guid: f1e5bfa1708458a41a3cf6ec4c3d053e, type: 3}
-  - {fileID: 21300000, guid: b0d8a882513979d45a6e6c97748f4e34, type: 3}
-  - {fileID: 21300000, guid: 8fec2fca4bfccbc41866a367210f27b5, type: 3}
-  - {fileID: 21300000, guid: 528069fb6fba086469aebbcf9f1624a4, type: 3}
-  - {fileID: 21300000, guid: 2aafc573391d1ca4f9b4203b5cc9213d, type: 3}
+  - {fileID: 21300000, guid: b79e7ec910f20864299914375e749a9e, type: 3}
+  - {fileID: 21300000, guid: aefd621412d199045849f34fd55a3bed, type: 3}
+  - {fileID: 21300000, guid: d6e32397068c0934fa8d39db84ae4fa8, type: 3}
+  - {fileID: 21300000, guid: 7c4f42fc27f0e09439624eb974e09c13, type: 3}
+  - {fileID: 21300000, guid: 6608b7d4f43e92c4293d7fb9e8d66a96, type: 3}
+  - {fileID: 21300000, guid: b3cc940dd11db5c42b55ce16fef31cb1, type: 3}
   isAlive: 1

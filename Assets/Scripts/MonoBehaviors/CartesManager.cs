@@ -56,14 +56,14 @@ public class CartesManager : MonoBehaviour
 
     private void Start()
     {
-        while(cards.Count < 3)
+        /*while(cards.Count < 3)
         {
             EmotionMonstre cart = cartesBases[Random.Range(0, cartesBases.Count)];
             if(!cards.Contains(cart))
             {
                 AddCard(cart);
             }
-        }/*
+        }/ */
         for(int i = 0; i< 6; i++)
         {
             EmotionMonstre cart = cartesBases[i];
@@ -71,7 +71,7 @@ public class CartesManager : MonoBehaviour
             {
                 AddCard(cart);
             }
-        }*/
+        }
         screenSize = new Vector2(660, Screen.height);
         screenSize = cam.ScreenToWorldPoint(screenSize);
     }
@@ -308,7 +308,7 @@ public class CartesManager : MonoBehaviour
             cartesJoueur[i].transform.localPosition += new Vector3(1, 0, 0) * speed;
             if(Vector2.Distance(cartesJoueur[i].transform.localPosition, positionCentrale) < distanceBetweenCards/2)
             {
-                cartesJoueur[i].transform.localScale = Vector3.one * (1 - (0.3f * (Vector2.Distance(cartesJoueur[i].transform.localPosition, positionCentrale) / (distanceBetweenCards / 2))));
+                cartesJoueur[i].transform.localScale = (Vector3.one*0.9f) * (1 - (0.3f * (Vector2.Distance(cartesJoueur[i].transform.localPosition, positionCentrale) / (distanceBetweenCards / 2))));
                 cartesJoueur[i].ChangeLayerLevel(20);
                 mainCard = i;
             }

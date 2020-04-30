@@ -15,10 +15,10 @@ MonoBehaviour:
   role: {fileID: 11400000, guid: 83456a35f80fbba46a4250844b3d29fc, type: 2}
   communaute: {fileID: 11400000, guid: b748d2f27a6991b4a9c80912efec977b, type: 2}
   spriteReaction:
-  - {fileID: 21300000, guid: 98ba0537a39c2a644997ef6917830f6f, type: 3}
-  - {fileID: 21300000, guid: 66519a40a646f9441929b25bf70c7318, type: 3}
-  - {fileID: 21300000, guid: 621ce57e400a0d94e8326221ab2a2035, type: 3}
-  - {fileID: 21300000, guid: 03c848ed4bbd53949aaadcf545854685, type: 3}
-  - {fileID: 21300000, guid: f551069ee837f484abb8f3ccc442b4af, type: 3}
-  - {fileID: 21300000, guid: 3686feda435271947bdab5d4fa95b980, type: 3}
+  - {fileID: 21300000, guid: 4d4d3bcbd557ec545b674f04d5e3dbdc, type: 3}
+  - {fileID: 21300000, guid: 7f7138a5fec8fe94493f6a86903c2934, type: 3}
+  - {fileID: 21300000, guid: 94d3bb4cc52cff344b55bc38f081b27b, type: 3}
+  - {fileID: 21300000, guid: 65fcee101d1215f46b344f7be79af6d0, type: 3}
+  - {fileID: 21300000, guid: 788173bd50b10414a910190a02c733d6, type: 3}
+  - {fileID: 21300000, guid: 82264c9db4651284d9a3e3f8caa6277b, type: 3}
   isAlive: 1
