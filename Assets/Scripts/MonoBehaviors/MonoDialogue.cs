@@ -23,7 +23,6 @@ public class MonoDialogue : MonoBehaviour
     {
         dial = dialog;
         zoneAccroche.SetActive(true);
-        manager.HideCards();
         textAccroche.text = txt;
     }
 
@@ -117,7 +116,6 @@ public class MonoDialogue : MonoBehaviour
         
             if (zoneAccroche.activeSelf)
             {
-                manager.ShowCards();
                 manager.AccrocheShowed();
                 ShowDialogue(dial, false);
                 zoneAccroche.SetActive(false);

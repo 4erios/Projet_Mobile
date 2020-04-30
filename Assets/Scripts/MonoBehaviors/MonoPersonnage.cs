@@ -14,6 +14,8 @@ public class MonoPersonnage : MonoBehaviour
     [SerializeField]
     private MonstreEventManager manager;
 
+    private float transitionSpeed = 0.06f;
+
     private void Start()
     {
         spriteRnd = GetComponent<Image>();
@@ -38,9 +40,9 @@ public class MonoPersonnage : MonoBehaviour
     {
         Color newColor = Color.white;
         newColor.a = 0;
-        for(int i = 0; i < 100; i++)
+        for(int i = 0; i < 1/transitionSpeed; i++)
         {
-            newColor.a += 0.06f;
+            newColor.a += transitionSpeed;
             spriteRnd.color = newColor;
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
@@ -50,12 +52,13 @@ public class MonoPersonnage : MonoBehaviour
     {
         Color newColor = Color.white;
         newColor.a = 1;
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 1/transitionSpeed; i++)
         {
-            newColor.a -= 0.06f;
+            newColor.a -= transitionSpeed;
             spriteRnd.color = newColor;
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
+        Debug.Log("Test");
         manager.EndEvent();
     }
 }

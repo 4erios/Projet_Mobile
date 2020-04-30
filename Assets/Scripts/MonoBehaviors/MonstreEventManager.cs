@@ -440,6 +440,7 @@ public class MonstreEventManager : MonoBehaviour
     void StartEndEvent(EndEvent eventToEnd)
     {
         SaveLoadSystem.ResetGameSate();
+        HideCards();
         monoEnd.showEnd.SetActive(true);
         if (eventToEnd.success != null)
         {

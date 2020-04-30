@@ -20,6 +20,8 @@ public class SaveLoadSystem : MonoBehaviour
 
     static string GetPath(string name, string extension = ".txt") => Path.Combine(Application.persistentDataPath, name + extension);
 
+    static string GetDirectory(string name) => Path.Combine(Application.persistentDataPath, name);
+
     public static void Save(object objToSave, string name)
     {
         BinaryFormatter bf = new BinaryFormatter();
@@ -68,7 +70,7 @@ public class SaveLoadSystem : MonoBehaviour
     #region Save System
     public static void ResetGameSate()
     {
-        DeleteFileInDirectory(GetPath("GameState"));
+        DeleteFileInDirectory(GetDirectory("GameState"));
     }
 
     public static void CreateDirectory()
