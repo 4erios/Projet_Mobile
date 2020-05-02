@@ -56,14 +56,16 @@ public class CartesManager : MonoBehaviour
 
     private void Start()
     {
-        /*while(cards.Count < 3)
+        while(cards.Count < 3)
         {
             EmotionMonstre cart = cartesBases[Random.Range(0, cartesBases.Count)];
             if(!cards.Contains(cart))
             {
                 AddCard(cart);
             }
-        }/ */
+        }
+        ChangeAnimatorState(true);
+        /*
         for(int i = 0; i< 6; i++)
         {
             EmotionMonstre cart = cartesBases[i];
@@ -74,6 +76,7 @@ public class CartesManager : MonoBehaviour
         }
         screenSize = new Vector2(660, Screen.height);
         screenSize = cam.ScreenToWorldPoint(screenSize);
+        */
     }
 
     private void Update()
@@ -88,6 +91,7 @@ public class CartesManager : MonoBehaviour
                 if(hitinfo.collider != null && hitinfo.collider.name == "ZoneCarte")
                 {
                     isTouch = true;
+                    ChangeAnimatorState(false);
                 }
                 touchStartPos = touch.position;
             }
@@ -169,6 +173,7 @@ public class CartesManager : MonoBehaviour
             RaycastHit2D hitinfo = Physics2D.Raycast(touchStartPos, cam.transform.forward);
             if (hitinfo.collider != null && hitinfo.collider.name == "ZoneCarte")
             {
+                ChangeAnimatorState(false);
                 isTouch = true;
             }
             touchStartPos = Input.mousePosition;
@@ -279,6 +284,7 @@ public class CartesManager : MonoBehaviour
 
     void ResetCardPosition()
     {
+        ChangeAnimatorState(true);
         cartesJoueur[mainCard].transform.localPosition = new Vector3(positionCentrale.x, positionCentrale.y, cartesJoueur[mainCard].transform.localPosition.z);
         currentPosition = positionCentrale;
         cartesJoueur[mainCard].colid.enabled = false;
@@ -342,6 +348,11 @@ public class CartesManager : MonoBehaviour
             currentPosition = new Vector2(newX, currentPosition.y);
             cartesJoueur[i].transform.localPosition = currentPosition;
         }
+    }
+
+    void ChangeAnimatorState(bool state)
+    {
+        cartesJoueur[mainCard].spriteNoir.GetComponent<Animator>().enabled = state;
     }
 
     public void SaveCards()

@@ -10,12 +10,16 @@ public class SaveLoadSystem : MonoBehaviour
 
     [SerializeField]
     private List<Success> allSuccess;
+    [SerializeField]
+    private List<AncientGame> allHistoric;
 
     private static List<Success> everySuccess;
+    private static List<AncientGame> everyHistoric;
 
-    private void Start()
+    private void Awake()
     {
         everySuccess = allSuccess;
+        everyHistoric = allHistoric;
     }
 
     static string GetPath(string name, string extension = ".txt") => Path.Combine(Application.persistentDataPath, name + extension);
@@ -47,24 +51,27 @@ public class SaveLoadSystem : MonoBehaviour
 
     public static void DeleteFileInDirectory(string direc)
     {
-        string[] files = Directory.GetFiles(direc);
-        string[] dirs = Directory.GetDirectories(direc);
-
-        if (dirs.Length > 0)
+        if (Directory.Exists(direc))
         {
-            foreach (string dir in dirs)
+            string[] files = Directory.GetFiles(direc);
+            string[] dirs = Directory.GetDirectories(direc);
+
+            if (dirs.Length > 0)
             {
-                DeleteFileInDirectory(dir);
+                foreach (string dir in dirs)
+                {
+                    DeleteFileInDirectory(dir);
+                }
             }
-        }
 
-        foreach (string file in files)
-        {
-            File.SetAttributes(file, FileAttributes.Normal);
-            File.Delete(file);
-        }
+            foreach (string file in files)
+            {
+                File.SetAttributes(file, FileAttributes.Normal);
+                File.Delete(file);
+            }
 
-        Directory.Delete(direc);
+            Directory.Delete(direc);
+        }
     }
 
     #region Save System
@@ -229,13 +236,13 @@ public class SaveLoadSystem : MonoBehaviour
         {
             fileContent += game.titre + "\n";
         }
-        SaveTextDoc("GameState/Historic", fileContent);
+        SaveTextDoc("Historic", fileContent);
     }
     public static string[] LoadHistoric()
     {
-        if (File.Exists(GetPath("GameState/Historic")))
+        if (File.Exists(GetPath("Historic")))
         {
-            string[] fileContent = File.ReadAllLines(GetPath("GameState/Historic"));
+            string[] fileContent = File.ReadAllLines(GetPath("Historic"));
             return fileContent;
         }
         else
@@ -243,6 +250,24 @@ public class SaveLoadSystem : MonoBehaviour
             Debug.Log("Echec Chargement Historique");
             return new string[0];
         }
+    }
+    public static List<AncientGame> GetHistoricList()
+    {
+        string[] historicTitles = LoadHistoric();
+        List<AncientGame> historic = new List<AncientGame>();
+
+        foreach (string title in historicTitles)
+        {
+            for (int i = 0; i < everyHistoric.Count; i++)
+            {
+                if (everyHistoric[i].titre == title)
+                {
+                    historic.Add(everyHistoric[i]);
+                    break;
+                }
+            }
+        }
+        return historic;
     }
 
     public static bool ValidateSuccess(Success succ)
@@ -266,13 +291,13 @@ public class SaveLoadSystem : MonoBehaviour
         {
             fileContent += sucess.titre + "\n";
         }
-        SaveTextDoc("GameState/Success", fileContent);
+        SaveTextDoc("Success", fileContent);
     }
     public static string[] LoadSuccess()
     {
-        if (File.Exists(GetPath("GameState/Success")))
+        if (File.Exists(GetPath("Success")))
         {
-            string[] fileContent = File.ReadAllLines(GetPath("GameState/Success"));
+            string[] fileContent = File.ReadAllLines(GetPath("Success"));
             return fileContent;
         }
         else
@@ -281,7 +306,7 @@ public class SaveLoadSystem : MonoBehaviour
             return new string[0];
         }
     }
-    private static List<Success> GetSuccessList()
+    public static List<Success> GetSuccessList()
     {
         string[] succesTitles = LoadSuccess();
         List<Success> unlockedSucc = new List<Success>();

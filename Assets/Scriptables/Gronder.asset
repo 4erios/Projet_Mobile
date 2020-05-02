@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Gronder
   m_EditorClassIdentifier: 
   emotion: 0
-  sprite: {fileID: 21300000, guid: 8046bd2b2bce93b4193fcf8b69a0a531, type: 3}
-  titre: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 74a5d71585a73f347a3180323c2a39b8, type: 3}
+  titre: {fileID: 21300000, guid: a54f4af4f70c6614589823b0cfe510cd, type: 3}
   animNoire: {fileID: 9100000, guid: 42c262fa2a0fb3d45bee8ec9ead0c3db, type: 2}
   bonusRole: []
   malusRole: []

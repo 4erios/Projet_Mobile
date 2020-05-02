@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7a830de6960374aaa06c961165b524, type: 3}
   m_Name: Positive Habitants
   m_EditorClassIdentifier: 
-  imageFin: {fileID: 0}
+  imageFin: {fileID: 21300000, guid: afa397f49a8a4b34aa27fab284bfbf04, type: 3}
   texteFin: 'You walk thorugh the street, watching its people. Some kids run before,
     a woman give you a snack. You feel great, you feel at home. You''re different,
     but the people here accepted you for what you are. '
+  success: {fileID: 11400000, guid: 9af45736aaa5b8b4f8d6aebfbfff303b, type: 2}
+  historic: {fileID: 11400000, guid: e8da9fadc35e2ad4db4a89b4c27be911, type: 2}

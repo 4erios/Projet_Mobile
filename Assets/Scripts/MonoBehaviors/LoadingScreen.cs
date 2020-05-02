@@ -16,7 +16,10 @@ public class LoadingScreen : MonoBehaviour
 
     public static void ShowLoadScreen()
     {
-        screen.SetActive(true);
+        if (screen != null)
+        {
+            screen.SetActive(true);
+        }
     }
 
     public static void HideLoadScreen()

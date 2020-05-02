@@ -5,7 +5,7 @@ using UnityEngine;
 public class MenuSuccess : MonoBehaviour
 {
     [SerializeField]
-    private List<AncientGame> historic, allHistoric;
+    private List<AncientGame> historic;
     [SerializeField]
     private List<Success> unlockedSuccess, allSuccess; //Créer un Scriptable avec la liste des succès, qu'on pourrait ensuite utiliser pour faire voyager les succès d'une scène à l'autre
 
@@ -25,13 +25,16 @@ public class MenuSuccess : MonoBehaviour
         /* Récupère les Saves si elles existent
          * Crée les 2 listes (3 Parties précédentes ET celle des succès disponible)
          */
+
+        unlockedSuccess = SaveLoadSystem.GetSuccessList();
+        historic = SaveLoadSystem.GetHistoricList();
     }
 
     public void AffichageHistorique()
     {
         if(historic.Count>0 && historic[0]!=null)
         {
-            for(int i = 0; i < 3; i++)
+            for(int i = 0; i < historic.Count; i++)
             {
                 historicList[i].ShowHistoric(historic[i]);
             }
@@ -41,10 +44,19 @@ public class MenuSuccess : MonoBehaviour
     public void AffichageDerniersSucces()
     {
         int j = 0;
-        for(int i = unlockedSuccess.Count-1; i > unlockedSuccess.Count-4; i--)
+
+        int forEnd = unlockedSuccess.Count - 4;
+        if(forEnd<0)
         {
-            threeSuccess[j].ShowSuccess(unlockedSuccess[j]);
-            j++;
+            forEnd = 0;
+        }
+        if (unlockedSuccess.Count > 0)
+        {
+            for (int i = unlockedSuccess.Count - 1; i >= forEnd; i--)
+            {
+                threeSuccess[j].ShowSuccess(unlockedSuccess[j]);
+                j++;
+            }
         }
     }
 
@@ -57,6 +69,7 @@ public class MenuSuccess : MonoBehaviour
                 if(unlockedSuccess.Contains(allSuccess[i]))
                 {
                     successList[i].gameObject.SetActive(true);
+                    successList[i].ShowSuccess(allSuccess[i]); ;
                 }
             }
         }

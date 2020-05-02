@@ -42,9 +42,17 @@ public class MonoDialogue : MonoBehaviour
     {
         isDialShowing = true;
         string tmpStr = "";
-        for(int i = 0; i < dial.Length; i++)
+        for(int i = 0; i < dial.Length; i+=3)
         {
             tmpStr += dial[i];
+            if (i + 1 < dial.Length)
+            {
+                tmpStr += dial[i+1];
+            }
+            if (i + 2 < dial.Length)
+            {
+                tmpStr += dial[i+2];
+            }
             zoneText.text = tmpStr;
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }

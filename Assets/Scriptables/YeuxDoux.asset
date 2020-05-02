@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: YeuxDoux
   m_EditorClassIdentifier: 
   emotion: 2
-  sprite: {fileID: 21300000, guid: 840c62771a6e9df409d36c78ae565d7b, type: 3}
+  sprite: {fileID: 21300000, guid: 4c21c72889272894299a3043cc5dfc08, type: 3}
   titre: {fileID: 21300000, guid: 12a0422e925a5584bbb6be1ed7a5f5bc, type: 3}
   animNoire: {fileID: 9100000, guid: a60c49c093381da458863fc80f2003ac, type: 2}
   bonusRole: []

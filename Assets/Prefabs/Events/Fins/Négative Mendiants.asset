@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7a830de6960374aaa06c961165b524, type: 3}
   m_Name: "N\xE9gative Mendiants"
   m_EditorClassIdentifier: 
-  imageFin: {fileID: 0}
+  imageFin: {fileID: 21300000, guid: 0f91781565041f24cadb35c5c5f559f6, type: 3}
   texteFin: 'You''re hurt. Your body screams in pain at your every move. The sewers
     aren''t safe anymore, since the homeless know it as well as you do. Your only
     choice is to run away from the city. And that''s what you do. Going away from
     the humans, you hope they won''t chase after you. '
+  success: {fileID: 11400000, guid: 623ef99a84d7f274eab0e83ec9bb99af, type: 2}
+  historic: {fileID: 11400000, guid: b027bab2e41a0f44ca09abf6c807cf6e, type: 2}

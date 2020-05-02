@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Caresser
   m_EditorClassIdentifier: 
   emotion: 4
-  sprite: {fileID: 21300000, guid: a605226998b06f342a6f59568f8cf942, type: 3}
+  sprite: {fileID: 21300000, guid: 480a092b8630b8d48b5fb2a13c1cf0a6, type: 3}
   titre: {fileID: 21300000, guid: 1c0c5404b59e85c46b6e5655e375dc21, type: 3}
   animNoire: {fileID: 9100000, guid: f1466ebb400c366499e6baa9791e7eab, type: 2}
   bonusRole: []

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pleurer
   m_EditorClassIdentifier: 
   emotion: 3
-  sprite: {fileID: 21300000, guid: f83e4b07b1585654199db8a0cabcc652, type: 3}
+  sprite: {fileID: 21300000, guid: 232b141b172f76242b7080dada78a935, type: 3}
   titre: {fileID: 21300000, guid: 0c975476c302ba34f92f1a5e5b595422, type: 3}
   animNoire: {fileID: 9100000, guid: 2e5e5ff6668852243a05147848f6303e, type: 2}
   bonusRole: []

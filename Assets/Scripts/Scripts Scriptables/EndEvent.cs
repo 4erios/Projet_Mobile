@@ -9,4 +9,5 @@ public class EndEvent : ScriptableObject
     [TextArea(3, 5)]
     public string texteFin;
     public Success success;
+    public AncientGame historic;
 }

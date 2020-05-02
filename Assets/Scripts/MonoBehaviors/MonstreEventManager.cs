@@ -271,7 +271,13 @@ public class MonstreEventManager : MonoBehaviour
     {
         //Animation de prise de blessure
         monstreHp -= dmg;
-        affichageBlessure.sprite = blessuresSprites[monstreHp];
+        if (monstreHp > 0)
+        {
+            if (blessuresSprites.Count > monstreHp - 1 && blessuresSprites[monstreHp - 1] != null)
+            {
+                affichageBlessure.sprite = blessuresSprites[monstreHp - 1];
+            }
+        }
     }
     
     public void AddRepresentationForJournal(string phrase)
@@ -446,6 +452,13 @@ public class MonstreEventManager : MonoBehaviour
         {
             eventToEnd.success.ValidateSuccess();
         }
+        List<AncientGame> currentHistoric = SaveLoadSystem.GetHistoricList();
+        if(currentHistoric.Count>=3)
+        {
+            currentHistoric.RemoveAt(0);
+        }
+        currentHistoric.Add(eventToEnd.historic);
+        SaveLoadSystem.SaveHistoric(currentHistoric);
         //Mettre un affichage pour les succès
         Debug.Log(eventToEnd);
         if (eventToEnd.imageFin != null)

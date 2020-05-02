@@ -27,7 +27,6 @@ public class MenuNavigation : MonoBehaviour
 
         if(!PlayerPrefs.HasKey("FirstLoad"))
         {
-            Debug.Log("Test");
             PlayerPrefs.SetInt("FirstLoad", 1);
             PlayerPrefs.Save();
             anim.SetBool("EcranTitre", true);
