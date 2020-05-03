@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -710,7 +710,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -721,7 +721,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TestText
+  m_Text: 
 --- !u!222 &407511006
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1677,6 +1677,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 149a6593c05492b4b8b0b85429ce0b0c, type: 2}
   - {fileID: 11400000, guid: e9791bfb2644f7e4a93ed014839654e9, type: 2}
   - {fileID: 11400000, guid: 7ccc691696807f94b963af9045bb93b0, type: 2}
+  - {fileID: 11400000, guid: cfb132ad2fe2c7a41adf8b093045602a, type: 2}
+  - {fileID: 11400000, guid: 47a20f19f8c8dbc40ba690e830f9012e, type: 2}
+  - {fileID: 11400000, guid: 4c4cf4fb02db84645ae638fccf16068f, type: 2}
+  - {fileID: 11400000, guid: 8da5a16f8e0bd95469c786eb38a95486, type: 2}
   - {fileID: 11400000, guid: 9c9b94471e22a8845aa4abaf4df66138, type: 2}
   - {fileID: 11400000, guid: 8670ef193c3eeaf44a2a49f86a439311, type: 2}
   - {fileID: 11400000, guid: 200d1fd8760526841a6304b077d2d9c9, type: 2}
@@ -2147,7 +2151,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 42
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -2183,8 +2187,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22, y: -331}
-  m_SizeDelta: {x: 661.2, y: 219.5}
+  m_AnchoredPosition: {x: -0.7, y: -331}
+  m_SizeDelta: {x: 618.6, y: 219.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &860647480 stripped
 RectTransform:

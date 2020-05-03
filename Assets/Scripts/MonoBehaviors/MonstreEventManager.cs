@@ -377,7 +377,7 @@ public class MonstreEventManager : MonoBehaviour
                 continue;
             }
             #region Communautés
-            if (count < 75)
+            if (count < 90)
             {
                 for (int j = 0; j < 5; j++)
                 {
@@ -402,25 +402,25 @@ public class MonstreEventManager : MonoBehaviour
             switch (newEvent.personnage.communaute.name) //A remodifier après la Slice
             {
                 case "Dirigeants":
-                    if (compteCommu[0] > 4)
+                    if (compteCommu[0] > 2)
                     {
                         continue;
                     }
                     break;
                 case "Habitants":
-                    if (compteCommu[1] > 4)
+                    if (compteCommu[1] > 2)
                     {
                         continue;
                     }
                     break;
                 case "Mendiants":
-                    if (compteCommu[2] > 4)
+                    if (compteCommu[2] > 2)
                     {
                         continue;
                     }
                     break;
                 case "Représentants de l'ordre":
-                    if (compteCommu[3] > 4)
+                    if (compteCommu[3] > 2)
                     {
                         continue;
                     }

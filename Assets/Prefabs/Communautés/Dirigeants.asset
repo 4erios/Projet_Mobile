@@ -15,7 +15,9 @@ MonoBehaviour:
   repulsion:
     valeur: 0
     seuilHaut: 3
-    seuilBas: -3
+    seuilBas: 0
+    maxBas: -3
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - "Dirigeant R\xE9pulsion +"
@@ -24,7 +26,9 @@ MonoBehaviour:
   agressivite:
     valeur: 0
     seuilHaut: 3
-    seuilBas: -3
+    seuilBas: 0
+    maxBas: -3
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - Dirigeant Agro +
@@ -33,7 +37,9 @@ MonoBehaviour:
   jalousie:
     valeur: 0
     seuilHaut: 3
-    seuilBas: -3
+    seuilBas: 0
+    maxBas: -3
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - Dirigeant Jalousie +
@@ -42,7 +48,9 @@ MonoBehaviour:
   desir:
     valeur: 0
     seuilHaut: 3
-    seuilBas: -3
+    seuilBas: 0
+    maxBas: -6
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - "Dirigeant D\xE9sir +"
@@ -51,7 +59,9 @@ MonoBehaviour:
   acceptation:
     valeur: 0
     seuilHaut: 3
-    seuilBas: -3
+    seuilBas: 0
+    maxBas: -6
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - Dirigeant Acceptation +
@@ -60,11 +70,13 @@ MonoBehaviour:
   pitie:
     valeur: 0
     seuilHaut: 3
-    seuilBas: -3
+    seuilBas: 0
+    maxBas: -6
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - Dirigeant Pitie +
     journalPhrasesDown:
     - Dirigeant Pitie -
-  goodEnding: {fileID: 0}
-  badEnding: {fileID: 0}
+  goodEnding: {fileID: 11400000, guid: 5b692460196e43243aa123b32978be8a, type: 2}
+  badEnding: {fileID: 11400000, guid: eeb25e5494f44564cb466aeb0acabb77, type: 2}

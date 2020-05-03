@@ -15,44 +15,56 @@ MonoBehaviour:
   repulsion:
     valeur: 0
     seuilHaut: 3
-    seuilBas: -3
+    seuilBas: 0
+    maxBas: -3
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp: []
     journalPhrasesDown: []
   agressivite:
     valeur: 0
     seuilHaut: 3
-    seuilBas: -3
+    seuilBas: 0
+    maxBas: -3
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp: []
     journalPhrasesDown: []
   jalousie:
     valeur: 0
     seuilHaut: 3
-    seuilBas: -3
+    seuilBas: 0
+    maxBas: -3
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp: []
     journalPhrasesDown: []
   desir:
     valeur: 0
     seuilHaut: 3
-    seuilBas: -3
+    seuilBas: 0
+    maxBas: -6
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp: []
     journalPhrasesDown: []
   acceptation:
     valeur: 0
     seuilHaut: 3
-    seuilBas: -3
+    seuilBas: 0
+    maxBas: -6
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp: []
     journalPhrasesDown: []
   pitie:
     valeur: 0
     seuilHaut: 3
-    seuilBas: -3
+    seuilBas: 0
+    maxBas: -6
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp: []
     journalPhrasesDown: []
-  goodEnding: {fileID: 0}
-  badEnding: {fileID: 0}
+  goodEnding: {fileID: 11400000, guid: fd7c7efa7f47d854d939afd3f3c1de11, type: 2}
+  badEnding: {fileID: 11400000, guid: d8873c30967c5bc4090bd4dbc4aebfc2, type: 2}

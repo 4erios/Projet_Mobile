@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Representation
 {
-    public int valeur, seuilHaut, seuilBas;
+    public int valeur, seuilHaut, seuilBas, maxBas, maxHaut;
     public List<Event> eventsPhase2;
     public List<string> journalPhrasesUp, journalPhrasesDown;
     bool firstState = true;
@@ -15,13 +15,13 @@ public class Representation
         int ancientValue = valeur;
         valeur += value;
 
-        if(valeur < -6)
+        if(valeur < maxBas)
         {
-            valeur = -6;
+            valeur = maxBas;
         }
-        else if(valeur > 6)
+        else if(valeur > maxHaut)
         {
-            valeur = 6;
+            valeur = maxHaut;
         }
 
         if(ancientValue < valeur && valeur > seuilHaut && journalPhrasesUp.Count>0 && firstState)
