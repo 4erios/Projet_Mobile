@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f970699efd4d47b50127f0d59d7e8, type: 3}
+  m_Name: Policier
+  m_EditorClassIdentifier: 
+  presets:
+  - ReactionDepart: 5
+    interet:
+      emot: 5
+      doesDamage: 0
+    affection:
+      emot: 4
+      doesDamage: 0
+    compassion:
+      emot: 3
+      doesDamage: 0
+    degout:
+      emot: 2
+      doesDamage: 0
+    peur:
+      emot: 1
+      doesDamage: 1
+    haine:
+      emot: 0
+      doesDamage: 1
