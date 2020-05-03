@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fe92d092829fb644a9e698b1e178b36, type: 3}
+  m_Name: Policier
+  m_EditorClassIdentifier: 
+  role: {fileID: 11400000, guid: 2788d1aae58a362438c6441d96ca6ed8, type: 2}
+  communaute: {fileID: 11400000, guid: 87436ca911a096b44bd7ce66a1ef9d84, type: 2}
+  spriteReaction:
+  - {fileID: 21300000, guid: 1c4cdbc52ec78d643902f0cb6d350086, type: 3}
+  - {fileID: 21300000, guid: 283eb4986d72817458b90418fb3bb217, type: 3}
+  - {fileID: 21300000, guid: 33acf830448c43a44894e40054860920, type: 3}
+  - {fileID: 21300000, guid: 5309ab4546580bb4c9a4d3247829caec, type: 3}
+  - {fileID: 21300000, guid: f763cebc3d7cad241b72b1acc741383e, type: 3}
+  - {fileID: 21300000, guid: 40ea3a6bfa1be9e4bbfb10f7cb8d5c0b, type: 3}
+  isAlive: 1

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: M_VH_BasePositif
+  m_EditorClassIdentifier: 
+  dialogueDepart: '"Hey there! Did you find something edible? If not, I can share
+    what I found!"'
+  reponseInteret: 'Always warry aren''t you? Well, I''ll leave you some food over
+    here, so don''t be afraid next time ok? '
+  reponseAffection: Ah! I'm happy to see you too! Come and eat, it's on me!
+  reponseCompassion: 'Hey don''t cry. Why didn''t you come to see me if you were
+    that hungry? You knowI will always share my food with you. '
+  reponseDegout: 'You know you don''t need to act like this with me right? I really
+    dislike it when you try to get food from me like this. '
+  reponsePeur: '"Are you alright? Ouch! What are yo.. ARRGGGGHHHHH!!!"
+
+    Your
+    hunger was too strong, and so you devoured the old man. '
+  reponseHaine: Aaaaahh.. And here I thought you accepted me... Seems like you only
+    needed me because I gave you food...
+  reponseBonus: 
+  reponseMalus: 

@@ -10,63 +10,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b47f970699efd4d47b50127f0d59d7e8, type: 3}
-  m_Name: Vieil Homme
+  m_Name: Enfant
   m_EditorClassIdentifier: 
   presets:
-  - ReactionDepart: 1
+  - ReactionDepart: 0
     interet:
       emot: 0
-      doesDamage: 0
-    affection:
-      emot: 4
-      doesDamage: 0
-    compassion:
-      emot: 3
-      doesDamage: 0
-    degout:
-      emot: 2
-      doesDamage: 0
-    peur:
-      emot: 1
-      doesDamage: 1
-    haine:
-      emot: 5
-      doesDamage: 0
-  - ReactionDepart: 5
-    interet:
-      emot: 5
       doesDamage: 0
     affection:
       emot: 0
       doesDamage: 0
     compassion:
-      emot: 2
+      emot: 0
       doesDamage: 0
     degout:
-      emot: 3
+      emot: 0
       doesDamage: 0
     peur:
-      emot: 4
+      emot: 0
       doesDamage: 0
     haine:
-      emot: 1
-      doesDamage: 1
-  - ReactionDepart: 4
+      emot: 0
+      doesDamage: 0
+  - ReactionDepart: 0
     interet:
       emot: 0
       doesDamage: 0
     affection:
-      emot: 4
+      emot: 0
       doesDamage: 0
     compassion:
-      emot: 3
+      emot: 0
       doesDamage: 0
     degout:
-      emot: 2
+      emot: 0
       doesDamage: 0
     peur:
-      emot: 1
-      doesDamage: 1
+      emot: 0
+      doesDamage: 0
     haine:
-      emot: 5
+      emot: 0
       doesDamage: 0

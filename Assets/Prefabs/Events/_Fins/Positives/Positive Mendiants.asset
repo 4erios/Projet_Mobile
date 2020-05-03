@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b7a830de6960374aaa06c961165b524, type: 3}
+  m_Name: Positive Mendiants
+  m_EditorClassIdentifier: 
+  imageFin: {fileID: 21300000, guid: afa397f49a8a4b34aa27fab284bfbf04, type: 3}
+  texteFin: 'You see people happily chatting together. They share a meal, laugh together.
+    Thanks to you, these homeless people have a place they can call home now. And
+    as long as you watch over it, no one will take it from them. '
+  success: {fileID: 11400000, guid: c4d1829f1f8a1ca46839503517ae4ae6, type: 2}
+  historic: {fileID: 11400000, guid: ee088c6c8448f9042826e05d85a789c3, type: 2}

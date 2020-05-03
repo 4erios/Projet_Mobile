@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fe92d092829fb644a9e698b1e178b36, type: 3}
+  m_Name: Vieil Homme (Habitants)
+  m_EditorClassIdentifier: 
+  role: {fileID: 11400000, guid: 83456a35f80fbba46a4250844b3d29fc, type: 2}
+  communaute: {fileID: 11400000, guid: eb86752a0915205459ec860c38e7d4da, type: 2}
+  spriteReaction:
+  - {fileID: 21300000, guid: d85dcb8c52f01c649a2c3e4ee3961352, type: 3}
+  - {fileID: 21300000, guid: 1c94a8babfc2c75489f98860d97056f9, type: 3}
+  - {fileID: 21300000, guid: d55ddb51b32cd6b4489ae04fbdd86ff7, type: 3}
+  - {fileID: 21300000, guid: a251c23227512904ebf6ed1e650f23b4, type: 3}
+  - {fileID: 21300000, guid: 496142821431c2d44ab348b50e9b8ca2, type: 3}
+  - {fileID: 21300000, guid: 2bae955a758a96d409acebefcb685090, type: 3}
+  isAlive: 1
