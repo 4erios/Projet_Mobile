@@ -20,9 +20,8 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
-    - Mendiant Repulsion +
-    journalPhrasesDown:
-    - Mendiant Repulsion -
+    - Les mendiants ne vous aime pas
+    journalPhrasesDown: []
   agressivite:
     valeur: 0
     seuilHaut: 3
@@ -31,9 +30,8 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
-    - Mendiant Agro +
-    journalPhrasesDown:
-    - Mendiant Agro -
+    - Les mendiants ne vous aime pas
+    journalPhrasesDown: []
   jalousie:
     valeur: 0
     seuilHaut: 3
@@ -42,9 +40,8 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
-    - Mendiant Jalousie +
-    journalPhrasesDown:
-    - Mendiant Jalousie -
+    - Les mendiants ne vous aime pas
+    journalPhrasesDown: []
   desir:
     valeur: 0
     seuilHaut: 3
@@ -53,9 +50,8 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
-    - Mendiant Desir +
-    journalPhrasesDown:
-    - Mendiant Desir -
+    - "Les mendiants commencent \xE0 vous aimer"
+    journalPhrasesDown: []
   acceptation:
     valeur: 0
     seuilHaut: 3
@@ -64,9 +60,8 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
-    - Mendiant Acceptation +
-    journalPhrasesDown:
-    - Mendiant Acceptation -
+    - "Les mendiants commencent \xE0 vous aimer"
+    journalPhrasesDown: []
   pitie:
     valeur: 0
     seuilHaut: 3
@@ -75,8 +70,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
-    - Mendiant Pitie +
-    journalPhrasesDown:
-    - Mendiant Pitie -
+    - "Les mendiants commencent \xE0 vous aimer"
+    journalPhrasesDown: []
   goodEnding: {fileID: 11400000, guid: 6df24435122d18d488503a9008a0e390, type: 2}
   badEnding: {fileID: 11400000, guid: df969f77c3121a74291a8f8f65b28ed3, type: 2}

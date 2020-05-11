@@ -19,7 +19,8 @@ MonoBehaviour:
     maxBas: -3
     maxHaut: 6
     eventsPhase2: []
-    journalPhrasesUp: []
+    journalPhrasesUp:
+    - Les habitants ne vous aime pas
     journalPhrasesDown: []
   agressivite:
     valeur: 0
@@ -28,7 +29,8 @@ MonoBehaviour:
     maxBas: -3
     maxHaut: 6
     eventsPhase2: []
-    journalPhrasesUp: []
+    journalPhrasesUp:
+    - Les habitants ne vous aime pas
     journalPhrasesDown: []
   jalousie:
     valeur: 0
@@ -37,7 +39,8 @@ MonoBehaviour:
     maxBas: -3
     maxHaut: 6
     eventsPhase2: []
-    journalPhrasesUp: []
+    journalPhrasesUp:
+    - Les habitants ne vous aime pas
     journalPhrasesDown: []
   desir:
     valeur: 0
@@ -46,7 +49,8 @@ MonoBehaviour:
     maxBas: -6
     maxHaut: 6
     eventsPhase2: []
-    journalPhrasesUp: []
+    journalPhrasesUp:
+    - "Les habitants commencent \xE0 vous aimer"
     journalPhrasesDown: []
   acceptation:
     valeur: 0
@@ -55,7 +59,8 @@ MonoBehaviour:
     maxBas: -6
     maxHaut: 6
     eventsPhase2: []
-    journalPhrasesUp: []
+    journalPhrasesUp:
+    - "Les habitants commencent \xE0 vous aimer"
     journalPhrasesDown: []
   pitie:
     valeur: 0
@@ -64,7 +69,8 @@ MonoBehaviour:
     maxBas: -6
     maxHaut: 6
     eventsPhase2: []
-    journalPhrasesUp: []
+    journalPhrasesUp:
+    - "Les habitants commencent \xE0 vous aimer"
     journalPhrasesDown: []
   goodEnding: {fileID: 11400000, guid: bcb70a9219c152e42956d96becc46dac, type: 2}
   badEnding: {fileID: 11400000, guid: 1ca5ae9b37bcb3f449407ef18dff4d3f, type: 2}

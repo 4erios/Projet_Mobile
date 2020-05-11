@@ -109,7 +109,7 @@ public class MonoDialogue : MonoBehaviour
 
     void DoOnDown()
     {
-        if (time > 1.5f)
+        if (time > 0.5f)
         {
             if (isDialShowing)
             {

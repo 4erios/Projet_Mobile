@@ -41,14 +41,18 @@ public class MonstreEventManager : MonoBehaviour
     [SerializeField]
     private List<Sprite> blessuresSprites;
     [SerializeField]
-    private Image affichageBlessure;
+    private SpriteRenderer affichageBlessure;
     [SerializeField]
     private EndEvent finCarnage;
 
     [SerializeField]
     private List<Event> allEvents;
+    [SerializeField]
+    private List<Personnage> allPersos;
 
     private int saveCount;
+
+    private List<Personnage> encounteredCharacter = new List<Personnage>();
 
     #region Load des sauvegardes
     void Awake()
@@ -59,9 +63,10 @@ public class MonstreEventManager : MonoBehaviour
         //Load Game State
         string eventName = "";
         List<string> pool = new List<string>();
+        List<string> persos = new List<string>();
         int paniqueToAdd = 0;
         int damage = 0;
-        bool didLoad = SaveLoadSystem.LoadGameState(out eventName, out paniqueToAdd, out damage, out pool);
+        bool didLoad = SaveLoadSystem.LoadGameState(out eventName, out paniqueToAdd, out damage, out pool, out persos);
 
         futurEvents = new List<Event>();
         if (didLoad)
@@ -82,6 +87,18 @@ public class MonstreEventManager : MonoBehaviour
                             futurEvents.Add(evt);
                             Debug.Log(futurEvents);
                         }
+                        break;
+                    }
+                }
+            }
+
+            foreach (string name in persos)
+            {
+                foreach (Personnage perso in allPersos)
+                {
+                    if (perso.name == name)
+                    {
+                        encounteredCharacter.Add(perso);
                         break;
                     }
                 }
@@ -155,7 +172,7 @@ public class MonstreEventManager : MonoBehaviour
             #region Mise à jour des cartes retirées
             List<EmotionMonstre> emotionsToAdd = new List<EmotionMonstre>();
             List<EmotionMonstre> keys = new List<EmotionMonstre>();
-            foreach(KeyValuePair<EmotionMonstre,int> dict in cardManager.removedCard)
+            foreach (KeyValuePair<EmotionMonstre, int> dict in cardManager.removedCard)
             {
                 keys.Add(dict.Key);
             }
@@ -174,7 +191,14 @@ public class MonstreEventManager : MonoBehaviour
             }
             #endregion
 
+
             actualEvent = newEvent;
+
+            if (!encounteredCharacter.Contains(newEvent.personnage) && newEvent.personnage.rencontreEvent != null)
+            {
+                encounteredCharacter.Add(newEvent.personnage);
+                actualEvent = newEvent.personnage.rencontreEvent;
+            }
             StartEvent(actualEvent);
         }
     }
@@ -309,20 +333,24 @@ public class MonstreEventManager : MonoBehaviour
         {
             StartEndEvent(finCarnage);
         }
-        else if(commus[0].acceptation.valeur > valeurFinCommu || commus[0].desir.valeur > valeurFinCommu || commus[0].pitie.valeur > valeurFinCommu) //Fin "Good End"
+        else if(commus[0].acceptation.valeur >= valeurFinCommu || commus[0].desir.valeur >= valeurFinCommu || commus[0].pitie.valeur >= valeurFinCommu) //Fin "Good End"
         {
+            Debug.Log("Commu 1 fin");
             StartEndEvent(commus[0].goodEnding);
         }
-        else if (commus[1].acceptation.valeur > valeurFinCommu || commus[1].desir.valeur > valeurFinCommu || commus[1].pitie.valeur > valeurFinCommu)
+        else if (commus[1].acceptation.valeur >= valeurFinCommu || commus[1].desir.valeur >= valeurFinCommu || commus[1].pitie.valeur >= valeurFinCommu)
         {
+            Debug.Log("Commu 2 fin");
             StartEndEvent(commus[1].goodEnding);
         }
-        else if (commus[2].acceptation.valeur > valeurFinCommu || commus[2].desir.valeur > valeurFinCommu || commus[2].pitie.valeur > valeurFinCommu)
+        else if (commus[2].acceptation.valeur >= valeurFinCommu || commus[2].desir.valeur >= valeurFinCommu || commus[2].pitie.valeur >= valeurFinCommu)
         {
+            Debug.Log("Commu 3 fin");
             StartEndEvent(commus[2].goodEnding);
         }
-        else if (commus[3].acceptation.valeur > valeurFinCommu || commus[3].desir.valeur > valeurFinCommu || commus[3].pitie.valeur > valeurFinCommu)
+        else if (commus[3].acceptation.valeur >= valeurFinCommu || commus[3].desir.valeur >= valeurFinCommu || commus[3].pitie.valeur >= valeurFinCommu)
         {
+            Debug.Log("Commu 4 fin");
             StartEndEvent(commus[3].goodEnding);
         }
         else if (representationForJournal.Count > 0)
@@ -445,6 +473,7 @@ public class MonstreEventManager : MonoBehaviour
 
     void StartEndEvent(EndEvent eventToEnd)
     {
+        Debug.Log("End Game");
         SaveLoadSystem.ResetGameSate();
         HideCards();
         monoEnd.showEnd.SetActive(true);
@@ -460,9 +489,10 @@ public class MonstreEventManager : MonoBehaviour
         currentHistoric.Add(eventToEnd.historic);
         SaveLoadSystem.SaveHistoric(currentHistoric);
         //Mettre un affichage pour les succès
-        Debug.Log(eventToEnd);
+        Debug.Log("Image de fin ? : " + eventToEnd.imageFin);
         if (eventToEnd.imageFin != null)
         {
+            Debug.Log("Test image fin");
             monoEnd.fond.sprite = eventToEnd.imageFin;
         }
         monoEnd.text.text = eventToEnd.texteFin;
@@ -613,7 +643,7 @@ public class MonstreEventManager : MonoBehaviour
 
     public void SaveGameState()
     {
-        SaveLoadSystem.SaveGameState(actualEvent, Panique.value, monstreHp, eventsPool);
+        SaveLoadSystem.SaveGameState(actualEvent, Panique.value, monstreHp, eventsPool, encounteredCharacter);
         SaveLoadSystem.SaveCommunauteScore(commus);
         cardManager.SaveCards();
     }

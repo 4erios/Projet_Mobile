@@ -97,7 +97,7 @@ public class SaveLoadSystem : MonoBehaviour
     }
 
     #region GameState
-    public static void SaveGameState(Event actualEvent, float panique, int blessures, List<Event> pool)
+    public static void SaveGameState(Event actualEvent, float panique, int blessures, List<Event> pool, List<Personnage> persos)
     {
         string fileContent = "";
         fileContent += actualEvent.name + "\n";
@@ -107,14 +107,20 @@ public class SaveLoadSystem : MonoBehaviour
         {
             fileContent += evt.name + ";";
         }
+        fileContent += "\n";
+        foreach(Personnage perso in persos)
+        {
+            fileContent += perso.name + ";";
+        }
         SaveTextDoc("GameState/GameActualState", fileContent);
     }
-    public static bool LoadGameState(out string ActualEvent, out int panique, out int blessure, out List<string> poolEvent)
+    public static bool LoadGameState(out string ActualEvent, out int panique, out int blessure, out List<string> poolEvent, out List<string> personnages)
     {
         ActualEvent = "";
         panique = 0;
         blessure = 0;
         poolEvent = new List<string>();
+        personnages = new List<string>();
         if (File.Exists(GetPath("GameState/GameActualState")))
         {
             string[] fileContent = File.ReadAllLines(GetPath("GameState/GameActualState"));
@@ -126,6 +132,14 @@ public class SaveLoadSystem : MonoBehaviour
             foreach(string name in buffer)
             {
                 poolEvent.Add(name);
+            }
+            if (fileContent.Length >= 4)
+            {
+                buffer = fileContent[4].Split(';');
+                foreach (string name in buffer)
+                {
+                    personnages.Add(name);
+                }
             }
             return true;
         }

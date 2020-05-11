@@ -19,7 +19,8 @@ MonoBehaviour:
     maxBas: -3
     maxHaut: 6
     eventsPhase2: []
-    journalPhrasesUp: []
+    journalPhrasesUp:
+    - La police ne vous aime pas
     journalPhrasesDown: []
   agressivite:
     valeur: 0
@@ -28,7 +29,8 @@ MonoBehaviour:
     maxBas: -3
     maxHaut: 6
     eventsPhase2: []
-    journalPhrasesUp: []
+    journalPhrasesUp:
+    - La police ne vous aime pas
     journalPhrasesDown: []
   jalousie:
     valeur: 0
@@ -37,7 +39,8 @@ MonoBehaviour:
     maxBas: -3
     maxHaut: 6
     eventsPhase2: []
-    journalPhrasesUp: []
+    journalPhrasesUp:
+    - La police ne vous aime pas
     journalPhrasesDown: []
   desir:
     valeur: 0
@@ -46,7 +49,8 @@ MonoBehaviour:
     maxBas: -6
     maxHaut: 6
     eventsPhase2: []
-    journalPhrasesUp: []
+    journalPhrasesUp:
+    - "La police commencet \xE0 vous apprecier"
     journalPhrasesDown: []
   acceptation:
     valeur: 0
@@ -55,7 +59,8 @@ MonoBehaviour:
     maxBas: -6
     maxHaut: 6
     eventsPhase2: []
-    journalPhrasesUp: []
+    journalPhrasesUp:
+    - "La police commence \xE0 vous apprecier"
     journalPhrasesDown: []
   pitie:
     valeur: 0
@@ -64,7 +69,8 @@ MonoBehaviour:
     maxBas: -6
     maxHaut: 6
     eventsPhase2: []
-    journalPhrasesUp: []
+    journalPhrasesUp:
+    - "La police commence \xE0 vous apprecier"
     journalPhrasesDown: []
   goodEnding: {fileID: 11400000, guid: fd7c7efa7f47d854d939afd3f3c1de11, type: 2}
   badEnding: {fileID: 11400000, guid: d8873c30967c5bc4090bd4dbc4aebfc2, type: 2}

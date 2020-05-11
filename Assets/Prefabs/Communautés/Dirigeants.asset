@@ -20,9 +20,8 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
-    - "Dirigeant R\xE9pulsion +"
-    journalPhrasesDown:
-    - "Dirigeant R\xE9pulsion -"
+    - Les dirigeants ne vous aime pas
+    journalPhrasesDown: []
   agressivite:
     valeur: 0
     seuilHaut: 3
@@ -31,9 +30,8 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
-    - Dirigeant Agro +
-    journalPhrasesDown:
-    - Dirigeant Agro -
+    - Les dirigeants ne vous aime pas
+    journalPhrasesDown: []
   jalousie:
     valeur: 0
     seuilHaut: 3
@@ -42,9 +40,8 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
-    - Dirigeant Jalousie +
-    journalPhrasesDown:
-    - Dirigeant Jalousie -
+    - Les dirigeants ne vous aime pas
+    journalPhrasesDown: []
   desir:
     valeur: 0
     seuilHaut: 3
@@ -53,9 +50,8 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
-    - "Dirigeant D\xE9sir +"
-    journalPhrasesDown:
-    - "Dirigeant D\xE9sir -"
+    - "Les dirigeants commencent \xE0 vous aimer"
+    journalPhrasesDown: []
   acceptation:
     valeur: 0
     seuilHaut: 3
@@ -64,9 +60,8 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
-    - Dirigeant Acceptation +
-    journalPhrasesDown:
-    - Dirigeant Acceptation -
+    - "Les dirigeants commencent \xE0 vous aimer"
+    journalPhrasesDown: []
   pitie:
     valeur: 0
     seuilHaut: 3
@@ -75,8 +70,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
-    - Dirigeant Pitie +
-    journalPhrasesDown:
-    - Dirigeant Pitie -
+    - "Les dirigeants commencent \xE0 vous aimer"
+    journalPhrasesDown: []
   goodEnding: {fileID: 11400000, guid: 5b692460196e43243aa123b32978be8a, type: 2}
   badEnding: {fileID: 11400000, guid: eeb25e5494f44564cb466aeb0acabb77, type: 2}

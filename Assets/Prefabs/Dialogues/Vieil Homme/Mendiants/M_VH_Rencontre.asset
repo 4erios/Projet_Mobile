@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: M_VH_Rencontre
   m_EditorClassIdentifier: 
-  dialogueDepart: You hunger. You didn't eat for some time now. You see some trash,
-    maybe you'll find some food inside it? As you search the trash, a shadow come
-    behind you and someone calls you. "Oh! Look like I'll have a meal with a friend
-    tonight! Wait what are you?  You're not a cat, are you?"
+  dialogueDepart: As you search the trash, a shadow come behind you and someone calls
+    you. "Oh! Look like I'll have a meal with a friend tonight! Wait what are you? 
+    You're not a cat, are you?"
   reponseInteret: '"Wowowow, no need to get angry little one! I''m not here to steal
     your food.. But I know where to find some. Come find me the next time you''re
     hungry.."'
