@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: H_VH_BasePositif
   m_EditorClassIdentifier: 
-  dialogueDepart: 
-  reponseInteret: 
-  reponseAffection: 
-  reponseCompassion: 
-  reponseDegout: 
-  reponsePeur: 
-  reponseHaine: 
+  dialogueDepart: 'Oh! Are you the cat from last time? Come here, let me cuddle you.. '
+  reponseInteret: 'Hey, don''t be scared.. Look, I even brought you a treat! '
+  reponseAffection: 'You''re pretty cute.. But up close you don''t look like a cat... '
+  reponseCompassion: 'Poor little one. Here, take a treat, it''ll help you regain
+    some strength. '
+  reponseDegout: 'What are those? Do you have some more friends with you? '
+  reponsePeur: Eh! Why are you biting me?! Do you have rage?!
+  reponseHaine: 'Don''t run away! Did I do something wrong? '
   reponseBonus: 
   reponseMalus: 

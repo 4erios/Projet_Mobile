@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: RO_JP_Rencontre
+  m_EditorClassIdentifier: 
+  dialogueDepart: 'I hope the captain won''t mind me going home earlier today. Hmmm,
+    what''s this thing? '
+  reponseInteret: 'I scared it! Maybe if I come back later I''ll see it again? '
+  reponseAffection: 'You''re pretty clingy huh? Sorry I don''t have anything for
+    you. '
+  reponseCompassion: 'What happened to you? Are you hurt? I''m sorry I don''t know
+    what can help you. '
+  reponseDegout: 'Is it me or you have way bigger fangs than you should? You''re
+    pretty scary like this... '
+  reponsePeur: 'Argh! What are you doing?! I''m gonna shoot you! '
+  reponseHaine: 'Wow! Don''t try me! I''m armed! '
+  reponseBonus: 
+  reponseMalus: 

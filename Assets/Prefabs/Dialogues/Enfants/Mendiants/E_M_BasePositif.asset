@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: E_M_BasePositif
   m_EditorClassIdentifier: 
-  dialogueDepart: 
-  reponseInteret: 
-  reponseAffection: 
-  reponseCompassion: 
-  reponseDegout: 
-  reponsePeur: 
-  reponseHaine: 
+  dialogueDepart: 'Hey! You''re the one from last time! Care to share with me? '
+  reponseInteret: 'Oh yoou learned to act cute! I can do it too, since I''m not allowed
+    to work, I do it to get some food from people. '
+  reponseAffection: 'Hey it''s alright! You know what? When you''re sad come to me,
+    I''ll play with you! '
+  reponseCompassion: 'Don''t be like this, it''s hard for me too you know... '
+  reponseDegout: 'Those are my only clothes, don''t drool on them ! '
+  reponsePeur: Aaahh! It hurts! Leave me alone !
+  reponseHaine: 'Hmpf! At least leave the food if you''re going to run away.. '
   reponseBonus: 
   reponseMalus: 

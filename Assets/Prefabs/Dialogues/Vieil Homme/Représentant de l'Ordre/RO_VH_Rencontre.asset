@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: RO_VH_Rencontre
+  m_EditorClassIdentifier: 
+  dialogueDepart: 'And here come the wild cats again.. This is an endless task, why
+    do the higher up want me to take care of it?! Go away! '
+  reponseInteret: 'Thanks god, this one decided to be obedient. '
+  reponseAffection: 'Hey I know you don''t like this but I have orders.. Sorry little
+    one. '
+  reponseCompassion: 'Hmpf.. I better continue my patrol. Chasing  after you won''t
+    bring me anything. '
+  reponseDegout: 'Urgh.. Stop dirtying the road! That''s exactly why I''m asked to
+    chase you away! '
+  reponsePeur: 'What are you?! Don''t touch me with those things! '
+  reponseHaine: 'Hey! I''m a police officer, do you think you can just bite me like
+    this?! '
+  reponseBonus: 
+  reponseMalus: 

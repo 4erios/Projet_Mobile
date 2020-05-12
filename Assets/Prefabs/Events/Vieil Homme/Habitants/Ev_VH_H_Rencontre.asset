@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63264c0044614164ab02233d8adf93b7, type: 3}
-  m_Name: Ev_VH_M_Perte fuite
+  m_Name: Ev_VH_H_Rencontre
   m_EditorClassIdentifier: 
-  personnage: {fileID: 11400000, guid: 0bd5e7e4718357649bb790cd5167c1ec, type: 2}
-  accroche: {fileID: 11400000, guid: 67cbb1e3f4f68564786ac16226b86f69, type: 2}
-  dialogue: {fileID: 11400000, guid: 650fbaffac8874948ad1ffbbd8c9df21, type: 2}
+  personnage: {fileID: 11400000, guid: a48733bf39894a14683bae1f69369b38, type: 2}
+  accroche: {fileID: 11400000, guid: f3de56c0746689540afa6db114eea48e, type: 2}
+  dialogue: {fileID: 11400000, guid: 09c3d35643985054c9f3fd85c879fa99, type: 2}
   lieux: 0
   effetBonus: {fileID: 0}
   carteBonus: {fileID: 0}
-  effetMalus: {fileID: 11400000, guid: 43501bd07cfd95648be7ce1c834cb8a5, type: 2}
-  carteMalus: {fileID: 11400000, guid: 6ad6911bc7ae07b4d9bf266ab1f9af77, type: 2}
-  preset: 2
+  effetMalus: {fileID: 0}
+  carteMalus: {fileID: 0}
+  preset: 0
   killPersonnage: 6
   eventSuivant: {fileID: 0}
