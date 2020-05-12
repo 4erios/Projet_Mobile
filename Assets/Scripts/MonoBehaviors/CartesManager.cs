@@ -108,6 +108,7 @@ public class CartesManager : MonoBehaviour
                 }
                 else if(touch.phase == TouchPhase.Ended)
                 {
+                    ChangeAnimatorState(true);
                     isTouch = false;
                     if (touch.position.x - positionCentrale.x > 360 + distanceBetweenCards / 2 || touch.position.x - positionCentrale.x < 360 - distanceBetweenCards / 2)
                     {
@@ -146,6 +147,7 @@ public class CartesManager : MonoBehaviour
                     Debug.Log("Test Card 2");
                     if (touch.phase == TouchPhase.Ended && isTouch)
                     {
+                        ChangeAnimatorState(true);
                         Debug.Log("Test Card 1");
                         dialogueTransf.parent.GetComponent<MonoDialogue>().GetCard(cartesJoueur[mainCard].emotion);
                         Debug.Log(pos.y + " < " + dialogueTransf.position.y + " + " + (screenSize.y * 0.16f));
@@ -157,6 +159,7 @@ public class CartesManager : MonoBehaviour
 
             if (touch.phase == TouchPhase.Ended && isTouch)
             {
+                ChangeAnimatorState(true);
                 isTouch = false;
                 movingCard = false;
                 movingList = false;
@@ -194,6 +197,7 @@ public class CartesManager : MonoBehaviour
                 }
                 else if(Input.GetMouseButtonUp(0))
                 {
+                    ChangeAnimatorState(true);
                     isTouch = false;
                     if (Input.mousePosition.x - positionCentrale.x > 360 + distanceBetweenCards / 2 || Input.mousePosition.x - positionCentrale.x < 360 - distanceBetweenCards / 2)
                     {
@@ -241,6 +245,7 @@ public class CartesManager : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0) && isTouch)
         {
+            ChangeAnimatorState(true);
             Vector3 pos = cartesJoueur[mainCard].transform.position;
             if ((pos.x < dialogueTransf.position.x + 9 && pos.x > dialogueTransf.position.x - 9) && (pos.y < dialogueTransf.position.y + 13 && pos.y > dialogueTransf.position.y - 4 / 2))
             {
@@ -289,7 +294,6 @@ public class CartesManager : MonoBehaviour
 
     void ResetCardPosition()
     {
-        ChangeAnimatorState(true);
         cartesJoueur[mainCard].transform.localPosition = new Vector3(positionCentrale.x, positionCentrale.y, cartesJoueur[mainCard].transform.localPosition.z);
         currentPosition = positionCentrale;
         cartesJoueur[mainCard].colid.enabled = false;

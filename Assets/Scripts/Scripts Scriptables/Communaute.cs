@@ -5,14 +5,14 @@ using UnityEngine;
 [System.Serializable]
 public class Representation
 {
-    public int valeur, seuilHaut, seuilBas, maxBas, maxHaut;
+    public float valeur, seuilHaut, seuilBas, maxBas, maxHaut;
     public List<Event> eventsPhase2;
     public List<string> journalPhrasesUp, journalPhrasesDown;
     bool firstState = true;
 
-    public int AddPoint(int value, MonstreEventManager manag) // Ajoute/Enlève les points de la Représentation. Renvoie un Bool qui dit s'il y a besoin du Journal ou pas
+    public float AddPoint(float value, MonstreEventManager manag) // Ajoute/Enlève les points de la Représentation. Renvoie un Bool qui dit s'il y a besoin du Journal ou pas
     {
-        int ancientValue = valeur;
+        float ancientValue = valeur;
         valeur += value;
 
         if(valeur < maxBas)
@@ -48,7 +48,10 @@ public class Communaute : ScriptableObject
     public Representation repulsion, agressivite, jalousie, desir, acceptation, pitie;
     public EndEvent goodEnding, badEnding;
 
-    public string GetHighestRepresentation(out int nb)
+    public Communaute communauteEnnemie;
+    public float coef;
+
+    public string GetHighestRepresentation(out float nb)
     {
         nb = pitie.valeur;
         string toReturn = "Pitie";

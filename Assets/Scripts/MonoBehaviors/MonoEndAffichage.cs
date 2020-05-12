@@ -11,6 +11,7 @@ public class MonoEndAffichage : MonoBehaviour
     public bool canEnd;
     [SerializeField]
     private MenuScript menus;
+    public Animator anim;
 
     private float timeBeforeClic = 1.5f;
 

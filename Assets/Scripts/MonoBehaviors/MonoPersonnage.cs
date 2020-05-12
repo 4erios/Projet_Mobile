@@ -36,12 +36,24 @@ public class MonoPersonnage : MonoBehaviour
         StartCoroutine(HideSprite());
     }
 
+    public void Die()
+    {
+        GetComponent<Animator>().enabled = true;
+        GetComponent<Animator>().Play("Death", 0, 0.25f);
+    }
+
+    public void StopAnimator()
+    {
+        GetComponent<Animator>().enabled = false;
+    }
+
     IEnumerator ShowSprite()
     {
         Color newColor = Color.white;
         newColor.a = 0;
         for(int i = 0; i < 1/transitionSpeed; i++)
         {
+            Debug.Log("Test Appar");
             newColor.a += transitionSpeed;
             spriteRnd.color = newColor;
             yield return new WaitForSeconds(Time.fixedDeltaTime);
@@ -50,10 +62,14 @@ public class MonoPersonnage : MonoBehaviour
 
     IEnumerator HideSprite()
     {
-        Color newColor = Color.white;
+        Color newColor = spriteRnd.color;
         newColor.a = 1;
         for (int i = 0; i < 1/transitionSpeed; i++)
         {
+            if(newColor.a <= 0)
+            {
+                break;
+            }
             newColor.a -= transitionSpeed;
             spriteRnd.color = newColor;
             yield return new WaitForSeconds(Time.fixedDeltaTime);

@@ -74,3 +74,5 @@ MonoBehaviour:
     journalPhrasesDown: []
   goodEnding: {fileID: 11400000, guid: fd7c7efa7f47d854d939afd3f3c1de11, type: 2}
   badEnding: {fileID: 11400000, guid: d8873c30967c5bc4090bd4dbc4aebfc2, type: 2}
+  communauteEnnemie: {fileID: 11400000, guid: b748d2f27a6991b4a9c80912efec977b, type: 2}
+  coef: 0.2
