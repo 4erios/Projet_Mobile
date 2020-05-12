@@ -12,12 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: "RO_VH_BaseN\xE9gatif"
   m_EditorClassIdentifier: 
-  dialogueDepart: 
-  reponseInteret: 
-  reponseAffection: 
-  reponseCompassion: 
-  reponseDegout: 
-  reponsePeur: 
-  reponseHaine: 
+  dialogueDepart: 'You again?! I told you you can''t come here! Thanks god I''m retiring
+    soon! '
+  reponseInteret: 'Look like I scared it. Maybe next time it''ll come to me. '
+  reponseAffection: 'I''m not here to hurt you you know? If you want to growl at
+    someone I''ll have to send you away though. '
+  reponseCompassion: 'Sorry I don''t have anything for you. Except if you would like
+    to hear some poems, but I don''t think you would. '
+  reponseDegout: 'You''re pretty dirty. I can''t have you sullying my uniform, so
+    don''t get near! '
+  reponsePeur: 'No no no! You''re trying something bad right? '
+  reponseHaine: 'Ouch! Hey stop this! '
   reponseBonus: 
   reponseMalus: 

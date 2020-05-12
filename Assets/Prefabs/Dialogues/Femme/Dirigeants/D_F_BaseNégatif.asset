@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: "D_F_BaseN\xE9gatif"
   m_EditorClassIdentifier: 
-  dialogueDepart: 
-  reponseInteret: 
-  reponseAffection: 
-  reponseCompassion: 
-  reponseDegout: 
-  reponsePeur: 
-  reponseHaine: 
+  dialogueDepart: 'I have to hurry back! He''s gonna be back home soon. Get out of
+    my way! '
+  reponseInteret: 'It''s pretty smart. Running away when I ask it to. '
+  reponseAffection: 'Ooohhh sorry I made you cry, but I have to hurry! '
+  reponseCompassion: Yes you're cute. I'll get you something next time, I'm in a
+    hurry today.
+  reponseDegout: 'Out of my way! I can''t get dirty because of you! '
+  reponsePeur: 'Kyyyyaaa! It bit me! Officer! '
+  reponseHaine: 'Out of my way! I don''t have time for this! '
   reponseBonus: 
   reponseMalus: 

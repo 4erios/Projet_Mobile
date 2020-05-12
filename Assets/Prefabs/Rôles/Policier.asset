@@ -50,4 +50,4 @@ MonoBehaviour:
       doesDamage: 1
     haine:
       emot: 0
-      doesDamage: 1
+      doesDamage: 0

@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: "E_M_BaseN\xE9gatif"
   m_EditorClassIdentifier: 
-  dialogueDepart: 
-  reponseInteret: 
-  reponseAffection: 
-  reponseCompassion: 
-  reponseDegout: 
-  reponsePeur: 
-  reponseHaine: 
+  dialogueDepart: 'Hey! You''re the thing from last time. Leave what you found here,
+    it''s mine! '
+  reponseInteret: Wow it's pretty smart. It seems like it understand me.
+  reponseAffection: 'Hmmm.. Don''t think I''ll leave you alone because of some cuddles!
+    I''m feeling generous so you can take what you found today. '
+  reponseCompassion: I'm not a bully, don't cry. Take what you found, I'll let you
+    off..
+  reponseDegout: 'Tsk.. What kind of mouth is that?! You really are ugly you know? '
+  reponsePeur: Ok I was wrong! It's your food, so please let go !
+  reponseHaine: 'Don''t try to look cute, I know the trick! Now leave the food here! '
   reponseBonus: 
   reponseMalus: 

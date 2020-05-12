@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: "H_VH_BaseN\xE9gatif"
   m_EditorClassIdentifier: 
-  dialogueDepart: 
-  reponseInteret: 
-  reponseAffection: 
-  reponseCompassion: 
-  reponseDegout: 
-  reponsePeur: 
-  reponseHaine: 
+  dialogueDepart: 'That''s you! The odd cat! What are you doing here? '
+  reponseInteret: 'Ah! I scared it.. Maybe it''s not as bad as I thought? '
+  reponseAffection: 'Cool down little one. If you''re hungry, here''s a treat. '
+  reponseCompassion: 'Oh you''re a funny one.. Here''s a treat. '
+  reponseDegout: 'What are you trying to pull here? Are you drooling on my shoes? '
+  reponsePeur: 'Don''t get near me with you claw like this. I, I don''t like it! '
+  reponseHaine: 'Hey! You''re hurting me! Let go! '
   reponseBonus: 
   reponseMalus: 
