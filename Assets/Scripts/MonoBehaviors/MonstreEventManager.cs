@@ -51,6 +51,7 @@ public class MonstreEventManager : MonoBehaviour
     private List<Event> allEvents;
     [SerializeField]
     private List<Personnage> allPersos;
+    private List<Personnage> persoEventFuturs = new List<Personnage>();
 
     private int saveCount;
 
@@ -68,7 +69,7 @@ public class MonstreEventManager : MonoBehaviour
         List<string> persos = new List<string>();
         int paniqueToAdd = 0;
         int damage = 0;
-        bool didLoad = SaveLoadSystem.LoadGameState(out eventName, out paniqueToAdd, out damage, out pool, out persos);
+        bool didLoad = false; //SaveLoadSystem.LoadGameState(out eventName, out paniqueToAdd, out damage, out pool, out persos);
 
         futurEvents = new List<Event>();
         if (didLoad)
@@ -123,7 +124,6 @@ public class MonstreEventManager : MonoBehaviour
     #region Mise en place des Events de début de partie
     private void Start()
     {
-        LoadingScreen.HideLoadScreen();
         int start = 0;
         if(futurEvents.Count>0 && futurEvents[0]!=null)
         {
@@ -132,12 +132,13 @@ public class MonstreEventManager : MonoBehaviour
         for(int i = start; i < 5; i++) //Voir pour rajouter les Règles de Choix des Events en début de Partie
         {
             Event newEvent = eventsPool[Random.Range(0, eventsPool.Count)];
-            while (futurEvents.Contains(newEvent))
+            while (futurEvents.Contains(newEvent) || persoEventFuturs.Contains(newEvent.personnage))
             {
                 newEvent = eventsPool[Random.Range(0, eventsPool.Count)];
             }
             futurEvents.Add(newEvent);
         }
+        LoadingScreen.HideLoadScreen();
         StartNextEvent(futurEvents[0]);
     }
     #endregion
@@ -382,7 +383,8 @@ public class MonstreEventManager : MonoBehaviour
                 saveCount = 0;
                 SaveGameState();
             }
-            futurEvents.Remove(actualEvent);
+            futurEvents.RemoveAt(0);
+            persoEventFuturs.Remove(actualEvent.personnage);
             actualEvent = null;
             EventChoice();
             StartNextEvent(futurEvents[0]);
@@ -411,6 +413,10 @@ public class MonstreEventManager : MonoBehaviour
             for(int k = 0; k < 4; k++)
             {
                 compteCommu.Add(0);
+            }
+            if(persoEventFuturs.Contains(newEvent.personnage))
+            {
+                continue;
             }
             if (futurEvents.Contains(newEvent)) // Vérification de Doublon
             {
@@ -482,6 +488,7 @@ public class MonstreEventManager : MonoBehaviour
             if (i >= 4)
             {
                 futurEvents[4] = newEvent;
+                persoEventFuturs.Add(newEvent.personnage);
             }
             //continueWhile:;
         }
@@ -702,8 +709,8 @@ public class MonstreEventManager : MonoBehaviour
 
     public void SaveGameState()
     {
-        SaveLoadSystem.SaveGameState(actualEvent, Panique.value, monstreHp, eventsPool, encounteredCharacter);
+        /*SaveLoadSystem.SaveGameState(actualEvent, Panique.value, monstreHp, eventsPool, encounteredCharacter);
         SaveLoadSystem.SaveCommunauteScore(commus);
-        cardManager.SaveCards();
+        cardManager.SaveCards();*/
     }
 }

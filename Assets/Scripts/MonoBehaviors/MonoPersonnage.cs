@@ -53,7 +53,6 @@ public class MonoPersonnage : MonoBehaviour
         newColor.a = 0;
         for(int i = 0; i < 1/transitionSpeed; i++)
         {
-            Debug.Log("Test Appar");
             newColor.a += transitionSpeed;
             spriteRnd.color = newColor;
             yield return new WaitForSeconds(Time.fixedDeltaTime);

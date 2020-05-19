@@ -18,6 +18,8 @@ public class MonoDialogue : MonoBehaviour
     private bool isDialShowing;
     private bool isResponseDial;
     private string dial;
+    [SerializeField]
+    private int speed;
 
     public void ShowAccroche(string txt, string dialog)
     {
@@ -42,16 +44,15 @@ public class MonoDialogue : MonoBehaviour
     {
         isDialShowing = true;
         string tmpStr = "";
-        for(int i = 0; i < dial.Length; i+=3)
+
+        for (int i = 0; i < dial.Length; i += speed)
         {
-            tmpStr += dial[i];
-            if (i + 1 < dial.Length)
+            for (int j = 0; j < speed; j++)
             {
-                tmpStr += dial[i+1];
-            }
-            if (i + 2 < dial.Length)
-            {
-                tmpStr += dial[i+2];
+                if (i + j < dial.Length)
+                {
+                    tmpStr += dial[i + j];
+                }
             }
             zoneText.text = tmpStr;
             yield return new WaitForSeconds(Time.fixedDeltaTime);

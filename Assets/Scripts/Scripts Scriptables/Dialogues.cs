@@ -9,5 +9,4 @@ public class Dialogues : ScriptableObject
     public string dialogueDepart;
     [TextArea(3,5)]
     public string reponseInteret, reponseAffection, reponseCompassion, reponseDegout, reponsePeur, reponseHaine, reponseBonus, reponseMalus;
-
 }

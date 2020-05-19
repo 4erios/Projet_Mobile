@@ -77,7 +77,10 @@ public class SaveLoadSystem : MonoBehaviour
     #region Save System
     public static void ResetGameSate()
     {
-        DeleteFileInDirectory(GetDirectory("GameState"));
+        if (Directory.Exists(GetDirectory("GameState")))
+        {
+            DeleteFileInDirectory(GetDirectory("GameState"));
+        }
     }
 
     public static void CreateDirectory()
