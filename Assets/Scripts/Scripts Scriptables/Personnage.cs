@@ -10,6 +10,7 @@ public class Personnage : ScriptableObject
     public List<Sprite> spriteReaction; //Voir si on met une Anim ou une liste de Sprites
     public bool isAlive = true;
     public Event rencontreEvent;
+    public Success dyingSuccess;
 
     public void Die()
     {

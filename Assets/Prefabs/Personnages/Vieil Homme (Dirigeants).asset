@@ -23,3 +23,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1bdc95e80077f934a98d5c9d742b8b36, type: 3}
   isAlive: 1
   rencontreEvent: {fileID: 11400000, guid: fdd42d2686454304a83aaa5ec3311ae5, type: 2}
+  dyingSuccess: {fileID: 11400000, guid: 11398b858369f46419da74b5283f9a72, type: 2}

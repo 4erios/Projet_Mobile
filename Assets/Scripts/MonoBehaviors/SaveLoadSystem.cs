@@ -12,14 +12,18 @@ public class SaveLoadSystem : MonoBehaviour
     private List<Success> allSuccess;
     [SerializeField]
     private List<AncientGame> allHistoric;
-
-    private static List<Success> everySuccess;
+    [SerializeField]
+    private List<Quest> allQuests;
+    
+    public static List<Success> everySuccess;
     private static List<AncientGame> everyHistoric;
+    private static List<Quest> everyQuests;
 
     private void Awake()
     {
         everySuccess = allSuccess;
         everyHistoric = allHistoric;
+        everyQuests = allQuests;
     }
 
     static string GetPath(string name, string extension = ".txt") => Path.Combine(Application.persistentDataPath, name + extension);
@@ -92,7 +96,6 @@ public class SaveLoadSystem : MonoBehaviour
     {
         if (!Directory.Exists(Path.Combine(Application.persistentDataPath, "GameState")))
         {
-            Debug.Log("Direct Exist ?");
             CreateDirectory();
         }
         Debug.Log("Path : " + GetPath(docName));
@@ -340,6 +343,110 @@ public class SaveLoadSystem : MonoBehaviour
             }
         }
         return unlockedSucc;
+    }
+
+    public static bool ValidateQuest(Quest quete)
+    {
+        List<Quest> queteList = GetQuestList();
+        if (queteList.Contains(quete))
+        {
+            return false;
+        }
+        else
+        {
+            queteList.Add(quete);
+            SaveAllQuest(queteList);
+            return true;
+        }
+    }
+    public static void SaveAllQuest(List<Quest> quetesList)
+    {
+        string fileContent = "";
+        foreach (Quest quete in quetesList)
+        {
+            fileContent += quete.titre + ";" + quete.isValid + "\n";
+        }
+        SaveTextDoc("Quest", fileContent);
+    }
+    public static void SaveAllUsedQuest(List<Quest> quetesList)
+    {
+        string fileContent = "";
+        foreach (Quest quete in quetesList)
+        {
+            fileContent += quete.titre + "\n";
+        }
+        SaveTextDoc("UsedQuest", fileContent);
+    }
+    public static string[] LoadQuest(string path)
+    {
+        if (File.Exists(GetPath(path)))
+        {
+            string[] fileContent = File.ReadAllLines(GetPath(path));
+            return fileContent;
+        }
+        else
+        {
+            Debug.Log("Echec Chargement Quest");
+            return new string[0];
+        }
+    }
+    public static List<Quest> GetQuestList()
+    {
+        string[] questTitles = LoadQuest("Quest");
+        List<Quest> unlockedQuest = new List<Quest>();
+
+        foreach (string title in questTitles)
+        {
+            string[] buffer = title.Split(';');
+            for (int i = 0; i < everyQuests.Count; i++)
+            {
+                if (everyQuests[i].titre == buffer[0])
+                {
+                    Quest newQuest = everyQuests[i];
+                    if (buffer[1] == "True")
+                    {
+                        newQuest.isValid = true;
+                    }
+                    unlockedQuest.Add(newQuest);
+
+                    break;
+                }
+            }
+        }
+        return unlockedQuest;
+    }
+    public static List<Quest> GetUsedQuestList()
+    {
+        string[] questTitles = LoadQuest("UsedQuest");
+        List<Quest> unlockedQuest = new List<Quest>();
+
+        foreach (string title in questTitles)
+        {
+            for (int i = 0; i < everyQuests.Count; i++)
+            {
+                if (everyQuests[i].titre == title)
+                {
+                    unlockedQuest.Add(everyQuests[i]);
+                    break;
+                }
+            }
+        }
+        return unlockedQuest;
+    }
+
+
+    public static void ResetQuest()
+    {
+        string[] files = Directory.GetFiles(GetDirectory(""));
+
+        foreach (string file in files)
+        {
+            if (file == GetPath("UsedQuest"))
+            {
+                //File.SetAttributes(file, FileAttributes.Normal);
+                File.Delete(file);
+            }
+        }
     }
 
     //Representation repulsion, agressivite, jalousie, desir, acceptation, pitie;

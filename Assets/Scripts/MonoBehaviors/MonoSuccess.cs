@@ -17,6 +17,13 @@ public class MonoSuccess : MonoBehaviour
         text.text = succ.texteExplicatif;
     }
 
+    public void ShowValidSuccess()
+    {
+        image.color = Color.white;
+        titre.color = Color.white;
+        text.color = Color.white;
+    }
+
     public void ShowHistoric(AncientGame game)
     {
         image.sprite = game.icone;

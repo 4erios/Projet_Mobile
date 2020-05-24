@@ -57,11 +57,15 @@ public class MonstreEventManager : MonoBehaviour
 
     private List<Personnage> encounteredCharacter = new List<Personnage>();
 
+    public List<Quest> quetesActuelles;
+
     #region Load des sauvegardes
     void Awake()
     {
         //Load Communautés
         SaveLoadSystem.LoadCommunauteScore(commus);
+
+        quetesActuelles = SaveLoadSystem.GetQuestList();
 
         //Load Game State
         string eventName = "";
@@ -246,6 +250,7 @@ public class MonstreEventManager : MonoBehaviour
 
     public void GetResponse(EmotionMonstre reponse) //Récupère la carte jouée par le Joueur
     {
+        AvancementSuccess.AddCardPlayed();
         PresetRole rolePreset = actualEvent.personnage.role.presets[actualEvent.preset];
         int damage = 0;
         Reactions emot = rolePreset.GetReact(reponse.emotion, out damage);
@@ -290,6 +295,14 @@ public class MonstreEventManager : MonoBehaviour
 
         if (actualEvent.effetBonus == reponse)
         {
+            AvancementSuccess.AddUnlockCard(actualEvent.carteBonus);
+            foreach (Quest q in quetesActuelles)
+            {
+                if (q.cardWanted == actualEvent.carteBonus)
+                {
+                    q.ValidateQuest();
+                }
+            }
             cardManager.AddCard(actualEvent.carteBonus);
         }
         else if (actualEvent.effetMalus == reponse)
@@ -301,8 +314,16 @@ public class MonstreEventManager : MonoBehaviour
     [ContextMenu("Kill")]
     void KillPersonnage()
     {
+        AvancementSuccess.AddKilledCharacter(actualEvent.personnage);
         tacheSang.SetActive(true);
         actualEvent.personnage.Die();
+        foreach(Quest q in quetesActuelles)
+        {
+            if(q.killedPerso == actualEvent.personnage)
+            {
+                q.ValidateQuest();
+            }
+        }
         monoPerso.Die();
 
         nbDeadPeople++;
@@ -393,6 +414,7 @@ public class MonstreEventManager : MonoBehaviour
 
     public void RemoveFromJournal()
     {
+        //Changement needed
         representationForJournal.RemoveAt(0);
         if(representationForJournal.Count<=0)
         {
@@ -431,50 +453,56 @@ public class MonstreEventManager : MonoBehaviour
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    switch (futurEvents[j].personnage.communaute.name)
+                    if (futurEvents[j].personnage.communaute != null)
                     {
-                        case "Dirigeants":
-                            compteCommu[0]++;
-                            break;
-                        case "Habitants":
-                            compteCommu[1]++;
-                            break;
-                        case "Mendiants":
-                            compteCommu[2]++;
-                            break;
-                        case "Représentants de l'ordre":
-                            compteCommu[3]++;
-                            break;
+                        switch (futurEvents[j].personnage.communaute.name)
+                        {
+                            case "Dirigeants":
+                                compteCommu[0]++;
+                                break;
+                            case "Habitants":
+                                compteCommu[1]++;
+                                break;
+                            case "Mendiants":
+                                compteCommu[2]++;
+                                break;
+                            case "Représentants de l'ordre":
+                                compteCommu[3]++;
+                                break;
+                        }
                     }
                 }
             }
 
-            switch (newEvent.personnage.communaute.name) //A remodifier après la Slice
+            if (newEvent.personnage.communaute != null)
             {
-                case "Dirigeants":
-                    if (compteCommu[0] > 2)
-                    {
-                        continue;
-                    }
-                    break;
-                case "Habitants":
-                    if (compteCommu[1] > 2)
-                    {
-                        continue;
-                    }
-                    break;
-                case "Mendiants":
-                    if (compteCommu[2] > 2)
-                    {
-                        continue;
-                    }
-                    break;
-                case "Représentants de l'ordre":
-                    if (compteCommu[3] > 2)
-                    {
-                        continue;
-                    }
-                    break;
+                switch (newEvent.personnage.communaute.name)
+                {
+                    case "Dirigeants":
+                        if (compteCommu[0] > 2)
+                        {
+                            continue;
+                        }
+                        break;
+                    case "Habitants":
+                        if (compteCommu[1] > 2)
+                        {
+                            continue;
+                        }
+                        break;
+                    case "Mendiants":
+                        if (compteCommu[2] > 2)
+                        {
+                            continue;
+                        }
+                        break;
+                    case "Représentants de l'ordre":
+                        if (compteCommu[3] > 2)
+                        {
+                            continue;
+                        }
+                        break;
+                }
             }
             #endregion
             int i = 0;
@@ -493,20 +521,16 @@ public class MonstreEventManager : MonoBehaviour
             //continueWhile:;
         }
     }
-    [ContextMenu("BadEnd")]
-    void TestEndBad()
-    {
-        monstreHp = -1;
-        StartEndEvent(actualEvent.personnage.communaute.badEnding);
-    }
-    [ContextMenu("GoodEnd")]
-    void TestEndGood()
-    {
-        StartEndEvent(actualEvent.personnage.communaute.goodEnding);
-    }
 
     void StartEndEvent(EndEvent eventToEnd)
     {
+        foreach (Quest q in quetesActuelles)
+        {
+            if (q.endingWanted == eventToEnd)
+            {
+                q.ValidateQuest();
+            }
+        }
         Debug.Log("End Game");
         SaveLoadSystem.ResetGameSate();
         HideCards();
@@ -521,7 +545,7 @@ public class MonstreEventManager : MonoBehaviour
         }
         if (eventToEnd.success != null)
         {
-            eventToEnd.success.ValidateSuccess();
+            AvancementSuccess.AddEnding(eventToEnd);
         }
         List<AncientGame> currentHistoric = SaveLoadSystem.GetHistoricList();
         if(currentHistoric.Count>=3)
@@ -529,6 +553,7 @@ public class MonstreEventManager : MonoBehaviour
             currentHistoric.RemoveAt(0);
         }
         currentHistoric.Add(eventToEnd.historic);
+        
         SaveLoadSystem.SaveHistoric(currentHistoric);
         //Mettre un affichage pour les succès
         Debug.Log("Image de fin ? : " + eventToEnd.imageFin);
@@ -605,105 +630,107 @@ public class MonstreEventManager : MonoBehaviour
 
     void ChangeScoreCommu(Communaute commuPerso, Reactions react, int bonus)
     {
-        
-        switch (react)
+        if (commuPerso != null)
         {
-            case Reactions.interet:
-                if (bonus >= 0)
-                {
-                    commuPerso.jalousie.AddPoint(1,this);
-                    commuPerso.communauteEnnemie.jalousie.AddPoint(-commuPerso.coef, this);
-                    commuPerso.desir.AddPoint(1, this);
-                    commuPerso.communauteEnnemie.desir.AddPoint(-commuPerso.coef, this);
-                }
-                if(bonus <= 0)
-                {
-                    commuPerso.repulsion.AddPoint(-1, this);
-                    commuPerso.communauteEnnemie.repulsion.AddPoint(commuPerso.coef, this);
-                    commuPerso.pitie.AddPoint(-1, this);
-                    commuPerso.communauteEnnemie.pitie.AddPoint(commuPerso.coef, this);
-                }
-                break;
-            case Reactions.affection:
-                if (bonus >= 0)
-                {
-                    commuPerso.acceptation.AddPoint(1, this);
-                    commuPerso.communauteEnnemie.acceptation.AddPoint(-commuPerso.coef, this);
-                    commuPerso.desir.AddPoint(1, this);
-                    commuPerso.communauteEnnemie.desir.AddPoint(-commuPerso.coef, this);
-                }
-                if (bonus <= 0)
-                {
-                    commuPerso.repulsion.AddPoint(-1, this);
-                    commuPerso.communauteEnnemie.repulsion.AddPoint(commuPerso.coef, this);
-                    commuPerso.agressivite.AddPoint(-1, this);
-                    commuPerso.communauteEnnemie.agressivite.AddPoint(commuPerso.coef, this);
-                }
-                break;
-            case Reactions.compassion:
-                if (bonus >= 0)
-                {
-                    commuPerso.acceptation.AddPoint(1, this);
-                    commuPerso.communauteEnnemie.acceptation.AddPoint(-commuPerso.coef, this);
-                    commuPerso.pitie.AddPoint(1, this);
-                    commuPerso.communauteEnnemie.pitie.AddPoint(-commuPerso.coef, this);
-                }
-                if (bonus <= 0)
-                {
-                    commuPerso.jalousie.AddPoint(-1, this);
-                    commuPerso.communauteEnnemie.jalousie.AddPoint(commuPerso.coef, this);
-                    commuPerso.agressivite.AddPoint(-1, this);
-                    commuPerso.communauteEnnemie.agressivite.AddPoint(commuPerso.coef, this);
-                }
-                break;
-            case Reactions.degout:
-                if (bonus >= 0)
-                {
-                    commuPerso.repulsion.AddPoint(1, this);
-                    commuPerso.communauteEnnemie.repulsion.AddPoint(-commuPerso.coef, this);
-                    commuPerso.pitie.AddPoint(1, this);
-                    commuPerso.communauteEnnemie.pitie.AddPoint(-commuPerso.coef, this);
-                }
-                if (bonus <= 0)
-                {
-                    commuPerso.jalousie.AddPoint(-1, this);
-                    commuPerso.communauteEnnemie.jalousie.AddPoint(commuPerso.coef, this);
-                    commuPerso.desir.AddPoint(-1, this);
-                    commuPerso.communauteEnnemie.desir.AddPoint(commuPerso.coef, this);
-                }
-                break;
-            case Reactions.peur:
-                if (bonus >= 0)
-                {
-                    commuPerso.repulsion.AddPoint(1, this);
-                    commuPerso.communauteEnnemie.repulsion.AddPoint(-commuPerso.coef, this);
-                    commuPerso.agressivite.AddPoint(1, this);
-                    commuPerso.communauteEnnemie.agressivite.AddPoint(-commuPerso.coef, this);
-                }
-                if (bonus <= 0)
-                {
-                    commuPerso.acceptation.AddPoint(-1, this);
-                    commuPerso.communauteEnnemie.acceptation.AddPoint(commuPerso.coef, this);
-                    commuPerso.desir.AddPoint(-1, this);
-                    commuPerso.communauteEnnemie.desir.AddPoint(commuPerso.coef, this);
-                }
-                break;
-            case Reactions.haine:
-                if (bonus >= 0)
-                {
-                    commuPerso.jalousie.AddPoint(1, this);
-                    commuPerso.communauteEnnemie.jalousie.AddPoint(-commuPerso.coef, this);
-                    commuPerso.agressivite.AddPoint(1, this);
-                    commuPerso.communauteEnnemie.agressivite.AddPoint(-commuPerso.coef, this);
-                }
-                if (bonus <= 0)
-                {
-                    commuPerso.acceptation.AddPoint(-1, this);
-                    commuPerso.communauteEnnemie.acceptation.AddPoint(commuPerso.coef, this);
-                    commuPerso.pitie.AddPoint(-1, this);
-                    commuPerso.communauteEnnemie.pitie.AddPoint(commuPerso.coef, this);
-                }
-                break;
+            switch (react)
+            {
+                case Reactions.interet:
+                    if (bonus >= 0)
+                    {
+                        commuPerso.jalousie.AddPoint(1, this);
+                        commuPerso.communauteEnnemie.jalousie.AddPoint(-commuPerso.coef, this);
+                        commuPerso.desir.AddPoint(1, this);
+                        commuPerso.communauteEnnemie.desir.AddPoint(-commuPerso.coef, this);
+                    }
+                    if (bonus <= 0)
+                    {
+                        commuPerso.repulsion.AddPoint(-1, this);
+                        commuPerso.communauteEnnemie.repulsion.AddPoint(commuPerso.coef, this);
+                        commuPerso.pitie.AddPoint(-1, this);
+                        commuPerso.communauteEnnemie.pitie.AddPoint(commuPerso.coef, this);
+                    }
+                    break;
+                case Reactions.affection:
+                    if (bonus >= 0)
+                    {
+                        commuPerso.acceptation.AddPoint(1, this);
+                        commuPerso.communauteEnnemie.acceptation.AddPoint(-commuPerso.coef, this);
+                        commuPerso.desir.AddPoint(1, this);
+                        commuPerso.communauteEnnemie.desir.AddPoint(-commuPerso.coef, this);
+                    }
+                    if (bonus <= 0)
+                    {
+                        commuPerso.repulsion.AddPoint(-1, this);
+                        commuPerso.communauteEnnemie.repulsion.AddPoint(commuPerso.coef, this);
+                        commuPerso.agressivite.AddPoint(-1, this);
+                        commuPerso.communauteEnnemie.agressivite.AddPoint(commuPerso.coef, this);
+                    }
+                    break;
+                case Reactions.compassion:
+                    if (bonus >= 0)
+                    {
+                        commuPerso.acceptation.AddPoint(1, this);
+                        commuPerso.communauteEnnemie.acceptation.AddPoint(-commuPerso.coef, this);
+                        commuPerso.pitie.AddPoint(1, this);
+                        commuPerso.communauteEnnemie.pitie.AddPoint(-commuPerso.coef, this);
+                    }
+                    if (bonus <= 0)
+                    {
+                        commuPerso.jalousie.AddPoint(-1, this);
+                        commuPerso.communauteEnnemie.jalousie.AddPoint(commuPerso.coef, this);
+                        commuPerso.agressivite.AddPoint(-1, this);
+                        commuPerso.communauteEnnemie.agressivite.AddPoint(commuPerso.coef, this);
+                    }
+                    break;
+                case Reactions.degout:
+                    if (bonus >= 0)
+                    {
+                        commuPerso.repulsion.AddPoint(1, this);
+                        commuPerso.communauteEnnemie.repulsion.AddPoint(-commuPerso.coef, this);
+                        commuPerso.pitie.AddPoint(1, this);
+                        commuPerso.communauteEnnemie.pitie.AddPoint(-commuPerso.coef, this);
+                    }
+                    if (bonus <= 0)
+                    {
+                        commuPerso.jalousie.AddPoint(-1, this);
+                        commuPerso.communauteEnnemie.jalousie.AddPoint(commuPerso.coef, this);
+                        commuPerso.desir.AddPoint(-1, this);
+                        commuPerso.communauteEnnemie.desir.AddPoint(commuPerso.coef, this);
+                    }
+                    break;
+                case Reactions.peur:
+                    if (bonus >= 0)
+                    {
+                        commuPerso.repulsion.AddPoint(1, this);
+                        commuPerso.communauteEnnemie.repulsion.AddPoint(-commuPerso.coef, this);
+                        commuPerso.agressivite.AddPoint(1, this);
+                        commuPerso.communauteEnnemie.agressivite.AddPoint(-commuPerso.coef, this);
+                    }
+                    if (bonus <= 0)
+                    {
+                        commuPerso.acceptation.AddPoint(-1, this);
+                        commuPerso.communauteEnnemie.acceptation.AddPoint(commuPerso.coef, this);
+                        commuPerso.desir.AddPoint(-1, this);
+                        commuPerso.communauteEnnemie.desir.AddPoint(commuPerso.coef, this);
+                    }
+                    break;
+                case Reactions.haine:
+                    if (bonus >= 0)
+                    {
+                        commuPerso.jalousie.AddPoint(1, this);
+                        commuPerso.communauteEnnemie.jalousie.AddPoint(-commuPerso.coef, this);
+                        commuPerso.agressivite.AddPoint(1, this);
+                        commuPerso.communauteEnnemie.agressivite.AddPoint(-commuPerso.coef, this);
+                    }
+                    if (bonus <= 0)
+                    {
+                        commuPerso.acceptation.AddPoint(-1, this);
+                        commuPerso.communauteEnnemie.acceptation.AddPoint(commuPerso.coef, this);
+                        commuPerso.pitie.AddPoint(-1, this);
+                        commuPerso.communauteEnnemie.pitie.AddPoint(commuPerso.coef, this);
+                    }
+                    break;
+            }
         }
     }
 

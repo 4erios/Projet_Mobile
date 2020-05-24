@@ -36,6 +36,8 @@ public class CartesManager : MonoBehaviour
 
     private Vector2 screenSize;
 
+    private Vector3 pos;
+
     private void Awake()
     {
         cards = new List<EmotionMonstre>();
@@ -110,26 +112,6 @@ public class CartesManager : MonoBehaviour
                 {
                     ChangeAnimatorState(true);
                     isTouch = false;
-                    if (touch.position.x - positionCentrale.x > 360 + distanceBetweenCards / 2 || touch.position.x - positionCentrale.x < 360 - distanceBetweenCards / 2)
-                    {
-                        if (touch.position.x - positionCentrale.x > 360 + (3 * distanceBetweenCards / 2))
-                        {
-                            DeplacementCartes(-distanceBetweenCards * 2);
-                        }
-                        else if (touch.position.x - positionCentrale.x < 360 - (3 * distanceBetweenCards / 2))
-                        {
-                            DeplacementCartes(distanceBetweenCards * 2);
-                        }
-                        else if (touch.position.x - positionCentrale.x > 360 + distanceBetweenCards / 2)
-                        {
-                            DeplacementCartes(-distanceBetweenCards);
-                        }
-                        else if (touch.position.x - positionCentrale.x < 360 - distanceBetweenCards / 2)
-                        {
-                            DeplacementCartes(distanceBetweenCards);
-                        }
-                        ResetCardPosition();
-                    }
                 }
             }
             else if (movingList)
@@ -138,11 +120,15 @@ public class CartesManager : MonoBehaviour
             }
             else if(movingCard)
             {
-                cartesJoueur[mainCard].transform.position = cam.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 0));
-                cartesJoueur[mainCard].transform.position = new Vector3(cartesJoueur[mainCard].transform.position.x, cartesJoueur[mainCard].transform.position.y, 0);
-                Vector3 pos = cartesJoueur[mainCard].transform.position;
+                pos = cam.ScreenToWorldPoint(new Vector3(0, touch.position.y, 0));
+                pos = new Vector3(0, pos.y, 0);
+                if(pos.y < -1.5f && pos.y > -7.4f)
+                {
+                    cartesJoueur[mainCard].transform.position = new Vector3(0, pos.y, 0);
+                    pos = cartesJoueur[mainCard].transform.position;
+                }
                 Debug.Log("Test Card 3");
-                if ((pos.x < dialogueTransf.position.x + 9 && pos.x > dialogueTransf.position.x - 9) && (pos.y < dialogueTransf.position.y + 13 && pos.y > dialogueTransf.position.y - 4 / 2))
+                if ((pos.y < dialogueTransf.position.y + 13 && pos.y > dialogueTransf.position.y - 4 / 2))
                 {
                     Debug.Log("Test Card 2");
                     if (touch.phase == TouchPhase.Ended && isTouch)
@@ -199,26 +185,6 @@ public class CartesManager : MonoBehaviour
                 {
                     ChangeAnimatorState(true);
                     isTouch = false;
-                    if (Input.mousePosition.x - positionCentrale.x > 360 + distanceBetweenCards / 2 || Input.mousePosition.x - positionCentrale.x < 360 - distanceBetweenCards / 2)
-                    {
-                        if (Input.mousePosition.x - positionCentrale.x > 360 + (3 * distanceBetweenCards / 2))
-                        {
-                            DeplacementCartes(-distanceBetweenCards * 2);
-                        }
-                        else if (Input.mousePosition.x - positionCentrale.x < 360 - (3 * distanceBetweenCards / 2))
-                        {
-                            DeplacementCartes(distanceBetweenCards * 2);
-                        }
-                        else if (Input.mousePosition.x - positionCentrale.x > 360 + distanceBetweenCards / 2)
-                        {
-                            DeplacementCartes(-distanceBetweenCards);
-                        }
-                        else if (Input.mousePosition.x - positionCentrale.x < 360 - distanceBetweenCards / 2)
-                        {
-                            DeplacementCartes(distanceBetweenCards);
-                        }
-                        ResetCardPosition();
-                    }
                 }
             }
             else if (movingList)
@@ -227,9 +193,16 @@ public class CartesManager : MonoBehaviour
             }
             else if (movingCard)
             {
-                cartesJoueur[mainCard].transform.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-                cartesJoueur[mainCard].transform.position = new Vector3(cartesJoueur[mainCard].transform.position.x, cartesJoueur[mainCard].transform.position.y, 0);
-                Vector3 pos = cartesJoueur[mainCard].transform.position;
+                /*cartesJoueur[mainCard].transform.position = cam.ScreenToWorldPoint(new Vector3(0, Input.mousePosition.y, 0));
+                cartesJoueur[mainCard].transform.position = new Vector3(0, cartesJoueur[mainCard].transform.position.y, 0);
+                pos = cartesJoueur[mainCard].transform.position;*/
+                pos = cam.ScreenToWorldPoint(new Vector3(0, Input.mousePosition.y, 0));
+                pos = new Vector3(0, pos.y, 0);
+                if (pos.y < -1.5f && pos.y > -7.4f)
+                {
+                    cartesJoueur[mainCard].transform.position = new Vector3(0, pos.y, 0);
+                    pos = cartesJoueur[mainCard].transform.position;
+                }
                 /*if ((pos.x < dialogueTransf.position.x + 9 && pos.x > dialogueTransf.position.x - 9) && (pos.y < dialogueTransf.position.y + 20 && pos.y > dialogueTransf.position.y - 4 / 2))
                 {
                     Debug.Log("Test Card placement");
@@ -247,7 +220,7 @@ public class CartesManager : MonoBehaviour
         {
             ChangeAnimatorState(true);
             Vector3 pos = cartesJoueur[mainCard].transform.position;
-            if ((pos.x < dialogueTransf.position.x + 9 && pos.x > dialogueTransf.position.x - 9) && (pos.y < dialogueTransf.position.y + 13 && pos.y > dialogueTransf.position.y - 4 / 2))
+            if ((pos.y < dialogueTransf.position.y + 13 && pos.y > dialogueTransf.position.y - 4 / 2))
             {
                 dialogueTransf.parent.GetComponent<MonoDialogue>().GetCard(cartesJoueur[mainCard].emotion);
             }

@@ -56,6 +56,10 @@ public class MenuSuccess : MonoBehaviour
             {
                 threeSuccess[j].ShowSuccess(unlockedSuccess[j]);
                 j++;
+                if(j>=3)
+                {
+                    return;
+                }
             }
         }
     }
@@ -69,7 +73,7 @@ public class MenuSuccess : MonoBehaviour
                 if(unlockedSuccess.Contains(allSuccess[i]))
                 {
                     successList[i].gameObject.SetActive(true);
-                    successList[i].ShowSuccess(allSuccess[i]); ;
+                    successList[i].ShowValidSuccess(); ;
                 }
             }
         }
