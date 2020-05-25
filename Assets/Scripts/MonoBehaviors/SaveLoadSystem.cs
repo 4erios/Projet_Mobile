@@ -15,9 +15,9 @@ public class SaveLoadSystem : MonoBehaviour
     [SerializeField]
     private List<Quest> allQuests;
     
-    public static List<Success> everySuccess;
-    private static List<AncientGame> everyHistoric;
-    private static List<Quest> everyQuests;
+    public static List<Success> everySuccess = new List<Success>();
+    private static List<AncientGame> everyHistoric = new List<AncientGame>();
+    private static List<Quest> everyQuests = new List<Quest>();
 
     private void Awake()
     {
@@ -299,6 +299,7 @@ public class SaveLoadSystem : MonoBehaviour
         }
         else
         {
+            AffichageSuccesInGame.AffichageSucces(succ.titre);
             successList.Add(succ);
             SaveAllSuccess(successList);
             return true;
@@ -434,6 +435,58 @@ public class SaveLoadSystem : MonoBehaviour
         return unlockedQuest;
     }
 
+    public static void SaveSuccessState(int playedCards,int killedCharacter,int questsAccomplished)
+    {
+        string fileContent = "";
+        int currentPlayCard = 0;
+        int currentKilledChara = 0;
+        int currentQuest = 0;
+        LoadSuccessState(out currentPlayCard, out currentKilledChara, out currentQuest);
+        playedCards += currentPlayCard;
+        killedCharacter += currentKilledChara;
+        questsAccomplished += currentQuest;
+        fileContent += playedCards + "\n";
+        fileContent += killedCharacter + "\n";
+        fileContent += questsAccomplished + "\n";
+
+        SaveTextDoc("SuccessState", fileContent);
+    }
+    public static void LoadSuccessState(out int playedCards,out int killedCharacter,out int questsAccomplished)
+    {
+        playedCards = 0;
+        killedCharacter = 0;
+        questsAccomplished = 0;
+        if (File.Exists(GetPath("SuccessState")))
+        {
+            string[] fileContent = File.ReadAllLines(GetPath("SuccessState"));
+            playedCards = int.Parse(fileContent[0]);
+            killedCharacter = int.Parse(fileContent[1]);
+            questsAccomplished = int.Parse(fileContent[2]);
+        }
+        else
+        {
+            Debug.Log("Echec Chargement SuccessState");
+        }
+    }
+
+    public static void SaveUnlockedPerso(string persoName)
+    {
+        Debug.Log("Path : " + GetPath("UnlockedPerso"));
+        File.AppendAllText(GetPath("UnlockedPerso"), persoName + "\n");
+    }
+    public static string[] LoadUnlockedPerso()
+    {
+        if (File.Exists(GetPath("UnlockedPerso")))
+        {
+            string[] fileContent = File.ReadAllLines(GetPath("UnlockedPerso"));
+            return fileContent;
+        }
+        else
+        {
+            Debug.Log("Echec Chargement UnlockedPerso");
+            return new string[0];
+        }
+    }
 
     public static void ResetQuest()
     {

@@ -53,7 +53,7 @@ public class MonstreEventManager : MonoBehaviour
     private List<Personnage> allPersos;
     private List<Personnage> persoEventFuturs = new List<Personnage>();
 
-    private int saveCount;
+    private int saveCount, journalCount;
 
     private List<Personnage> encounteredCharacter = new List<Personnage>();
 
@@ -66,6 +66,20 @@ public class MonstreEventManager : MonoBehaviour
         SaveLoadSystem.LoadCommunauteScore(commus);
 
         quetesActuelles = SaveLoadSystem.GetQuestList();
+
+        string[] persoDebloques = SaveLoadSystem.LoadUnlockedPerso();
+
+        foreach(string nom in persoDebloques)
+        {
+            foreach(Personnage perso in allPersos)
+            {
+                if(nom == perso.name)
+                {
+                    perso.isUnlocked = true;
+                    break;
+                }
+            }
+        }
 
         //Load Game State
         string eventName = "";
@@ -136,7 +150,7 @@ public class MonstreEventManager : MonoBehaviour
         for(int i = start; i < 5; i++) //Voir pour rajouter les Règles de Choix des Events en début de Partie
         {
             Event newEvent = eventsPool[Random.Range(0, eventsPool.Count)];
-            while (futurEvents.Contains(newEvent) || persoEventFuturs.Contains(newEvent.personnage))
+            while (futurEvents.Contains(newEvent) || persoEventFuturs.Contains(newEvent.personnage) && !newEvent.personnage.isUnlocked)
             {
                 newEvent = eventsPool[Random.Range(0, eventsPool.Count)];
             }
@@ -353,7 +367,7 @@ public class MonstreEventManager : MonoBehaviour
         AddRepresentationForJournal("Test Journal 1");
         AddRepresentationForJournal("Test Journal 2");
         AddRepresentationForJournal("Test Journal 3");
-        EndEvent();
+        //EndEvent();
     }
 
     public void EndEvent()
@@ -391,13 +405,22 @@ public class MonstreEventManager : MonoBehaviour
             Debug.Log("Commu 4 fin");
             StartEndEvent(commus[3].goodEnding);
         }
-        else if (representationForJournal.Count > 0)
+        else if (journalCount>=4)
         {
             monoJourn.gameObject.SetActive(true);
-            monoJourn.ShowText(representationForJournal[0]);
+            if(representationForJournal.Count > 0)
+            {
+                monoJourn.ShowText(representationForJournal[0]);
+            }
+            else
+            {
+                monoJourn.ShowText(Panique.JournalPanique());
+               journalCount = 0;
+            }
         }
         else
         {
+            journalCount++;
             saveCount++;
             if (saveCount >= 3) //Save de l'état de la partie
             {
@@ -415,7 +438,10 @@ public class MonstreEventManager : MonoBehaviour
     public void RemoveFromJournal()
     {
         //Changement needed
-        representationForJournal.RemoveAt(0);
+        if (representationForJournal.Count > 0)
+        {
+            representationForJournal.RemoveAt(0);
+        }
         if(representationForJournal.Count<=0)
         {
             monoJourn.Close();
@@ -444,7 +470,7 @@ public class MonstreEventManager : MonoBehaviour
             {
                 continue;
             }
-            if(!newEvent.personnage.isAlive) //Vérifie si le personnage est en vie
+            if(!newEvent.personnage.isAlive || !newEvent.personnage.isUnlocked) //Vérifie si le personnage est en vie
             {
                 continue;
             }

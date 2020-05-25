@@ -12,10 +12,6 @@ public class Panique : MonoBehaviour
     private static List<Event> midEvent, lateEvent;
     private static UnityEvent addPanicEvent = new UnityEvent();
     [SerializeField]
-    private Image paniqueAffichage;
-    [SerializeField]
-    private List<Sprite> paniqueSprites;
-    [SerializeField]
     private float max;
 
     private void Awake()
@@ -23,7 +19,6 @@ public class Panique : MonoBehaviour
         midEvent = middleGameEvent;
         lateEvent = lateGameEvent;
         maxValue = max;
-        addPanicEvent.AddListener(AffichagePanique);
         //Mettre à jour l'affichage de la panique
     }
 
@@ -31,6 +26,30 @@ public class Panique : MonoBehaviour
     public void AddPointTest()
     {
         AddPanic(5);
+    }
+
+    public static string JournalPanique()
+    {
+        if (maxValue == 0)
+        {
+            maxValue = 10;
+        }
+        if(value >= maxValue)
+        {
+            return "People are scared, the Monster is here.";
+        }
+        else if (value >= 0.8f * maxValue)
+        {
+            return "Keep calm, some peoples are hunting the Monster.";
+        }
+        else if (value >= 0.5f * maxValue)
+        {
+            return "A creature in the city ? Some people claim they saw it.";
+        }
+        else
+        {
+            return "There are some rumors about a creature in the city.";
+        }
     }
 
     public static void AddPanic(float valueToAdd)
@@ -49,29 +68,5 @@ public class Panique : MonoBehaviour
             MonstreEventManager.AddEvent(midEvent);
         }
         addPanicEvent.Invoke();
-    }
-
-    void AffichagePanique()
-    {
-        if(value>= maxValue)
-        {
-            paniqueAffichage.sprite = paniqueSprites[4];
-        }
-        else if(value>=0.75* maxValue)
-        {
-            paniqueAffichage.sprite = paniqueSprites[3];
-        }
-        else if (value >= 0.5* maxValue)
-        {
-            paniqueAffichage.sprite = paniqueSprites[2];
-        }
-        else if (value >= 0.25* maxValue)
-        {
-            paniqueAffichage.sprite = paniqueSprites[1];
-        }
-        else if (value >= 0)
-        {
-            paniqueAffichage.sprite = paniqueSprites[0];
-        }
     }
 }

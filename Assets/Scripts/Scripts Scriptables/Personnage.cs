@@ -11,6 +11,8 @@ public class Personnage : ScriptableObject
     public bool isAlive = true;
     public Event rencontreEvent;
     public Success dyingSuccess;
+    public int cout = 10;
+    public bool isUnlocked = true;
 
     public void Die()
     {

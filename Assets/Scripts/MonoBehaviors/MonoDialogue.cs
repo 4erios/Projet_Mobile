@@ -122,8 +122,7 @@ public class MonoDialogue : MonoBehaviour
                     cardManager.canPlayCards = true;
                 }
             }
-        
-            if (zoneAccroche.activeSelf)
+            else if (zoneAccroche.activeSelf)
             {
                 manager.AccrocheShowed();
                 ShowDialogue(dial, false);

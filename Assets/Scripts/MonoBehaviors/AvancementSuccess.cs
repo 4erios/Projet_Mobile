@@ -19,6 +19,8 @@ public class AvancementSuccess : MonoBehaviour
             }
         }
 
+        SaveLoadSystem.LoadSuccessState(out playedCards, out killedCharacter, out questsAccomplished);
+
         //Faire un autre truc de sauvgearde pour les etats des succès comme ça
     }
 
@@ -45,7 +47,8 @@ public class AvancementSuccess : MonoBehaviour
     public static void AddCardPlayed()
     {
         playedCards++;
-        if(playedCards==120)
+        SaveLoadSystem.SaveSuccessState(1, 0, 0);
+        if (playedCards==120)
         {
             SearchForSuccess("Human");
         }
@@ -62,7 +65,8 @@ public class AvancementSuccess : MonoBehaviour
     public static void AddKilledCharacter(Personnage perso)
     {
         killedCharacter++;
-        if(killedCharacter==1)
+        SaveLoadSystem.SaveSuccessState(0, 1, 0);
+        if (killedCharacter==1)
         {
             SearchForSuccess("No Return");
         }
@@ -80,6 +84,7 @@ public class AvancementSuccess : MonoBehaviour
     public static void AddQuestAccomplished()
     {
         questsAccomplished++;
+        SaveLoadSystem.SaveSuccessState(0, 0, 1);
         if (questsAccomplished == 1)
         {
             SearchForSuccess("New City");
