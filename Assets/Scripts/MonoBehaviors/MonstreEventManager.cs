@@ -250,6 +250,12 @@ public class MonstreEventManager : MonoBehaviour
             case Lieux.pontDeSeine:
                 fonds[1].SetActive(true);
                 break;
+            case Lieux.parc:
+                fonds[2].SetActive(true);
+                break;
+            case Lieux.cabaret:
+                fonds[3].SetActive(true);
+                break;
         }
         #endregion
         monoDial.ShowAccroche(eventToStart.accroche.texte, eventToStart.dialogue.dialogueDepart);
@@ -405,7 +411,7 @@ public class MonstreEventManager : MonoBehaviour
             Debug.Log("Commu 4 fin");
             StartEndEvent(commus[3].goodEnding);
         }
-        else if (journalCount>=4)
+        else if (journalCount>=2)
         {
             monoJourn.gameObject.SetActive(true);
             if(representationForJournal.Count > 0)

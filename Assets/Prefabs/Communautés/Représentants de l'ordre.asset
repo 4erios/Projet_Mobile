@@ -13,61 +13,61 @@ MonoBehaviour:
   m_Name: "Repr\xE9sentants de l'ordre"
   m_EditorClassIdentifier: 
   repulsion:
-    valeur: 0
-    seuilHaut: 3
+    valeur: 0.79999995
+    seuilHaut: 4
     seuilBas: 0
-    maxBas: -3
-    maxHaut: 6
+    maxBas: -4
+    maxHaut: 8
     eventsPhase2: []
     journalPhrasesUp:
     - La police ne vous aime pas
     journalPhrasesDown: []
   agressivite:
-    valeur: 0
-    seuilHaut: 3
+    valeur: -0.79999995
+    seuilHaut: 4
     seuilBas: 0
-    maxBas: -3
-    maxHaut: 6
+    maxBas: -4
+    maxHaut: 8
     eventsPhase2: []
     journalPhrasesUp:
     - La police ne vous aime pas
     journalPhrasesDown: []
   jalousie:
-    valeur: 0
-    seuilHaut: 3
+    valeur: -1.5999998
+    seuilHaut: 4
     seuilBas: 0
-    maxBas: -3
-    maxHaut: 6
+    maxBas: -4
+    maxHaut: 8
     eventsPhase2: []
     journalPhrasesUp:
     - La police ne vous aime pas
     journalPhrasesDown: []
   desir:
-    valeur: 0
-    seuilHaut: 3
+    valeur: -0.79999995
+    seuilHaut: 4
     seuilBas: 0
-    maxBas: -6
-    maxHaut: 6
+    maxBas: -8
+    maxHaut: 8
     eventsPhase2: []
     journalPhrasesUp:
     - "La police commencet \xE0 vous apprecier"
     journalPhrasesDown: []
   acceptation:
-    valeur: 0
-    seuilHaut: 3
+    valeur: 0.79999995
+    seuilHaut: 4
     seuilBas: 0
-    maxBas: -6
-    maxHaut: 6
+    maxBas: -8
+    maxHaut: 8
     eventsPhase2: []
     journalPhrasesUp:
     - "La police commence \xE0 vous apprecier"
     journalPhrasesDown: []
   pitie:
-    valeur: 0
-    seuilHaut: 3
+    valeur: 1.5999998
+    seuilHaut: 4
     seuilBas: 0
-    maxBas: -6
-    maxHaut: 6
+    maxBas: -8
+    maxHaut: 8
     eventsPhase2: []
     journalPhrasesUp:
     - "La police commence \xE0 vous apprecier"

@@ -9,7 +9,8 @@ public class MenuNavigation : MonoBehaviour
     [SerializeField]
     private Animator anim;
 
-    public static UnityEvent mainMenuEvent, achievementEvent, settingsEvent, creditEvent, successEvent;
+    public static UnityEvent mainMenuEvent, achievementEvent, settingsEvent, creditEvent, successEvent, questEvent;
+    public static UnityEvent achatPersoEvent = new UnityEvent();
 
     // Start is called before the first frame update
     void Awake()
@@ -19,13 +20,15 @@ public class MenuNavigation : MonoBehaviour
         settingsEvent = new UnityEvent();
         creditEvent = new UnityEvent();
         successEvent = new UnityEvent();
+        questEvent = new UnityEvent();
         mainMenuEvent.AddListener(OpenMainMenu);
         achievementEvent.AddListener(OpenAchievementMenu);
         settingsEvent.AddListener(OpenSettingsMenu);
         creditEvent.AddListener(OpenCreditsMenu);
         successEvent.AddListener(OpenSuccessMenu);
+        questEvent.AddListener(OpenQuestMenu);
 
-        if(!PlayerPrefs.HasKey("FirstLoad"))
+        if (!PlayerPrefs.HasKey("FirstLoad"))
         {
             PlayerPrefs.SetInt("FirstLoad", 1);
             PlayerPrefs.Save();
@@ -48,6 +51,7 @@ public class MenuNavigation : MonoBehaviour
         anim.SetBool("Settings", false);
         anim.SetBool("Credit", false);
         anim.SetBool("Success", false);
+        anim.SetBool("Quest", false);
     }
 
     void OpenMainMenu()
@@ -78,5 +82,11 @@ public class MenuNavigation : MonoBehaviour
     {
         ResetAnim();
         anim.SetBool("Success", true);
+    }
+
+    void OpenQuestMenu()
+    {
+        ResetAnim();
+        anim.SetBool("Quest", true);
     }
 }

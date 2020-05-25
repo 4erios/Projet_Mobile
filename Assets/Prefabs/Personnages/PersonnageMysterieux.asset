@@ -24,5 +24,5 @@ MonoBehaviour:
   isAlive: 1
   rencontreEvent: {fileID: 0}
   dyingSuccess: {fileID: 0}
-  cout: 0
+  cout: 50
   isUnlocked: 0

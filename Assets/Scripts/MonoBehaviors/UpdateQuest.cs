@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpdateQuest : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class UpdateQuest : MonoBehaviour
     [SerializeField]
     private List<Quest> pool = new List<Quest>();
 
+    public List<Text> titre = new List<Text>(), description = new List<Text>();
+    public Text monnaie;
+
+    private List<Quest> questListe = new List<Quest>();
 
     private void Start()
     {
@@ -37,9 +42,28 @@ public class UpdateQuest : MonoBehaviour
                 usedQuest.Add(q);
             }
         }
+        questListe = quetes;
         SaveLoadSystem.SaveAllUsedQuest(usedQuest);
         SaveLoadSystem.SaveAllQuest(quetes);
+
+        questListe = SaveLoadSystem.GetQuestList();
+        MenuNavigation.questEvent.AddListener(AffichageMenu);
+        MenuNavigation.achatPersoEvent.AddListener(AffichageArgent);
     }
 
-    //Affichage des quêtes ?
+    private void AffichageMenu()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            titre[i].text = questListe[i].titre;
+            description[i].text = questListe[i].texteExplicatif;
+            //Rajouter si la quête a été validé ou non
+        }
+        AffichageArgent();
+    }
+
+    private void AffichageArgent()
+    {
+        monnaie.text = BanqueJoueur.currentMonnaie.ToString();
+    }
 }

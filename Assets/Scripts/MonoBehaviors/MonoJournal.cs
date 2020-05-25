@@ -11,6 +11,9 @@ public class MonoJournal : MonoBehaviour
     private MonstreEventManager manag;
     [SerializeField]
     private Animator anim;
+    [SerializeField]
+    private GameObject pageJournal;
+    private List<GameObject> pages = new List<GameObject>();
 
     private void Update()
     {
@@ -37,7 +40,9 @@ public class MonoJournal : MonoBehaviour
     {
         manag.HideCards();
         anim.SetBool("EndJournal", false);
-        titre.text = text;
+        //Mettre l'apparition du Journal
+        //titre.text = text;
+        Instantiate(pageJournal, gameObject.transform, true).GetComponent<PageJournal>().ShowJournal(text);
     }
 
     public void Close()
@@ -49,5 +54,9 @@ public class MonoJournal : MonoBehaviour
     {
         manag.ShowCards();
         gameObject.SetActive(false);
+        foreach(GameObject go in pages)
+        {
+            Destroy(go);
+        }
     }
 }

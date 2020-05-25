@@ -37,6 +37,9 @@ public class MenuScript : EventTrigger
             case 5:
                 MenuNavigation.successEvent.Invoke();
                 break;
+            case 6:
+                MenuNavigation.questEvent.Invoke();
+                break;
         }
     }
 

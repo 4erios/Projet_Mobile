@@ -16,7 +16,7 @@ public class MenuSuccess : MonoBehaviour
     {
         MenuNavigation.achievementEvent.AddListener(AffichageHistorique);
         MenuNavigation.achievementEvent.AddListener(AffichageDerniersSucces);
-        MenuNavigation.achievementEvent.AddListener(AffichageSuccess);
+        MenuNavigation.successEvent.AddListener(AffichageSuccess);
     }
 
     // Start is called before the first frame update
@@ -68,11 +68,10 @@ public class MenuSuccess : MonoBehaviour
     {
         if(unlockedSuccess.Count>0 && unlockedSuccess[0]!=null)
         {
-            for(int i = 0; i < allSuccess.Count; i++)
+            for (int i = 0; i < allSuccess.Count; i++)
             {
-                if(unlockedSuccess.Contains(allSuccess[i]))
+                if (unlockedSuccess.Contains(allSuccess[i]))
                 {
-                    successList[i].gameObject.SetActive(true);
                     successList[i].ShowValidSuccess(); ;
                 }
             }

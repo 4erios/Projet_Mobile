@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Lieux { ruelle, pontDeSeine}
+public enum Lieux { ruelle, pontDeSeine, parc, cabaret}
 
 [CreateAssetMenu(fileName = "Event", menuName = "Create Event")]
 public class Event : ScriptableObject

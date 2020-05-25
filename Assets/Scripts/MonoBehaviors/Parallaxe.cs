@@ -37,9 +37,9 @@ public class Parallaxe : MonoBehaviour
         /*actualGyro = Input.gyro.attitude;
         Debug.Log(actualGyro);
         Debug.Log(Input.gyro.rotationRate);*/
-        if (Vector2.Distance(transform.position, newPosition) > 0.1f)
+        if (Vector2.Distance(transform.localPosition, newPosition) > 0.1f)
         {
-            transform.position = new Vector2(Mathf.Lerp(transform.position.x, newPosition.x * coef, lerpCoef), Mathf.Lerp(transform.position.y, newPosition.y * coef, lerpCoef));
+            transform.localPosition = new Vector2(Mathf.Lerp(transform.localPosition.x, newPosition.x * coef, lerpCoef), Mathf.Lerp(transform.localPosition.y, newPosition.y * coef, lerpCoef));
         }
         yield return new WaitForSeconds(1 / ips);
         StartCoroutine(Moving());

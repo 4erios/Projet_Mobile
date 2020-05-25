@@ -15,13 +15,18 @@ public class AffichageSuccesInGame : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log(gameObject);
         goAnim = anim;
+        staticTitre = titre;
     }
 
     public static void AffichageSucces(string nom)
     {
-        goAnim.SetActive(true);
-        staticTitre.text = nom;
+        if (goAnim != null)
+        {
+            goAnim.SetActive(true);
+            staticTitre.text = nom;
+        }
     }
 
     public void FinAffichage()
