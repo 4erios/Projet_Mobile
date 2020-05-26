@@ -71,10 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 7511646587528660445}
-  angles:
-  - 0
-  - 15
-  - -15
+  angles: []
 --- !u!1 &7511646586606418725
 GameObject:
   m_ObjectHideFlags: 0

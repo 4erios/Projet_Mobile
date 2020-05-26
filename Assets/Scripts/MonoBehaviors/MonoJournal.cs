@@ -12,6 +12,8 @@ public class MonoJournal : MonoBehaviour
     [SerializeField]
     private Animator anim;
     [SerializeField]
+    private GameObject animationTransition;
+    [SerializeField]
     private GameObject pageJournal;
     private List<GameObject> pages = new List<GameObject>();
 
@@ -47,7 +49,8 @@ public class MonoJournal : MonoBehaviour
 
     public void Close()
     {
-        anim.SetBool("EndJournal", true);
+        animationTransition.SetActive(true);
+        //anim.SetBool("EndJournal", true);
     }
 
     public void Disapear()

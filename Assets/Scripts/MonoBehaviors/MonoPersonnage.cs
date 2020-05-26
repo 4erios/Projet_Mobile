@@ -19,11 +19,15 @@ public class MonoPersonnage : MonoBehaviour
     private void Start()
     {
         spriteRnd = GetComponent<Image>();
+        Color newColor = Color.white;
+        newColor.a = 0;
+        spriteRnd.color = newColor;
     }
 
-    public void ChangeSprite(Sprite spr)
+    public void ChangeSprite(Sprite spr, string anim)
     {
         spriteRnd.sprite = spr;
+        GetComponent<Animator>().Play(anim, 0, 0.25f);
     }
 
     public void Apparition()
@@ -57,10 +61,12 @@ public class MonoPersonnage : MonoBehaviour
             spriteRnd.color = newColor;
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
+        GetComponent<Animator>().enabled = true;
     }
 
     IEnumerator HideSprite()
     {
+        GetComponent<Animator>().enabled = false;
         Color newColor = spriteRnd.color;
         newColor.a = 1;
         for (int i = 0; i < 1/transitionSpeed; i++)

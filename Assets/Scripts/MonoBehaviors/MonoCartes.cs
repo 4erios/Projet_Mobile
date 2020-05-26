@@ -9,6 +9,7 @@ public class MonoCartes : MonoBehaviour
     public Collider2D colid;
     public SpriteRenderer spriteNoir, fond, titre;
     public Animator animNoire;
+    public Animator animPlayedCard;
 
     private void Start()
     {
@@ -29,4 +30,6 @@ public class MonoCartes : MonoBehaviour
         fond.sortingOrder = newLevel - 1;
         titre.sortingOrder = newLevel + 2;
     }
+
+
 }

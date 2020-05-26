@@ -24,3 +24,5 @@ MonoBehaviour:
   isAlive: 1
   rencontreEvent: {fileID: 11400000, guid: 83107fc7532eab84a9f0e6e00776116a, type: 2}
   dyingSuccess: {fileID: 11400000, guid: 72cb8d2c66b72f746bdefdc2a0da532c, type: 2}
+  cout: 10
+  isUnlocked: 1

@@ -15,6 +15,9 @@ public class MonoDialogue : MonoBehaviour
     private MonstreEventManager manager;
     [SerializeField]
     private CartesManager cardManager;
+    [SerializeField]
+    private GameObject animCard;
+
     private bool isDialShowing;
     private bool isResponseDial;
     private string dial;
@@ -66,6 +69,7 @@ public class MonoDialogue : MonoBehaviour
 
     public void GetCard(EmotionMonstre carte)
     {
+        animCard.SetActive(true);
         cardManager.canPlayCards = false;
         //Mettre les faces caché des cartes
         manager.GetResponse(carte);

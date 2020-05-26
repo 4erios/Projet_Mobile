@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Repr\xE9sentants de l'ordre"
   m_EditorClassIdentifier: 
   repulsion:
-    valeur: 0.79999995
+    valeur: 0
     seuilHaut: 4
     seuilBas: 0
     maxBas: -4
@@ -23,7 +23,7 @@ MonoBehaviour:
     - La police ne vous aime pas
     journalPhrasesDown: []
   agressivite:
-    valeur: -0.79999995
+    valeur: 0
     seuilHaut: 4
     seuilBas: 0
     maxBas: -4
@@ -33,7 +33,7 @@ MonoBehaviour:
     - La police ne vous aime pas
     journalPhrasesDown: []
   jalousie:
-    valeur: -1.5999998
+    valeur: 0
     seuilHaut: 4
     seuilBas: 0
     maxBas: -4
@@ -43,7 +43,7 @@ MonoBehaviour:
     - La police ne vous aime pas
     journalPhrasesDown: []
   desir:
-    valeur: -0.79999995
+    valeur: 0
     seuilHaut: 4
     seuilBas: 0
     maxBas: -8
@@ -53,7 +53,7 @@ MonoBehaviour:
     - "La police commencet \xE0 vous apprecier"
     journalPhrasesDown: []
   acceptation:
-    valeur: 0.79999995
+    valeur: 0
     seuilHaut: 4
     seuilBas: 0
     maxBas: -8
@@ -63,7 +63,7 @@ MonoBehaviour:
     - "La police commence \xE0 vous apprecier"
     journalPhrasesDown: []
   pitie:
-    valeur: 1.5999998
+    valeur: 0
     seuilHaut: 4
     seuilBas: 0
     maxBas: -8

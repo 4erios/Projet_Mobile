@@ -10,8 +10,7 @@ public class MonstreEventManager : MonoBehaviour
     private List<Event> eventsDepart;
     [SerializeField]
     private List<Communaute> commus;
-    [SerializeField]
-    private List<GameObject> fonds;
+
     [SerializeField]
     private int valeurFinCommu = 6;
 
@@ -26,6 +25,10 @@ public class MonstreEventManager : MonoBehaviour
     private CartesManager cardManager;
     [SerializeField]
     private MonoEndAffichage monoEnd;
+    [SerializeField]
+    private AnimTransitionDecor decor;
+    [SerializeField]
+    private GameObject feedbackDegat;
 
     private static List<Event> eventsPool;
     public List<Event> futurEvents;
@@ -230,35 +233,14 @@ public class MonstreEventManager : MonoBehaviour
                 encounteredCharacter.Add(newEvent.personnage);
                 actualEvent = newEvent.personnage.rencontreEvent;
             }
-            StartEvent(actualEvent);
+            decor.ChangeDecor(actualEvent);
         }
     }
 
-    void StartEvent(Event eventToStart) //Lance le nouvel Event (Fonction privée)
+    public void StartEvent() //Lance le nouvel Event (Fonction privée)
     {
-        #region Mise en place du nouveau fond
-        foreach (GameObject gm in fonds)
-        {
-            gm.GetComponent<ParallaxeGroup>().HideDecor();
-        }
-        switch (eventToStart.lieux)
-        {
-            //Mettre une animation à la place d'un SetActive
-            case Lieux.ruelle:
-                fonds[0].SetActive(true);
-                break;
-            case Lieux.pontDeSeine:
-                fonds[1].SetActive(true);
-                break;
-            case Lieux.parc:
-                fonds[2].SetActive(true);
-                break;
-            case Lieux.cabaret:
-                fonds[3].SetActive(true);
-                break;
-        }
-        #endregion
-        monoDial.ShowAccroche(eventToStart.accroche.texte, eventToStart.dialogue.dialogueDepart);
+        
+        monoDial.ShowAccroche(actualEvent.accroche.texte, actualEvent.dialogue.dialogueDepart);
 
         //Mettre le côté Animation des Cartes
     }
@@ -355,6 +337,7 @@ public class MonstreEventManager : MonoBehaviour
         monstreHp -= dmg;
         if (monstreHp > 0)
         {
+            feedbackDegat.SetActive(true);
             if (blessuresSprites.Count > monstreHp - 1 && blessuresSprites[monstreHp - 1] != null)
             {
                 affichageBlessure.sprite = blessuresSprites[monstreHp - 1];
@@ -640,22 +623,22 @@ public class MonstreEventManager : MonoBehaviour
         switch (react)
         {
             case Reactions.interet:
-                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[0]);
+                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[0], "Interet");
                 break;
             case Reactions.affection:
-                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[1]);
+                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[1], "Affection");
                 break;
             case Reactions.compassion:
-                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[2]);
+                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[2], "Compassion");
                 break;
             case Reactions.degout:
-                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[3]);
+                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[3], "Degout");
                 break;
             case Reactions.peur:
-                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[4]);
+                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[4], "Peur");
                 break;
             case Reactions.haine:
-                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[5]);
+                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[5], "Colere");
                 break;
         }
     }
