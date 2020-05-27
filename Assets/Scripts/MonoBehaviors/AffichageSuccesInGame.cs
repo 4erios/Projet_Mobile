@@ -15,7 +15,6 @@ public class AffichageSuccesInGame : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(gameObject);
         goAnim = anim;
         staticTitre = titre;
     }

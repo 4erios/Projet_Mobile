@@ -246,6 +246,18 @@ public class SaveLoadSystem : MonoBehaviour
                 commus[i].pitie.valeur = int.Parse(buffer[0]);
             }
         }
+        else
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                commus[i].repulsion.valeur = 0;
+                commus[i].agressivite.valeur = 0;
+                commus[i].jalousie.valeur = 0;
+                commus[i].desir.valeur = 0;
+                commus[i].acceptation.valeur = 0;
+                commus[i].pitie.valeur = 0;
+            }
+        }
     }
     #endregion
 

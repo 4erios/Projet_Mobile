@@ -84,6 +84,11 @@ public class MonstreEventManager : MonoBehaviour
             }
         }
 
+        foreach(Personnage perso in allPersos)
+        {
+            perso.isAlive = true;
+        }
+
         //Load Game State
         string eventName = "";
         List<string> pool = new List<string>();
@@ -227,6 +232,7 @@ public class MonstreEventManager : MonoBehaviour
 
 
             actualEvent = newEvent;
+            journalCount++;
 
             if (!encounteredCharacter.Contains(newEvent.personnage) && newEvent.personnage.rencontreEvent != null)
             {
@@ -337,7 +343,10 @@ public class MonstreEventManager : MonoBehaviour
         monstreHp -= dmg;
         if (monstreHp > 0)
         {
-            feedbackDegat.SetActive(true);
+            if(dmg>0)
+            {
+                feedbackDegat.SetActive(true);
+            }
             if (blessuresSprites.Count > monstreHp - 1 && blessuresSprites[monstreHp - 1] != null)
             {
                 affichageBlessure.sprite = blessuresSprites[monstreHp - 1];
@@ -394,7 +403,7 @@ public class MonstreEventManager : MonoBehaviour
             Debug.Log("Commu 4 fin");
             StartEndEvent(commus[3].goodEnding);
         }
-        else if (journalCount>=2)
+        else if (journalCount>=3)
         {
             monoJourn.gameObject.SetActive(true);
             if(representationForJournal.Count > 0)
@@ -409,7 +418,6 @@ public class MonstreEventManager : MonoBehaviour
         }
         else
         {
-            journalCount++;
             saveCount++;
             if (saveCount >= 3) //Save de l'état de la partie
             {
@@ -420,6 +428,7 @@ public class MonstreEventManager : MonoBehaviour
             persoEventFuturs.Remove(actualEvent.personnage);
             actualEvent = null;
             EventChoice();
+            Debug.Log(journalCount);
             StartNextEvent(futurEvents[0]);
         }
     }

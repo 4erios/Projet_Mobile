@@ -16,7 +16,6 @@ public class AnimTransitionDecor : MonoBehaviour
     {
         actualEvent = newEvent;
         #region Mise en place du nouveau fond
-        Debug.Log(ancienLieu +"=="+ actualEvent.lieux);
         if (ancienLieu != actualEvent.lieux)
         {
             Transition();
@@ -37,7 +36,6 @@ public class AnimTransitionDecor : MonoBehaviour
     public void EndTransition()
     {
         manager.StartEvent();
-        Debug.Log("Test");
         foreach (GameObject gm in fonds)
         {
             gm.GetComponent<ParallaxeGroup>().HideDecor();

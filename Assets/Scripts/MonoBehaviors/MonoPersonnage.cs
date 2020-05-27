@@ -79,7 +79,6 @@ public class MonoPersonnage : MonoBehaviour
             spriteRnd.color = newColor;
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
-        Debug.Log("Test");
         manager.EndEvent();
     }
 }

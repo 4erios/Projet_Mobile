@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -570,7 +570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -611,9 +611,9 @@ RectTransform:
   m_Father: {fileID: 1283027728}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -519.6}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: -324}
   m_SizeDelta: {x: 660, y: 351.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &437058027
@@ -879,7 +879,7 @@ PrefabInstance:
     - target: {fileID: 3102833705849108879, guid: fe36338ce60485c47974f2ea907107d3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.82
       objectReference: {fileID: 0}
     - target: {fileID: 3102833705849108879, guid: fe36338ce60485c47974f2ea907107d3,
         type: 3}
@@ -929,12 +929,12 @@ PrefabInstance:
     - target: {fileID: 3102833705849108879, guid: fe36338ce60485c47974f2ea907107d3,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4
+      value: 1.7472
       objectReference: {fileID: 0}
     - target: {fileID: 3102833705849108879, guid: fe36338ce60485c47974f2ea907107d3,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4
+      value: 1.7472
       objectReference: {fileID: 0}
     - target: {fileID: 3102833705849108914, guid: fe36338ce60485c47974f2ea907107d3,
         type: 3}
@@ -1407,7 +1407,7 @@ PrefabInstance:
     - target: {fileID: 4460054963035911759, guid: d11eea694098224408c3f1b944c37331,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -740
       objectReference: {fileID: 0}
     - target: {fileID: 4460054963035911759, guid: d11eea694098224408c3f1b944c37331,
         type: 3}
@@ -1427,7 +1427,7 @@ PrefabInstance:
     - target: {fileID: 4460054963035911759, guid: d11eea694098224408c3f1b944c37331,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4460054963035911759, guid: d11eea694098224408c3f1b944c37331,
         type: 3}
@@ -1437,7 +1437,7 @@ PrefabInstance:
     - target: {fileID: 4460054963035911759, guid: d11eea694098224408c3f1b944c37331,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4460054963035911759, guid: d11eea694098224408c3f1b944c37331,
         type: 3}
@@ -2017,7 +2017,7 @@ MonoBehaviour:
   cardManager: {fileID: 482265138}
   monoEnd: {fileID: 774605906}
   decor: {fileID: 498948091}
-  feedbackDegat: {fileID: 0}
+  feedbackDegat: {fileID: 1329552652}
   futurEvents: []
   needTap: 0
   monstreHp: 6
@@ -3150,7 +3150,7 @@ PrefabInstance:
     - target: {fileID: 8681442328206761316, guid: e772fab6fc82f8a4092ca248031b88f4,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 100
+      value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 8681442328206761319, guid: e772fab6fc82f8a4092ca248031b88f4,
         type: 3}
@@ -3160,7 +3160,7 @@ PrefabInstance:
     - target: {fileID: 8681442328206761319, guid: e772fab6fc82f8a4092ca248031b88f4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.574
       objectReference: {fileID: 0}
     - target: {fileID: 8681442328206761319, guid: e772fab6fc82f8a4092ca248031b88f4,
         type: 3}
@@ -3210,17 +3210,17 @@ PrefabInstance:
     - target: {fileID: 8681442328206761319, guid: e772fab6fc82f8a4092ca248031b88f4,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4
+      value: 1.7472
       objectReference: {fileID: 0}
     - target: {fileID: 8681442328206761319, guid: e772fab6fc82f8a4092ca248031b88f4,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4
+      value: 1.7472
       objectReference: {fileID: 0}
     - target: {fileID: 8681442328206761319, guid: e772fab6fc82f8a4092ca248031b88f4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.248
       objectReference: {fileID: 0}
     - target: {fileID: 8681442328206761322, guid: e772fab6fc82f8a4092ca248031b88f4,
         type: 3}
@@ -3599,7 +3599,7 @@ PrefabInstance:
     - target: {fileID: 8487872052083592342, guid: e80d11dd27bfaa24eb8b1a0b264f3a90,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.58
+      value: 3.81
       objectReference: {fileID: 0}
     - target: {fileID: 8487872052083592342, guid: e80d11dd27bfaa24eb8b1a0b264f3a90,
         type: 3}
@@ -3649,12 +3649,12 @@ PrefabInstance:
     - target: {fileID: 8487872052083592342, guid: e80d11dd27bfaa24eb8b1a0b264f3a90,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4
+      value: 1.7472
       objectReference: {fileID: 0}
     - target: {fileID: 8487872052083592342, guid: e80d11dd27bfaa24eb8b1a0b264f3a90,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4
+      value: 1.7472
       objectReference: {fileID: 0}
     - target: {fileID: 8487872052083592342, guid: e80d11dd27bfaa24eb8b1a0b264f3a90,
         type: 3}
@@ -5204,7 +5204,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 32767
+  m_SortingOrder: 90
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
