@@ -14,64 +14,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repulsion:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -4
-    maxHaut: 8
+    maxBas: -3
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - La police ne vous aime pas
     journalPhrasesDown: []
+    firstState: 1
   agressivite:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -4
-    maxHaut: 8
+    maxBas: -3
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - La police ne vous aime pas
     journalPhrasesDown: []
+    firstState: 1
   jalousie:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -4
-    maxHaut: 8
+    maxBas: -3
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - La police ne vous aime pas
     journalPhrasesDown: []
+    firstState: 1
   desir:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -8
-    maxHaut: 8
+    maxBas: -6
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - "La police commencet \xE0 vous apprecier"
     journalPhrasesDown: []
+    firstState: 1
   acceptation:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -8
-    maxHaut: 8
+    maxBas: -6
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - "La police commence \xE0 vous apprecier"
     journalPhrasesDown: []
+    firstState: 1
   pitie:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -8
-    maxHaut: 8
+    maxBas: -6
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - "La police commence \xE0 vous apprecier"
     journalPhrasesDown: []
+    firstState: 1
   goodEnding: {fileID: 11400000, guid: fd7c7efa7f47d854d939afd3f3c1de11, type: 2}
   badEnding: {fileID: 11400000, guid: d8873c30967c5bc4090bd4dbc4aebfc2, type: 2}
   communauteEnnemie: {fileID: 11400000, guid: b748d2f27a6991b4a9c80912efec977b, type: 2}

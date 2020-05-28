@@ -15,7 +15,7 @@ MonoBehaviour:
   personnage: {fileID: 11400000, guid: 090c8784cdd07bc47bd304d1497c4ccd, type: 2}
   accroche: {fileID: 11400000, guid: d5cc1475e43547942a801ebf8e636627, type: 2}
   dialogue: {fileID: 11400000, guid: c65b76b9be4fc03479127b8e787f02c0, type: 2}
-  lieux: 1
+  lieux: 3
   effetBonus: {fileID: 0}
   carteBonus: {fileID: 0}
   effetMalus: {fileID: 0}

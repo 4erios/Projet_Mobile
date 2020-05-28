@@ -14,64 +14,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repulsion:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -4
-    maxHaut: 8
+    maxBas: -3
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - Les mendiants ne vous aime pas
     journalPhrasesDown: []
+    firstState: 1
   agressivite:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -4
-    maxHaut: 8
+    maxBas: -3
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - Les mendiants ne vous aime pas
     journalPhrasesDown: []
+    firstState: 1
   jalousie:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -4
-    maxHaut: 8
+    maxBas: -3
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - Les mendiants ne vous aime pas
     journalPhrasesDown: []
+    firstState: 1
   desir:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -8
-    maxHaut: 8
+    maxBas: -6
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - "Les mendiants commencent \xE0 vous aimer"
     journalPhrasesDown: []
+    firstState: 1
   acceptation:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -8
-    maxHaut: 8
+    maxBas: -6
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - "Les mendiants commencent \xE0 vous aimer"
     journalPhrasesDown: []
+    firstState: 1
   pitie:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -8
-    maxHaut: 8
+    maxBas: -6
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - "Les mendiants commencent \xE0 vous aimer"
     journalPhrasesDown: []
+    firstState: 1
   goodEnding: {fileID: 11400000, guid: 6df24435122d18d488503a9008a0e390, type: 2}
   badEnding: {fileID: 11400000, guid: df969f77c3121a74291a8f8f65b28ed3, type: 2}
   communauteEnnemie: {fileID: 11400000, guid: 87436ca911a096b44bd7ce66a1ef9d84, type: 2}

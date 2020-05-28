@@ -14,64 +14,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repulsion:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -4
-    maxHaut: 8
+    maxBas: -3
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - Les habitants ne vous aime pas
     journalPhrasesDown: []
+    firstState: 1
   agressivite:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -4
-    maxHaut: 8
+    maxBas: -3
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - Les habitants ne vous aime pas
     journalPhrasesDown: []
+    firstState: 1
   jalousie:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -4
-    maxHaut: 8
+    maxBas: -3
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - Les habitants ne vous aime pas
     journalPhrasesDown: []
+    firstState: 1
   desir:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -8
-    maxHaut: 8
+    maxBas: -6
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - "Les habitants commencent \xE0 vous aimer"
     journalPhrasesDown: []
+    firstState: 1
   acceptation:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -8
-    maxHaut: 8
+    maxBas: -6
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - "Les habitants commencent \xE0 vous aimer"
     journalPhrasesDown: []
+    firstState: 1
   pitie:
     valeur: 0
-    seuilHaut: 4
+    seuilHaut: 3
     seuilBas: 0
-    maxBas: -8
-    maxHaut: 8
+    maxBas: -6
+    maxHaut: 6
     eventsPhase2: []
     journalPhrasesUp:
     - "Les habitants commencent \xE0 vous aimer"
     journalPhrasesDown: []
+    firstState: 1
   goodEnding: {fileID: 11400000, guid: bcb70a9219c152e42956d96becc46dac, type: 2}
   badEnding: {fileID: 11400000, guid: 1ca5ae9b37bcb3f449407ef18dff4d3f, type: 2}
   communauteEnnemie: {fileID: 11400000, guid: 193c86c924813984fbeb3359fddf55a1, type: 2}

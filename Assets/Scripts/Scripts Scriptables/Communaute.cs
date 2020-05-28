@@ -8,12 +8,15 @@ public class Representation
     public float valeur, seuilHaut, seuilBas, maxBas, maxHaut;
     public List<Event> eventsPhase2;
     public List<string> journalPhrasesUp, journalPhrasesDown;
-    bool firstState = true;
+    public bool firstState = true;
 
     public float AddPoint(float value, MonstreEventManager manag) // Ajoute/Enlève les points de la Représentation. Renvoie un Bool qui dit s'il y a besoin du Journal ou pas
     {
         float ancientValue = valeur;
         valeur += value;
+
+        Debug.Log(ancientValue);
+        Debug.Log(valeur);
 
         if(valeur < maxBas)
         {
@@ -23,15 +26,15 @@ public class Representation
         {
             valeur = maxHaut;
         }
-
-        if(ancientValue < valeur && valeur > seuilHaut && journalPhrasesUp.Count>0 && firstState)
+        if(ancientValue < valeur && valeur >= seuilHaut && journalPhrasesUp.Count>0 && firstState)
         {
+            Debug.Log(this);
             firstState = false;
             MonstreEventManager.AddEvent(eventsPhase2);
-            manag.AddRepresentationForJournal(journalPhrasesUp[Random.Range(0,journalPhrasesUp.Count)]);
+            manag.AddRepresentationForJournal(journalPhrasesUp[0]);
             return 1;
         }
-        else if(ancientValue > valeur && valeur < seuilBas && journalPhrasesDown.Count > 0 && !firstState)
+        else if(ancientValue > valeur && valeur <= seuilBas && journalPhrasesDown.Count > 0 && !firstState)
         {
             firstState = true;
             MonstreEventManager.RemoveEvent(eventsPhase2);

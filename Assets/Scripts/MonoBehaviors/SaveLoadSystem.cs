@@ -98,7 +98,6 @@ public class SaveLoadSystem : MonoBehaviour
         {
             CreateDirectory();
         }
-        Debug.Log("Path : " + GetPath(docName));
         File.WriteAllText(GetPath(docName), toSave);
     }
 
@@ -239,11 +238,65 @@ public class SaveLoadSystem : MonoBehaviour
             {
                 string[] buffer = fileContent[i].Split(';');
                 commus[i].repulsion.valeur = int.Parse(buffer[0]);
+                if(commus[i].repulsion.valeur >= commus[i].repulsion.seuilHaut)
+                {
+                    commus[i].repulsion.firstState = false;
+                }
+                else
+                {
+                    commus[i].repulsion.firstState = true;
+                }
+
                 commus[i].agressivite.valeur = int.Parse(buffer[0]);
+                if (commus[i].agressivite.valeur >= commus[i].agressivite.seuilHaut)
+                {
+                    commus[i].agressivite.firstState = false;
+                }
+                else
+                {
+                    commus[i].agressivite.firstState = true;
+                }
+
                 commus[i].jalousie.valeur = int.Parse(buffer[0]);
+                if (commus[i].jalousie.valeur >= commus[i].jalousie.seuilHaut)
+                {
+                    commus[i].jalousie.firstState = false;
+                }
+                else
+                {
+                    commus[i].jalousie.firstState = true;
+                }
+
                 commus[i].desir.valeur = int.Parse(buffer[0]);
+                if (commus[i].desir.valeur >= commus[i].desir.seuilHaut)
+                {
+                    commus[i].desir.firstState = false;
+                }
+                else
+                {
+                    commus[i].desir.firstState = true;
+                }
+
                 commus[i].acceptation.valeur = int.Parse(buffer[0]);
+                if (commus[i].acceptation.valeur >= commus[i].acceptation.seuilHaut)
+                {
+                    commus[i].acceptation.firstState = false;
+                }
+                else
+                {
+                    commus[i].acceptation.firstState = true;
+                }
+
                 commus[i].pitie.valeur = int.Parse(buffer[0]);
+                if (commus[i].pitie.valeur >= commus[i].pitie.seuilHaut)
+                {
+                    commus[i].pitie.firstState = false;
+                }
+                else
+                {
+                    commus[i].pitie.firstState = true;
+                }
+
             }
         }
         else
@@ -251,11 +304,17 @@ public class SaveLoadSystem : MonoBehaviour
             for (int i = 0; i < 4; i++)
             {
                 commus[i].repulsion.valeur = 0;
+                commus[i].repulsion.firstState =true;
                 commus[i].agressivite.valeur = 0;
+                commus[i].agressivite.firstState = true;
                 commus[i].jalousie.valeur = 0;
+                commus[i].jalousie.firstState = true;
                 commus[i].desir.valeur = 0;
+                commus[i].desir.firstState = true;
                 commus[i].acceptation.valeur = 0;
+                commus[i].acceptation.firstState = true;
                 commus[i].pitie.valeur = 0;
+                commus[i].pitie.firstState = true;
             }
         }
     }
@@ -313,6 +372,7 @@ public class SaveLoadSystem : MonoBehaviour
         {
             AffichageSuccesInGame.AffichageSucces(succ.titre);
             successList.Add(succ);
+            Debug.Log(successList.Count);
             SaveAllSuccess(successList);
             return true;
         }
@@ -350,6 +410,7 @@ public class SaveLoadSystem : MonoBehaviour
             {
                 if(everySuccess[i].titre == title)
                 {
+                    Debug.Log("Success is Unlocked ?");
                     unlockedSucc.Add(everySuccess[i]);
                     break;
                 }
@@ -507,6 +568,20 @@ public class SaveLoadSystem : MonoBehaviour
         foreach (string file in files)
         {
             if (file == GetPath("UsedQuest"))
+            {
+                //File.SetAttributes(file, FileAttributes.Normal);
+                File.Delete(file);
+            }
+        }
+    }
+
+    public void ResetAll()
+    {
+        string[] files = Directory.GetFiles(GetDirectory(""));
+
+        foreach (string file in files)
+        {
+            if (file == GetPath("UsedQuest") || file == GetPath("Success") || file == GetPath("SuccessState"))
             {
                 //File.SetAttributes(file, FileAttributes.Normal);
                 File.Delete(file);

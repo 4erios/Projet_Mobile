@@ -10,7 +10,11 @@ public class AvancementSuccess : MonoBehaviour
 
     private void Start()
     {
-        successList = SaveLoadSystem.everySuccess;
+        successList = new List<Success>();
+        foreach (Success succ in SaveLoadSystem.everySuccess)
+        {
+            successList.Add(succ);
+        }
         foreach(Success succ in SaveLoadSystem.GetSuccessList())
         {
             if(successList.Contains(succ))

@@ -16,6 +16,7 @@ public class MonoJournal : MonoBehaviour
     [SerializeField]
     private GameObject pageJournal;
     private List<GameObject> pages = new List<GameObject>();
+    private bool endJournal;
 
     private void Update()
     {
@@ -34,12 +35,18 @@ public class MonoJournal : MonoBehaviour
         {
             //gameObject.SetActive(false);
             manag.RemoveFromJournal();
+            Debug.Log("Test EndJournal");
+            if(endJournal)
+            {
+                Close();
+            }
             manag.EndEvent();
         }
     }
 
-    public void ShowText(string text)
+    public void ShowText(string text, bool doesEnd)
     {
+        endJournal = doesEnd;
         manag.HideCards();
         anim.SetBool("EndJournal", false);
         //Mettre l'apparition du Journal

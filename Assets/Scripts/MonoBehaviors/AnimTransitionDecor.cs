@@ -12,11 +12,12 @@ public class AnimTransitionDecor : MonoBehaviour
     [SerializeField]
     private Animator anim;
 
-    public void ChangeDecor(Event newEvent)
+    public void ChangeDecor(Event newEvent, int journalCount)
     {
         actualEvent = newEvent;
+        Debug.Log("Journal cahngement : " + journalCount);
         #region Mise en place du nouveau fond
-        if (ancienLieu != actualEvent.lieux)
+        if (ancienLieu != actualEvent.lieux && journalCount > 0)
         {
             Transition();
         }

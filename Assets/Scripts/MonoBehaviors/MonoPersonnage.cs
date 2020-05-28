@@ -24,10 +24,13 @@ public class MonoPersonnage : MonoBehaviour
         spriteRnd.color = newColor;
     }
 
-    public void ChangeSprite(Sprite spr, string anim)
+    public void ChangeSprite(Sprite spr, string anim, bool needAnim)
     {
         spriteRnd.sprite = spr;
-        GetComponent<Animator>().Play(anim, 0, 0.25f);
+        if (needAnim)
+        {
+            GetComponent<Animator>().Play(anim, 0, 0.25f);
+        }
     }
 
     public void Apparition()
@@ -37,6 +40,7 @@ public class MonoPersonnage : MonoBehaviour
 
     public void Disparition()
     {
+        GetComponent<Animator>().Play("BaseAnimPerso", 0, 0.25f);
         StartCoroutine(HideSprite());
     }
 
@@ -44,11 +48,7 @@ public class MonoPersonnage : MonoBehaviour
     {
         GetComponent<Animator>().enabled = true;
         GetComponent<Animator>().Play("Death", 0, 0.25f);
-    }
-
-    public void StopAnimator()
-    {
-        GetComponent<Animator>().enabled = false;
+        
     }
 
     IEnumerator ShowSprite()
@@ -66,6 +66,8 @@ public class MonoPersonnage : MonoBehaviour
 
     IEnumerator HideSprite()
     {
+        GetComponent<Animator>().Play("BaseAnimPerso", 0, 0.25f);
+        yield return new WaitForSeconds(Time.fixedDeltaTime);
         GetComponent<Animator>().enabled = false;
         Color newColor = spriteRnd.color;
         newColor.a = 1;
@@ -79,6 +81,7 @@ public class MonoPersonnage : MonoBehaviour
             spriteRnd.color = newColor;
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
+        //GetComponent<RectTransform>().position = new Vector3(-2, GetComponent<RectTransform>().position.y, GetComponent<RectTransform>().position.z);
         manager.EndEvent();
     }
 }

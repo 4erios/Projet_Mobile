@@ -17,8 +17,8 @@ MonoBehaviour:
   spriteReaction:
   - {fileID: 21300000, guid: 4544a99f046173d42917ddfa98eafe72, type: 3}
   - {fileID: 21300000, guid: 4a56e8aebf8e3eb44bb14de9100e9f41, type: 3}
-  - {fileID: 21300000, guid: d55ddb51b32cd6b4489ae04fbdd86ff7, type: 3}
-  - {fileID: 21300000, guid: a251c23227512904ebf6ed1e650f23b4, type: 3}
+  - {fileID: 21300000, guid: b17b62098961dfc4e95f4a6163233fcf, type: 3}
+  - {fileID: 21300000, guid: 3cf33e6e2d7a716419bbaa27a303c07f, type: 3}
   - {fileID: 21300000, guid: 54a16c0913171b74e8bdf11c4618e866, type: 3}
   - {fileID: 21300000, guid: 919c31cae7caddd4faf97bc3473e1427, type: 3}
   isAlive: 1

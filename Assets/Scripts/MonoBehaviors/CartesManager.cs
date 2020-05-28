@@ -11,6 +11,8 @@ public class CartesManager : MonoBehaviour
     [Header("Pour le GD")]
     [SerializeField]
     private List<EmotionMonstre> cartesBases;
+    [SerializeField]
+    private List<EmotionMonstre> cartesObligatoire;
 
     [Header("Pour la Prog (Pas touche)")]
     [SerializeField]
@@ -67,12 +69,21 @@ public class CartesManager : MonoBehaviour
             }
         }*/
         int rndCard = Random.Range(0, 6);
-        for(int i = 0; i< 5; i++)
+        foreach(EmotionMonstre emot in cartesObligatoire)
         {
-            EmotionMonstre cart = cartesBases[(i+rndCard)%6];
+            AddCard(emot);
+        }
+        for(int i = 0; i< 3; i++)
+        {
+            EmotionMonstre cart = cartesBases[(i+rndCard)% cartesBases.Count];
             if (!cards.Contains(cart))
             {
                 AddCard(cart);
+            }
+            else
+            {
+                i--;
+                rndCard++;
             }
         }
         /*screenSize = new Vector2(660, Screen.height);

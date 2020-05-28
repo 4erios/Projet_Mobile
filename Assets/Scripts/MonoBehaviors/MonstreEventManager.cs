@@ -10,6 +10,8 @@ public class MonstreEventManager : MonoBehaviour
     private List<Event> eventsDepart;
     [SerializeField]
     private List<Communaute> commus;
+    [SerializeField]
+    private int journalDelay = 4;
 
     [SerializeField]
     private int valeurFinCommu = 6;
@@ -232,14 +234,14 @@ public class MonstreEventManager : MonoBehaviour
 
 
             actualEvent = newEvent;
-            journalCount++;
 
             if (!encounteredCharacter.Contains(newEvent.personnage) && newEvent.personnage.rencontreEvent != null)
             {
                 encounteredCharacter.Add(newEvent.personnage);
                 actualEvent = newEvent.personnage.rencontreEvent;
             }
-            decor.ChangeDecor(actualEvent);
+            decor.ChangeDecor(actualEvent, journalCount);
+            journalCount++;
         }
     }
 
@@ -264,20 +266,20 @@ public class MonstreEventManager : MonoBehaviour
         Reactions emot = rolePreset.GetReact(reponse.emotion, out damage);
         if (reponse.bonusRole.Contains(actualEvent.personnage.role)) //Pour la réponse Bonus
         {
-            ChangeSpritePerso(emot);
+            ChangeSpritePerso(emot,true);
             monoDial.ShowDialogue(actualEvent.dialogue.reponseBonus, true);
             ChangeScoreCommu(actualEvent.personnage.communaute, emot, 1);
         }
         else if (reponse.malusRole.Contains(actualEvent.personnage.role)) //Pour la réponse Malus
         {
-            ChangeSpritePerso(emot);
+            ChangeSpritePerso(emot,true);
             monoDial.ShowDialogue(actualEvent.dialogue.reponseMalus, true);
             ChangeScoreCommu(actualEvent.personnage.communaute, emot, -1);
             Panique.AddPanic(2);
         }
         else
         {
-            ChangeSpritePerso(emot);
+            ChangeSpritePerso(emot,true);
             ReponseChoice(emot);
             ChangeScoreCommu(actualEvent.personnage.communaute, emot, 0);
             switch (emot)
@@ -335,6 +337,17 @@ public class MonstreEventManager : MonoBehaviour
         monoPerso.Die();
 
         nbDeadPeople++;
+    }
+
+    [ContextMenu("AddPointCommus")]
+    void TestAddPoint()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            Debug.Log("Test ??");
+            commus[i].repulsion.AddPoint(4,this);
+            commus[i].pitie.AddPoint(4,this);
+        }
     }
 
     private void GetDamage(int dmg)
@@ -403,21 +416,24 @@ public class MonstreEventManager : MonoBehaviour
             Debug.Log("Commu 4 fin");
             StartEndEvent(commus[3].goodEnding);
         }
-        else if (journalCount>=3)
+        else if (journalCount>=journalDelay)
         {
+            Debug.Log(journalCount);
             monoJourn.gameObject.SetActive(true);
             if(representationForJournal.Count > 0)
             {
-                monoJourn.ShowText(representationForJournal[0]);
+                monoJourn.ShowText(representationForJournal[0], false);
             }
             else
             {
-                monoJourn.ShowText(Panique.JournalPanique());
-               journalCount = 0;
+                Debug.Log("Test Journal panique");
+                monoJourn.ShowText(Panique.JournalPanique(),true);
+                journalCount = 0;
             }
         }
         else
         {
+            Debug.Log("End Event");
             saveCount++;
             if (saveCount >= 3) //Save de l'état de la partie
             {
@@ -428,7 +444,6 @@ public class MonstreEventManager : MonoBehaviour
             persoEventFuturs.Remove(actualEvent.personnage);
             actualEvent = null;
             EventChoice();
-            Debug.Log(journalCount);
             StartNextEvent(futurEvents[0]);
         }
     }
@@ -442,7 +457,6 @@ public class MonstreEventManager : MonoBehaviour
         }
         if(representationForJournal.Count<=0)
         {
-            monoJourn.Close();
         }
     }
 
@@ -617,7 +631,7 @@ public class MonstreEventManager : MonoBehaviour
 
     void ApparitionPerso(Reactions react)
     {
-        ChangeSpritePerso(react);
+        ChangeSpritePerso(react, false);
         monoPerso.Apparition();
     }
 
@@ -627,27 +641,27 @@ public class MonstreEventManager : MonoBehaviour
         monoDial.SupprDial();
     }
 
-    void ChangeSpritePerso(Reactions react)
+    void ChangeSpritePerso(Reactions react, bool doesAnim)
     {
         switch (react)
         {
             case Reactions.interet:
-                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[0], "Interet");
+                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[0], "Curiosite", doesAnim);
                 break;
             case Reactions.affection:
-                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[1], "Affection");
+                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[1], "Affection", doesAnim);
                 break;
             case Reactions.compassion:
-                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[2], "Compassion");
+                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[2], "Compassion", doesAnim);
                 break;
             case Reactions.degout:
-                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[3], "Degout");
+                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[3], "Degout", doesAnim);
                 break;
             case Reactions.peur:
-                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[4], "Peur");
+                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[4], "Peur", doesAnim);
                 break;
             case Reactions.haine:
-                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[5], "Colere");
+                monoPerso.ChangeSprite(actualEvent.personnage.spriteReaction[5], "Colere", doesAnim);
                 break;
         }
     }
