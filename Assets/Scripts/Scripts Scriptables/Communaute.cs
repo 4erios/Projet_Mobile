@@ -15,9 +15,6 @@ public class Representation
         float ancientValue = valeur;
         valeur += value;
 
-        Debug.Log(ancientValue);
-        Debug.Log(valeur);
-
         if(valeur < maxBas)
         {
             valeur = maxBas;
