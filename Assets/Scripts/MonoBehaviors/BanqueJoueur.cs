@@ -8,7 +8,19 @@ public class BanqueJoueur : MonoBehaviour
 
     private void Start()
     {
-        currentMonnaie = 100;
+        currentMonnaie = SaveLoadSystem.LoadMonney();
         //Récupérer la sauvegarde de la Banque du joueur
+    }
+
+    public static void WinMonney(int montant)
+    {
+        currentMonnaie += montant;
+        SaveLoadSystem.SaveMonney(currentMonnaie);
+    }
+
+    public static void LoseMonney (int montant)
+    {
+        currentMonnaie -= montant;
+        SaveLoadSystem.SaveMonney(currentMonnaie);
     }
 }

@@ -1,12 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
 public class MenuScript : EventTrigger
 {
     private bool sceneLoading = false;
+    private Sprite spr;
+
+    private void Start()
+    {
+        if (GetComponent<Image>() != null)
+        {
+            spr = GetComponent<Image>().sprite;
+        }
+    }
 
     public void LoadScene(int nbScene)
     {
@@ -15,6 +25,32 @@ public class MenuScript : EventTrigger
             sceneLoading = true;
             LoadingScreen.ShowLoadScreen();
             StartCoroutine(LoadGame(nbScene));
+        }
+    }
+
+    public override void OnPointerDown(PointerEventData eventData)
+    {
+        base.OnPointerDown(eventData);
+        if (GetComponent<BoutonVariables>() != null)
+        {
+            GetComponent<Image>().sprite = GetComponent<BoutonVariables>().spr;
+        }
+    }
+
+    public override void OnPointerUp(PointerEventData eventData)
+    {
+        base.OnPointerUp(eventData);
+        GetComponent<Image>().sprite = spr;
+        if (GetComponent<BoutonVariables>() != null)
+        {
+            if (GetComponent<BoutonVariables>().newMenu > 0)
+            {
+                ChangeMenu(GetComponent<BoutonVariables>().newMenu);
+            }
+            else if (GetComponent<BoutonVariables>().newScene > 0)
+            {
+                LoadScene(GetComponent<BoutonVariables>().newScene);
+            }
         }
     }
 

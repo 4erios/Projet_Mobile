@@ -507,6 +507,26 @@ public class SaveLoadSystem : MonoBehaviour
         }
         return unlockedQuest;
     }
+    public static void SaveMonney(int montant)
+    {
+        string fileContent = "";
+        fileContent += montant;
+        SaveTextDoc("Bank", fileContent);
+    }
+    public static int LoadMonney()
+    {
+        if (File.Exists(GetPath("Bank")))
+        {
+            string[] fileContent = File.ReadAllLines(GetPath("Bank"));
+            return int.Parse(fileContent[0]);
+        }
+        else
+        {
+            Debug.Log("Echec Chargement Bank");
+            return 0;
+        }
+    }
+
 
     public static void SaveSuccessState(int playedCards,int killedCharacter,int questsAccomplished)
     {
@@ -581,7 +601,7 @@ public class SaveLoadSystem : MonoBehaviour
 
         foreach (string file in files)
         {
-            if (file == GetPath("UsedQuest") || file == GetPath("Success") || file == GetPath("SuccessState"))
+            if (file == GetPath("UsedQuest") || file == GetPath("Success") || file == GetPath("SuccessState") || file == GetPath("Bank"))
             {
                 //File.SetAttributes(file, FileAttributes.Normal);
                 File.Delete(file);

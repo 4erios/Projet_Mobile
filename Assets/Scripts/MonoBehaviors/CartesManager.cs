@@ -248,6 +248,7 @@ public class CartesManager : MonoBehaviour
         {
             cards.Add(cardToAdd);
             MonoCartes newCard = Instantiate(prefabCarte, Vector3.zero, Quaternion.identity, zoneCarte).GetComponent<MonoCartes>();
+            StartCoroutine(newCard.Dissolve(0f));
             newCard.transform.localPosition = Vector3.zero;
             newCard.emotion = cardToAdd;
             cartesJoueur.Add(newCard);

@@ -32,21 +32,26 @@ public class UpdateQuest : MonoBehaviour
             SaveLoadSystem.ResetQuest();
         }
 
-        if (quetes.Count<=0 && pool.Count > 0)
+        if (System.DateTime.Now.Day != PlayerPrefs.GetInt("Day"))
         {
-            for(int i = 0; i < 3; i++)
+            if (quetes.Count <= 0 && pool.Count > 0)
             {
-                Quest q = pool[Random.Range(0, pool.Count)];
-                quetes.Add(q);
-                pool.Remove(q);
-                usedQuest.Add(q);
+                for (int i = 0; i < 3; i++)
+                {
+                    Quest q = pool[Random.Range(0, pool.Count)];
+                    quetes.Add(q);
+                    pool.Remove(q);
+                    usedQuest.Add(q);
+                }
             }
+            questListe = quetes;
+            SaveLoadSystem.SaveAllUsedQuest(usedQuest);
+            SaveLoadSystem.SaveAllQuest(quetes);
         }
-        questListe = quetes;
-        SaveLoadSystem.SaveAllUsedQuest(usedQuest);
-        SaveLoadSystem.SaveAllQuest(quetes);
-
-        questListe = SaveLoadSystem.GetQuestList();
+        else
+        {
+            questListe = SaveLoadSystem.GetQuestList();
+        }
         MenuNavigation.questEvent.AddListener(AffichageMenu);
         MenuNavigation.achatPersoEvent.AddListener(AffichageArgent);
     }

@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 4679353566661526769}
   - component: {fileID: 4679353566661526768}
   - component: {fileID: 4679353566661526775}
+  - component: {fileID: 8001233610172310141}
   m_Layer: 5
-  m_Name: BoutonPlay
+  m_Name: Bouton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,3 +103,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &8001233610172310141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4679353566661526773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f17d8c536e664414c8a0223452c94105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spr: {fileID: 0}
+  newScene: -1
+  newMenu: -1

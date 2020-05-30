@@ -24,7 +24,7 @@ public class MenuPersonnageDeblocable : MonoBehaviour
         if(!perso.isUnlocked && perso.cout <= BanqueJoueur.currentMonnaie)
         {
             perso.isUnlocked = true;
-            BanqueJoueur.currentMonnaie -= perso.cout;
+            BanqueJoueur.LoseMonney(perso.cout);
             SaveLoadSystem.SaveUnlockedPerso(perso.name);
             MenuNavigation.achatPersoEvent.Invoke();
             //Rajouter ce perso à la liste des persos débloqués

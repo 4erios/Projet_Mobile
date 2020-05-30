@@ -14,11 +14,13 @@ public class Quest : ScriptableObject
     public EmotionMonstre cardWanted;
 
     public bool isValid;
+    public int gain;
 
     public bool ValidateQuest()
     {
         isValid = true;
         AvancementSuccess.AddQuestAccomplished();
+        BanqueJoueur.WinMonney(gain);
         return false;
     }
 }

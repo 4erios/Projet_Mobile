@@ -11,6 +11,9 @@ public class MonoCartes : MonoBehaviour
     public Animator animNoire;
     public Animator animPlayedCard;
 
+    //private float fade = 0f;
+    private bool isDissolving;
+
     private void Start()
     {
         spriteNoir.sprite = emotion.sprite;
@@ -29,6 +32,28 @@ public class MonoCartes : MonoBehaviour
         spriteNoir.sortingOrder = newLevel;
         fond.sortingOrder = newLevel - 1;
         titre.sortingOrder = newLevel + 2;
+    }
+
+    public IEnumerator Dissolve(float fade)
+    {
+        Debug.Log("Dissolve ?" + fade);
+        yield return new WaitForSeconds(Time.fixedDeltaTime);
+        fade += Time.fixedDeltaTime;
+
+        if (fade>=1)
+        {
+            fade = 1;
+            spriteNoir.material.SetFloat("_Fade", fade);
+            fond.material.SetFloat("_Fade", fade);
+            titre.material.SetFloat("_Fade", fade);
+        }
+        else
+        {
+            spriteNoir.material.SetFloat("_Fade", fade);
+            fond.material.SetFloat("_Fade", fade);
+            titre.material.SetFloat("_Fade", fade);
+            StartCoroutine(Dissolve(fade));
+        }
     }
 
 
