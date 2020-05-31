@@ -350,6 +350,12 @@ public class MonstreEventManager : MonoBehaviour
         }
     }
 
+    [ContextMenu("GetDamage")]
+    private void GetOneDmg()
+    {
+        GetDamage(1);
+    }
+
     private void GetDamage(int dmg)
     {
         //Animation de prise de blessure

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1698,7 +1698,7 @@ MonoBehaviour:
   feedbackDegat: {fileID: 1329552652}
   futurEvents: []
   needTap: 0
-  monstreHp: 6
+  monstreHp: 5
   blessuresSprites:
   - {fileID: 21300000, guid: 88223cb9640e60947bf356c18d0489b4, type: 3}
   - {fileID: 21300000, guid: 06fbfe7165a683c4d9e45e741a16ccd4, type: 3}
@@ -2216,6 +2216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings: {fileID: 4460054963540307293}
   cartes: {fileID: 482265134}
+  dialMono: {fileID: 2032892226}
 --- !u!1 &789339968
 GameObject:
   m_ObjectHideFlags: 0
@@ -4739,6 +4740,7 @@ MonoBehaviour:
   cardManager: {fileID: 482265138}
   animCard: {fileID: 928705797}
   speed: 1
+  isPause: 0
 --- !u!61 &2032892227
 BoxCollider2D:
   m_ObjectHideFlags: 0

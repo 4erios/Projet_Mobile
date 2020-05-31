@@ -24,6 +24,7 @@ public class MonoDialogue : MonoBehaviour
     [SerializeField]
     private int speed;
 
+
     public void ShowAccroche(string txt, string dialog)
     {
         dial = dialog;

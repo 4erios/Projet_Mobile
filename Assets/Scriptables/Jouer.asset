@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotion: 0
   sprite: {fileID: 21300000, guid: 81116602e546425468e0a6de30279fa8, type: 3}
-  titre: {fileID: 0}
+  titre: {fileID: 21300000, guid: d88c16967e03c23409a9256b2ca5da7b, type: 3}
   animNoire: {fileID: 9100000, guid: 7944e46f337497d41881cee55eaccb32, type: 2}
   bonusRole: []
   malusRole: []
