@@ -128,7 +128,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a56ed66001266a649b39cc73fc1e5537, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -234,7 +234,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a56ed66001266a649b39cc73fc1e5537, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -384,7 +384,7 @@ MonoBehaviour:
   fond: {fileID: 6612454612996833406}
   titre: {fileID: 4123123529062774251}
   animNoire: {fileID: 6479537983728552359}
-  animPlayedCard: {fileID: 0}
+  newMat: {fileID: 2100000, guid: d7273b7df2b956240910f1d5d6c42ae8, type: 2}
 --- !u!61 &8175669260088574203
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -624,7 +624,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5102e872300285f4a87a8ae26ed5dfe6, type: 2}
+  - {fileID: 2100000, guid: d7273b7df2b956240910f1d5d6c42ae8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

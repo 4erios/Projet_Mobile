@@ -9,7 +9,9 @@ public class MonoCartes : MonoBehaviour
     public Collider2D colid;
     public SpriteRenderer spriteNoir, fond, titre;
     public Animator animNoire;
-    public Animator animPlayedCard;
+
+    [SerializeField]
+    //private Material newMat;
 
     //private float fade = 0f;
     private bool isDissolving;
@@ -36,7 +38,6 @@ public class MonoCartes : MonoBehaviour
 
     public IEnumerator Dissolve(float fade)
     {
-        Debug.Log("Dissolve ?" + fade);
         yield return new WaitForSeconds(Time.fixedDeltaTime);
         fade += Time.fixedDeltaTime;
 
@@ -44,6 +45,7 @@ public class MonoCartes : MonoBehaviour
         {
             fade = 1;
             spriteNoir.material.SetFloat("_Fade", fade);
+            //spriteNoir.material = newMat;
             fond.material.SetFloat("_Fade", fade);
             titre.material.SetFloat("_Fade", fade);
         }

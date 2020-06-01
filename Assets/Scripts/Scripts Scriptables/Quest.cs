@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Quest", menuName = "Create Quest")]
 public class Quest : ScriptableObject
 {
-    public Sprite icone;
     public string titre;
     public string texteExplicatif;
 

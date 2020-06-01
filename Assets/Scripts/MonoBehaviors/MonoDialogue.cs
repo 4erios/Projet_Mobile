@@ -98,18 +98,41 @@ public class MonoDialogue : MonoBehaviour
     private void Update() //En faire un Enumerator, qui n'est appelé qu'après un certains temps après avoir joué la carte  ??
     {
         time += Time.deltaTime;
+
         if (Input.touchCount > 0)
         {
+            Debug.Log("TestInput ?");
             Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
+            Vector2 touchStartPos = cardManager.cam.ScreenToWorldPoint(touch.position);
+            RaycastHit2D hitinfo = Physics2D.Raycast(touchStartPos, cardManager.cam.transform.forward);
+            if (hitinfo.collider == null || hitinfo.collider.tag != "Settings")
             {
-                DoOnDown();
+                Debug.Log(hitinfo.collider);
+                if (touch.phase == TouchPhase.Began)
+                {
+                    DoOnDown();
+                }
             }
+            else
+            {
+                Debug.Log("Was Settings");
+            }
+
         }
 
         if (Input.GetMouseButtonDown(0))
         {
-            DoOnDown();
+            Vector2 touchStartPos = cardManager.cam.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hitinfo = Physics2D.Raycast(touchStartPos, cardManager.cam.transform.forward);
+            if (hitinfo.collider == null || hitinfo.collider.tag != "Settings")
+            {
+                Debug.Log(hitinfo.collider);
+                DoOnDown();
+            }
+            else
+            {
+                Debug.Log("Was Settings");
+            }
         }
     }
 

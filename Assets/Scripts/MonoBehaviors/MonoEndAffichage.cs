@@ -22,6 +22,7 @@ public class MonoEndAffichage : MonoBehaviour
             if (Input.touchCount > 0 && canEnd)
             {
                 Touch touch = Input.GetTouch(0);
+
                 if (touch.phase == TouchPhase.Began)
                 {
                     menus.LoadScene(0);

@@ -34,6 +34,7 @@ public class UpdateQuest : MonoBehaviour
 
         if (System.DateTime.Now.Day != PlayerPrefs.GetInt("Day"))
         {
+            PlayerPrefs.SetInt("Day", System.DateTime.Now.Day);
             if (quetes.Count <= 0 && pool.Count > 0)
             {
                 for (int i = 0; i < 3; i++)

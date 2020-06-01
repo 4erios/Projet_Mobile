@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d84b16a9f0ff044b921ee7fd1094ae, type: 3}
+  m_Name: LikeAChild
+  m_EditorClassIdentifier: 
+  titre: Like A Child
+  texteExplicatif: Learn the comportment "Play"
+  killedPerso: {fileID: 0}
+  endingWanted: {fileID: 0}
+  cardWanted: {fileID: 11400000, guid: beecfa7c3973d804db841305b81f33b5, type: 2}
+  isValid: 0
+  gain: 25

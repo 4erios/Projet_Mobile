@@ -15,8 +15,7 @@ public class CartesManager : MonoBehaviour
     private List<EmotionMonstre> cartesObligatoire;
 
     [Header("Pour la Prog (Pas touche)")]
-    [SerializeField]
-    private Camera cam;
+    public Camera cam;
     [SerializeField]
     private float distanceBetweenCards;
     [SerializeField]
@@ -39,6 +38,11 @@ public class CartesManager : MonoBehaviour
     private Vector2 screenSize;
 
     private Vector3 pos;
+
+    [SerializeField]
+    private GameObject fleche;
+
+    private float showFleche;
 
     private void Awake()
     {
@@ -93,8 +97,15 @@ public class CartesManager : MonoBehaviour
 
     private void Update()
     {
+        showFleche += Time.deltaTime;
+        if(showFleche>=3f && !fleche.activeSelf)
+        {
+            fleche.SetActive(true);
+        }
+
         if(Input.touchCount > 0 && canPlayCards)
         {
+            fleche.SetActive(false);
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
