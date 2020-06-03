@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "D_VH_Palier_D\xE9sir"
+  m_EditorClassIdentifier: 
+  dialogueDepart: "Oh it's you!! I spoke to my wife and she wants a pet. Do you want
+    to come to my house? \r\n"
+  reponseInteret: 'You seem pretty interested.. You''re quite smart. '
+  reponseAffection: 'That''s cute! My wife will love a pet like you! '
+  reponseCompassion: 'Ohh.. I hope it''s tears of joy! '
+  reponseDegout: 'No! I won''t take an animal like you, growling at it''s master! '
+  reponsePeur: 'Argh! Why? It hurts! Someone help. Helllpppp! '
+  reponseHaine: So that's how you take my kindness? Whatever, my wife wouldn't have
+    liked you anyway
+  reponseBonus: 
+  reponseMalus: 

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: M_VH_Palier_Acceptation
+  m_EditorClassIdentifier: 
+  dialogueDepart: "Oh it's you! Tonight we are sharing some booze with the others,
+    wanna come? \r"
+  reponseInteret: 'You don''t look like you''re in the mood... Next time maybe? '
+  reponseAffection: Is that a yes? Come on then!
+  reponseCompassion: Oooh.. I knew you would be happy!
+  reponseDegout: 'Euh please, don''t do this with the others, they will fear you. '
+  reponsePeur: Ahhhh! It hurts! Why did you do this??
+  reponseHaine: And I though we were friends!
+  reponseBonus: 
+  reponseMalus: 

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "H_VH_Palier_Agressivit\xE9"
+  m_EditorClassIdentifier: 
+  dialogueDepart: "You're that beast! I heard you've been up to no good recently?
+    Don't come near me or my family, else I'll have to beat you up!\r"
+  reponseInteret: 'Looks like at least you know what fear is! '
+  reponseAffection: 'Tsk, if you act like this I''ll feel bad. Go away. '
+  reponseCompassion: 'Maybe I was a bit harsh. But who wouldn''t after what it did? '
+  reponseDegout: You beast?! Trying to attack me? I'll show you what happens then!!
+  reponsePeur: 'Arrghh!!! Please stop it, I beg you! I still have to repay my brother,
+    please stop! '
+  reponseHaine: What is this? Are you threatening me?? You're in for a world of pain!
+  reponseBonus: 
+  reponseMalus: 

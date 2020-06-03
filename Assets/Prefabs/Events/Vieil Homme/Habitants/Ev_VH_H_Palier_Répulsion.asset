@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63264c0044614164ab02233d8adf93b7, type: 3}
+  m_Name: "Ev_VH_H_Palier_R\xE9pulsion"
+  m_EditorClassIdentifier: 
+  personnage: {fileID: 11400000, guid: a48733bf39894a14683bae1f69369b38, type: 2}
+  accroche: {fileID: 11400000, guid: 401ec78f3953fda4ebb35358765f72e0, type: 2}
+  dialogue: {fileID: 11400000, guid: aba6be768f3749c459f70f7eec5b466d, type: 2}
+  lieux: 0
+  effetBonus: {fileID: 11400000, guid: 6ad6911bc7ae07b4d9bf266ab1f9af77, type: 2}
+  carteBonus: {fileID: 11400000, guid: 9b1123b42eb05304985469ca4a08d7be, type: 2}
+  effetMalus: {fileID: 0}
+  carteMalus: {fileID: 0}
+  preset: 2
+  killPersonnage: 1
+  eventSuivant: {fileID: 0}

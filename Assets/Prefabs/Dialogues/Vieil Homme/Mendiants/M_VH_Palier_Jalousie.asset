@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: M_VH_Palier_Jalousie
+  m_EditorClassIdentifier: 
+  dialogueDepart: "Hmph.. So you think those people are better than people like me?
+    I was stupid to think an animal would understand me...  \r"
+  reponseInteret: 'Hmmphh.. Guess I''ll see you again when they abandon you.. '
+  reponseAffection: Ah! I prefer when you act like this!
+  reponseCompassion: 'Aaaah.. Guess you weren''t that happy like this.. '
+  reponseDegout: 'Don''t try this. You disgust me. '
+  reponsePeur: What are you trying to do? Don't get near!
+  reponseHaine: 'Argh! You bit me?? '
+  reponseBonus: 
+  reponseMalus: 

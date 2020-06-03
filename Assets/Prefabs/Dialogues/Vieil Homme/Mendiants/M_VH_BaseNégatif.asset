@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: "M_VH_BaseN\xE9gatif"
   m_EditorClassIdentifier: 
-  dialogueDepart: '"Hey! This is my turf ! Leave my food income alone!"'
+  dialogueDepart: Hey! This is my turf ! Leave my food income alone!
   reponseInteret: 'Yeah, run away!! Hmmm... Maybe he''s not bad, maybe next time
     I''ll let him search for food. '
   reponseAffection: 'Ah! Look like we go back to the beginning uh... I''ll let you
@@ -22,7 +22,7 @@ MonoBehaviour:
   reponseDegout: You know that won't work on me. Get out of my sight. NOW!
   reponsePeur: 'Don''t try to touch me! You''re not like me, so don''t try to imitate
     me. I don''t want to see you again. So get AWAY from me! '
-  reponseHaine: 'Argh! Why you?! Here, take this! *punch* And this! *punch* And this!
-    *punch* Got your fill? Now get out of here! '
+  reponseHaine: 'Argh! Why you?! Here, take this!  And this!  And this!  Got your
+    fill? Now get out of here! '
   reponseBonus: 
   reponseMalus: 
