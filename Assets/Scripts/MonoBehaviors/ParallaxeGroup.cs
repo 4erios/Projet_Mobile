@@ -41,21 +41,21 @@ public class ParallaxeGroup : MonoBehaviour
     {
         x += Input.acceleration.x*0.3f; // Random.Range(-1f, 1f);
         y += (Input.acceleration.y+0.62f)*0.3f; // Random.Range(-1.5f, 1.5f);
-        if (x>2)
+        if (x>1)
         {
-            x = 2;
+            x = 1;
         }
-        else if (x<-2)
+        else if (x<-1)
         {
-            x = -2;
+            x = -1;
         }
-        if (y > 3)
+        if (y > 1.5f)
         {
-            y = 3;
+            y = 1.5f;
         }
-        else if (y < -3)
+        else if (y < -1.5f)
         {
-            y = -3;
+            y = -1.5f;
         }
         foreach (Parallaxe item in items)
         {

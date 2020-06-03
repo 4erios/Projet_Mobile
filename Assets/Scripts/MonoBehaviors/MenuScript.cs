@@ -43,6 +43,7 @@ public class MenuScript : EventTrigger
         GetComponent<Image>().sprite = spr;
         if (GetComponent<BoutonVariables>() != null)
         {
+            GetComponent<BoutonVariables>().PlayFeedback();
             if (GetComponent<BoutonVariables>().newMenu > 0)
             {
                 ChangeMenu(GetComponent<BoutonVariables>().newMenu);

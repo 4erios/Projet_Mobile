@@ -44,6 +44,8 @@ public class CartesManager : MonoBehaviour
 
     private float showFleche;
 
+    public GameObject greyCard;
+
     private void Awake()
     {
         cards = new List<EmotionMonstre>();
@@ -205,7 +207,6 @@ public class CartesManager : MonoBehaviour
                 }
                 else if (Mathf.Abs(Input.mousePosition.y - touchStartPos.y) > 70 && !removedCard.ContainsKey(cards[mainCard])) //Fait bouger la carte principale
                 {
-                    Debug.Log(removedCard.Count + " : " + removedCard.ContainsKey(cards[mainCard]));
                     movingCard = true;
                     cartesJoueur[mainCard].colid.enabled = true;
                 }
@@ -287,7 +288,7 @@ public class CartesManager : MonoBehaviour
             {
                 if (cart.emotion == cardToRemove)
                 {
-                    cart.blockedCardAnimator.Play("AnimBlocageCarte");
+                    cart.blockedCardAnimator.Play("AnimDeblocageCarte");
                     //Animation
                 }
             }
@@ -315,7 +316,7 @@ public class CartesManager : MonoBehaviour
         {
             if (cart.emotion == card)
             {
-                //Animation
+                cart.blockedCardAnimator.Play("AnimBlocageCarte");
             }
         }
     }

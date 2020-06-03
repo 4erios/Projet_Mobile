@@ -16,6 +16,9 @@ public class MonoPersonnage : MonoBehaviour
 
     private float transitionSpeed = 0.06f;
 
+    [SerializeField]
+    private AudioClip feedbackKill;
+
     private void Start()
     {
         spriteRnd = GetComponent<Image>();
@@ -48,7 +51,7 @@ public class MonoPersonnage : MonoBehaviour
     {
         GetComponent<Animator>().enabled = true;
         GetComponent<Animator>().Play("Death", 0, 0.25f);
-        
+        manager.AudioFeedback(feedbackKill);
     }
 
     IEnumerator ShowSprite()

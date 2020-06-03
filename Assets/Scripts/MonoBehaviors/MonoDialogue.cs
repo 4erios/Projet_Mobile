@@ -65,6 +65,7 @@ public class MonoDialogue : MonoBehaviour
         if (!isResponseDial)
         {
             cardManager.canPlayCards = true;
+            cardManager.greyCard.SetActive(false);
         }
     }
 
@@ -72,6 +73,7 @@ public class MonoDialogue : MonoBehaviour
     {
         animCard.SetActive(true);
         cardManager.canPlayCards = false;
+        cardManager.greyCard.SetActive(true);
         //Mettre les faces caché des cartes
         manager.GetResponse(carte);
     }
@@ -121,7 +123,6 @@ public class MonoDialogue : MonoBehaviour
             RaycastHit2D hitinfo = Physics2D.Raycast(touchStartPos, cardManager.cam.transform.forward);
             if (hitinfo.collider == null || hitinfo.collider.tag != "Settings")
             {
-                Debug.Log(hitinfo.collider);
                 DoOnDown();
             }
         }
@@ -139,6 +140,7 @@ public class MonoDialogue : MonoBehaviour
                 if (!isResponseDial)
                 {
                     cardManager.canPlayCards = true;
+                    cardManager.greyCard.SetActive(false);
                 }
             }
             else if (zoneAccroche.activeSelf)

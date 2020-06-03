@@ -31,6 +31,11 @@ public class MonstreEventManager : MonoBehaviour
     private AnimTransitionDecor decor;
     [SerializeField]
     private GameObject feedbackDegat;
+    [SerializeField]
+    private AudioSource sfxAudio;
+
+    [SerializeField]
+    private AudioClip feedbackDegatAudio, feedbackBattementAudio, bonusCardAudio, audioEndingGood, audioEndingBad, audioEndingCarnage;
 
     private static List<Event> eventsPool;
     public List<Event> futurEvents;
@@ -196,6 +201,11 @@ public class MonstreEventManager : MonoBehaviour
         StartNextEvent(futurEvents[0]);
     }
 
+    public void AudioFeedback(AudioClip clip)
+    {
+        //sfxAudio.PlayOneShot(clip);
+    }
+
     public void ShowCards()
     {
         cardManager.gameObject.SetActive(true);
@@ -338,6 +348,7 @@ public class MonstreEventManager : MonoBehaviour
                 }
             }
             cardManager.AddCard(actualEvent.carteBonus);
+            AudioFeedback(bonusCardAudio);
         }
         else if (actualEvent.effetMalus == reponse)
         {
@@ -392,6 +403,8 @@ public class MonstreEventManager : MonoBehaviour
         monstreHp -= dmg;
         if (monstreHp > 0)
         {
+            AudioFeedback(feedbackDegatAudio);
+            Debug.Log(dmg);
             if(dmg>0)
             {
                 feedbackDegat.SetActive(true);
@@ -462,14 +475,12 @@ public class MonstreEventManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Test Journal panique");
                 monoJourn.ShowText(Panique.JournalPanique(),true);
                 journalCount = 0;
             }
         }
         else
         {
-            Debug.Log("End Event");
             saveCount++;
             if (saveCount >= 3) //Save de l'état de la partie
             {
@@ -612,6 +623,7 @@ public class MonstreEventManager : MonoBehaviour
         if(monstreHp<=0)
         {
             monoEnd.anim.SetBool("DyingEnd", true);
+            AudioFeedback(feedbackBattementAudio);
         }
         else
         {

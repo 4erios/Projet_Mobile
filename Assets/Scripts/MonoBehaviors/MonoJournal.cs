@@ -18,6 +18,9 @@ public class MonoJournal : MonoBehaviour
     private List<GameObject> pages = new List<GameObject>();
     private bool endJournal;
 
+    [SerializeField]
+    private AudioClip feedbackJournal;
+
     private void Update()
     {
         if (Input.touchCount > 0)
@@ -38,6 +41,7 @@ public class MonoJournal : MonoBehaviour
             Debug.Log("Test EndJournal");
             if(endJournal)
             {
+                manag.AudioFeedback(feedbackJournal);
                 Close();
             }
             manag.EndEvent();
@@ -52,6 +56,7 @@ public class MonoJournal : MonoBehaviour
         //Mettre l'apparition du Journal
         //titre.text = text;
         Instantiate(pageJournal, gameObject.transform, true).GetComponent<PageJournal>().ShowJournal(text);
+        manag.AudioFeedback(feedbackJournal);
     }
 
     public void Close()
