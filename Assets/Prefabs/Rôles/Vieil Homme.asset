@@ -51,7 +51,64 @@ MonoBehaviour:
     haine:
       emot: 1
       doesDamage: 1
-  - ReactionDepart: 4
+  - ReactionDepart: 3
+    interet:
+      emot: 0
+      doesDamage: 0
+    affection:
+      emot: 5
+      doesDamage: 0
+    compassion:
+      emot: 2
+      doesDamage: 0
+    degout:
+      emot: 4
+      doesDamage: 0
+    peur:
+      emot: 1
+      doesDamage: 0
+    haine:
+      emot: 3
+      doesDamage: 1
+  - ReactionDepart: 0
+    interet:
+      emot: 2
+      doesDamage: 0
+    affection:
+      emot: 4
+      doesDamage: 0
+    compassion:
+      emot: 3
+      doesDamage: 0
+    degout:
+      emot: 0
+      doesDamage: 0
+    peur:
+      emot: 1
+      doesDamage: 0
+    haine:
+      emot: 5
+      doesDamage: 0
+  - ReactionDepart: 5
+    interet:
+      emot: 3
+      doesDamage: 0
+    affection:
+      emot: 2
+      doesDamage: 0
+    compassion:
+      emot: 5
+      doesDamage: 0
+    degout:
+      emot: 4
+      doesDamage: 1
+    peur:
+      emot: 1
+      doesDamage: 0
+    haine:
+      emot: 0
+      doesDamage: 1
+  - ReactionDepart: 2
     interet:
       emot: 0
       doesDamage: 0
@@ -66,7 +123,7 @@ MonoBehaviour:
       doesDamage: 0
     peur:
       emot: 1
-      doesDamage: 1
+      doesDamage: 0
     haine:
       emot: 5
       doesDamage: 0

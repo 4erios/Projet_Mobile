@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "H_VH_Palier_D\xE9sir"
+  m_EditorClassIdentifier: 
+  dialogueDepart: "Oh it's you! Are you lonely? If you want to, we can go to my brother's
+    home, I'm sure he'll be happy to meet you!\r"
+  reponseInteret: Wow.. You're truly special, please don't do that before the kids,
+    you'll scare them.
+  reponseAffection: 'Looks like you want to, so let''s go! '
+  reponseCompassion: 'I know, it''s nice when the people around you are kind right? '
+  reponseDegout: 'Wow, calm down! You have way too many teeth for me to bring you
+    there. '
+  reponsePeur: Argh! Why are you doing this?
+  reponseHaine: So you hate me... I see..
+  reponseBonus: 
+  reponseMalus: 

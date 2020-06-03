@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "D_VH_Palier_Piti\xE9"
+  m_EditorClassIdentifier: 
+  dialogueDepart: "Oh! Are you trying to find an owner? If you want I can bring you
+    to a refuge. \r"
+  reponseInteret: 'Looks like you are too wild to accept my proposition.. Too bad,
+    you seemed rather smart. '
+  reponseAffection: You're affective! You sure you don't want my help? People love
+    affective pets!
+  reponseCompassion: 'Don''t cry. I won''t force it on you, I don''t have time for
+    that. '
+  reponseDegout: 'Don''t mind... I don''t think anyone would like to have you. '
+  reponsePeur: 'Argh! What did I do? You really don''t want to go to a refuge? '
+  reponseHaine: 'And here I was being nice.. Freaking animal. '
+  reponseBonus: 
+  reponseMalus: 

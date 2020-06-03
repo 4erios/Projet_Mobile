@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "H_VH_Palier_Piti\xE9"
+  m_EditorClassIdentifier: 
+  dialogueDepart: "Oh it's the little one! Do you want some food? Seeing you like
+    that is making me sad. \r\n\r"
+  reponseInteret: 'Seems like you really are hungry.. I''ll go ask my brother''s
+    wife if she has some leftovers for you. '
+  reponseAffection: You truly are nice. If only I was still able to work, I would
+    take you home with me to raise you..
+  reponseCompassion: 'You were really hungry? I''ll bring the leftovers from my brother
+    home next time, so don''t be sad ok? '
+  reponseDegout: 'Oh I see.. So that''s why no one gave you any food.. '
+  reponsePeur: 'Ah! Don''t bite me! It hurts you cursed beast! '
+  reponseHaine: So that's you how treat kindness... You truly are just a beast...
+  reponseBonus: 
+  reponseMalus: 

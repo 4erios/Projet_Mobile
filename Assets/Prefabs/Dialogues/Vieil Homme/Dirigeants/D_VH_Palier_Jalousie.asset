@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: D_VH_Palier_Jalousie
+  m_EditorClassIdentifier: 
+  dialogueDepart: "How did you get so popular huh? I don't understand how people
+    can appreciate a monster like you, you're disgusting. \r"
+  reponseInteret: Well.. Looks like you won't let me know.
+  reponseAffection: 'Ah! I like animals because at least they are honest. '
+  reponseCompassion: Oh so that's why? I'll never understand poor people..
+  reponseDegout: Can you stop drooling or crying or whatever you're doing? It's disgusting!
+  reponsePeur: 'Don''t get near! I don''t know what kind of disease you bear! '
+  reponseHaine: 'It hurts! You cursed beast! I''ll destroy you! '
+  reponseBonus: 
+  reponseMalus: 

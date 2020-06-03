@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: M_VH_BasePositif
   m_EditorClassIdentifier: 
-  dialogueDepart: '"Hey there! Did you find something edible? If not, I can share
-    what I found!"'
+  dialogueDepart: Hey there! Did you find something edible? If not, I can share what
+    I found!
   reponseInteret: 'Always warry aren''t you? Well, I''ll leave you some food over
     here, so don''t be afraid next time ok? '
   reponseAffection: Ah! I'm happy to see you too! Come and eat, it's on me!
@@ -21,10 +21,9 @@ MonoBehaviour:
     that hungry? You knowI will always share my food with you. '
   reponseDegout: 'You know you don''t need to act like this with me right? I really
     dislike it when you try to get food from me like this. '
-  reponsePeur: '"Are you alright? Ouch! What are yo.. ARRGGGGHHHHH!!!"
+  reponsePeur: 'Are you alright? Ouch! What are yo.. ARRGGGGHHHHH!!!
 
-    Your
-    hunger was too strong, and so you devoured the old man. '
+'
   reponseHaine: Aaaaahh.. And here I thought you accepted me... Seems like you only
     needed me because I gave you food...
   reponseBonus: 

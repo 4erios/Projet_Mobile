@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "D_VH_Palier_R\xE9pulsion"
+  m_EditorClassIdentifier: 
+  dialogueDepart: "What is this disgusting thing doing here?! How many time do I
+    have to ask the autorities to keep the roads clean of pests??!\r"
+  reponseInteret: 'Oh I see so that''s why the autorities aren''t doing their job
+    correctly.. '
+  reponseAffection: 'Ahah! It got scared, that''s cute! '
+  reponseCompassion: 'Wow.. Look like you weren''t spared by mother nature.. '
+  reponseDegout: Don't touch me! You're disgusting! I'll show you what the autorities
+    should have done to you!
+  reponsePeur: Argh! Stop! Please stop! Arghhh!
+  reponseHaine: You're crying? Do you think I care? I pay taxes for pests like you
+    to be taken care of, so I'll show them what happens when they don't do their
+    jobs!
+  reponseBonus: 
+  reponseMalus: 
