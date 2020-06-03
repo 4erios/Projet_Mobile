@@ -9,7 +9,13 @@ public class PageJournal : MonoBehaviour
     private Text txt;
 
     [SerializeField]
+    private Image image;
+
+    [SerializeField]
     private List<float> angles = new List<float>();
+
+    [SerializeField]
+    private List<Sprite> journaux;
 
     public void ShowJournal(string t)
     {
@@ -19,5 +25,7 @@ public class PageJournal : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(0, 0, angles[Random.Range(0, angles.Count)]);
         }
+
+        image.sprite = journaux[Random.Range(0, 4)];
     }
 }

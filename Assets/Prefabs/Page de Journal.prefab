@@ -71,7 +71,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txt: {fileID: 7511646587528660445}
+  image: {fileID: 7511646586606418723}
   angles: []
+  journaux:
+  - {fileID: 21300000, guid: 6c6a8fba7f84de1459abf133267b6b7d, type: 3}
+  - {fileID: 21300000, guid: 528506406c25362458a6b4dbc9b42feb, type: 3}
+  - {fileID: 21300000, guid: 24e00b0ff91677744b26f75e4d88ea6c, type: 3}
+  - {fileID: 21300000, guid: 7d2905633b586cd488df0949e5a25093, type: 3}
 --- !u!1 &7511646586606418725
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +141,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f43dcaf3d291b1741a58b7f74ce334bd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 24e00b0ff91677744b26f75e4d88ea6c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -179,8 +185,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43, y: 60.7}
-  m_SizeDelta: {x: 520, y: 771.2}
+  m_AnchoredPosition: {x: 14.4, y: 327.6}
+  m_SizeDelta: {x: 577.3, y: 279.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7511646587528660442
 CanvasRenderer:
@@ -210,7 +216,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6862488ee3f7ccf4d855a26213666d5d, type: 3}
-    m_FontSize: 70
+    m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
