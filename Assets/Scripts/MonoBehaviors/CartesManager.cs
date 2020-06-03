@@ -105,7 +105,7 @@ public class CartesManager : MonoBehaviour
 
         if(Input.touchCount > 0 && canPlayCards)
         {
-            fleche.SetActive(false);
+
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
@@ -121,12 +121,15 @@ public class CartesManager : MonoBehaviour
 
             if(isTouch && !(movingCard || movingList))
             {
+                fleche.SetActive(false);
+                showFleche = 0;
                 if (Mathf.Abs(touch.position.x - touchStartPos.x) > 100) //Fait bouger la liste de carte
                 {
                     movingList = true;
                 }
-                else if(Mathf.Abs(touch.position.y - touchStartPos.y) > 70 && touch.position.x - positionCentrale.x < 360 + distanceBetweenCards / 2 && touch.position.x - positionCentrale.x > 360 - distanceBetweenCards / 2) //Fait bouger la carte principale
+                else if(Mathf.Abs(touch.position.y - touchStartPos.y) > 70 && touch.position.x - positionCentrale.x < 360 + distanceBetweenCards / 2 && touch.position.x - positionCentrale.x > 360 - distanceBetweenCards / 2 && !removedCard.ContainsKey(cards[mainCard])) //Fait bouger la carte principale
                 {
+                    Debug.Log(removedCard.Count + " : " + removedCard.ContainsKey(cards[mainCard]));
                     movingCard = true;
                     cartesJoueur[mainCard].colid.enabled = true;
                 }
@@ -185,6 +188,8 @@ public class CartesManager : MonoBehaviour
             RaycastHit2D hitinfo = Physics2D.Raycast(touchStartPos, cam.transform.forward);
             if (hitinfo.collider != null && hitinfo.collider.name == "ZoneCarte")
             {
+                fleche.SetActive(false);
+                showFleche = 0;
                 ChangeAnimatorState(false);
                 isTouch = true;
             }
@@ -198,8 +203,9 @@ public class CartesManager : MonoBehaviour
                 {
                     movingList = true;
                 }
-                else if (Mathf.Abs(Input.mousePosition.y - touchStartPos.y) > 70) //Fait bouger la carte principale
+                else if (Mathf.Abs(Input.mousePosition.y - touchStartPos.y) > 70 && !removedCard.ContainsKey(cards[mainCard])) //Fait bouger la carte principale
                 {
+                    Debug.Log(removedCard.Count + " : " + removedCard.ContainsKey(cards[mainCard]));
                     movingCard = true;
                     cartesJoueur[mainCard].colid.enabled = true;
                 }
@@ -274,6 +280,18 @@ public class CartesManager : MonoBehaviour
         if (cards.Contains(cardToRemove))
         {
             removedCard.Add(cardToRemove, 1);
+
+            //Animation de carte bloquée
+
+            foreach (MonoCartes cart in cartesJoueur)
+            {
+                if (cart.emotion == cardToRemove)
+                {
+                    cart.blockedCardAnimator.Play("AnimBlocageCarte");
+                    //Animation
+                }
+            }
+            /*
             cards.Remove(cardToRemove);
             MonoCartes monoCardToRemove = default;
             foreach(MonoCartes cart in cartesJoueur)
@@ -284,7 +302,21 @@ public class CartesManager : MonoBehaviour
                 }
             }
             cartesJoueur.Remove(monoCardToRemove);
-            ResetCardPosition();
+            */
+            //ResetCardPosition();
+        }
+    }
+
+    public void EndRemoved(EmotionMonstre card)
+    {
+        removedCard.Remove(card);
+
+        foreach (MonoCartes cart in cartesJoueur)
+        {
+            if (cart.emotion == card)
+            {
+                //Animation
+            }
         }
     }
 

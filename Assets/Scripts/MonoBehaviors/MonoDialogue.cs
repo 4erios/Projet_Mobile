@@ -113,11 +113,6 @@ public class MonoDialogue : MonoBehaviour
                     DoOnDown();
                 }
             }
-            else
-            {
-                Debug.Log("Was Settings");
-            }
-
         }
 
         if (Input.GetMouseButtonDown(0))
@@ -128,10 +123,6 @@ public class MonoDialogue : MonoBehaviour
             {
                 Debug.Log(hitinfo.collider);
                 DoOnDown();
-            }
-            else
-            {
-                Debug.Log("Was Settings");
             }
         }
     }

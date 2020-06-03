@@ -15,10 +15,17 @@ public class Quest : ScriptableObject
     public bool isValid;
     public int gain;
 
+    [HideInInspector]
+    public GameObject validationObj;
+
     public bool ValidateQuest()
     {
         isValid = true;
         AvancementSuccess.AddQuestAccomplished();
+        if(validationObj != null)
+        {
+            validationObj.SetActive(true);
+        }
         BanqueJoueur.WinMonney(gain);
         return false;
     }

@@ -64,6 +64,14 @@ public class MonstreEventManager : MonoBehaviour
 
     public List<Quest> quetesActuelles;
 
+    [Header("Menus quêtes")]
+
+    [SerializeField]
+    private List<GameObject> validationQuest;
+    [SerializeField]
+    private List<Text> titre = new List<Text>(), description = new List<Text>();
+
+
     #region Load des sauvegardes
     void Awake()
     {
@@ -166,10 +174,27 @@ public class MonstreEventManager : MonoBehaviour
             }
             futurEvents.Add(newEvent);
         }
+
+        if (quetesActuelles.Count > 0)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                titre[i].text = quetesActuelles[i].titre;
+                description[i].text = quetesActuelles[i].texteExplicatif;
+                validationQuest[i].SetActive(quetesActuelles[i].isValid);
+                quetesActuelles[i].validationObj = validationQuest[i];
+                //Rajouter si la quête a été validé ou non
+            }
+        }
         LoadingScreen.HideLoadScreen();
-        StartNextEvent(futurEvents[0]);
+
     }
     #endregion
+
+    public void EndCinematique()
+    {
+        StartNextEvent(futurEvents[0]);
+    }
 
     public void ShowCards()
     {
@@ -227,8 +252,7 @@ public class MonstreEventManager : MonoBehaviour
             }
             foreach (EmotionMonstre emot in emotionsToAdd)
             {
-                cardManager.removedCard.Remove(emot);
-                cardManager.AddCard(emot);
+                cardManager.EndRemoved(emot);
             }
             #endregion
 
@@ -319,6 +343,12 @@ public class MonstreEventManager : MonoBehaviour
         {
             cardManager.RemoveCard(actualEvent.carteMalus);
         }
+    }
+
+    [ContextMenu("BlockCard")]
+    void BlockCard()
+    {
+        cardManager.RemoveCard(CartesManager.cards[0]);
     }
 
     [ContextMenu("Kill")]

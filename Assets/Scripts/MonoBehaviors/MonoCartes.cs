@@ -7,8 +7,9 @@ public class MonoCartes : MonoBehaviour
 {
     public EmotionMonstre emotion;
     public Collider2D colid;
-    public SpriteRenderer spriteNoir, fond, titre;
+    public SpriteRenderer spriteNoir, fond, titre, animationBlocked;
     public Animator animNoire;
+    public Animator blockedCardAnimator;
 
     [SerializeField]
     //private Material newMat;
@@ -32,8 +33,9 @@ public class MonoCartes : MonoBehaviour
     public void ChangeLayerLevel(int newLevel)
     {
         spriteNoir.sortingOrder = newLevel;
+        animationBlocked.sortingOrder = newLevel + 2;
         fond.sortingOrder = newLevel - 1;
-        titre.sortingOrder = newLevel + 2;
+        titre.sortingOrder = newLevel + 1;
     }
 
     public IEnumerator Dissolve(float fade)

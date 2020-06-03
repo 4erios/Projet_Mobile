@@ -10,8 +10,12 @@ public class UpdateQuest : MonoBehaviour
     [SerializeField]
     private List<Quest> pool = new List<Quest>();
 
-    public List<Text> titre = new List<Text>(), description = new List<Text>();
-    public Text monnaie;
+    [SerializeField]
+    private List<Text> titre = new List<Text>(), description = new List<Text>();
+    [SerializeField]
+    private List<GameObject> validationQuest;
+    [SerializeField]
+    private Text monnaie;
 
     private List<Quest> questListe = new List<Quest>();
 
@@ -63,6 +67,7 @@ public class UpdateQuest : MonoBehaviour
         {
             titre[i].text = questListe[i].titre;
             description[i].text = questListe[i].texteExplicatif;
+            validationQuest[i].SetActive(questListe[i].isValid);
             //Rajouter si la quête a été validé ou non
         }
         AffichageArgent();

@@ -15,12 +15,12 @@ MonoBehaviour:
   role: {fileID: 11400000, guid: 4b57380cd4cd6404987627acb8063fea, type: 2}
   communaute: {fileID: 0}
   spriteReaction:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 4b8351b732c58d84f9ab5cb09e15f551, type: 3}
+  - {fileID: 21300000, guid: 3c3c8d6be4f14a04083659cbcc54b55a, type: 3}
+  - {fileID: 21300000, guid: 8c26caccad521084a93f2517ba7c691a, type: 3}
+  - {fileID: 21300000, guid: 16304293da91d76468a3b17a476ef924, type: 3}
+  - {fileID: 21300000, guid: 93e52572f6541034686eaada3f889e76, type: 3}
+  - {fileID: 21300000, guid: 12fa03c1dc88dcb46a2937f1251df168, type: 3}
   isAlive: 1
   rencontreEvent: {fileID: 0}
   dyingSuccess: {fileID: 0}

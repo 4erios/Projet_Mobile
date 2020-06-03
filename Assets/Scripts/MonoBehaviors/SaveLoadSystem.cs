@@ -410,7 +410,6 @@ public class SaveLoadSystem : MonoBehaviour
             {
                 if(everySuccess[i].titre == title)
                 {
-                    Debug.Log("Success is Unlocked ?");
                     unlockedSucc.Add(everySuccess[i]);
                     break;
                 }
