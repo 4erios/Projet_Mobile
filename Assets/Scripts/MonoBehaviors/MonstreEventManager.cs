@@ -404,7 +404,6 @@ public class MonstreEventManager : MonoBehaviour
         if (monstreHp > 0)
         {
             AudioFeedback(feedbackDegatAudio);
-            Debug.Log(dmg);
             if(dmg>0)
             {
                 feedbackDegat.SetActive(true);

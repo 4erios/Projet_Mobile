@@ -99,12 +99,14 @@ public class CartesManager : MonoBehaviour
 
     private void Update()
     {
-        showFleche += Time.deltaTime;
-        if(showFleche>=3f && !fleche.activeSelf)
+        if (canPlayCards)
         {
-            fleche.SetActive(true);
+            showFleche += Time.deltaTime;
+            if (showFleche >= 3f && !fleche.activeSelf)
+            {
+                fleche.SetActive(true);
+            }
         }
-
         if(Input.touchCount > 0 && canPlayCards)
         {
 

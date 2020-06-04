@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b98e5d80aa35ce42903d2758fcba8a2, type: 3}
   m_Name: BadEndPolice
   m_EditorClassIdentifier: 
-  icone: {fileID: 21300000, guid: 6e1e957f0b1f15e4bb95aa2be9101a14, type: 3}
+  icone: {fileID: 21300000, guid: e1b54b6b75628784ca1a455c0e9b84b6, type: 3}
   titre: Most Wanted
   texteExplicatif: Became the most wanted one

@@ -18,6 +18,11 @@ public class MenuScript : EventTrigger
         }
     }
 
+    private void Update()
+    {
+        
+    }
+
     public void LoadScene(int nbScene)
     {
         if (!sceneLoading)

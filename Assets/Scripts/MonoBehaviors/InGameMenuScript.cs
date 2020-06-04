@@ -7,6 +7,21 @@ public class InGameMenuScript : MonoBehaviour
     [SerializeField]
     private GameObject settings, cartes;
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(settings.activeSelf)
+            {
+                CloseSettings();
+            }
+            else
+            {
+                OpenSettings();
+            }
+        }
+    }
+
     public void OpenSettings()
     {
         settings.SetActive(true);

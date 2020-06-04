@@ -17,6 +17,7 @@ public class MonoJournal : MonoBehaviour
     private GameObject pageJournal;
     private List<GameObject> pages = new List<GameObject>();
     private bool endJournal;
+    private Vector2 beganTapPosition;
 
     [SerializeField]
     private AudioClip feedbackJournal;
@@ -28,9 +29,23 @@ public class MonoJournal : MonoBehaviour
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
+                beganTapPosition = touch.position;
                 //gameObject.SetActive(false);
-                manag.RemoveFromJournal();
-                manag.EndEvent();
+
+            }
+
+            if(touch.phase == TouchPhase.Ended)
+            {
+                if(Mathf.Abs(touch.position.y-beganTapPosition.y) <= 200 && touch.position.x - beganTapPosition.x < -100)
+                {
+                    manag.RemoveFromJournal();
+                    if (endJournal)
+                    {
+                        manag.AudioFeedback(feedbackJournal);
+                        Close();
+                    }
+                    manag.EndEvent();
+                }
             }
         }
 
@@ -38,7 +53,6 @@ public class MonoJournal : MonoBehaviour
         {
             //gameObject.SetActive(false);
             manag.RemoveFromJournal();
-            Debug.Log("Test EndJournal");
             if(endJournal)
             {
                 manag.AudioFeedback(feedbackJournal);

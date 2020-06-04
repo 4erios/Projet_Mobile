@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b98e5d80aa35ce42903d2758fcba8a2, type: 3}
   m_Name: Carnage
   m_EditorClassIdentifier: 
-  icone: {fileID: 21300000, guid: ca723e760639fba488a80d420fdbfd4d, type: 3}
+  icone: {fileID: 21300000, guid: 8842ebea26a65704ea45051a176780ce, type: 3}
   titre: Tranquility
   texteExplicatif: There's no one left, except you

@@ -16,6 +16,7 @@ public class AnimTransitionDecor : MonoBehaviour
     {
         actualEvent = newEvent;
         #region Mise en place du nouveau fond
+        Debug.Log(journalCount);
         if (ancienLieu != actualEvent.lieux && journalCount > 0)
         {
             Transition();

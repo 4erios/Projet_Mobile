@@ -18,9 +18,10 @@ MonoBehaviour:
     seuilBas: 0
     maxBas: -3
     maxHaut: 6
-    eventsPhase2: []
+    eventsPhase2:
+    - {fileID: 11400000, guid: e7b9335b58fdf5d4eaac00639f55520a, type: 2}
     journalPhrasesUp:
-    - Les habitants ne vous aime pas
+    - Inhabitants try to avoid the Monster.
     journalPhrasesDown: []
     firstState: 1
   agressivite:
@@ -29,9 +30,10 @@ MonoBehaviour:
     seuilBas: 0
     maxBas: -3
     maxHaut: 6
-    eventsPhase2: []
+    eventsPhase2:
+    - {fileID: 11400000, guid: 36e7f4e2051e6da4ea18bbe71b10b330, type: 2}
     journalPhrasesUp:
-    - Les habitants ne vous aime pas
+    - Inhabitants search a way to attack the Monster.
     journalPhrasesDown: []
     firstState: 1
   jalousie:
@@ -40,9 +42,10 @@ MonoBehaviour:
     seuilBas: 0
     maxBas: -3
     maxHaut: 6
-    eventsPhase2: []
+    eventsPhase2:
+    - {fileID: 11400000, guid: 4728eeef9e65f4e44bea8fd6850b4aad, type: 2}
     journalPhrasesUp:
-    - Les habitants ne vous aime pas
+    - Inhabitants think the Monster is stealing from them.on.
     journalPhrasesDown: []
     firstState: 1
   desir:
@@ -51,9 +54,10 @@ MonoBehaviour:
     seuilBas: 0
     maxBas: -6
     maxHaut: 6
-    eventsPhase2: []
+    eventsPhase2:
+    - {fileID: 11400000, guid: d6e998da1aa5df24096f1679625bbd92, type: 2}
     journalPhrasesUp:
-    - "Les habitants commencent \xE0 vous aimer"
+    - Inhabitants want the Monster by their side.
     journalPhrasesDown: []
     firstState: 1
   acceptation:
@@ -62,9 +66,10 @@ MonoBehaviour:
     seuilBas: 0
     maxBas: -6
     maxHaut: 6
-    eventsPhase2: []
+    eventsPhase2:
+    - {fileID: 11400000, guid: 90e02184381360947aadc661e86f34d6, type: 2}
     journalPhrasesUp:
-    - "Les habitants commencent \xE0 vous aimer"
+    - Inhabitants think the Monster is just an abandoned animal.
     journalPhrasesDown: []
     firstState: 1
   pitie:
@@ -73,9 +78,10 @@ MonoBehaviour:
     seuilBas: 0
     maxBas: -6
     maxHaut: 6
-    eventsPhase2: []
+    eventsPhase2:
+    - {fileID: 11400000, guid: 90911756b58f2d648899f7d6a0cab45c, type: 2}
     journalPhrasesUp:
-    - "Les habitants commencent \xE0 vous aimer"
+    - Inhabitants ask peoples to help the Monster.
     journalPhrasesDown: []
     firstState: 1
   goodEnding: {fileID: 11400000, guid: bcb70a9219c152e42956d96becc46dac, type: 2}

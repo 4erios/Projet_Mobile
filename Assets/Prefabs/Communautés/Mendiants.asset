@@ -18,9 +18,10 @@ MonoBehaviour:
     seuilBas: 0
     maxBas: -3
     maxHaut: 6
-    eventsPhase2: []
+    eventsPhase2:
+    - {fileID: 11400000, guid: 02d1604a6b2be1a44907cc75e92eb226, type: 2}
     journalPhrasesUp:
-    - Les mendiants ne vous aime pas
+    - Mendicants try to avoid the Monster.
     journalPhrasesDown: []
     firstState: 1
   agressivite:
@@ -29,9 +30,10 @@ MonoBehaviour:
     seuilBas: 0
     maxBas: -3
     maxHaut: 6
-    eventsPhase2: []
+    eventsPhase2:
+    - {fileID: 11400000, guid: 0697c77f5557bf54cb1f77bf37572f2d, type: 2}
     journalPhrasesUp:
-    - Les mendiants ne vous aime pas
+    - Mendicants search a way to attack the Monster.
     journalPhrasesDown: []
     firstState: 1
   jalousie:
@@ -40,9 +42,10 @@ MonoBehaviour:
     seuilBas: 0
     maxBas: -3
     maxHaut: 6
-    eventsPhase2: []
+    eventsPhase2:
+    - {fileID: 11400000, guid: 9ca290caf9777064b82b97c54d2dec95, type: 2}
     journalPhrasesUp:
-    - Les mendiants ne vous aime pas
+    - Mendicants think the Monster is stilling from them.
     journalPhrasesDown: []
     firstState: 1
   desir:
@@ -51,9 +54,10 @@ MonoBehaviour:
     seuilBas: 0
     maxBas: -6
     maxHaut: 6
-    eventsPhase2: []
+    eventsPhase2:
+    - {fileID: 11400000, guid: f067e69d6692eb74a860b507aeab895e, type: 2}
     journalPhrasesUp:
-    - "Les mendiants commencent \xE0 vous aimer"
+    - Mendicant want the Monster by their side.
     journalPhrasesDown: []
     firstState: 1
   acceptation:
@@ -62,9 +66,10 @@ MonoBehaviour:
     seuilBas: 0
     maxBas: -6
     maxHaut: 6
-    eventsPhase2: []
+    eventsPhase2:
+    - {fileID: 11400000, guid: d87ae748436748a479aad69fa70b409a, type: 2}
     journalPhrasesUp:
-    - "Les mendiants commencent \xE0 vous aimer"
+    - Mendicants think the Monster is just an abandoned animal.
     journalPhrasesDown: []
     firstState: 1
   pitie:
@@ -73,9 +78,10 @@ MonoBehaviour:
     seuilBas: 0
     maxBas: -6
     maxHaut: 6
-    eventsPhase2: []
+    eventsPhase2:
+    - {fileID: 11400000, guid: 3c1d61ae3c9ad6d4f99b2d6aa7e50ada, type: 2}
     journalPhrasesUp:
-    - "Les mendiants commencent \xE0 vous aimer"
+    - Mendicants ask peoples to help the Monster.
     journalPhrasesDown: []
     firstState: 1
   goodEnding: {fileID: 11400000, guid: 6df24435122d18d488503a9008a0e390, type: 2}
