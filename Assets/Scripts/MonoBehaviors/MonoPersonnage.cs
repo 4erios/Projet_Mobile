@@ -43,7 +43,6 @@ public class MonoPersonnage : MonoBehaviour
 
     public void Disparition()
     {
-        GetComponent<Animator>().Play("BaseAnimPerso", 0, 0.25f);
         StartCoroutine(HideSprite());
     }
 
@@ -65,15 +64,15 @@ public class MonoPersonnage : MonoBehaviour
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
         GetComponent<Animator>().enabled = true;
+        GetComponent<Animator>().Play("BaseAnimPerso", 0, 0.25f);
     }
 
     IEnumerator HideSprite()
     {
-        GetComponent<Animator>().Play("BaseAnimPerso", 0, 0.25f);
         yield return new WaitForSeconds(Time.fixedDeltaTime);
-        GetComponent<Animator>().enabled = false;
+        Debug.Log(spriteRnd.color);
         Color newColor = spriteRnd.color;
-        newColor.a = 1;
+        GetComponent<Animator>().enabled = false;
         for (int i = 0; i < 1/transitionSpeed; i++)
         {
             if(newColor.a <= 0)
@@ -84,7 +83,6 @@ public class MonoPersonnage : MonoBehaviour
             spriteRnd.color = newColor;
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
-        //GetComponent<RectTransform>().position = new Vector3(-2, GetComponent<RectTransform>().position.y, GetComponent<RectTransform>().position.z);
         manager.EndEvent();
     }
 }
