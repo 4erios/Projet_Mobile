@@ -19,6 +19,7 @@ TagManager:
   - Card
   - 
   - 
+  - Decor
   - 
   - 
   - 
@@ -38,8 +39,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - FX
   m_SortingLayers:
   - name: Default
     uniqueID: 0
