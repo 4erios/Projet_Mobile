@@ -51,14 +51,21 @@ public class MonoJournal : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
+            beganTapPosition = Input.mousePosition;
             //gameObject.SetActive(false);
-            manag.RemoveFromJournal();
-            if(endJournal)
+        }
+        else if(Input.GetMouseButtonUp(0))
+        {
+            if (Mathf.Abs(Input.mousePosition.y - beganTapPosition.y) <= 200 && Input.mousePosition.x - beganTapPosition.x < -100)
             {
-                manag.AudioFeedback(feedbackJournal);
-                Close();
+                manag.RemoveFromJournal();
+                if (endJournal)
+                {
+                    manag.AudioFeedback(feedbackJournal);
+                    Close();
+                }
+                manag.EndEvent();
             }
-            manag.EndEvent();
         }
     }
 

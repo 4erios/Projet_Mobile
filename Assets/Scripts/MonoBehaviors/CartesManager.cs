@@ -46,6 +46,11 @@ public class CartesManager : MonoBehaviour
 
     public GameObject greyCard;
 
+   /* [SerializeField]
+    private GameObject feedbackCardPlayed;
+    [SerializeField]
+    private SpriteRenderer feebackMonstre, feedbackTitre;*/
+
     private void Awake()
     {
         cards = new List<EmotionMonstre>();
@@ -156,14 +161,14 @@ public class CartesManager : MonoBehaviour
                     cartesJoueur[mainCard].transform.position = new Vector3(0, pos.y, 0);
                     pos = cartesJoueur[mainCard].transform.position;
                 }
-                Debug.Log("Test Card 3");
                 if ((pos.y < dialogueTransf.position.y + 13 && pos.y > dialogueTransf.position.y - 4 / 2))
                 {
-                    Debug.Log("Test Card 2");
                     if (touch.phase == TouchPhase.Ended && isTouch)
                     {
                         ChangeAnimatorState(true);
-                        Debug.Log("Test Card 1");
+                       /* feedbackCardPlayed.SetActive(true);
+                        feebackMonstre.sprite = cards[mainCard].sprite;
+                        feedbackTitre.sprite = cards[mainCard].titre;*/
                         dialogueTransf.parent.GetComponent<MonoDialogue>().GetCard(cartesJoueur[mainCard].emotion);
                         Debug.Log(pos.y + " < " + dialogueTransf.position.y + " + " + (screenSize.y * 0.16f));
                     }
@@ -253,6 +258,9 @@ public class CartesManager : MonoBehaviour
             Vector3 pos = cartesJoueur[mainCard].transform.position;
             if ((pos.y < dialogueTransf.position.y + 13 && pos.y > dialogueTransf.position.y - 4 / 2))
             {
+                /* feedbackCardPlayed.SetActive(true);
+                        feebackMonstre.sprite = cards[mainCard].sprite;
+                        feedbackTitre.sprite = cards[mainCard].titre;*/
                 dialogueTransf.parent.GetComponent<MonoDialogue>().GetCard(cartesJoueur[mainCard].emotion);
             }
             isTouch = false;
