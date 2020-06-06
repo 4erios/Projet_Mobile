@@ -45,6 +45,7 @@ public class MonstreEventManager : MonoBehaviour
     public bool needTap;
 
     private List<string> representationForJournal = new List<string>();
+    private List<string> interviewForJournal = new List<string>();
 
     public int monstreHp = 3;
     private int nbDeadPeople;
@@ -415,17 +416,18 @@ public class MonstreEventManager : MonoBehaviour
         }
     }
     
-    public void AddRepresentationForJournal(string phrase)
+    public void AddRepresentationForJournal(string phrase, string interview)
     {
         representationForJournal.Add(phrase);
+        interviewForJournal.Add(interview);
     }
 
     [ContextMenu("TestJournal")]
     void EndEventTestJournel()
     {
-        AddRepresentationForJournal("Test Journal 1");
-        AddRepresentationForJournal("Test Journal 2");
-        AddRepresentationForJournal("Test Journal 3");
+        AddRepresentationForJournal("Test Journal 1", "Interview 1");
+        AddRepresentationForJournal("Test Journal 2", "Interview 2");
+        AddRepresentationForJournal("Test Journal 3", "Interview 3");
         //EndEvent();
     }
 
@@ -470,11 +472,11 @@ public class MonstreEventManager : MonoBehaviour
             monoJourn.gameObject.SetActive(true);
             if(representationForJournal.Count > 0)
             {
-                monoJourn.ShowText(representationForJournal[0], false);
+                monoJourn.ShowText(representationForJournal[0],false, actualEvent.personnage.communaute.journalCom, interviewForJournal[0]);
             }
             else
             {
-                monoJourn.ShowText(Panique.JournalPanique(),true);
+                monoJourn.ShowText(Panique.JournalPanique(),true, null, "");
                 journalCount = 0;
             }
         }
@@ -500,9 +502,7 @@ public class MonstreEventManager : MonoBehaviour
         if (representationForJournal.Count > 0)
         {
             representationForJournal.RemoveAt(0);
-        }
-        if(representationForJournal.Count<=0)
-        {
+            interviewForJournal.RemoveAt(0);
         }
     }
 

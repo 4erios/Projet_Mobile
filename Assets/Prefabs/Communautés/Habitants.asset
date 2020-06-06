@@ -22,7 +22,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: e7b9335b58fdf5d4eaac00639f55520a, type: 2}
     journalPhrasesUp:
     - Inhabitants try to avoid the Monster.
-    journalPhrasesDown: []
+    journalInterview: []
     firstState: 1
   agressivite:
     valeur: 0
@@ -34,7 +34,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 36e7f4e2051e6da4ea18bbe71b10b330, type: 2}
     journalPhrasesUp:
     - Inhabitants search a way to attack the Monster.
-    journalPhrasesDown: []
+    journalInterview: []
     firstState: 1
   jalousie:
     valeur: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4728eeef9e65f4e44bea8fd6850b4aad, type: 2}
     journalPhrasesUp:
     - Inhabitants think the Monster is stealing from them.on.
-    journalPhrasesDown: []
+    journalInterview: []
     firstState: 1
   desir:
     valeur: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: d6e998da1aa5df24096f1679625bbd92, type: 2}
     journalPhrasesUp:
     - Inhabitants want the Monster by their side.
-    journalPhrasesDown: []
+    journalInterview: []
     firstState: 1
   acceptation:
     valeur: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 90e02184381360947aadc661e86f34d6, type: 2}
     journalPhrasesUp:
     - Inhabitants think the Monster is just an abandoned animal.
-    journalPhrasesDown: []
+    journalInterview: []
     firstState: 1
   pitie:
     valeur: 0
@@ -82,9 +82,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 90911756b58f2d648899f7d6a0cab45c, type: 2}
     journalPhrasesUp:
     - Inhabitants ask peoples to help the Monster.
-    journalPhrasesDown: []
+    journalInterview: []
     firstState: 1
   goodEnding: {fileID: 11400000, guid: bcb70a9219c152e42956d96becc46dac, type: 2}
   badEnding: {fileID: 11400000, guid: 1ca5ae9b37bcb3f449407ef18dff4d3f, type: 2}
   communauteEnnemie: {fileID: 11400000, guid: 193c86c924813984fbeb3359fddf55a1, type: 2}
   coef: 0.3
+  journalCom: {fileID: 21300000, guid: 462dfc537f364fd4197f7c95710e7468, type: 3}

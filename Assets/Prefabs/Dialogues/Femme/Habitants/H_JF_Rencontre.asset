@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: H_JF_Rencontre
   m_EditorClassIdentifier: 
-  dialogueDepart: '"I have to hurry! The kids are about to finish school. Ugh! What''s
+  dialogueDepart: 'I have to hurry! The kids are about to finish school. Ugh! What''s
     this thing? An animal? Please don''t bite me, I have children, I can''t get sick! '
   reponseInteret: 'What was that thing? A new species of cat maybe? Could I make
     some money if I told people about it? '

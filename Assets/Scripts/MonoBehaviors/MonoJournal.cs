@@ -69,14 +69,14 @@ public class MonoJournal : MonoBehaviour
         }
     }
 
-    public void ShowText(string text, bool doesEnd)
+    public void ShowText(string text, bool doesEnd, Sprite commu, string interview)
     {
         endJournal = doesEnd;
         manag.HideCards();
         anim.SetBool("EndJournal", false);
         //Mettre l'apparition du Journal
         //titre.text = text;
-        Instantiate(pageJournal, gameObject.transform, true).GetComponent<PageJournal>().ShowJournal(text);
+        Instantiate(pageJournal, gameObject.transform, true).GetComponent<PageJournal>().ShowJournal(text, commu, interview);
         manag.AudioFeedback(feedbackJournal);
     }
 

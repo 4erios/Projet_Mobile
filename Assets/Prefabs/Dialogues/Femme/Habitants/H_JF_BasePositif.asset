@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: H_JF_BasePositif
   m_EditorClassIdentifier: 
-  dialogueDepart: ' "There you are! The strange animal! I was searching for you!
-    I told them it was not my imagination!"'
+  dialogueDepart: ' There you are! The strange animal! I was searching for you! I
+    told them it was not my imagination!'
   reponseInteret: 'Oh? Do you like me? I''m really curious about what you are you
     know? Maybe next time I''ll bring a vet here! '
   reponseAffection: I understand now! That's your way of acting cute right? Well

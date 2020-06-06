@@ -7,7 +7,7 @@ public class Representation
 {
     public float valeur, seuilHaut, seuilBas, maxBas, maxHaut;
     public List<Event> eventsPhase2;
-    public List<string> journalPhrasesUp, journalPhrasesDown;
+    public List<string> journalPhrasesUp, journalInterview;
     public bool firstState = true;
 
     public float AddPoint(float value, MonstreEventManager manag) // Ajoute/Enlève les points de la Représentation. Renvoie un Bool qui dit s'il y a besoin du Journal ou pas
@@ -28,14 +28,13 @@ public class Representation
             Debug.Log(this);
             firstState = false;
             MonstreEventManager.AddEvent(eventsPhase2);
-            manag.AddRepresentationForJournal(journalPhrasesUp[0]);
+            manag.AddRepresentationForJournal(journalPhrasesUp[0], journalInterview[0]);
             return 1;
         }
-        else if(ancientValue > valeur && valeur <= seuilBas && journalPhrasesDown.Count > 0 && !firstState)
+        else if(ancientValue > valeur && valeur <= seuilBas && !firstState)
         {
             firstState = true;
             MonstreEventManager.RemoveEvent(eventsPhase2);
-            manag.AddRepresentationForJournal(journalPhrasesDown[Random.Range(0, journalPhrasesDown.Count)]);
             return -1;
         }
         return 0;
@@ -50,6 +49,7 @@ public class Communaute : ScriptableObject
 
     public Communaute communauteEnnemie;
     public float coef;
+    public Sprite journalCom;
 
     public string GetHighestRepresentation(out float nb)
     {
