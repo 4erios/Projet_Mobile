@@ -940,6 +940,7 @@ MonoBehaviour:
   canPlayCards: 0
   fleche: {fileID: 0}
   greyCard: {fileID: 0}
+  feedbackCard: {fileID: 0}
 --- !u!61 &482265139
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4699,7 +4700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1686349861
 Transform:
   m_ObjectHideFlags: 0
@@ -5698,12 +5699,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoneText: {fileID: 932672025}
+  spriteCommu: {fileID: 0}
   zoneAccroche: {fileID: 373258128}
   textAccroche: {fileID: 841278246}
   manager: {fileID: 696124072}
   cardManager: {fileID: 482265138}
   animCard: {fileID: 928705797}
   speed: 1
+  spriteVide: {fileID: 0}
 --- !u!61 &2032892227
 BoxCollider2D:
   m_ObjectHideFlags: 0
