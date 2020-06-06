@@ -27,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 67094185303573146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 37.5, y: 37.5, z: 1}
+  m_LocalScale: {x: 78.75, y: 78.75, z: 1}
   m_Children: []
   m_Father: {fileID: 5100201457793925958}
   m_RootOrder: 6
@@ -206,7 +206,7 @@ RectTransform:
   m_GameObject: {fileID: 2016357128205017356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 37.5, y: 37.5, z: 1}
+  m_LocalScale: {x: 78.75, y: 78.75, z: 1}
   m_Children: []
   m_Father: {fileID: 5100201457793925958}
   m_RootOrder: 5
@@ -312,7 +312,7 @@ RectTransform:
   m_GameObject: {fileID: 3949459710085863481}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 37.5, y: 37.5, z: 1}
+  m_LocalScale: {x: 78.75, y: 78.75, z: 1}
   m_Children: []
   m_Father: {fileID: 5100201457793925958}
   m_RootOrder: 0
@@ -493,7 +493,6 @@ MonoBehaviour:
   animationBlocked: {fileID: 208044858348263974}
   animNoire: {fileID: 6479537983728552359}
   blockedCardAnimator: {fileID: 7073016516477889710}
-  isDissolving: 0
 --- !u!61 &8175669260088574203
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -546,7 +545,7 @@ RectTransform:
   m_GameObject: {fileID: 5609997685804570995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 37.5, y: 37.5, z: 1}
+  m_LocalScale: {x: 78.75, y: 78.75, z: 1}
   m_Children: []
   m_Father: {fileID: 5100201457793925958}
   m_RootOrder: 2
@@ -596,7 +595,7 @@ SpriteMask:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: db538755b1757bf4aa6df317569f5720, type: 3}
-  m_MaskAlphaCutoff: 0.55
+  m_MaskAlphaCutoff: 0.5
   m_FrontSortingLayerID: 0
   m_BackSortingLayerID: 0
   m_FrontSortingLayer: 0
@@ -705,7 +704,7 @@ RectTransform:
   m_GameObject: {fileID: 8607728536651241252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 37.5, y: 37.5, z: 1}
+  m_LocalScale: {x: 60, y: 60, z: 1}
   m_Children: []
   m_Father: {fileID: 5100201457793925958}
   m_RootOrder: 4
@@ -754,7 +753,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0a5d05415da35ee4c87dfb3ba9dbd326, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f16bd9072da5f04c8491a7799a30737, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
