@@ -95,3 +95,4 @@ MonoBehaviour:
   communauteEnnemie: {fileID: 11400000, guid: 87436ca911a096b44bd7ce66a1ef9d84, type: 2}
   coef: 0.6
   journalCom: {fileID: 21300000, guid: 06f7f4fe446d493448402680dbdebb84, type: 3}
+  dialCom: {fileID: 21300000, guid: 159b027ff3fadde449e265120f89b855, type: 3}

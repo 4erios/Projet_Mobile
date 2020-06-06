@@ -49,7 +49,7 @@ public class Communaute : ScriptableObject
 
     public Communaute communauteEnnemie;
     public float coef;
-    public Sprite journalCom;
+    public Sprite journalCom, dialCom;
 
     public string GetHighestRepresentation(out float nb)
     {

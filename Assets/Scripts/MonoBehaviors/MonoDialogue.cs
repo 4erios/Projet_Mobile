@@ -42,11 +42,10 @@ public class MonoDialogue : MonoBehaviour
     {
         isResponseDial = reponseDial;
         dial = dialogue;
-        Debug.Log(commu);
         commuSprite = commu;
         if(commu!=null)
         {
-            spriteCommu.sprite = commu.journalCom;
+            spriteCommu.sprite = commu.dialCom;
         }
         else
         {
