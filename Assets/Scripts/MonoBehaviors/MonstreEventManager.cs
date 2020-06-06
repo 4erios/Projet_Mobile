@@ -45,6 +45,7 @@ public class MonstreEventManager : MonoBehaviour
     public bool needTap;
 
     private List<string> representationForJournal = new List<string>();
+    private List<string> interviewForJournal = new List<string>();
 
     public int monstreHp = 3;
     private int nbDeadPeople;
@@ -282,7 +283,7 @@ public class MonstreEventManager : MonoBehaviour
     public void StartEvent() //Lance le nouvel Event (Fonction privée)
     {
         
-        monoDial.ShowAccroche(actualEvent.accroche.texte, actualEvent.dialogue.dialogueDepart);
+        monoDial.ShowAccroche(actualEvent.accroche.texte, actualEvent.dialogue.dialogueDepart, actualEvent.personnage.communaute);
 
         //Mettre le côté Animation des Cartes
     }
@@ -301,13 +302,13 @@ public class MonstreEventManager : MonoBehaviour
         if (reponse.bonusRole.Contains(actualEvent.personnage.role)) //Pour la réponse Bonus
         {
             ChangeSpritePerso(emot,true);
-            monoDial.ShowDialogue(actualEvent.dialogue.reponseBonus, true);
+            monoDial.ShowDialogue(actualEvent.dialogue.reponseBonus, true, actualEvent.personnage.communaute);
             ChangeScoreCommu(actualEvent.personnage.communaute, emot, 1);
         }
         else if (reponse.malusRole.Contains(actualEvent.personnage.role)) //Pour la réponse Malus
         {
             ChangeSpritePerso(emot,true);
-            monoDial.ShowDialogue(actualEvent.dialogue.reponseMalus, true);
+            monoDial.ShowDialogue(actualEvent.dialogue.reponseMalus, true, actualEvent.personnage.communaute);
             ChangeScoreCommu(actualEvent.personnage.communaute, emot, -1);
             Panique.AddPanic(2);
         }
@@ -415,17 +416,18 @@ public class MonstreEventManager : MonoBehaviour
         }
     }
     
-    public void AddRepresentationForJournal(string phrase)
+    public void AddRepresentationForJournal(string phrase, string interview)
     {
         representationForJournal.Add(phrase);
+        interviewForJournal.Add(interview);
     }
 
     [ContextMenu("TestJournal")]
     void EndEventTestJournel()
     {
-        AddRepresentationForJournal("Test Journal 1");
-        AddRepresentationForJournal("Test Journal 2");
-        AddRepresentationForJournal("Test Journal 3");
+        AddRepresentationForJournal("Test Journal 1", "Interview 1");
+        AddRepresentationForJournal("Test Journal 2", "Interview 2");
+        AddRepresentationForJournal("Test Journal 3", "Interview 3");
         //EndEvent();
     }
 
@@ -470,11 +472,18 @@ public class MonstreEventManager : MonoBehaviour
             monoJourn.gameObject.SetActive(true);
             if(representationForJournal.Count > 0)
             {
-                monoJourn.ShowText(representationForJournal[0], false);
+                if (actualEvent.personnage.communaute != null)
+                {
+                    monoJourn.ShowText(representationForJournal[0], false, actualEvent.personnage.communaute.journalCom, interviewForJournal[0]);
+                }
+                else
+                {
+                    monoJourn.ShowText(representationForJournal[0], false, null, interviewForJournal[0]);
+                }
             }
             else
             {
-                monoJourn.ShowText(Panique.JournalPanique(),true);
+                monoJourn.ShowText(Panique.JournalPanique(),true, null, "");
                 journalCount = 0;
             }
         }
@@ -500,9 +509,7 @@ public class MonstreEventManager : MonoBehaviour
         if (representationForJournal.Count > 0)
         {
             representationForJournal.RemoveAt(0);
-        }
-        if(representationForJournal.Count<=0)
-        {
+            interviewForJournal.RemoveAt(0);
         }
     }
 
@@ -656,22 +663,22 @@ public class MonstreEventManager : MonoBehaviour
         switch (react)
         {
             case Reactions.interet:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponseInteret, true);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponseInteret, true, actualEvent.personnage.communaute);
                 break;
             case Reactions.affection:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponseAffection, true);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponseAffection, true, actualEvent.personnage.communaute);
                 break;
             case Reactions.compassion:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponseCompassion, true);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponseCompassion, true, actualEvent.personnage.communaute);
                 break;
             case Reactions.degout:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponseDegout, true);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponseDegout, true, actualEvent.personnage.communaute);
                 break;
             case Reactions.peur:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponsePeur, true);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponsePeur, true, actualEvent.personnage.communaute);
                 break;
             case Reactions.haine:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponseHaine, true);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponseHaine, true, actualEvent.personnage.communaute);
                 break;
         }
     }
@@ -722,96 +729,96 @@ public class MonstreEventManager : MonoBehaviour
                 case Reactions.interet:
                     if (bonus >= 0)
                     {
-                        commuPerso.jalousie.AddPoint(1, this);
+                        commuPerso.jalousie.AddPoint(1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.jalousie.AddPoint(-commuPerso.coef, this);
-                        commuPerso.desir.AddPoint(1, this);
+                        commuPerso.desir.AddPoint(1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.desir.AddPoint(-commuPerso.coef, this);
                     }
                     if (bonus <= 0)
                     {
-                        commuPerso.repulsion.AddPoint(-1, this);
+                        commuPerso.repulsion.AddPoint(-1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.repulsion.AddPoint(commuPerso.coef, this);
-                        commuPerso.pitie.AddPoint(-1, this);
+                        commuPerso.pitie.AddPoint(-1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.pitie.AddPoint(commuPerso.coef, this);
                     }
                     break;
                 case Reactions.affection:
                     if (bonus >= 0)
                     {
-                        commuPerso.acceptation.AddPoint(1, this);
+                        commuPerso.acceptation.AddPoint(1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.acceptation.AddPoint(-commuPerso.coef, this);
-                        commuPerso.desir.AddPoint(1, this);
+                        commuPerso.desir.AddPoint(1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.desir.AddPoint(-commuPerso.coef, this);
                     }
                     if (bonus <= 0)
                     {
-                        commuPerso.repulsion.AddPoint(-1, this);
+                        commuPerso.repulsion.AddPoint(-1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.repulsion.AddPoint(commuPerso.coef, this);
-                        commuPerso.agressivite.AddPoint(-1, this);
+                        commuPerso.agressivite.AddPoint(-1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.agressivite.AddPoint(commuPerso.coef, this);
                     }
                     break;
                 case Reactions.compassion:
                     if (bonus >= 0)
                     {
-                        commuPerso.acceptation.AddPoint(1, this);
+                        commuPerso.acceptation.AddPoint(1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.acceptation.AddPoint(-commuPerso.coef, this);
-                        commuPerso.pitie.AddPoint(1, this);
+                        commuPerso.pitie.AddPoint(1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.pitie.AddPoint(-commuPerso.coef, this);
                     }
                     if (bonus <= 0)
                     {
-                        commuPerso.jalousie.AddPoint(-1, this);
+                        commuPerso.jalousie.AddPoint(-1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.jalousie.AddPoint(commuPerso.coef, this);
-                        commuPerso.agressivite.AddPoint(-1, this);
+                        commuPerso.agressivite.AddPoint(-1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.agressivite.AddPoint(commuPerso.coef, this);
                     }
                     break;
                 case Reactions.degout:
                     if (bonus >= 0)
                     {
-                        commuPerso.repulsion.AddPoint(1, this);
+                        commuPerso.repulsion.AddPoint(1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.repulsion.AddPoint(-commuPerso.coef, this);
-                        commuPerso.pitie.AddPoint(1, this);
+                        commuPerso.pitie.AddPoint(1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.pitie.AddPoint(-commuPerso.coef, this);
                     }
                     if (bonus <= 0)
                     {
-                        commuPerso.jalousie.AddPoint(-1, this);
+                        commuPerso.jalousie.AddPoint(-1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.jalousie.AddPoint(commuPerso.coef, this);
-                        commuPerso.desir.AddPoint(-1, this);
+                        commuPerso.desir.AddPoint(-1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.desir.AddPoint(commuPerso.coef, this);
                     }
                     break;
                 case Reactions.peur:
                     if (bonus >= 0)
                     {
-                        commuPerso.repulsion.AddPoint(1, this);
+                        commuPerso.repulsion.AddPoint(1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.repulsion.AddPoint(-commuPerso.coef, this);
-                        commuPerso.agressivite.AddPoint(1, this);
+                        commuPerso.agressivite.AddPoint(1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.agressivite.AddPoint(-commuPerso.coef, this);
                     }
                     if (bonus <= 0)
                     {
-                        commuPerso.acceptation.AddPoint(-1, this);
+                        commuPerso.acceptation.AddPoint(-1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.acceptation.AddPoint(commuPerso.coef, this);
-                        commuPerso.desir.AddPoint(-1, this);
+                        commuPerso.desir.AddPoint(-1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.desir.AddPoint(commuPerso.coef, this);
                     }
                     break;
                 case Reactions.haine:
                     if (bonus >= 0)
                     {
-                        commuPerso.jalousie.AddPoint(1, this);
+                        commuPerso.jalousie.AddPoint(1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.jalousie.AddPoint(-commuPerso.coef, this);
-                        commuPerso.agressivite.AddPoint(1, this);
+                        commuPerso.agressivite.AddPoint(1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.agressivite.AddPoint(-commuPerso.coef, this);
                     }
                     if (bonus <= 0)
                     {
-                        commuPerso.acceptation.AddPoint(-1, this);
+                        commuPerso.acceptation.AddPoint(-1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.acceptation.AddPoint(commuPerso.coef, this);
-                        commuPerso.pitie.AddPoint(-1, this);
+                        commuPerso.pitie.AddPoint(-1 * actualEvent.personnage.coef, this);
                         commuPerso.communauteEnnemie.pitie.AddPoint(commuPerso.coef, this);
                     }
                     break;

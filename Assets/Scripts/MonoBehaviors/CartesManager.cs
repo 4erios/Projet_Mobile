@@ -45,6 +45,7 @@ public class CartesManager : MonoBehaviour
     private float showFleche;
 
     public GameObject greyCard;
+    public AnimationCarteJouee feedbackCard;
 
    /* [SerializeField]
     private GameObject feedbackCardPlayed;
@@ -170,6 +171,7 @@ public class CartesManager : MonoBehaviour
                         feebackMonstre.sprite = cards[mainCard].sprite;
                         feedbackTitre.sprite = cards[mainCard].titre;*/
                         dialogueTransf.parent.GetComponent<MonoDialogue>().GetCard(cartesJoueur[mainCard].emotion);
+                        feedbackCard.DissolveNew(1, cartesJoueur[mainCard].spriteNoir.sprite, cartesJoueur[mainCard].fond.sprite, cartesJoueur[mainCard].titre.sprite);
                         Debug.Log(pos.y + " < " + dialogueTransf.position.y + " + " + (screenSize.y * 0.16f));
                     }
                 }
@@ -262,6 +264,7 @@ public class CartesManager : MonoBehaviour
                         feebackMonstre.sprite = cards[mainCard].sprite;
                         feedbackTitre.sprite = cards[mainCard].titre;*/
                 dialogueTransf.parent.GetComponent<MonoDialogue>().GetCard(cartesJoueur[mainCard].emotion);
+                feedbackCard.DissolveNew(1, cartesJoueur[mainCard].spriteNoir.sprite, cartesJoueur[mainCard].fond.sprite, cartesJoueur[mainCard].titre.sprite);
             }
             isTouch = false;
             movingCard = false;

@@ -22,7 +22,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: cd207f9569a1be743bf3286d5b4919ca, type: 2}
     journalPhrasesUp:
     - The police try to avoid the Monster.
-    journalPhrasesDown: []
+    journalInterview:
+    - Test Interview
     firstState: 1
   agressivite:
     valeur: 0
@@ -34,7 +35,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 7873c2b494d347943828440c3d588b13, type: 2}
     journalPhrasesUp:
     - The police search a way to attack the Monster.
-    journalPhrasesDown: []
+    journalInterview:
+    - Test Interview
     firstState: 1
   jalousie:
     valeur: 0
@@ -46,7 +48,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: ed89810458395aa4f8580541c37dfccc, type: 2}
     journalPhrasesUp:
     - The police think the Monster is making fun of them.
-    journalPhrasesDown: []
+    journalInterview:
+    - Test Interview
     firstState: 1
   desir:
     valeur: 0
@@ -58,7 +61,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: eac0bdd0a313a0444bca280441cd9b99, type: 2}
     journalPhrasesUp:
     - The police want the Monster by their side.
-    journalPhrasesDown: []
+    journalInterview:
+    - Test Interview
     firstState: 1
   acceptation:
     valeur: 0
@@ -70,7 +74,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 73922c13eaded7544962703efd209063, type: 2}
     journalPhrasesUp:
     - The police think the Monster is just an abandoned animal.
-    journalPhrasesDown: []
+    journalInterview:
+    - Test Interview
     firstState: 1
   pitie:
     valeur: 0
@@ -82,9 +87,12 @@ MonoBehaviour:
     - {fileID: 11400000, guid: aaf02db497edfe840a84aa75d52ac7db, type: 2}
     journalPhrasesUp:
     - The police ask peoples to help the Monster.
-    journalPhrasesDown: []
+    journalInterview:
+    - Test Interview
     firstState: 1
   goodEnding: {fileID: 11400000, guid: fd7c7efa7f47d854d939afd3f3c1de11, type: 2}
   badEnding: {fileID: 11400000, guid: d8873c30967c5bc4090bd4dbc4aebfc2, type: 2}
   communauteEnnemie: {fileID: 11400000, guid: b748d2f27a6991b4a9c80912efec977b, type: 2}
   coef: 0.2
+  journalCom: {fileID: 21300000, guid: b5df27fea54bd9f4dac557a6d68c6c1f, type: 3}
+  dialCom: {fileID: 21300000, guid: a99e0e41c4959ff4996064571e57378e, type: 3}

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: "H_JF_BaseN\xE9gatif"
   m_EditorClassIdentifier: 
-  dialogueDepart: '"Ah! You again! I thought you were just an hallucination due to
-    fatigue. Well I''m going, need to get my kids, so please don''t come near."'
+  dialogueDepart: Ah! You again! I thought you were just an hallucination due to
+    fatigue. Well I'm going, need to get my kids, so please don't come near.
   reponseInteret: 'Ouf, it''s gone. Maybe he''s not dangerous? Well I''ll worry about
     it later. '
   reponseAffection: Oh sorry, sorry! I'll get you some treats next time I see you

@@ -26,3 +26,4 @@ MonoBehaviour:
   dyingSuccess: {fileID: 11400000, guid: da28d43ba09f52347946bd6d2e58a8a8, type: 2}
   cout: 10
   isUnlocked: 1
+  coef: 1.2

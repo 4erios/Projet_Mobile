@@ -13,6 +13,7 @@ public class Personnage : ScriptableObject
     public Success dyingSuccess;
     public int cout = 10;
     public bool isUnlocked = true;
+    public float coef = 1;
 
     public void Die()
     {

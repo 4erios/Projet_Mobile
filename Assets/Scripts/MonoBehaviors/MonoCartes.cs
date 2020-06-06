@@ -15,7 +15,6 @@ public class MonoCartes : MonoBehaviour
     //private Material newMat;
 
     //private float fade = 0f;
-    private bool isDissolving;
 
     private void Start()
     {
