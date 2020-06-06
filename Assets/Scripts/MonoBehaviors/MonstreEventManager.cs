@@ -283,7 +283,7 @@ public class MonstreEventManager : MonoBehaviour
     public void StartEvent() //Lance le nouvel Event (Fonction privée)
     {
         
-        monoDial.ShowAccroche(actualEvent.accroche.texte, actualEvent.dialogue.dialogueDepart);
+        monoDial.ShowAccroche(actualEvent.accroche.texte, actualEvent.dialogue.dialogueDepart, actualEvent.personnage.communaute);
 
         //Mettre le côté Animation des Cartes
     }
@@ -302,13 +302,13 @@ public class MonstreEventManager : MonoBehaviour
         if (reponse.bonusRole.Contains(actualEvent.personnage.role)) //Pour la réponse Bonus
         {
             ChangeSpritePerso(emot,true);
-            monoDial.ShowDialogue(actualEvent.dialogue.reponseBonus, true);
+            monoDial.ShowDialogue(actualEvent.dialogue.reponseBonus, true, actualEvent.personnage.communaute);
             ChangeScoreCommu(actualEvent.personnage.communaute, emot, 1);
         }
         else if (reponse.malusRole.Contains(actualEvent.personnage.role)) //Pour la réponse Malus
         {
             ChangeSpritePerso(emot,true);
-            monoDial.ShowDialogue(actualEvent.dialogue.reponseMalus, true);
+            monoDial.ShowDialogue(actualEvent.dialogue.reponseMalus, true, actualEvent.personnage.communaute);
             ChangeScoreCommu(actualEvent.personnage.communaute, emot, -1);
             Panique.AddPanic(2);
         }
@@ -472,7 +472,14 @@ public class MonstreEventManager : MonoBehaviour
             monoJourn.gameObject.SetActive(true);
             if(representationForJournal.Count > 0)
             {
-                monoJourn.ShowText(representationForJournal[0],false, actualEvent.personnage.communaute.journalCom, interviewForJournal[0]);
+                if (actualEvent.personnage.communaute != null)
+                {
+                    monoJourn.ShowText(representationForJournal[0], false, actualEvent.personnage.communaute.journalCom, interviewForJournal[0]);
+                }
+                else
+                {
+                    monoJourn.ShowText(representationForJournal[0], false, null, interviewForJournal[0]);
+                }
             }
             else
             {
@@ -656,22 +663,22 @@ public class MonstreEventManager : MonoBehaviour
         switch (react)
         {
             case Reactions.interet:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponseInteret, true);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponseInteret, true, actualEvent.personnage.communaute);
                 break;
             case Reactions.affection:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponseAffection, true);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponseAffection, true, actualEvent.personnage.communaute);
                 break;
             case Reactions.compassion:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponseCompassion, true);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponseCompassion, true, actualEvent.personnage.communaute);
                 break;
             case Reactions.degout:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponseDegout, true);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponseDegout, true, actualEvent.personnage.communaute);
                 break;
             case Reactions.peur:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponsePeur, true);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponsePeur, true, actualEvent.personnage.communaute);
                 break;
             case Reactions.haine:
-                monoDial.ShowDialogue(actualEvent.dialogue.reponseHaine, true);
+                monoDial.ShowDialogue(actualEvent.dialogue.reponseHaine, true, actualEvent.personnage.communaute);
                 break;
         }
     }

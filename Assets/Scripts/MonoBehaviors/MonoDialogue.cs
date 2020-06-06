@@ -8,6 +8,8 @@ public class MonoDialogue : MonoBehaviour
     [SerializeField]
     private Text zoneText;
     [SerializeField]
+    private Image spriteCommu;
+    [SerializeField]
     private GameObject zoneAccroche;
     [SerializeField]
     private Text textAccroche;
@@ -21,21 +23,35 @@ public class MonoDialogue : MonoBehaviour
     private bool isDialShowing;
     private bool isResponseDial;
     private string dial;
+    private Communaute commuSprite;
     [SerializeField]
     private int speed;
+    [SerializeField]
+    private Sprite spriteVide;
 
 
-    public void ShowAccroche(string txt, string dialog)
+    public void ShowAccroche(string txt, string dialog, Communaute commu)
     {
+        commuSprite = commu;
         dial = dialog;
         zoneAccroche.SetActive(true);
         textAccroche.text = txt;
     }
 
-    public void ShowDialogue(string dialogue, bool reponseDial)
+    public void ShowDialogue(string dialogue, bool reponseDial, Communaute commu)
     {
         isResponseDial = reponseDial;
         dial = dialogue;
+        Debug.Log(commu);
+        commuSprite = commu;
+        if(commu!=null)
+        {
+            spriteCommu.sprite = commu.journalCom;
+        }
+        else
+        {
+            spriteCommu.sprite = spriteVide;
+        }
         StartCoroutine(AffichageDialogue());
     }
 
@@ -146,7 +162,7 @@ public class MonoDialogue : MonoBehaviour
             else if (zoneAccroche.activeSelf)
             {
                 manager.AccrocheShowed();
-                ShowDialogue(dial, false);
+                ShowDialogue(dial, false, commuSprite);
                 zoneAccroche.SetActive(false);
             }
             else

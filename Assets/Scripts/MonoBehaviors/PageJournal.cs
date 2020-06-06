@@ -17,11 +17,21 @@ public class PageJournal : MonoBehaviour
     [SerializeField]
     private List<Sprite> journaux;
 
+    [SerializeField]
+    private Sprite spriteVide;
+
     public void ShowJournal(string t, Sprite commu, string interview)
     {
         transform.localScale = Vector3.one;
         txt.text = t;
-        commuSprite.sprite = commu;
+        if (commu != null)
+        {
+            commuSprite.sprite = commu;
+        }
+        else
+        {
+            commuSprite.sprite = spriteVide;
+        }
         interv.text = interview;
         if(angles.Count>0)
         {
