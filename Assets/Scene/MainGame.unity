@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -600,7 +600,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -7147264432922061958, guid: fc63a87b92ca3d748bbc1c83fe3b50e0,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a43d63ea926ce0044bf2e3c6b31e165b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1665,6 +1665,16 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3102833705849108876, guid: fe36338ce60485c47974f2ea907107d3,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102833705849108876, guid: fe36338ce60485c47974f2ea907107d3,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 7.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3102833705849108877, guid: fe36338ce60485c47974f2ea907107d3,
         type: 3}
       propertyPath: m_Enabled
@@ -2524,12 +2534,13 @@ MonoBehaviour:
   decor: {fileID: 498948091}
   feedbackDegat: {fileID: 1329552652}
   sfxAudio: {fileID: 40394418}
-  feedbackDegatAudio: {fileID: 0}
-  feedbackBattementAudio: {fileID: 0}
-  bonusCardAudio: {fileID: 0}
-  audioEndingGood: {fileID: 0}
-  audioEndingBad: {fileID: 0}
-  audioEndingCarnage: {fileID: 0}
+  feedbackDegatAudio: {fileID: 8300000, guid: 62c7cf510c23826409528aaf65bc60ad, type: 3}
+  feedbackBattementAudio: {fileID: 8300000, guid: 75f985200a71ded41a833c78e69e8114,
+    type: 3}
+  bonusCardAudio: {fileID: 8300000, guid: d7cbcc28906df38458f3b888c8347b06, type: 3}
+  audioEndingGood: {fileID: 8300000, guid: 99c04bc00c45d1d4f92610a7cf8356e8, type: 3}
+  audioEndingBad: {fileID: 8300000, guid: d95e1d7cb14ce8046a449110f730d901, type: 3}
+  audioEndingCarnage: {fileID: 8300000, guid: 5e8e189ef9df62f4e94b205907edc125, type: 3}
   futurEvents: []
   needTap: 0
   monstreHp: 5
@@ -3274,7 +3285,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -7147264432922061958, guid: fc63a87b92ca3d748bbc1c83fe3b50e0,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4e99269f44d74c640a219f40139f4bfa, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3808,7 +3819,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -7147264432922061958, guid: fc63a87b92ca3d748bbc1c83fe3b50e0,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0679702b10d80f446a2333efe956d1ce, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -4139,7 +4150,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -7147264432922061958, guid: fc63a87b92ca3d748bbc1c83fe3b50e0,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 235afb219ae99754b97637f9cd1a4e25, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5901,7 +5912,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 7125462414786016995, guid: fc63a87b92ca3d748bbc1c83fe3b50e0,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 2fc69e111f0f65040814e25d74bd0a04, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2a89d947e0a4ea242bd7835f780c7fa8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -7242,7 +7253,7 @@ MonoBehaviour:
   animationTransition: {fileID: 1258825403}
   pageJournal: {fileID: 203127881936505936, guid: 59dc7b0b60fe5194b8e8ff6359a17a56,
     type: 3}
-  feedbackJournal: {fileID: 0}
+  feedbackJournal: {fileID: 8300000, guid: 1517a7a91ceef5644bfb02fba1050039, type: 3}
 --- !u!95 &1976817515
 Animator:
   serializedVersion: 3
@@ -8016,6 +8027,11 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 696124072}
+    - target: {fileID: 1506286770827150030, guid: c8b8640569a499b49b397e7a5ef534c5,
+        type: 3}
+      propertyPath: feedbackKill
+      value: 
+      objectReference: {fileID: 8300000, guid: 6df9153bda9cd2c498acbeee35e05912, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8b8640569a499b49b397e7a5ef534c5, type: 3}
 --- !u!114 &1660887925290147535
