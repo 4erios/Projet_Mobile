@@ -18,7 +18,7 @@ public class AnimationCarteJouee : MonoBehaviour
     private IEnumerator Dissolve(float fade)
     {
         yield return new WaitForSeconds(Time.fixedDeltaTime);
-        fade -= Time.fixedDeltaTime*2;
+        fade -= Time.fixedDeltaTime*3;
 
         if (fade <= 0)
         {

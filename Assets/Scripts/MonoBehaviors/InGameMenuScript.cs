@@ -5,7 +5,7 @@ using UnityEngine;
 public class InGameMenuScript : MonoBehaviour
 {
     [SerializeField]
-    private GameObject settings, cartes;
+    private GameObject settings, cartes, journal;
 
     private void Update()
     {
@@ -25,13 +25,19 @@ public class InGameMenuScript : MonoBehaviour
     public void OpenSettings()
     {
         settings.SetActive(true);
-        HideCards();
+        if (!journal.activeSelf)
+        {
+            HideCards();
+        }
     }
 
     public void CloseSettings()
     {
         settings.SetActive(false);
-        ShowCards();
+        if (!journal.activeSelf)
+        {
+            ShowCards();
+        }
     }
 
     void HideCards()

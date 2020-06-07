@@ -15,7 +15,7 @@ public class CinematiqueScript : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
+            if (touch.phase == TouchPhase.Ended)
             {
                 if (!canEnd)
                 {
@@ -28,7 +28,7 @@ public class CinematiqueScript : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonUp(0))
         {
             if(!canEnd)
             {

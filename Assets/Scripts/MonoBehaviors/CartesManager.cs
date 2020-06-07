@@ -293,7 +293,7 @@ public class CartesManager : MonoBehaviour
     {
         if (cards.Contains(cardToRemove))
         {
-            removedCard.Add(cardToRemove, 1);
+            removedCard.Add(cardToRemove, 2);
 
             //Animation de carte bloquée
 

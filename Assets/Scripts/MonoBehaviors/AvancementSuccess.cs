@@ -38,11 +38,11 @@ public class AvancementSuccess : MonoBehaviour
 
     public static void AddUnlockCard(EmotionMonstre unlockedCard)
     {
-        if(unlockedCard.name == "Play")
+        if(unlockedCard.name == "Jouer")
         {
             SearchForSuccess("Kid");
         }
-        else if(unlockedCard.name == "Ignore")
+        else if(unlockedCard.name == "Ignorer")
         {
             SearchForSuccess("Ghost");
         }

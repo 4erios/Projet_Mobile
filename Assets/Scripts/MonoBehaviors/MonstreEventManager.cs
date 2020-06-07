@@ -282,7 +282,7 @@ public class MonstreEventManager : MonoBehaviour
 
     public void StartEvent() //Lance le nouvel Event (Fonction privée)
     {
-        
+        Debug.Log("Test startEvent");
         monoDial.ShowAccroche(actualEvent.accroche.texte, actualEvent.dialogue.dialogueDepart, actualEvent.personnage.communaute);
 
         //Mettre le côté Animation des Cartes
@@ -442,7 +442,7 @@ public class MonstreEventManager : MonoBehaviour
         {
             StartEndEvent(actualEvent.personnage.communaute.badEnding);
         }
-        else if(nbDeadPeople>5) //Fin "Carnage"
+        else if(nbDeadPeople>=4) //Fin "Carnage"
         {
             StartEndEvent(finCarnage);
         }
