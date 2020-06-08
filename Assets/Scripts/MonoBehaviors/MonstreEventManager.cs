@@ -204,7 +204,7 @@ public class MonstreEventManager : MonoBehaviour
 
     public void AudioFeedback(AudioClip clip)
     {
-        //sfxAudio.PlayOneShot(clip);
+        sfxAudio.PlayOneShot(clip);
     }
 
     public void ShowCards()
@@ -282,7 +282,6 @@ public class MonstreEventManager : MonoBehaviour
 
     public void StartEvent() //Lance le nouvel Event (Fonction privée)
     {
-        Debug.Log("Test startEvent");
         monoDial.ShowAccroche(actualEvent.accroche.texte, actualEvent.dialogue.dialogueDepart, actualEvent.personnage.communaute);
 
         //Mettre le côté Animation des Cartes
@@ -433,6 +432,7 @@ public class MonstreEventManager : MonoBehaviour
 
     public void EndEvent()
     {
+        Debug.Log("End Event");
         //Animation de fin d'évènement OU est appelée à la fin de l'animation (Uniquement si l'instruction vien de MonoDialogue)
         if (actualEvent.eventSuivant != null)
         {

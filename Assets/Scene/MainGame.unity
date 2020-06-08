@@ -2524,7 +2524,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eb86752a0915205459ec860c38e7d4da, type: 2}
   - {fileID: 11400000, guid: 87436ca911a096b44bd7ce66a1ef9d84, type: 2}
   - {fileID: 11400000, guid: 193c86c924813984fbeb3359fddf55a1, type: 2}
-  journalDelay: 4
+  journalDelay: 2
   valeurFinCommu: 6
   monoPerso: {fileID: 177643486}
   monoDial: {fileID: 2032892226}
@@ -7592,7 +7592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMix: {fileID: 24100000, guid: fc63a87b92ca3d748bbc1c83fe3b50e0, type: 2}
   source: {fileID: 1505469856}
-  music: {fileID: 8300000, guid: 2fc69e111f0f65040814e25d74bd0a04, type: 3}
+  music: {fileID: 8300000, guid: 2a89d947e0a4ea242bd7835f780c7fa8, type: 3}
   sfxs: []
   soundLevel: 0
   sett: {fileID: 5415976595944903408}
@@ -8515,7 +8515,7 @@ RectTransform:
   m_GameObject: {fileID: 4677699727787500171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 55, y: 55, z: 1}
+  m_LocalScale: {x: 60, y: 60, z: 1}
   m_Children: []
   m_Father: {fileID: 8167773072898438889}
   m_RootOrder: 2

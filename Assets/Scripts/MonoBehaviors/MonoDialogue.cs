@@ -86,7 +86,7 @@ public class MonoDialogue : MonoBehaviour
 
     public void GetCard(EmotionMonstre carte)
     {
-        animCard.SetActive(true);
+        //animCard.SetActive(true);
         cardManager.canPlayCards = false;
         cardManager.greyCard.SetActive(true);
         //Mettre les faces caché des cartes
@@ -118,13 +118,11 @@ public class MonoDialogue : MonoBehaviour
 
         if (Input.touchCount > 0)
         {
-            Debug.Log("TestInput ?");
             Touch touch = Input.GetTouch(0);
             Vector2 touchStartPos = cardManager.cam.ScreenToWorldPoint(touch.position);
             RaycastHit2D hitinfo = Physics2D.Raycast(touchStartPos, cardManager.cam.transform.forward);
             if (hitinfo.collider == null || hitinfo.collider.tag != "Settings")
             {
-                Debug.Log(hitinfo.collider);
                 if (touch.phase == TouchPhase.Began)
                 {
                     DoOnDown();

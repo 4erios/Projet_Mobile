@@ -70,7 +70,6 @@ public class MonoPersonnage : MonoBehaviour
     IEnumerator HideSprite()
     {
         yield return new WaitForSeconds(Time.fixedDeltaTime);
-        Debug.Log(spriteRnd.color);
         Color newColor = spriteRnd.color;
         GetComponent<Animator>().enabled = false;
         for (int i = 0; i < 1/transitionSpeed; i++)

@@ -24,7 +24,7 @@ public class MonoJournal : MonoBehaviour
 
     private void Update()
     {
-        if (Input.touchCount > 0)
+        /*if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
@@ -36,18 +36,21 @@ public class MonoJournal : MonoBehaviour
 
             if(touch.phase == TouchPhase.Ended)
             {
+                Debug.Log("Test touch journal");
                 if(Mathf.Abs(touch.position.y-beganTapPosition.y) <= 200 && touch.position.x - beganTapPosition.x < -100)
                 {
+                    Debug.Log("Test journal Flick");
                     manag.RemoveFromJournal();
                     if (endJournal)
                     {
+                        Debug.Log("Test end journal");
                         manag.AudioFeedback(feedbackJournal);
                         Close();
                     }
                     manag.EndEvent();
                 }
             }
-        }
+        }*/
 
         if(Input.GetMouseButtonDown(0))
         {
@@ -58,6 +61,7 @@ public class MonoJournal : MonoBehaviour
         {
             if (Mathf.Abs(Input.mousePosition.y - beganTapPosition.y) <= 200 && Input.mousePosition.x - beganTapPosition.x < -100)
             {
+                Debug.Log("Mouse Down");
                 manag.RemoveFromJournal();
                 if (endJournal)
                 {
@@ -74,8 +78,7 @@ public class MonoJournal : MonoBehaviour
         if(!animationTransition.activeSelf)
         {
             animationTransition.SetActive(true);
-            //animationTransition.GetComponent<Animator>().Play("journalTransitionClean_anim", -1, 0);
-            
+            animationTransition.GetComponent<Animator>().Play("journalTransitionClean_anim", -1, 0);
         }
         endJournal = doesEnd;
         manag.HideCards();

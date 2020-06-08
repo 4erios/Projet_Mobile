@@ -139,7 +139,6 @@ public class CartesManager : MonoBehaviour
                 }
                 else if(Mathf.Abs(touch.position.y - touchStartPos.y) > 70 && touch.position.x - positionCentrale.x < 360 + distanceBetweenCards / 2 && touch.position.x - positionCentrale.x > 360 - distanceBetweenCards / 2 && !removedCard.ContainsKey(cards[mainCard])) //Fait bouger la carte principale
                 {
-                    Debug.Log(removedCard.Count + " : " + removedCard.ContainsKey(cards[mainCard]));
                     movingCard = true;
                     cartesJoueur[mainCard].colid.enabled = true;
                 }
@@ -172,7 +171,6 @@ public class CartesManager : MonoBehaviour
                         feedbackTitre.sprite = cards[mainCard].titre;*/
                         dialogueTransf.parent.GetComponent<MonoDialogue>().GetCard(cartesJoueur[mainCard].emotion);
                         feedbackCard.DissolveNew(1, cartesJoueur[mainCard].spriteNoir.sprite, cartesJoueur[mainCard].fond.sprite, cartesJoueur[mainCard].titre.sprite);
-                        Debug.Log(pos.y + " < " + dialogueTransf.position.y + " + " + (screenSize.y * 0.16f));
                     }
                 }
             }
