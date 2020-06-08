@@ -621,6 +621,10 @@ public class MonstreEventManager : MonoBehaviour
             {
                 q.ValidateQuest();
             }
+            else if(q.titre == "New Monster")
+            {
+                q.ValidateQuest();
+            }
         }
         Debug.Log("End Game");
         SaveLoadSystem.ResetGameSate();

@@ -86,7 +86,7 @@ public class MonoDialogue : MonoBehaviour
 
     public void GetCard(EmotionMonstre carte)
     {
-        //animCard.SetActive(true);
+        animCard.SetActive(true);
         cardManager.canPlayCards = false;
         cardManager.greyCard.SetActive(true);
         //Mettre les faces caché des cartes

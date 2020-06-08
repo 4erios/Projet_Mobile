@@ -9,6 +9,8 @@ public class UpdateQuest : MonoBehaviour
     private List<Quest> disabledQuests = new List<Quest>();
     [SerializeField]
     private List<Quest> pool = new List<Quest>();
+    [SerializeField]
+    private Quest beginQuest;
 
     [SerializeField]
     private List<Text> titre = new List<Text>(), description = new List<Text>();
@@ -35,9 +37,11 @@ public class UpdateQuest : MonoBehaviour
             usedQuest = new List<Quest>();
             SaveLoadSystem.ResetQuest();
         }
+        Debug.Log("Test ??");
+        Debug.Log(System.DateTime.Now.Date == new System.DateTime(2020, 6, 8));
 
-        if (System.DateTime.Now.Day != PlayerPrefs.GetInt("Day"))
-        {
+        //if (System.DateTime.Now.Day != PlayerPrefs.GetInt("Day"))
+        //{
             PlayerPrefs.SetInt("Day", System.DateTime.Now.Day);
             if (quetes.Count <= 0 && pool.Count > 0)
             {
@@ -52,11 +56,17 @@ public class UpdateQuest : MonoBehaviour
             questListe = quetes;
             SaveLoadSystem.SaveAllUsedQuest(usedQuest);
             SaveLoadSystem.SaveAllQuest(quetes);
-        }
-        else
+        //}
+        /*else
         {
             questListe = SaveLoadSystem.GetQuestList();
+        }*/
+        if (System.DateTime.Now.Date == new System.DateTime(2020, 6, 8) || System.DateTime.Now.Date == new System.DateTime(2020, 6, 9) || System.DateTime.Now.Date == new System.DateTime(2020, 6, 10) || System.DateTime.Now.Date == new System.DateTime(2020, 6, 11) || System.DateTime.Now.Date == new System.DateTime(2020, 6, 12))
+        {
+            Debug.Log(questListe.Count);
+            questListe[0] = beginQuest;
         }
+        SaveLoadSystem.SaveAllQuest(questListe);
         MenuNavigation.questEvent.AddListener(AffichageMenu);
         MenuNavigation.achatPersoEvent.AddListener(AffichageArgent);
     }

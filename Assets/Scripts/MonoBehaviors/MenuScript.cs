@@ -18,11 +18,6 @@ public class MenuScript : EventTrigger
         }
     }
 
-    private void Update()
-    {
-        
-    }
-
     public void LoadScene(int nbScene)
     {
         if (!sceneLoading)
@@ -81,6 +76,9 @@ public class MenuScript : EventTrigger
                 break;
             case 6:
                 MenuNavigation.questEvent.Invoke();
+                break;
+            case 7:
+                MenuNavigation.shopEvent.Invoke();
                 break;
         }
     }

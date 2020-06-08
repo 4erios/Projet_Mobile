@@ -71,6 +71,12 @@ public class MonoJournal : MonoBehaviour
 
     public void ShowText(string text, bool doesEnd, Sprite commu, string interview)
     {
+        if(!animationTransition.activeSelf)
+        {
+            animationTransition.SetActive(true);
+            //animationTransition.GetComponent<Animator>().Play("journalTransitionClean_anim", -1, 0);
+            
+        }
         endJournal = doesEnd;
         manag.HideCards();
         anim.SetBool("EndJournal", false);
@@ -82,7 +88,7 @@ public class MonoJournal : MonoBehaviour
 
     public void Close()
     {
-        animationTransition.SetActive(true);
+        animationTransition.GetComponent<Animator>().enabled = true;
         //anim.SetBool("EndJournal", true);
     }
 

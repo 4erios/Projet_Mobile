@@ -522,6 +522,7 @@ public class SaveLoadSystem : MonoBehaviour
         else
         {
             Debug.Log("Echec Chargement Bank");
+            SaveMonney(0);
             return 0;
         }
     }

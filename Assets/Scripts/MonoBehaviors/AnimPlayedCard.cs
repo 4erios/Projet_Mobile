@@ -8,4 +8,5 @@ public class AnimPlayedCard : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
 }

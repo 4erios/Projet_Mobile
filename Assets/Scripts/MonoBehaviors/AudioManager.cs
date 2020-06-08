@@ -30,11 +30,11 @@ public class AudioManager : MonoBehaviour
 
     private void ChangeValueMusic(float value)
     {
-        audioMix.SetFloat("MusicVolume", value*100-80);
+        audioMix.SetFloat("MusicVolume", value*45-50);
     }
 
     private void ChangeValueSfx(float value)
     {
-        audioMix.SetFloat("SfxVolume", value * 100-80);
+        audioMix.SetFloat("SfxVolume", value * 50-30);
     }
 }

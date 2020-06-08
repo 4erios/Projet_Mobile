@@ -11,4 +11,9 @@ public class AnimFinJournal : MonoBehaviour
         gameObject.SetActive(false);
         journal.Disapear();
     }
+
+    public void DisableAnimator()
+    {
+        GetComponent<Animator>().enabled = false;
+    }
 }
