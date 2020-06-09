@@ -21,10 +21,9 @@ MonoBehaviour:
     eventsPhase2:
     - {fileID: 11400000, guid: cfec4536d12f7db4294307d96abbb858, type: 2}
     journalPhrasesUp:
-    - Leaders try to avoid the Monster.
+    - A HORRIBLE CREATURE CRAWLED AROUND THE MOULIN ROUGE!
     journalInterview:
-    - "An old lady woman said: \u201Cit\u2019s disgusting! It was crawling along
-      the gutter, I was just in front of Moulin Rouge!\u201D"
+    - "\u201Cit\u2019s disgusting! It was crawling along the gutter!\u201D"
     firstState: 1
   agressivite:
     valeur: 0
@@ -35,10 +34,10 @@ MonoBehaviour:
     eventsPhase2:
     - {fileID: 11400000, guid: d37d461d8665a094b8db2767a698bd43, type: 2}
     journalPhrasesUp:
-    - Leaders search a way to attack the Monster.
+    - MAYOR TELL TO PEOPLE TO BE UNFRIENDLY ABOUT A STRANGE BEAST!
     journalInterview:
-    - "\u201CThis little creepy thing attacked me for no reason! I\u2019m an innocent
-      businessman you know! I have work to do!\u201D"
+    - "\u201CThis thing attacked me for no reason! I\u2019m an innocent businessman
+      you know!\u201D"
     firstState: 1
   jalousie:
     valeur: 0
@@ -49,10 +48,10 @@ MonoBehaviour:
     eventsPhase2:
     - {fileID: 11400000, guid: f9b6cd56d316b16468ce93f519eb43b7, type: 2}
     journalPhrasesUp:
-    - Leaders think the Monster is stealing their reputation.
+    - SOME POWERFULL ARE RETICENTS ABOUT THIS "STRANGER" ANIMAL!
     journalInterview:
-    - "\u201CI don\u2019t understand why that awful sticky creature became so popular
-      in such a short time! It surpassed me! A rich and powerful man like me!\u201D"
+    - "\u201CI don\u2019t understand why that awful creature became popular in such
+      a short time\u201D"
     firstState: 1
   desir:
     valeur: 0
@@ -63,10 +62,10 @@ MonoBehaviour:
     eventsPhase2:
     - {fileID: 11400000, guid: 4e2e3580885dc7d4eaa16e68c9f4665e, type: 2}
     journalPhrasesUp:
-    - Leaders want the Monster by their side.
+    - AN BOUNTY TO THE PERSON WHO BRING THE NEW CREATURE TO ME!
     journalInterview:
-    - "\u201CThat little creature is really interesting for my business, I think
-      it could be a nice opportunity to cooperate with it\u2026\u201D"
+    - "\u201CIt\u2019s really interesting, it could be a nice opportunity to cooperate
+      with it\u201D"
     firstState: 1
   acceptation:
     valeur: 0
@@ -77,10 +76,9 @@ MonoBehaviour:
     eventsPhase2:
     - {fileID: 11400000, guid: 383153b77bc23654d90b040bfb8747f7, type: 2}
     journalPhrasesUp:
-    - Leaders think the Monster is just an abandoned animal.
+    - MAYOR SAY TO KEEP CALM ABOUT THE "MONSTER" IN TOWN!
     journalInterview:
-    - "The monster is cooperative, an old man testified: \u201CThanks to that little
-      dark creature, my business is achieving a new record in sales figures!\u201D"
+    - "\u201CThanks to that creature, my business is achieving a new record!\u201D"
     firstState: 1
   pitie:
     valeur: 0
@@ -91,10 +89,9 @@ MonoBehaviour:
     eventsPhase2:
     - {fileID: 11400000, guid: 9bfafc29db9a7534889f03a60d81ecc8, type: 2}
     journalPhrasesUp:
-    - Leaders ask peoples to help the Monster.
+    - A POWERFULL WOMAN CREATE A DONATION FOR "UNUSUAL CHARACTER"
     journalInterview:
-    - "An old woman saw the creature last night, she said: \u201Cit looked so harmless
-      with its sweet little eyes!\u201D"
+    - "\u201Cit looked so harmless with its sweet little eyes!\u201D"
     firstState: 1
   goodEnding: {fileID: 11400000, guid: 5b692460196e43243aa123b32978be8a, type: 2}
   badEnding: {fileID: 11400000, guid: eeb25e5494f44564cb466aeb0acabb77, type: 2}
