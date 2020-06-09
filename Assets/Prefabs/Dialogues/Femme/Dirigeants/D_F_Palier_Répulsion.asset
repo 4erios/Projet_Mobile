@@ -25,5 +25,5 @@ MonoBehaviour:
   reponsePeur: 'Ouch! That''s exactly why police officer should catch you on sight! '
   reponseHaine: 'Looks like I''ll have to tame you a bit since the officers don''t
     do their job! '
-  reponseBonus: 
+  reponseBonus: Ignoring me?! At least you won't bother me!
   reponseMalus: 

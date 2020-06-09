@@ -19,5 +19,5 @@ MonoBehaviour:
   reponseDegout: 'Are you glaring at me? Looks like you really need to be incaged! '
   reponsePeur: 'Argh! It hurts! Are you trying to eat me? I won''t let you! '
   reponseHaine: 'Growling at an officer? You chose the wrong target! '
-  reponseBonus: 
+  reponseBonus: Ignoring me? It would be smarter for you to run away!
   reponseMalus: 

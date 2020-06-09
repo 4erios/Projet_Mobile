@@ -22,5 +22,5 @@ MonoBehaviour:
   reponseDegout: 'Tsk... What kind of mouth is that?! You really are ugly you know? '
   reponsePeur: Ok I was wrong! It's your food, so please let go!
   reponseHaine: 'Don''t try to look cute, I know the trick! Now leave the food here! '
-  reponseBonus: 
+  reponseBonus: You want to play? If so I'll share some food with you!!
   reponseMalus: 

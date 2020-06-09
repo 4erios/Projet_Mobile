@@ -24,5 +24,6 @@ MonoBehaviour:
   reponsePeur: Arghh! Did you just attack me???
   reponseHaine: 'That''s life. If you''re sad, don''t try to steal food from the
     trashes so I won''t have to stop you. '
-  reponseBonus: 
+  reponseBonus: What, you don't want to touch me too? Looks like you undertood me
+    then.
   reponseMalus: 

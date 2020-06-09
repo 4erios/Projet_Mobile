@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Carnage
   m_EditorClassIdentifier: 
   imageFin: {fileID: 21300000, guid: 0f91781565041f24cadb35c5c5f559f6, type: 3}
-  texteFin: 
+  texteFin: Bloods flows from your mouth to the ground. You finally understood. If
+    you're hungry, you just need to eat them. If you don't like them, you can just
+    eat them. Paris is covered in blood because of you, but now it's your town.
   success: {fileID: 11400000, guid: 9e857225659cf03439534c62b26a7889, type: 2}
   historic: {fileID: 11400000, guid: 721446b3536d6c044a7f935ea388a6b7, type: 2}

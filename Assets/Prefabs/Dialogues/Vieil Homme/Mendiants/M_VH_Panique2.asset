@@ -21,5 +21,6 @@ MonoBehaviour:
   reponseDegout: 'Don''t get too near! I don''t know your intents. '
   reponsePeur: 'Aaaahh! Stop! Please Stop!!! '
   reponseHaine: 'Huh??? What am I hearing? Do you think I''m afraid of you?! '
-  reponseBonus: 
+  reponseBonus: 'So you''re saying you won''t share any with me too? Looks like we''re
+    both alone and irascible. '
   reponseMalus: 

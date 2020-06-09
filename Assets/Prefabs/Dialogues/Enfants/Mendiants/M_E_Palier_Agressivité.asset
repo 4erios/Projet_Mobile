@@ -21,5 +21,5 @@ MonoBehaviour:
   reponseDegout: 'Are trying to intimidate me? Your ugliness  won''t scare me! '
   reponsePeur: 'Argh! It hurts! Someone please help me! '
   reponseHaine: 'Ooohhh? You wanna do this? Let''s fight then! '
-  reponseBonus: 
+  reponseBonus: If you don't care then you shouldn't stay around here...
   reponseMalus: 

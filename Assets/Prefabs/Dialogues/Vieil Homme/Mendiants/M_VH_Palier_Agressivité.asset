@@ -20,5 +20,6 @@ MonoBehaviour:
   reponseDegout: 'Don''t try to get near! I can''t even bear the sight of you monster! '
   reponsePeur: 'Aaahh! Stop! Please Stop!!! '
   reponseHaine: 'Huh??? What am I hearing? Do you think I''m afraid of you?! '
-  reponseBonus: 
+  reponseBonus: 'So you''re saying you won''t share any with me too? Looks like we''re
+    both alone and irascible. '
   reponseMalus: 

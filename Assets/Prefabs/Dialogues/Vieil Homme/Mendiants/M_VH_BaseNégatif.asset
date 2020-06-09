@@ -24,5 +24,6 @@ MonoBehaviour:
     me. I don''t want to see you again. So GET AWAY from me! '
   reponseHaine: 'Argh! Why you?! Here, take this! And this! And this! Got your fill?
     Now get out of here! '
-  reponseBonus: 
+  reponseBonus: "Ohoh! Are you angry at me? Well since you're funny I'll let you
+    have this place tonight! \n"
   reponseMalus: 
