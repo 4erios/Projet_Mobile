@@ -21,8 +21,16 @@ MonoBehaviour:
   reponseCompassion: 'Trying to be funny? Well I''ll let you go this time. '
   reponseDegout: You know that won't work on me. Get out of my sight. NOW!
   reponsePeur: 'Don''t try to touch me! You''re not like me, so don''t try to imitate
+<<<<<<< HEAD
     me. I don''t want to see you again. So GET AWAY from me! '
   reponseHaine: 'Argh! Why you?! Here, take this! And this! And this! Got your fill?
     Now get out of here! '
   reponseBonus: 
+=======
+    me. I don''t want to see you again. So get AWAY from me! '
+  reponseHaine: 'Argh! Why you?! Here, take this!  And this!  And this!  Got your
+    fill? Now get out of here! '
+  reponseBonus: "Ohoh! Are you angry at me? Well since you're funny I'll let you
+    have this place tonight! \n"
+>>>>>>> 59af9d9f30189825265924f9bb0ad00296f650a6
   reponseMalus: 

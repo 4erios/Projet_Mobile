@@ -19,7 +19,14 @@ MonoBehaviour:
   reponseCompassion: 'Whatever... You look sad, but if you don''t want help I won''t
     give you any. '
   reponseDegout: 'Don''t get too near! I don''t know your intents. '
+<<<<<<< HEAD
   reponsePeur: 'Aaaahh! Stop! Please Stop!!! '
   reponseHaine: 'Huh??? What am I hearing? Do you think I''m afraid of you?! '
   reponseBonus: 
+=======
+  reponsePeur: 'Ahhhh! Stop! Please Stop!!! '
+  reponseHaine: 'Huh?? What am I hearing? Do you think I''m afraid of you??! '
+  reponseBonus: 'So you''re saying you won''t share any with me too? Looks like we''re
+    both alone and irascible. '
+>>>>>>> 59af9d9f30189825265924f9bb0ad00296f650a6
   reponseMalus: 
