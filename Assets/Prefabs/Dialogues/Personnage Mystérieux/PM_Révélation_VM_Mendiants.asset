@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "PM_R\xE9v\xE9lation_VM_Mendiants"
+  m_EditorClassIdentifier: 
+  dialogueDepart: So, you're helping those begars now ? I don't care if you want
+    to fell better by helping poor peoples, but I can assure you that they deserve
+    what happen to them.
+  reponseInteret: You know it won't work with me. But if you want to help them ruin
+    others life, go on.
+  reponseAffection: As expected, this old man didn't tell you that he lost everything
+    after breaking a machine, killing 3 peoples.
+  reponseCompassion: I know you just want to help them, but with what this old man
+    did at the factory, he don't deserve your help.
+  reponseDegout: I don't need your pity. All I need is justice for my brother.
+  reponsePeur: Get out ! If you prefer help a murderer, that's not my business.
+  reponseHaine: What a surprise. You're as scared and pathetic than them !
+  reponseBonus: 
+  reponseMalus: 

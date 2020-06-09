@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "H_F_Palier_Agressivit\xE9"
+  m_EditorClassIdentifier: 
+  dialogueDepart: You again?! I told you to stop trying to get near me!
+  reponseInteret: 'At least it understood. It really is smart. '
+  reponseAffection: 'I know you want affection, but if I get sick my kids won''t
+    eat. If only my husband stayed home... '
+  reponseCompassion: I know it hurs when people abandon you. But if I help you my
+    kids may suffer from it, and that's the only thing I really don't want to happen.
+  reponseDegout: I told you not to touch me! Go away!
+  reponsePeur: 'Kyyyaaa! Someone save me! Please, I don''t want to leave my children
+    alone! '
+  reponseHaine: 'Oh no you don''t! Looks like I have to discipline you! '
+  reponseBonus: 
+  reponseMalus: 

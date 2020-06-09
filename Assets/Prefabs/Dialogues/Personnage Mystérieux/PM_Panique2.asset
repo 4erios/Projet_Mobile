@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: PM_Panique2
+  m_EditorClassIdentifier: 
+  dialogueDepart: Oh, I see you're still alive. Maybe you're more combative that
+    I though.
+  reponseInteret: You keep trying to scare me ? Maybe this will work one day.
+  reponseAffection: Well, at least I understand how you're still here.
+  reponseCompassion: They may want to hurt you, but you shouldn't be afraid of me.
+  reponseDegout: You really think I'll have pity for you ?
+  reponsePeur: Stop this ! It maybe work for them, but don't do this to me.
+  reponseHaine: What ?! You better never do this again !
+  reponseBonus: 
+  reponseMalus: 

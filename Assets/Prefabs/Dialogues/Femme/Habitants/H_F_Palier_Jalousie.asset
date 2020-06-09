@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: H_F_Palier_Jalousie
+  m_EditorClassIdentifier: 
+  dialogueDepart: 'It''s you! Being free is nice isn''t it? '
+  reponseInteret: 'Looks like I don''t interest you at all. Why is it? '
+  reponseAffection: 'Looks like you''re not that happy alone. At least you don''t
+    have kids to take care of. '
+  reponseCompassion: 'Oh so it''s not that nice? Is it because you''re alone? '
+  reponseDegout: Don't get near! I still don't know anything about your disease!
+  reponsePeur: Did you try to bite me? I'll leave you alone so please don't go after
+    me!
+  reponseHaine: 'Don''t try to intimidate me! It''ll take you more than this to do
+    so! '
+  reponseBonus: 
+  reponseMalus: 

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "D_F_Palier_Piti\xE9"
+  m_EditorClassIdentifier: 
+  dialogueDepart: 'You again! I see you''re still alone.. I wouldn''t be like you
+    if my husband wasn''t such a jerk... '
+  reponseInteret: 'You think he is a jerk too? Thank you, you''re a kind little one. '
+  reponseAffection: 'Thank you for trying to comfort me. '
+  reponseCompassion: 'Are you pitying me? It''s alright, I''m used to it. After all
+    what is a woman if she is neglected by her husband? '
+  reponseDegout: 'Hey! You''re drooling on my coat, it''s disgusting! '
+  reponsePeur: 'Kyyaaa! Officer! A beast is trying to attack me! '
+  reponseHaine: 'So even animals don''t care about me now... '
+  reponseBonus: 
+  reponseMalus: 

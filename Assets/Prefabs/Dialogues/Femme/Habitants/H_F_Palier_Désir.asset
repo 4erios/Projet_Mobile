@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "H_F_Palier_D\xE9sir"
+  m_EditorClassIdentifier: 
+  dialogueDepart: I found you! I wanted to ask you if you would be interested by
+    coming with me some other time? I want you to meet some people.
+  reponseInteret: Is that a yes? Nice, I'll go find you when they get there!
+  reponseAffection: 'Those eyes really are curious... I''m sure they will love studying
+    you! '
+  reponseCompassion: Are you afraid? Sorry that wasn't my purpose.
+  reponseDegout: Your breath stinks! I'll leave you alone for today, you should think
+    about my proposal.
+  reponsePeur: Kya! Why did you bite me?! I didn't have any ill intent at all!
+  reponseHaine: And there you go! So being nice won't work with you...
+  reponseBonus: 
+  reponseMalus: 

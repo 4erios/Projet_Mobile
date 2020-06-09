@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: M_E_Palier_Acceptation
+  m_EditorClassIdentifier: 
+  dialogueDepart: 'Hey! Wanna be my friend? I know we''re both lonely, so I''m sure
+    we can help each other out! '
+  reponseInteret: You're interested? Nice!
+  reponseAffection: You're really affective! I'm sure we'll be great friends!
+  reponseCompassion: 'It''s alright to cry. But now we''ll be there for each other. '
+  reponseDegout: 'So you don''t want to be my friend? Well I changed my mind, I don''t
+    want to be friend with you either! '
+  reponsePeur: Hey that hurts! Why did you bite me?! I won't be your friend if you
+    attack people like this!
+  reponseHaine: So that's what you take as friendship... You're truly hateful!
+  reponseBonus: 
+  reponseMalus: 

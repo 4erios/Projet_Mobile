@@ -23,7 +23,8 @@ MonoBehaviour:
     journalPhrasesUp:
     - Inhabitants try to avoid the Monster.
     journalInterview:
-    - Test Interview
+    - "All habitants feel ill at the sight of the monster, a woman said: \u201Cit\u2019s
+      all slimy and sticky, how disgusting! I never saw anything like this before!\u201D"
     firstState: 1
   agressivite:
     valeur: 0
@@ -36,7 +37,8 @@ MonoBehaviour:
     journalPhrasesUp:
     - Inhabitants search a way to attack the Monster.
     journalInterview:
-    - Test Interview
+    - "The monster is attacking people! A man accepted to talk about it: \u201CIf
+      I saw that gross stuff again, I\u2019m going to take it out of its skin!\u201D"
     firstState: 1
   jalousie:
     valeur: 0
@@ -49,7 +51,8 @@ MonoBehaviour:
     journalPhrasesUp:
     - Inhabitants think the Monster is stealing from them.on.
     journalInterview:
-    - Test Interview
+    - "Lately, the habitants are looking for the monster, a man said: \u201CI must
+      say I envy this strange creature, it is free and nobody comes to annoy it\u201D"
     firstState: 1
   desir:
     valeur: 0
@@ -62,7 +65,9 @@ MonoBehaviour:
     journalPhrasesUp:
     - Inhabitants want the Monster by their side.
     journalInterview:
-    - Test Interview
+    - "Every habitant in the city must envy the company of the creature. A woman
+      testified: \u201Cit could protect me from dangerous weird guys when I get home
+      late at night\u201D"
     firstState: 1
   acceptation:
     valeur: 0
@@ -75,7 +80,8 @@ MonoBehaviour:
     journalPhrasesUp:
     - Inhabitants think the Monster is just an abandoned animal.
     journalInterview:
-    - Test Interview
+    - "Habitants of Paris finally accept the monster\u2019s attendance, they said:
+      \u201Cit makes the city a clean and safe place for ordinary people like us\u201D"
     firstState: 1
   pitie:
     valeur: 0
@@ -88,7 +94,9 @@ MonoBehaviour:
     journalPhrasesUp:
     - Inhabitants ask peoples to help the Monster.
     journalInterview:
-    - Test Interview
+    - "The mysterious creature raises compassion from most of the citizens! A partially
+      sighted man testified: \u201Csometimes I feel the company of this small lonely
+      creature\u201D"
     firstState: 1
   goodEnding: {fileID: 11400000, guid: bcb70a9219c152e42956d96becc46dac, type: 2}
   badEnding: {fileID: 11400000, guid: 1ca5ae9b37bcb3f449407ef18dff4d3f, type: 2}

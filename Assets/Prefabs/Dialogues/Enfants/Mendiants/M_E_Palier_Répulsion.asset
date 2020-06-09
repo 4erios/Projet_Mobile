@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "M_E_Palier_R\xE9pulsion"
+  m_EditorClassIdentifier: 
+  dialogueDepart: Ah! You're the beast from last time! Don't get near; the old man
+    told me about what you did! You're truly just a monster!
+  reponseInteret: Maybe the old man was wrong? Well I'll know the next time I meet
+    you!
+  reponseAffection: You just wanted some cuddles? So the old man was wrong!
+  reponseCompassion: You're crying? Is it because the old man said bad thing about
+    you? It's ok, I don't believe what he said about you now.
+  reponseDegout: 
+  reponsePeur: 
+  reponseHaine: 
+  reponseBonus: 
+  reponseMalus: 

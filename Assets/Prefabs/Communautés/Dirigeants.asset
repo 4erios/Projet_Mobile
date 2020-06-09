@@ -23,7 +23,8 @@ MonoBehaviour:
     journalPhrasesUp:
     - Leaders try to avoid the Monster.
     journalInterview:
-    - Test Interview
+    - "An old lady woman said: \u201Cit\u2019s disgusting! It was crawling along
+      the gutter, I was just in front of Moulin Rouge!\u201D"
     firstState: 1
   agressivite:
     valeur: 0
@@ -36,7 +37,8 @@ MonoBehaviour:
     journalPhrasesUp:
     - Leaders search a way to attack the Monster.
     journalInterview:
-    - Test Interview
+    - "\u201CThis little creepy thing attacked me for no reason! I\u2019m an innocent
+      businessman you know! I have work to do!\u201D"
     firstState: 1
   jalousie:
     valeur: 0
@@ -49,7 +51,8 @@ MonoBehaviour:
     journalPhrasesUp:
     - Leaders think the Monster is stealing their reputation.
     journalInterview:
-    - Test Interview
+    - "\u201CI don\u2019t understand why that awful sticky creature became so popular
+      in such a short time! It surpassed me! A rich and powerful man like me!\u201D"
     firstState: 1
   desir:
     valeur: 0
@@ -62,7 +65,8 @@ MonoBehaviour:
     journalPhrasesUp:
     - Leaders want the Monster by their side.
     journalInterview:
-    - Test Interview
+    - "\u201CThat little creature is really interesting for my business, I think
+      it could be a nice opportunity to cooperate with it\u2026\u201D"
     firstState: 1
   acceptation:
     valeur: 0
@@ -75,7 +79,8 @@ MonoBehaviour:
     journalPhrasesUp:
     - Leaders think the Monster is just an abandoned animal.
     journalInterview:
-    - Test Interview
+    - "The monster is cooperative, an old man testified: \u201CThanks to that little
+      dark creature, my business is achieving a new record in sales figures!\u201D"
     firstState: 1
   pitie:
     valeur: 0
@@ -88,7 +93,8 @@ MonoBehaviour:
     journalPhrasesUp:
     - Leaders ask peoples to help the Monster.
     journalInterview:
-    - Test Interview
+    - "An old woman saw the creature last night, she said: \u201Cit looked so harmless
+      with its sweet little eyes!\u201D"
     firstState: 1
   goodEnding: {fileID: 11400000, guid: 5b692460196e43243aa123b32978be8a, type: 2}
   badEnding: {fileID: 11400000, guid: eeb25e5494f44564cb466aeb0acabb77, type: 2}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "M_E_Palier_D\xE9sir"
+  m_EditorClassIdentifier: 
+  dialogueDepart: Hey! I was searching for you! Wanna become my partner? I'm sure
+    we could achieve some great things!
+  reponseInteret: 'You''re interested! Nice then! '
+  reponseAffection: 'Are you that happy? Don''t worry, I''ll always be there to help
+    you partner! '
+  reponseCompassion: Looks like you can't put your trust in me... I understand, I'm
+    the same with the adults.
+  reponseDegout: 'It''s slippery? What are you made of? It''s strange! '
+  reponsePeur: Ouch! It hurts! I'll leave you alone but never do this again!
+  reponseHaine: 'And here I thought we could make a great team... Just go away then! '
+  reponseBonus: 
+  reponseMalus: 
