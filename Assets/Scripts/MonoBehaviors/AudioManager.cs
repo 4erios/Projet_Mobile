@@ -40,7 +40,7 @@ public class AudioManager : MonoBehaviour
 
     private void ChangeValueSfx(float value)
     {
-        audioMix.SetFloat("SfxVolume", value * 50-30);
+        audioMix.SetFloat("SfxVolume", value * 40-30);
         sfx = value;
         SaveLoadSystem.SaveSound(musix, sfx);
     }

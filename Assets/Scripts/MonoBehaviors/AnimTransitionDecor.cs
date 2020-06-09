@@ -25,7 +25,6 @@ public class AnimTransitionDecor : MonoBehaviour
         {
             EndTransition();
         }
-        ancienLieu = actualEvent.lieux;
         #endregion
     }
 
@@ -36,27 +35,33 @@ public class AnimTransitionDecor : MonoBehaviour
 
     public void EndTransition()
     {
+        Debug.Log(ancienLieu);
+        Debug.Log(actualEvent.lieux);
+        if (ancienLieu != actualEvent.lieux)
+        {
+            foreach (GameObject gm in fonds)
+            {
+                gm.GetComponent<ParallaxeGroup>().HideDecor();
+            }
+            switch (actualEvent.lieux)
+            {
+                //Mettre une animation à la place d'un SetActive
+                case Lieux.ruelle:
+                    fonds[0].SetActive(true);
+                    break;
+                case Lieux.pontDeSeine:
+                    fonds[1].SetActive(true);
+                    break;
+                case Lieux.parc:
+                    fonds[2].SetActive(true);
+                    break;
+                case Lieux.cabaret:
+                    fonds[3].SetActive(true);
+                    break;
+            }
+        }
+        ancienLieu = actualEvent.lieux;
         manager.StartEvent();
-        foreach (GameObject gm in fonds)
-        {
-            gm.GetComponent<ParallaxeGroup>().HideDecor();
-        }
-        switch (actualEvent.lieux)
-        {
-            //Mettre une animation à la place d'un SetActive
-            case Lieux.ruelle:
-                fonds[0].SetActive(true);
-                break;
-            case Lieux.pontDeSeine:
-                fonds[1].SetActive(true);
-                break;
-            case Lieux.parc:
-                fonds[2].SetActive(true);
-                break;
-            case Lieux.cabaret:
-                fonds[3].SetActive(true);
-                break;
-        }
     }
 
     public void HideTransition()
