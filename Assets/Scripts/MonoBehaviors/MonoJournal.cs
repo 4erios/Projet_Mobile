@@ -16,7 +16,7 @@ public class MonoJournal : MonoBehaviour
     [SerializeField]
     private GameObject pageJournal;
     private List<GameObject> pages = new List<GameObject>();
-    private bool endJournal;
+    private bool endJournal, stopFlick;
     private Vector2 beganTapPosition;
 
     [SerializeField]
@@ -59,13 +59,13 @@ public class MonoJournal : MonoBehaviour
         }
         else if(Input.GetMouseButtonUp(0))
         {
-            if (Mathf.Abs(Input.mousePosition.y - beganTapPosition.y) <= 200 && Input.mousePosition.x - beganTapPosition.x < -100)
+            if (Mathf.Abs(Input.mousePosition.y - beganTapPosition.y) <= 200 && Input.mousePosition.x - beganTapPosition.x < -100 && !stopFlick)
             {
-                Debug.Log("Mouse Down");
                 manag.RemoveFromJournal();
                 if (endJournal)
                 {
                     manag.AudioFeedback(feedbackJournal);
+                    stopFlick = true;
                     Close();
                 }
                 manag.EndEvent();
@@ -97,6 +97,7 @@ public class MonoJournal : MonoBehaviour
 
     public void Disapear()
     {
+        stopFlick = false;
         manag.ShowCards();
         gameObject.SetActive(false);
         foreach(GameObject go in pages)

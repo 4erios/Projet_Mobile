@@ -110,7 +110,7 @@ public class MonoDialogue : MonoBehaviour
         }
     }
 
-    float time = 0;
+    public float time = 0;
 
     private void Update() //En faire un Enumerator, qui n'est appelé qu'après un certains temps après avoir joué la carte  ??
     {
@@ -143,7 +143,7 @@ public class MonoDialogue : MonoBehaviour
 
     void DoOnDown()
     {
-        if (time > 0.5f)
+        if (time > 0.5f && !manager.monoJourn.gameObject.activeSelf)
         {
             if (isDialShowing)
             {

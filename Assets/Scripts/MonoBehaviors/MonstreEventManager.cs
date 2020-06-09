@@ -21,8 +21,7 @@ public class MonstreEventManager : MonoBehaviour
     private MonoPersonnage monoPerso;
     [SerializeField]
     private MonoDialogue monoDial;
-    [SerializeField]
-    private MonoJournal monoJourn;
+    public MonoJournal monoJourn;
     [SerializeField]
     private CartesManager cardManager;
     [SerializeField]

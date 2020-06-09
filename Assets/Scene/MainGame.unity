@@ -1879,7 +1879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &513282778
 Transform:
   m_ObjectHideFlags: 0
@@ -2524,7 +2524,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eb86752a0915205459ec860c38e7d4da, type: 2}
   - {fileID: 11400000, guid: 87436ca911a096b44bd7ce66a1ef9d84, type: 2}
   - {fileID: 11400000, guid: 193c86c924813984fbeb3359fddf55a1, type: 2}
-  journalDelay: 2
+  journalDelay: 4
   valeurFinCommu: 6
   monoPerso: {fileID: 177643486}
   monoDial: {fileID: 2032892226}
@@ -7436,6 +7436,7 @@ MonoBehaviour:
   animCard: {fileID: 928705797}
   speed: 1
   spriteVide: {fileID: 21300000, guid: 295997c199eb7994089ac83f29370039, type: 3}
+  time: 0
 --- !u!61 &2032892227
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7594,7 +7595,6 @@ MonoBehaviour:
   source: {fileID: 1505469856}
   music: {fileID: 8300000, guid: 2a89d947e0a4ea242bd7835f780c7fa8, type: 3}
   sfxs: []
-  soundLevel: 0
   sett: {fileID: 5415976595944903408}
 --- !u!1 &2106174376
 GameObject:
@@ -8408,21 +8408,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2289687043105363449, guid: cb49a374f33af4b438b63b5194218c74,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: aa2c72ff740a55248a9cf4243539e731,
-        type: 3}
     - target: {fileID: 6142603660889285351, guid: cb49a374f33af4b438b63b5194218c74,
         type: 3}
       propertyPath: m_Name
       value: LoadingScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 6142603660889285351, guid: cb49a374f33af4b438b63b5194218c74,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb49a374f33af4b438b63b5194218c74, type: 3}

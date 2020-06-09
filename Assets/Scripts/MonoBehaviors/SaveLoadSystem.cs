@@ -320,6 +320,31 @@ public class SaveLoadSystem : MonoBehaviour
     }
     #endregion
 
+    public static void SaveSound(float valueMusic, float valueSfx)
+    {
+        string fileContent = "";
+        fileContent += valueMusic + "\n";
+        fileContent += valueSfx + "\n";
+        SaveTextDoc("Sound", fileContent);
+    }
+
+    public static void LoadSound(out float valueMusic,out float valueSfx)
+    {
+        if (File.Exists(GetPath("Sound")))
+        {
+            string[] fileContent = File.ReadAllLines(GetPath("Sound"));
+            valueMusic = float.Parse(fileContent[0]);
+            valueSfx = float.Parse(fileContent[1]);
+        }
+        else
+        {
+            Debug.Log("Echec Chargement Son");
+            valueMusic = 1;
+            valueSfx = 1;
+        }
+
+    }
+
     public static void SaveHistoric(List<AncientGame> historic)
     {
         string fileContent = "";
