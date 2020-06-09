@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueDepart: 'You won''t find much to eat there. Come with me friend, I''ll
     show you a better spot. '
-  reponseInteret: Hmm.. I may have already said it, but you're pretty strange...
+  reponseInteret: Hmmm... I may have already said it, but you're pretty strange...
   reponseAffection: 'Come here! If you were lonely, you''ll love the place I''ll
     show you. We go there to share our food, so you''ll also be able to eat your
     fill! '
-  reponseCompassion: Poor little one.. I know you're hungry, so follow me, I'll show
-    you where to find food.
+  reponseCompassion: Poor little one... I know you're hungry, so follow me, I'll
+    show you where to find food.
   reponseDegout: 'Hey! And here I was trying to help you, why are you trying to hurt
     me? '
-  reponsePeur: 'Ahh! Please don''t eat me!! '
+  reponsePeur: Ahh! Please don't eat me!!!
   reponseHaine: And here I was trying to help you...
   reponseBonus: 
   reponseMalus: 

@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: RO_VH_Palier_Jalousie
   m_EditorClassIdentifier: 
-  dialogueDepart: "Stealing food? I really don't understand why the townspeople like
-    you, but I'm keeping an eye on you.. \r"
+  dialogueDepart: Stealing food? I really don't understand why the townspeople like
+    you, but I'm keeping an eye on you...
   reponseInteret: 'It''s pretty smart. I''ll have to think about how I''ll catch
     it. '
   reponseAffection: Here you are true to yourself at least. You won't find anything
-    edible in the trashes, you should go elsewhere
-  reponseCompassion: 'Please go away... I won''t hurt you, but I can''t really leave
-    you alone.. '
+    edible in the trashes, you should go elsewhere.
+  reponseCompassion: Please go away... I won't hurt you, but I can't really leave
+    you alone...
   reponseDegout: 'Trying to gain my pity? That won''t work. '
   reponsePeur: What are you trying to do? I'm a police officer, you won't get away
     easily if you attack me!

@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: H_VH_Palier_Jalousie
   m_EditorClassIdentifier: 
-  dialogueDepart: "Oh it's you.. Looks like the beast is also wandering alone in
-    the dark.. Can you leave me alone please? I can't work so it's better if I am
+  dialogueDepart: "Oh it's you... Looks like the beast is also wandering alone in
+    the dark... Can you leave me alone please? I can't work so it's better if I am
     left alone. \r"
-  reponseInteret: Thank you for listening I guess..
-  reponseAffection: Look like we are both scared of others... Don't act like this
-  reponseCompassion: 'Oh I see... So that''s why people are afraid of you.. '
+  reponseInteret: Thank you for listening I guess...
+  reponseAffection: Look like we are both scared of others... Don't act like this.
+  reponseCompassion: Oh I see... So that's why people are afraid of you...
   reponseDegout: 'You''re gonna come and cry around me? Can''t you read the mood? '
   reponsePeur: Wait what are you trying to do? Don't get near, you're scary!
-  reponseHaine: Argh! I told you to leave me alone, why did you bite me?? I'll show
+  reponseHaine: Argh! I told you to leave me alone, why did you bite me??? I'll show
     you what happen to bad cats!
   reponseBonus: 
   reponseMalus: 

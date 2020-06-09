@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueDepart: Hey! If you're hungry I can share what I have with you! I'm sure
     we can be great friends!
-  reponseInteret: 'You''re interested? Yay!! '
-  reponseAffection: You want some cuddles? I'll give you some then!!
+  reponseInteret: You're interested? Yay!!!
+  reponseAffection: You want some cuddles? I'll give you some then!!!
   reponseCompassion: 'I feel sad when I''m alone too... It''ll be alright, we are
     friends now! '
   reponseDegout: 'Why are like this? You''re just an ugly beast anyway! '

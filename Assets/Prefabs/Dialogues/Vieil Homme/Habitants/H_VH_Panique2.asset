@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: H_VH_Panique2
   m_EditorClassIdentifier: 
-  dialogueDepart: 'You''ve really done it... Now the people are afraid of you. Can''t
-    you just go far away from this town? It will better for both you and us. '
+  dialogueDepart: You've really done it... Now the people are afraid of you. Can't
+    you just go far away from this town? It will better for both you and us.
   reponseInteret: 'I know it''s sad... But you brought it upon yourself. '
   reponseAffection: 'If you act like this I''ll feel bad. But you brought it upon
     yourself. '
   reponseCompassion: 'Maybe I was a bit harsh. But who wouldn''t after what you did? '
   reponseDegout: Are you trying to attack me? I'll have to chase you by force then!
   reponsePeur: Ouch! It hurts! Please just go away!
-  reponseHaine: What is this? Are you threatening me?? You're in for a world of pain!
+  reponseHaine: What is this? Are you threatening me??? You're in for a world of
+    pain!
   reponseBonus: 
   reponseMalus: 

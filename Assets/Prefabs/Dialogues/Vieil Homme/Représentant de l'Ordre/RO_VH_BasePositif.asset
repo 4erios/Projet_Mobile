@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: RO_VH_BasePositif
   m_EditorClassIdentifier: 
   dialogueDepart: 'You again? Well I guess I''m too gentle for my own good... '
-  reponseInteret: 'Hmmm.. You''re pretty bold to growl at me like this. '
+  reponseInteret: 'Hmmm... You''re pretty bold to growl at me like this. '
   reponseAffection: 'Hey I''m on duty right now, so I can''t cuddle you too much. '
   reponseCompassion: 'Poor little one. Did your friends leave you alone? Well if
     you want you can come patroling with me. '
   reponseDegout: 'What? How do you have this many eyes?! What are you?! '
   reponsePeur: 'Argh! Stop! I''m, I''m an officer! '
-  reponseHaine: 'And here you go away...  I better make sure you don''t come back
-    here next time then.. '
+  reponseHaine: And here you go away... I better make sure you don't come back here
+    next time then...
   reponseBonus: 
   reponseMalus: 

@@ -19,13 +19,13 @@ MonoBehaviour:
   reponseAffection: Sorry did I scare you? You're a really strange animal, aren't
     you? You don't look too dangerous, maybe I'll show you to my kids next time!
   reponseCompassion: 'Oh are you trying to be funny? That''s so... cute?! You''re
-    a pretty strange animal you know that ? I can''t stay for long so I''ll get you
+    a pretty strange animal you know that? I can''t stay for long so I''ll get you
     some snacks next time ok? '
-  reponseDegout: 'Ugh... Euh I have to go, I''m in a hurry. I''m sure you''re  a
-    really nice animal and all... I don''t want to risk getting sick. '
+  reponseDegout: 'Ugh... Euh I have to go, I''m in a hurry. I''m sure you''re a really
+    nice animal and all... I don''t want to risk getting sick. '
   reponsePeur: 'Kyaaaa! Good boy. Be nice! Good boy! Please don''t hurt me, I''m
     going away. '
-  reponseHaine: What's this? You're growling at me? Get out of my way , I already
+  reponseHaine: What's this? You're growling at me? Get out of my way, I already
     have enough on my plate with my jobs and the kids, I'm not gonna be afraid of
     some big stray cat!
   reponseBonus: 

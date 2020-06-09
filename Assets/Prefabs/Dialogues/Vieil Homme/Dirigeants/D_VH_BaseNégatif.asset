@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "D_VH_BaseN\xE9gatif"
   m_EditorClassIdentifier: 
   dialogueDepart: 'Uhhh... My business isn''t doing well. How can I get back all
-    this money I lost.. Aaah don''t come near, I''m not in the mood to be kind with
+    this money I lost... Aaah don''t come near, I''m not in the mood to be kind with
     straights. '
   reponseInteret: 'What a strange one. I''ll think about it later! '
   reponseAffection: 'You''re not in a good mood too huh. Well that makes two of us. '
@@ -22,6 +22,6 @@ MonoBehaviour:
   reponseDegout: 'I said I am not in the mood! Out of my sight, you disgusting thing! '
   reponsePeur: 'What''s this. Don''t, don''t touche me! I don''t what kind of sickness
     you could give me and I may not be able to pay my personal doctor next month! '
-  reponseHaine: 'Argh! What the hell?? You''re hurting me! Get off you damned thing! '
+  reponseHaine: 'Argh! What the hell??? You''re hurting me! Get off you damned thing! '
   reponseBonus: 
   reponseMalus: 

@@ -15,11 +15,11 @@ MonoBehaviour:
   dialogueDepart: "Hey! How are you? I really wanted to give you some food so I was
     searching for you! \r"
   reponseInteret: 'Are you hungry? I''ll give it to you but you need to behave! '
-  reponseAffection: You're so nice.. Here, enjoy your meal!
-  reponseCompassion: 'Ohh you''re thankful.. If only others were like you.. Eat your
-    fill! '
-  reponseDegout: Urgh.. You really need this food I guess, you look sick...
-  reponsePeur: Argh! Why? It hurts! I just wanted to be nice..
+  reponseAffection: You're so nice... Here, enjoy your meal!
+  reponseCompassion: 'Ohh you''re thankful... If only others were like you... Eat
+    your fill! '
+  reponseDegout: Urgh... You really need this food I guess, you look sick...
+  reponsePeur: Argh! Why? It hurts! I just wanted to be nice...
   reponseHaine: So that's how you're gonna be? Well no food for you I guess.
   reponseBonus: 
   reponseMalus: 

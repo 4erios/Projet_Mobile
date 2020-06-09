@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: M_VH_Rencontre
   m_EditorClassIdentifier: 
   dialogueDepart: Oh! Look like I'll have a meal with a friend tonight! Wait what
-    are you?  You're not a cat, are you?"
+    are you? You're not a cat, are you?
   reponseInteret: Wowowow, no need to get angry little one! I'm not here to steal
-    your food.. But I know where to find some. Come find me the next time you're
-    hungry..
+    your food... But I know where to find some. Come find me the next time you're
+    hungry...
   reponseAffection: Well, I don't know what you are, but you're a rather cuddly one,
     aren't you? Here, I'll share some food with you.
   reponseCompassion: You poor thing... Whatever kind of being you are, you need to
     eat just like us... Here, take some of my food.
-  reponseDegout: Urgh... You really aren't a cat.. I better go away.
+  reponseDegout: Urgh... You really aren't a cat... I better go away.
   reponsePeur: Ok ok! Don't hurt me! I'm going away ok? Look, I'm going.
   reponseHaine: Yes, that's it! Go away, go! Turn away, just like everyone else do!
   reponseBonus: 

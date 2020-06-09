@@ -16,9 +16,9 @@ MonoBehaviour:
     wanna come? \r"
   reponseInteret: 'You don''t look like you''re in the mood... Next time maybe? '
   reponseAffection: Is that a yes? Come on then!
-  reponseCompassion: Oooh.. I knew you would be happy!
+  reponseCompassion: Oooh... I knew you would be happy!
   reponseDegout: 'Euh please, don''t do this with the others, they will fear you. '
-  reponsePeur: Ahhhh! It hurts! Why did you do this??
+  reponsePeur: Ahhhh! It hurts! Why did you do this???
   reponseHaine: And I though we were friends!
   reponseBonus: 
   reponseMalus: 

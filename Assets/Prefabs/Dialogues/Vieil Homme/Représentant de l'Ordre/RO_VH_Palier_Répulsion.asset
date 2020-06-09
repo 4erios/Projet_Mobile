@@ -18,10 +18,10 @@ MonoBehaviour:
     wouldn't try to face a police officer.
   reponseAffection: 'Good! It obeyed me, if I see it again maybe I should be a bit
     nicer. '
-  reponseCompassion: Well.. I'll make an exception and leave you alone for today.
+  reponseCompassion: Well... I'll make an exception and leave you alone for today.
   reponseDegout: 'Don''t touch me after searching the trashes! You''re gonna trash
     my uniform! '
-  reponsePeur: 'Arghh! Did you just attack me?? '
+  reponsePeur: Arghh! Did you just attack me???
   reponseHaine: 'That''s life. If you''re sad, don''t try to steal food from the
     trashes so I won''t have to stop you. '
   reponseBonus: 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueDepart: "Oh! Are you trying to find an owner? If you want I can bring you
     to a refuge. \r"
-  reponseInteret: 'Looks like you are too wild to accept my proposition.. Too bad,
+  reponseInteret: 'Looks like you are too wild to accept my proposition... Too bad,
     you seemed rather smart. '
   reponseAffection: You're affective! You sure you don't want my help? People love
     affective pets!
@@ -22,6 +22,6 @@ MonoBehaviour:
     that. '
   reponseDegout: 'Don''t mind... I don''t think anyone would like to have you. '
   reponsePeur: 'Argh! What did I do? You really don''t want to go to a refuge? '
-  reponseHaine: 'And here I was being nice.. Freaking animal. '
+  reponseHaine: 'And here I was being nice... Freaking animal. '
   reponseBonus: 
   reponseMalus: 

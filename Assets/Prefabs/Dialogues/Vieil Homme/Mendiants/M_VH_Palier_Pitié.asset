@@ -15,16 +15,16 @@ MonoBehaviour:
   dialogueDepart: 'Are you cold? If you want; I''ll show you a nice place to sleep
     at. As inhabitants of the streets, we have to help each other out!
 
-    
 
-    
+
+
 
 '
-  reponseInteret: 'It''s ok to be warry.. Don''t worry, I won''t hurt you. '
-  reponseAffection: What a nice one.. You should have a home instead of wandering
+  reponseInteret: 'It''s ok to be warry... Don''t worry, I won''t hurt you. '
+  reponseAffection: What a nice one... You should have a home instead of wandering
     the streets like this...
   reponseCompassion: 'Being alone is hard right? Come with me, I''ll keep you compagny. '
-  reponseDegout: 'Are you trying to use me?? Out of my way, you''re disgusting. '
+  reponseDegout: 'Are you trying to use me??? Out of my way, you''re disgusting. '
   reponsePeur: 'It hurts! Please let me go! '
   reponseHaine: 'I try to help you and that''s how you react? Go away then! '
   reponseBonus: 

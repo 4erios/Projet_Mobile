@@ -21,10 +21,10 @@ MonoBehaviour:
     that hungry? You knowI will always share my food with you. '
   reponseDegout: 'You know you don''t need to act like this with me right? I really
     dislike it when you try to get food from me like this. '
-  reponsePeur: 'Are you alright? Ouch! What are yo.. ARRGGGGHHHHH!!!
+  reponsePeur: 'Are you alright? Ouch! What are yo... ARRGGGGHHHHH!!!
 
 '
-  reponseHaine: Aaaaahh.. And here I thought you accepted me... Seems like you only
+  reponseHaine: Aaaahh... And here I thought you accepted me... Seems like you only
     needed me because I gave you food...
   reponseBonus: 
   reponseMalus: 

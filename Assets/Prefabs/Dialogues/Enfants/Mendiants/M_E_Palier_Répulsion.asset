@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: "M_E_Palier_R\xE9pulsion"
   m_EditorClassIdentifier: 
-  dialogueDepart: Ah! You're the beast from last time! Don't get near; the old man
+  dialogueDepart: Ah! You're the beast from last time! Don't get near, the old man
     told me about what you did! You're truly just a monster!
   reponseInteret: Maybe the old man was wrong? Well I'll know the next time I meet
     you!

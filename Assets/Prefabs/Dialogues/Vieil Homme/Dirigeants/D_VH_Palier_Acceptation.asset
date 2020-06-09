@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: D_VH_Palier_Acceptation
   m_EditorClassIdentifier: 
-  dialogueDepart: "Hey! How have you been? I thought about it and.. What do you think
-    about coming to my house? You will be fed and receive all the attention you need!
-    \r"
+  dialogueDepart: "Hey! How have you been? I thought about it and... What do you
+    think about coming to my house? You will be fed and receive all the attention
+    you need! \r"
   reponseInteret: 'Looks like you''re hungy... My offer is still up for you, come
     find me if you change your mind! '
-  reponseAffection: So you're thankful? I like even more then !
+  reponseAffection: So you're thankful? I like even more then!
   reponseCompassion: Looks like you did need food and attention! Follow me then,
     my wife will love you. I'm sure of it!
-  reponseDegout: Oh sooo.. That's why you don't have any master I guess..
+  reponseDegout: Oh sooo... That's why you don't have any master I guess...
   reponsePeur: 'Argh! Why are you attacking me? Are you that hungry? '
-  reponseHaine: Pffff.. Wild ones.. Never thankful, juste like the rest of the people.
-    Thanks god there are people like me to put some order in all of this!
+  reponseHaine: Pffff... Wild ones... Never thankful, juste like the rest of the
+    people. Thanks god there are people like me to put some order in all of this!
   reponseBonus: 
   reponseMalus: 

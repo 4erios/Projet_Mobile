@@ -15,9 +15,9 @@ MonoBehaviour:
   dialogueDepart: 'They  stoped me from working again! The adults are all liars!
     Hmm, what are you?! '
   reponseInteret: 'You seem pretty smart.. Maybe I can teach you some tricks? '
-  reponseAffection: Oh.. Were you abandoned too? Looks like life isn't easy for either
-    of us..
-  reponseCompassion: 'Wow.. Did you have a bad day too? Look here, I have chocolate
+  reponseAffection: Oh... Were you abandoned too? Looks like life isn't easy for
+    either of us...
+  reponseCompassion: 'Wow... Did you have a bad day too? Look here, I have chocolate
     left, I''ll share it with you! '
   reponseDegout: 'Are those tentacles? You''re really ugly! '
   reponsePeur: "A\xEFe! Let go! I won't bother you again! "

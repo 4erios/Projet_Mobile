@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: D_F_BasePositif
   m_EditorClassIdentifier: 
-  dialogueDepart: 'Oh! The new species from last time. I''m sorry, I have an appointment
-    so i''m a bit in a hurry.. '
+  dialogueDepart: Oh! The new species from last time. I'm sorry, I have an appointment
+    so i'm a bit in a hurry...
   reponseInteret: Oh you want some cuddles. Your speices is really affectionate isn't
     it?
   reponseAffection: 'Oooohhh, trying to be cute? You shrewd little one. '
   reponseCompassion: 'Don''t cry. Next time I promise I''ll bring you something! '
-  reponseDegout: 'What are you growling at me for, you filthy street creature!! '
+  reponseDegout: What are you growling at me for, you filthy street creature!!!
   reponsePeur: 'Kyyyaaaaa! Help! I''m getting bitten! Help! '
-  reponseHaine: 'And there it goes.. I guess it wasn''t worth my attention. '
+  reponseHaine: 'And there it goes... I guess it wasn''t worth my attention. '
   reponseBonus: 
   reponseMalus: 

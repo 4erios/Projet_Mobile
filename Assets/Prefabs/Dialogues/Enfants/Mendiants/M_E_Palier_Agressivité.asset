@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: "M_E_Palier_Agressivit\xE9"
   m_EditorClassIdentifier: 
-  dialogueDepart: 'Ah it''s you! Go away! We can''t live our live peacefully because
-    of you, so just go away and give us back our normal life! '
-  reponseInteret: 'Nice! Looks like it understood me. '
+  dialogueDepart: Ah it's you! Go away! We can't live our live peacefully because
+    of you, so just go away and give us back our normal life!
+  reponseInteret: Nice! Looks like it understood me.
   reponseAffection: Why do you want cuddles when I was mean to you? I can't really
-    ask you to go away if you're not acting like a monster..
+    ask you to go away if you're not acting like a monster...
   reponseCompassion: Hey! Don't cry ok? I'm not a mean person, I swear it!
   reponseDegout: 'Are trying to intimidate me? Your ugliness  won''t scare me! '
   reponsePeur: 'Argh! It hurts! Someone please help me! '

@@ -17,9 +17,10 @@ MonoBehaviour:
   reponseInteret: 'Looks like at least you know what fear is! '
   reponseAffection: 'Tsk, if you act like this I''ll feel bad. Go away. '
   reponseCompassion: 'Maybe I was a bit harsh. But who wouldn''t after what it did? '
-  reponseDegout: You beast?! Trying to attack me? I'll show you what happens then!!
+  reponseDegout: You beast?! Trying to attack me? I'll show you what happens then!!!
   reponsePeur: 'Arrghh!!! Please stop it, I beg you! I still have to repay my brother,
     please stop! '
-  reponseHaine: What is this? Are you threatening me?? You're in for a world of pain!
+  reponseHaine: What is this? Are you threatening me??? You're in for a world of
+    pain!
   reponseBonus: 
   reponseMalus: 

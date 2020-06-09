@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueDepart: 'Wow! Sorry little one, did I hurt you? My sight isn''t at it''s
     best, sorry if I scared you. '
-  reponseInteret: Looks like you're pretty bold.. I like it!
-  reponseAffection: 'What a cute little kitty.. Though it doesn''t feel like you
-    have any fur.. '
+  reponseInteret: Looks like you're pretty bold... I like it!
+  reponseAffection: What a cute little kitty... Though it doesn't feel like you have
+    any fur...
   reponseCompassion: 'Did I hurt you? Sorry here''s a treat for you to forgive me. '
   reponseDegout: 'What? Do you have a sickness or something? My health is already
     bad, please don''t get near... '

@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueDepart: Oh, I see you're still alive. Maybe you're more combative that
     I though.
-  reponseInteret: You keep trying to scare me ? Maybe this will work one day.
+  reponseInteret: You keep trying to scare me? Maybe this will work one day.
   reponseAffection: Well, at least I understand how you're still here.
   reponseCompassion: They may want to hurt you, but you shouldn't be afraid of me.
-  reponseDegout: You really think I'll have pity for you ?
-  reponsePeur: Stop this ! It maybe work for them, but don't do this to me.
-  reponseHaine: What ?! You better never do this again !
+  reponseDegout: You really think I'll have pity for you?
+  reponsePeur: Stop this! It maybe work for them, but don't do this to me.
+  reponseHaine: What?! You better never do this again!
   reponseBonus: 
   reponseMalus: 

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: "RO_P_Palier_Piti\xE9"
   m_EditorClassIdentifier: 
   dialogueDepart: 'Still lost? Do you need my help little one? '
-  reponseInteret: Seems like you don't. You look pretty smart !
+  reponseInteret: Seems like you don't. You look pretty smart!
   reponseAffection: You love people don't you? I'll play with you a bit hen!
   reponseCompassion: 'How can I help you? Show me! '
   reponseDegout: 'Don''t mind me I''ll leave you alone. I don''t like problems. '
   reponsePeur: Ouch! You're attacking a police officer? I'll show you what happen
-    then !
+    then!
   reponseHaine: 'Don''t try this. As an officer I''ll have to retaliate if you attack. '
   reponseBonus: 
   reponseMalus: 
