@@ -23,5 +23,5 @@ MonoBehaviour:
   reponseDegout: 'Urgh. Sick animals, the wost ones. Go away before I shoot you! '
   reponsePeur: 'What is this? Don''t come near or I''ll shoot! '
   reponseHaine: 'Go away! If you don''t I''ll shoot you! '
-  reponseBonus: 
+  reponseBonus: Ignoring me? It would be smarter for you to run away!
   reponseMalus: 

@@ -22,5 +22,7 @@ MonoBehaviour:
   reponseDegout: 'Beurk!  It looks sick. I shouldn''t get near. '
   reponsePeur: 'Urgh! I''m, I''m a policeman. I''ll shoot you! '
   reponseHaine: 'Stop this. Don''t get near or I''ll shoot! '
-  reponseBonus: 
+  reponseBonus: 'Ignoring me? It would be smarter for you to run away!
+
+'
   reponseMalus: 

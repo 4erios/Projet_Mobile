@@ -25,5 +25,6 @@ MonoBehaviour:
     swear! Arggghhhh!
   reponseHaine: 'What? Are you threatening ME? Ahah! It would have been better for
     you to meet an officer I think. I won''t let it pass. '
-  reponseBonus: 
+  reponseBonus: You think it's not your fault? Wait why do I think it's an animal
+    fault? Am I stupid?
   reponseMalus: 
