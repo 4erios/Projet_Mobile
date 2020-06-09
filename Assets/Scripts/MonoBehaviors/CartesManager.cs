@@ -131,7 +131,10 @@ public class CartesManager : MonoBehaviour
 
             if(isTouch && !(movingCard || movingList))
             {
-                fleche.GetComponent<Animator>().Play("FlècheTutoDepop");//SetActive(false);
+                if (fleche.activeSelf)
+                {
+                    fleche.GetComponent<Animator>().Play("FlècheTutoDepop");
+                }
                 showFleche = 0;
                 if (Mathf.Abs(touch.position.x - touchStartPos.x) > 100) //Fait bouger la liste de carte
                 {
@@ -197,7 +200,10 @@ public class CartesManager : MonoBehaviour
             RaycastHit2D hitinfo = Physics2D.Raycast(touchStartPos, cam.transform.forward);
             if (hitinfo.collider != null && hitinfo.collider.name == "ZoneCarte")
             {
-                fleche.GetComponent<Animator>().Play("FlècheTutoDepop");
+                if (fleche.activeSelf)
+                {
+                    fleche.GetComponent<Animator>().Play("FlècheTutoDepop");
+                }
                 showFleche = 0;
                 ChangeAnimatorState(false);
                 isTouch = true;

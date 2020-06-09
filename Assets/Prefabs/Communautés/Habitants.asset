@@ -27,7 +27,7 @@ MonoBehaviour:
     - "\u201Cit\u2019s all slimy and sticky, how disgusting!\u201D"
     firstState: 1
   agressivite:
-    valeur: 0
+    valeur: 1.4
     seuilHaut: 3
     seuilBas: 0
     maxBas: -3
@@ -42,7 +42,7 @@ MonoBehaviour:
       skin!\u201D"
     firstState: 1
   jalousie:
-    valeur: 0
+    valeur: 1.4
     seuilHaut: 3
     seuilBas: 0
     maxBas: -3
@@ -72,7 +72,7 @@ MonoBehaviour:
       night\u201D"
     firstState: 1
   acceptation:
-    valeur: 0
+    valeur: 1.6
     seuilHaut: 3
     seuilBas: 0
     maxBas: -6
@@ -87,7 +87,7 @@ MonoBehaviour:
     - "\u201Cit makes the city a clean and safe place for ordinary people like us\u201D"
     firstState: 1
   pitie:
-    valeur: 0
+    valeur: 1.6
     seuilHaut: 3
     seuilBas: 0
     maxBas: -6
