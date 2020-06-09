@@ -25,5 +25,5 @@ MonoBehaviour:
   reponsePeur: 'Kyaaaa! Help! There''s a monster attacking me! '
   reponseHaine: 'Let me pass! I need to go get my kids, and you''re not gonna stop
     me! '
-  reponseBonus: 
+  reponseBonus: 'You don''t care? Thanks then, I''ll just go and get my kids. '
   reponseMalus: 
