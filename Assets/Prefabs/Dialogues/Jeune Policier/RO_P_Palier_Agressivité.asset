@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "RO_P_Palier_Agressivit\xE9"
+  m_EditorClassIdentifier: 
+  dialogueDepart: I remember I told you to stop! I'm gonna have to put you in a cage!
+  reponseInteret: It ran away. It's better.
+  reponseAffection: You should really stop this. Someday I'll really have to do it...
+  reponseCompassion: 'Wow! If you stop, I won''t have to be mean to you like this! '
+  reponseDegout: 'Are you glaring at me? Looks like you really need to be incaged! '
+  reponsePeur: 'Argh! It hurts! Are you trying to eat me? I won''t let you! '
+  reponseHaine: 'Growling at an officer? You chose the wrong target! '
+  reponseBonus: 
+  reponseMalus: 

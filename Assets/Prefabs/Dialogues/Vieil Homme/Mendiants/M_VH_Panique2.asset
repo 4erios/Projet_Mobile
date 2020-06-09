@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: M_VH_Panique2
+  m_EditorClassIdentifier: 
+  dialogueDepart: Why did you become like this? You could've been so much better,
+    but you decided to act like a beast.
+  reponseInteret: So now you try to act nicely?  It's a bit late...
+  reponseAffection: 'Tsk.. Go away, I told you what I had to. '
+  reponseCompassion: 'Whatever... You look sad, but if you don''t want help I won''t
+    give you any. '
+  reponseDegout: 'Don''t get too near! I don''t know your intents. '
+  reponsePeur: 'Ahhhh! Stop! Please Stop!!! '
+  reponseHaine: 'Huh?? What am I hearing? Do you think I''m afraid of you??! '
+  reponseBonus: 
+  reponseMalus: 

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "RO_P_Palier_R\xE9pulsion"
+  m_EditorClassIdentifier: 
+  dialogueDepart: Here you go again! I told you to stop doing this, you're being
+    a pain for the townspeople!
+  reponseInteret: 'So you''re that hungry? I''ll be nice and leave you alone for
+    today. '
+  reponseAffection: 'Can''t you be nice and do what I tell you too? You''re making
+    it hard for me! '
+  reponseCompassion: 'Looks like it was scared. It''s my job, I can''t help it. '
+  reponseDegout: 'Trying to coax me? That won''t work get out! '
+  reponsePeur: 'How many eyes do you have? It''s scary. '
+  reponseHaine: Did you just try to bite me? You're in for a world of pain!
+  reponseBonus: 
+  reponseMalus: 
