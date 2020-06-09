@@ -22,10 +22,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: e7b9335b58fdf5d4eaac00639f55520a, type: 2}
     - {fileID: 11400000, guid: 4dbfc0b45950f0045854d1092a1266aa, type: 2}
     journalPhrasesUp:
-    - Inhabitants try to avoid the Monster.
+    - WORKERS BECAMES SICK AFTER MET THE "MYSTERIOUS CREATURE"
     journalInterview:
-    - "All habitants feel ill at the sight of the monster, a woman said: \u201Cit\u2019s
-      all slimy and sticky, how disgusting! I never saw anything like this before!\u201D"
+    - "\u201Cit\u2019s all slimy and sticky, how disgusting!\u201D"
     firstState: 1
   agressivite:
     valeur: 0
@@ -37,10 +36,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 36e7f4e2051e6da4ea18bbe71b10b330, type: 2}
     - {fileID: 11400000, guid: e97637cf31e0e0a46af2dd005b8cac03, type: 2}
     journalPhrasesUp:
-    - Inhabitants search a way to attack the Monster.
+    - WORKERS STEAL WEAPONS IN FACTORY, TO "PROTECT THEMSELVES"!
     journalInterview:
-    - "The monster is attacking people! A man accepted to talk about it: \u201CIf
-      I saw that gross stuff again, I\u2019m going to take it out of its skin!\u201D"
+    - "\u201CIf I saw that gross stuff again, I\u2019m going to take it out of its
+      skin!\u201D"
     firstState: 1
   jalousie:
     valeur: 0
@@ -52,10 +51,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4728eeef9e65f4e44bea8fd6850b4aad, type: 2}
     - {fileID: 11400000, guid: c2761e94aaa8f4346be17c7f41956a2b, type: 2}
     journalPhrasesUp:
-    - Inhabitants think the Monster is stealing from them.on.
+    - FOR CITIZENS OF PARIS, LEADERS PREFER A "FOREIGN ANIMAL"
     journalInterview:
-    - "Lately, the habitants are looking for the monster, a man said: \u201CI must
-      say I envy this strange creature, it is free and nobody comes to annoy it\u201D"
+    - "\u201CI envy this strange creature, it is free and nobody comes to annoy it\u201D"
     firstState: 1
   desir:
     valeur: 0
@@ -68,11 +66,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 2fdb6433bc0c37442a12c01c4a41b34d, type: 2}
     - {fileID: 11400000, guid: d900e8fa85f1d934fadd8a7dad92f093, type: 2}
     journalPhrasesUp:
-    - Inhabitants want the Monster by their side.
+    - SOME PEOPLE MAKE A POSSE TO FIND A "FRIENDLY CREATURE"
     journalInterview:
-    - "Every habitant in the city must envy the company of the creature. A woman
-      testified: \u201Cit could protect me from dangerous weird guys when I get home
-      late at night\u201D"
+    - "\u201Cit could protect me from dangerous weird guys when I get home late at
+      night\u201D"
     firstState: 1
   acceptation:
     valeur: 0
@@ -85,10 +82,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: c718a5c6039b99f49a47ac95a631ddaf, type: 2}
     - {fileID: 11400000, guid: d900e8fa85f1d934fadd8a7dad92f093, type: 2}
     journalPhrasesUp:
-    - Inhabitants think the Monster is just an abandoned animal.
+    - CHILDRENS WERE FOUND PLAYING WITH A NEW ANIMAL!
     journalInterview:
-    - "Habitants of Paris finally accept the monster\u2019s attendance, they said:
-      \u201Cit makes the city a clean and safe place for ordinary people like us\u201D"
+    - "\u201Cit makes the city a clean and safe place for ordinary people like us\u201D"
     firstState: 1
   pitie:
     valeur: 0
@@ -100,11 +96,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 90911756b58f2d648899f7d6a0cab45c, type: 2}
     - {fileID: 11400000, guid: c68accf089ae3a7428051cb9ff053a9a, type: 2}
     journalPhrasesUp:
-    - Inhabitants ask peoples to help the Monster.
+    - THE STARVING CREATURE IS "DEFENSELESS",  SAY A HOUSEWIFE!
     journalInterview:
-    - "The mysterious creature raises compassion from most of the citizens! A partially
-      sighted man testified: \u201Csometimes I feel the company of this small lonely
-      creature\u201D"
+    - "\u201Csometimes I feel the company of this small lonely creature\u201D"
     firstState: 1
   goodEnding: {fileID: 11400000, guid: bcb70a9219c152e42956d96becc46dac, type: 2}
   badEnding: {fileID: 11400000, guid: 1ca5ae9b37bcb3f449407ef18dff4d3f, type: 2}

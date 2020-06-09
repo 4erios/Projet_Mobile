@@ -22,10 +22,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 02d1604a6b2be1a44907cc75e92eb226, type: 2}
     - {fileID: 11400000, guid: a16efbc48dee68f4386836da8b78ff9d, type: 2}
     journalPhrasesUp:
-    - "With the creature outside, some homeless people said: \u201CI saw it creeping
-      around the parc, I don\u2019t feel safe with it around\u2026\u201D"
+    - HOMELESS LEFT SOME DISTRICTS IN PARIS, FEARING THE "SHADOW"
     journalInterview:
-    - Test Interview
+    - "\u201CI saw it creeping around the parc, I fell ill with it around\u201D"
     firstState: 1
   agressivite:
     valeur: 0
@@ -37,11 +36,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0697c77f5557bf54cb1f77bf37572f2d, type: 2}
     - {fileID: 11400000, guid: 8e5701d379a62a04db118bb360bd77f9, type: 2}
     journalPhrasesUp:
-    - Mendicants search a way to attack the Monster.
+    - HOMELESS'S DISPARITIONS ARE BECAUSE OF CRAWLING CREATURE!
     journalInterview:
-    - "With the creature outside, beggars are terrified, one of them said: \u201CI
-      saw this thing in the parc like an evil dark shadow, we\u2019re not safe anywhere
-      !\u201D"
+    - "\u201CI saw this thing in the parc, we\u2019re not safe anywhere !\u201D"
     firstState: 1
   jalousie:
     valeur: -1.2
@@ -53,11 +50,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9ca290caf9777064b82b97c54d2dec95, type: 2}
     - {fileID: 11400000, guid: a7b94d35fc479194cae9da3e9d1d6ae6, type: 2}
     journalPhrasesUp:
-    - Mendicants think the Monster is stilling from them.
+    - POORS BLAME THE INTEREST FOR CREATURE INSTEAD THEY HOMELESS!
     journalInterview:
-    - "A new rival for the street people? They testified: \u201Cthat sponger looted
-      all trash in the streets we have been settled for months! We\u2019ll starve
-      and nobody cares!\u201D "
+    - "\u201Cit looted all trash in the streets we have been settled for months!\u201D"
     firstState: 1
   desir:
     valeur: -1.2
@@ -70,11 +65,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 79baef07a94fb694fb5fa8aed847209f, type: 2}
     - {fileID: 11400000, guid: 29c18221b101fde48b115d4177e3c491, type: 2}
     journalPhrasesUp:
-    - Mendicant want the Monster by their side.
+    - FOR VETERANS, "MYSTERIOUS MONSTER" WILL BE THEIR PROTECTOR!
     journalInterview:
-    - "All beggars are now desirous to get protection from the creature! \u201CWe
-      feel safe with it, nobody tries to annoy us when it\u2019s here, every night
-      we get stronger!\u201D"
+    - "\u201CWe feel safe with it, nobody tries to annoy us, with it we get stronger!\u201D"
     firstState: 1
   acceptation:
     valeur: 0
@@ -87,11 +80,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: fe12a855806dbf94a90c761c82b06092, type: 2}
     - {fileID: 11400000, guid: 29c18221b101fde48b115d4177e3c491, type: 2}
     journalPhrasesUp:
-    - Mendicants think the Monster is just an abandoned animal.
+    - HOMELESS DENY EXISTENCE OF A "DANGEROUS CREATURE" IN PARIS
     journalInterview:
-    - "A new friendship is born through the streets! An old beggar said: \u201Cit
-      and I share the same food now, we are unified against the society which doesn\u2019t
-      want us\u201D"
+    - "\u201Cit and I share the same food now, we are unified against the society\u201D"
     firstState: 1
   pitie:
     valeur: 1.2
@@ -103,10 +94,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3c1d61ae3c9ad6d4f99b2d6aa7e50ada, type: 2}
     - {fileID: 11400000, guid: 5fd2372b6cc00d1439de4ce04f50c122, type: 2}
     journalPhrasesUp:
-    - Mendicants ask peoples to help the Monster.
+    - DESPITE THE BAN OF OFFICERS, MENDIANTS FEED THE "POOR BEAST"
     journalInterview:
-    - "A new fellow for beggars in the city? A little vagrant claimed: \u201CWe were
-      hanging out yesterday! This poor miserable creature was groveling at my feet\u201D"
+    - "\u201CThis poor miserable creature was groveling at my feet\u201D"
     firstState: 1
   goodEnding: {fileID: 11400000, guid: 6df24435122d18d488503a9008a0e390, type: 2}
   badEnding: {fileID: 11400000, guid: df969f77c3121a74291a8f8f65b28ed3, type: 2}
