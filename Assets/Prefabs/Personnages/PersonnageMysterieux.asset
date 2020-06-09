@@ -22,7 +22,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 93e52572f6541034686eaada3f889e76, type: 3}
   - {fileID: 21300000, guid: 12fa03c1dc88dcb46a2937f1251df168, type: 3}
   isAlive: 1
-  rencontreEvent: {fileID: 0}
+  rencontreEvent: {fileID: 11400000, guid: 17469dd5bebb0dd428e2eb7b99cf3096, type: 2}
   dyingSuccess: {fileID: 0}
   cout: 50
   isUnlocked: 0
+  coef: 1

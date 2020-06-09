@@ -65,6 +65,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: 4e2e3580885dc7d4eaa16e68c9f4665e, type: 2}
+    - {fileID: 11400000, guid: 8257ddbed4eebef48905bc39b435edc2, type: 2}
     journalPhrasesUp:
     - Leaders want the Monster by their side.
     journalInterview:
@@ -80,6 +81,7 @@ MonoBehaviour:
     eventsPhase2:
     - {fileID: 11400000, guid: 383153b77bc23654d90b040bfb8747f7, type: 2}
     - {fileID: 11400000, guid: 3b4df694509ecbb4eadd55c98c6c988a, type: 2}
+    - {fileID: 11400000, guid: 8257ddbed4eebef48905bc39b435edc2, type: 2}
     journalPhrasesUp:
     - Leaders think the Monster is just an abandoned animal.
     journalInterview:

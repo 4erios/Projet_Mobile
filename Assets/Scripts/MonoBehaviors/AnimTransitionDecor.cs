@@ -35,8 +35,6 @@ public class AnimTransitionDecor : MonoBehaviour
 
     public void EndTransition()
     {
-        Debug.Log(ancienLieu);
-        Debug.Log(actualEvent.lieux);
         if (ancienLieu != actualEvent.lieux)
         {
             foreach (GameObject gm in fonds)

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: "Repr\xE9sentants de l'ordre"
   m_EditorClassIdentifier: 
   repulsion:
-    valeur: 0
+    valeur: -0.6
     seuilHaut: 3
     seuilBas: 0
     maxBas: -3
@@ -45,7 +45,7 @@ MonoBehaviour:
       around, we have to get rid of it!\u201D"
     firstState: 1
   jalousie:
-    valeur: 0
+    valeur: 0.6
     seuilHaut: 3
     seuilBas: 0
     maxBas: -3
@@ -61,7 +61,7 @@ MonoBehaviour:
       It just appeared and everyone like it! I hope it\u2019s just a passing fad\u201D"
     firstState: 1
   desir:
-    valeur: 0
+    valeur: 0.6
     seuilHaut: 3
     seuilBas: 0
     maxBas: -6
@@ -69,6 +69,7 @@ MonoBehaviour:
     eventsPhase2:
     - {fileID: 11400000, guid: eac0bdd0a313a0444bca280441cd9b99, type: 2}
     - {fileID: 11400000, guid: 1a723d6f4bf66a44b8f3484f7e2f7543, type: 2}
+    - {fileID: 11400000, guid: f71722bee3a5e9d4b80d55667f0d4a05, type: 2}
     journalPhrasesUp:
     - The police want the Monster by their side.
     journalInterview:
@@ -84,6 +85,7 @@ MonoBehaviour:
     eventsPhase2:
     - {fileID: 11400000, guid: 73922c13eaded7544962703efd209063, type: 2}
     - {fileID: 11400000, guid: 9847a87ef3a3fe74f9939d8b18129e73, type: 2}
+    - {fileID: 11400000, guid: f71722bee3a5e9d4b80d55667f0d4a05, type: 2}
     journalPhrasesUp:
     - The police think the Monster is just an abandoned animal.
     journalInterview:
@@ -91,7 +93,7 @@ MonoBehaviour:
       dutiful creature, we don\u2019t have any problems to maintain order\u201D"
     firstState: 1
   pitie:
-    valeur: 0
+    valeur: -0.6
     seuilHaut: 3
     seuilBas: 0
     maxBas: -6

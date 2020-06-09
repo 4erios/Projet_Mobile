@@ -58,8 +58,6 @@ public class MonstreEventManager : MonoBehaviour
     private EndEvent finCarnage;
 
     [SerializeField]
-    private List<Event> allEvents;
-    [SerializeField]
     private List<Personnage> allPersos;
     private List<Personnage> persoEventFuturs = new List<Personnage>();
 
@@ -105,15 +103,15 @@ public class MonstreEventManager : MonoBehaviour
         }
 
         //Load Game State
-        string eventName = "";
+        /*string eventName = "";
         List<string> pool = new List<string>();
         List<string> persos = new List<string>();
         int paniqueToAdd = 0;
         int damage = 0;
-        bool didLoad = false; //SaveLoadSystem.LoadGameState(out eventName, out paniqueToAdd, out damage, out pool, out persos);
+        bool didLoad = false; //SaveLoadSystem.LoadGameState(out eventName, out paniqueToAdd, out damage, out pool, out persos);*/
 
         futurEvents = new List<Event>();
-        if (didLoad)
+        /*if (didLoad)
         {
             if (pool.Contains(eventsDepart[0].name))
             {
@@ -157,7 +155,7 @@ public class MonstreEventManager : MonoBehaviour
             {
                 SaveLoadSystem.ResetGameSate();
             }
-        }
+        }*/
         eventsPool = eventsDepart;
     }
     #endregion

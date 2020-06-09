@@ -25,7 +25,7 @@ public class Panique : MonoBehaviour
     [ContextMenu("AddPoint")]
     public void AddPointTest()
     {
-        AddPanic(5);
+        AddPanic(10);
     }
 
     public static string JournalPanique()

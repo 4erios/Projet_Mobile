@@ -66,6 +66,7 @@ MonoBehaviour:
     eventsPhase2:
     - {fileID: 11400000, guid: d6e998da1aa5df24096f1679625bbd92, type: 2}
     - {fileID: 11400000, guid: 2fdb6433bc0c37442a12c01c4a41b34d, type: 2}
+    - {fileID: 11400000, guid: d900e8fa85f1d934fadd8a7dad92f093, type: 2}
     journalPhrasesUp:
     - Inhabitants want the Monster by their side.
     journalInterview:
@@ -82,6 +83,7 @@ MonoBehaviour:
     eventsPhase2:
     - {fileID: 11400000, guid: 90e02184381360947aadc661e86f34d6, type: 2}
     - {fileID: 11400000, guid: c718a5c6039b99f49a47ac95a631ddaf, type: 2}
+    - {fileID: 11400000, guid: d900e8fa85f1d934fadd8a7dad92f093, type: 2}
     journalPhrasesUp:
     - Inhabitants think the Monster is just an abandoned animal.
     journalInterview:
