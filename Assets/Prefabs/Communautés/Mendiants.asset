@@ -20,6 +20,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: 02d1604a6b2be1a44907cc75e92eb226, type: 2}
+    - {fileID: 11400000, guid: a16efbc48dee68f4386836da8b78ff9d, type: 2}
     journalPhrasesUp:
     - "With the creature outside, some homeless people said: \u201CI saw it creeping
       around the parc, I don\u2019t feel safe with it around\u2026\u201D"
@@ -34,6 +35,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: 0697c77f5557bf54cb1f77bf37572f2d, type: 2}
+    - {fileID: 11400000, guid: 8e5701d379a62a04db118bb360bd77f9, type: 2}
     journalPhrasesUp:
     - Mendicants search a way to attack the Monster.
     journalInterview:
@@ -49,6 +51,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: 9ca290caf9777064b82b97c54d2dec95, type: 2}
+    - {fileID: 11400000, guid: a7b94d35fc479194cae9da3e9d1d6ae6, type: 2}
     journalPhrasesUp:
     - Mendicants think the Monster is stilling from them.
     journalInterview:
@@ -64,6 +67,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: f067e69d6692eb74a860b507aeab895e, type: 2}
+    - {fileID: 11400000, guid: 79baef07a94fb694fb5fa8aed847209f, type: 2}
     journalPhrasesUp:
     - Mendicant want the Monster by their side.
     journalInterview:
@@ -79,6 +83,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: d87ae748436748a479aad69fa70b409a, type: 2}
+    - {fileID: 11400000, guid: fe12a855806dbf94a90c761c82b06092, type: 2}
     journalPhrasesUp:
     - Mendicants think the Monster is just an abandoned animal.
     journalInterview:
@@ -94,6 +99,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: 3c1d61ae3c9ad6d4f99b2d6aa7e50ada, type: 2}
+    - {fileID: 11400000, guid: 5fd2372b6cc00d1439de4ce04f50c122, type: 2}
     journalPhrasesUp:
     - Mendicants ask peoples to help the Monster.
     journalInterview:

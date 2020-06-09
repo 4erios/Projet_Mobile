@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63264c0044614164ab02233d8adf93b7, type: 3}
+  m_Name: Ev_P_RO_Panique1
+  m_EditorClassIdentifier: 
+  personnage: {fileID: 11400000, guid: c54c52f4d5eb2d040840655d4bc9a659, type: 2}
+  accroche: {fileID: 11400000, guid: 67cbb1e3f4f68564786ac16226b86f69, type: 2}
+  dialogue: {fileID: 11400000, guid: f02cf640fd3404f4b9eaf3320350e36a, type: 2}
+  lieux: 0
+  effetBonus: {fileID: 0}
+  carteBonus: {fileID: 0}
+  effetMalus: {fileID: 0}
+  carteMalus: {fileID: 0}
+  preset: 0
+  killPersonnage: 6
+  eventSuivant: {fileID: 0}

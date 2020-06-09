@@ -20,6 +20,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: e7b9335b58fdf5d4eaac00639f55520a, type: 2}
+    - {fileID: 11400000, guid: 4dbfc0b45950f0045854d1092a1266aa, type: 2}
     journalPhrasesUp:
     - Inhabitants try to avoid the Monster.
     journalInterview:
@@ -34,6 +35,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: 36e7f4e2051e6da4ea18bbe71b10b330, type: 2}
+    - {fileID: 11400000, guid: e97637cf31e0e0a46af2dd005b8cac03, type: 2}
     journalPhrasesUp:
     - Inhabitants search a way to attack the Monster.
     journalInterview:
@@ -48,6 +50,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: 4728eeef9e65f4e44bea8fd6850b4aad, type: 2}
+    - {fileID: 11400000, guid: c2761e94aaa8f4346be17c7f41956a2b, type: 2}
     journalPhrasesUp:
     - Inhabitants think the Monster is stealing from them.on.
     journalInterview:
@@ -62,6 +65,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: d6e998da1aa5df24096f1679625bbd92, type: 2}
+    - {fileID: 11400000, guid: 2fdb6433bc0c37442a12c01c4a41b34d, type: 2}
     journalPhrasesUp:
     - Inhabitants want the Monster by their side.
     journalInterview:
@@ -77,6 +81,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: 90e02184381360947aadc661e86f34d6, type: 2}
+    - {fileID: 11400000, guid: c718a5c6039b99f49a47ac95a631ddaf, type: 2}
     journalPhrasesUp:
     - Inhabitants think the Monster is just an abandoned animal.
     journalInterview:
@@ -91,6 +96,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: 90911756b58f2d648899f7d6a0cab45c, type: 2}
+    - {fileID: 11400000, guid: c68accf089ae3a7428051cb9ff053a9a, type: 2}
     journalPhrasesUp:
     - Inhabitants ask peoples to help the Monster.
     journalInterview:

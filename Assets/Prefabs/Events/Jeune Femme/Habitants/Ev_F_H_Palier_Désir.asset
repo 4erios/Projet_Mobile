@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63264c0044614164ab02233d8adf93b7, type: 3}
+  m_Name: "Ev_F_H_Palier_D\xE9sir"
+  m_EditorClassIdentifier: 
+  personnage: {fileID: 11400000, guid: 757b4b4d7cd8e5045b7605033d2d4abd, type: 2}
+  accroche: {fileID: 11400000, guid: 64d1cea23cbdb6043a7cb76f08faa9e7, type: 2}
+  dialogue: {fileID: 11400000, guid: a5ef0539b31245e4f9fae451d2c8e320, type: 2}
+  lieux: 2
+  effetBonus: {fileID: 0}
+  carteBonus: {fileID: 0}
+  effetMalus: {fileID: 0}
+  carteMalus: {fileID: 0}
+  preset: 1
+  killPersonnage: 6
+  eventSuivant: {fileID: 0}
