@@ -18,8 +18,8 @@ MonoBehaviour:
   lieux: 0
   effetBonus: {fileID: 0}
   carteBonus: {fileID: 0}
-  effetMalus: {fileID: 0}
-  carteMalus: {fileID: 0}
+  effetMalus: {fileID: 11400000, guid: 5a4e14a6f092ed54e96f9562b80b1d4c, type: 2}
+  carteMalus: {fileID: 11400000, guid: 6ad6911bc7ae07b4d9bf266ab1f9af77, type: 2}
   preset: 0
   killPersonnage: 6
   eventSuivant: {fileID: 0}

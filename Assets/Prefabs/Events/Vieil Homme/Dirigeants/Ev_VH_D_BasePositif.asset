@@ -16,10 +16,10 @@ MonoBehaviour:
   accroche: {fileID: 11400000, guid: d5cc1475e43547942a801ebf8e636627, type: 2}
   dialogue: {fileID: 11400000, guid: f99c28940ca1cb44fa525ccdd3b6410d, type: 2}
   lieux: 3
-  effetBonus: {fileID: 0}
-  carteBonus: {fileID: 0}
-  effetMalus: {fileID: 0}
-  carteMalus: {fileID: 0}
+  effetBonus: {fileID: 11400000, guid: 43501bd07cfd95648be7ce1c834cb8a5, type: 2}
+  carteBonus: {fileID: 11400000, guid: 01f316a3c34b6084089a4824b1e2d4b8, type: 2}
+  effetMalus: {fileID: 11400000, guid: 01f316a3c34b6084089a4824b1e2d4b8, type: 2}
+  carteMalus: {fileID: 11400000, guid: 01f316a3c34b6084089a4824b1e2d4b8, type: 2}
   preset: 0
   killPersonnage: 6
   eventSuivant: {fileID: 0}
