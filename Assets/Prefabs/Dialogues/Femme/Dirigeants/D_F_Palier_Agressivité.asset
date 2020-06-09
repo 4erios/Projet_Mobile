@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "D_F_Palier_Agressivit\xE9"
+  m_EditorClassIdentifier: 
+  dialogueDepart: 'Ah! You again! Are you following me? Can''t I meet her without
+    seeing you? Out of my way!  '
+  reponseInteret: 'It''s better when you''re like this. I don''t have to worry about
+    you at least. '
+  reponseAffection: 'Yes you''re cute, please let me go now. '
+  reponseCompassion: Why are you sad? You don't even like me. Next time I'll get
+    you something ok ?
+  reponseDegout: I said out of my way! I can't have you dirtying my clothes right
+    before my date!
+  reponsePeur: 'Kyaaaa! Help! Someone help! '
+  reponseHaine: I have a date, don't make me repeat myself and get out of the way!
+    Else I'll have to tame you a bit!
+  reponseBonus: 
+  reponseMalus: 

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: PM_Rencontre
+  m_EditorClassIdentifier: 
+  dialogueDepart: 'Finally, I find you. You''re a bit different from what I espected,
+    but it''s alright. '
+  reponseInteret: Yes, that's what I was expecting.
+  reponseAffection: Hey, calm down. I'm not the one to attack here.
+  reponseCompassion: I see you're as afraid of them that I was. That's a good start.
+  reponseDegout: Well, those documents whould be outdated. I can't get anything out
+    of you.
+  reponsePeur: You're... You're like them ?
+  reponseHaine: And you're supposed to be a monster ? Get out, I'll find another
+    way.
+  reponseBonus: 
+  reponseMalus: 

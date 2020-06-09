@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: D_F_Palier_Acceptation
+  m_EditorClassIdentifier: 
+  dialogueDepart: 'Some compagny! That''s what I needed... I''m so confused you know.
+    I''m seeing someone without my husband knowing and I know it''s a sin but...
+    He don''t care about me, so why should I care about him? '
+  reponseInteret: 'You think I''m right? That''s kind of you. '
+  reponseAffection: 'Thanks for your compassion. If only my husband could as kind
+    as you are. '
+  reponseCompassion: Right? It's his fault! so I should live how I want to! Thank
+    you for the advice!
+  reponseDegout: I don't really need any cuddles...
+  reponsePeur: 'Ouch! So you think I''m wrong?! '
+  reponseHaine: 'I see, you don''t care. Just like my husband... '
+  reponseBonus: 
+  reponseMalus: 

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: H_F_Palier_Acceptation
+  m_EditorClassIdentifier: 
+  dialogueDepart: 'It''s you! Are you hungry again? You should come near my house
+    next time, I''ll give you some leftovers. '
+  reponseInteret: 'You really seems to like the word "leftovers" don''t you? You
+    know what to do then. '
+  reponseAffection: Did you want attention that much? Well I hope you're happy then.
+  reponseCompassion: Poor thing, look like you didn't eat for a while. I'll keep
+    you a part of our meal then, I'm sure you'll love my cooking!
+  reponseDegout: Wow! I still can't be sure if you are sick or not, so please don't
+    touch me.
+  reponsePeur: Ouch! Don't take me for the leftovers please! I won't help you anyway
+    now!
+  reponseHaine: No leftovers for you then! To think I tried to be nice with you!
+  reponseBonus: 
+  reponseMalus: 

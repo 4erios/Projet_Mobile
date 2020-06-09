@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "PM_r\xE9v\xE9lation_P_Repr\xE9sentantsDeLOrdre"
+  m_EditorClassIdentifier: 
+  dialogueDepart: Here it is, the new sheriff of the town. Are you going to arrest
+    me ? But first, tell me how it is to work with corrupt policemen.
+  reponseInteret: Maybe you don't like me, but if you knew, you wouldn't like those
+    policemen either.
+  reponseAffection: I see you don't know that someone pay them to lie about what
+    happen in the town.
+  reponseCompassion: You know what, that's ok. Maybe you didn't know that there were
+    no justice in this town.
+  reponseDegout: Don't come near me ! Why did I thougt you could understand.
+  reponsePeur: Ah ! You really think you could caught me ? I was a fool to believe
+    you could help me.
+  reponseHaine: You're going to warn the others ? Do you really think they can find
+    me ?
+  reponseBonus: 
+  reponseMalus: 

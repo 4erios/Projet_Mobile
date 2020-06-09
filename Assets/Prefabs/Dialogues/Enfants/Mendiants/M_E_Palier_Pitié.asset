@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "M_E_Palier_Piti\xE9"
+  m_EditorClassIdentifier: 
+  dialogueDepart: Hey! If you're hungry I can share what I have with you! I'm sure
+    we can be great friends!
+  reponseInteret: 'You''re interested? Yay!! '
+  reponseAffection: You want some cuddles? I'll give you some then!!
+  reponseCompassion: 'I feel sad when I''m alone too... It''ll be alright, we are
+    friends now! '
+  reponseDegout: 'Why are like this? You''re just an ugly beast anyway! '
+  reponsePeur: Hey stop! I just wanted to be nice...
+  reponseHaine: I was wrong! We can never be friends!
+  reponseBonus: 
+  reponseMalus: 

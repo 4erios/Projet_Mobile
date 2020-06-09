@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: RO_P_Palier_Acceptation
+  m_EditorClassIdentifier: 
+  dialogueDepart: 'Hello! Hope you''re doing good! Since you''re inoffensive I''ll
+    let you wander around here, but please don''t cause the townspeople too much
+    problems. '
+  reponseInteret: 'Are you thanking me? That''s nice of you! '
+  reponseAffection: 'I can''t stop for too long, but I''ll give you a bit of my time! '
+  reponseCompassion: 'Does it make you that happy? I understand, it''s nice being
+    accepted right? '
+  reponseDegout: 'Hey! I just told you not to cause problems! '
+  reponsePeur: 'Ouch! Did you bite me? I''m gonna have to put you in cage! '
+  reponseHaine: That's it, don't care about me! Ungrateful beast!
+  reponseBonus: 
+  reponseMalus: 

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
+  m_Name: "H_F_Palier_R\xE9pulsion"
+  m_EditorClassIdentifier: 
+  dialogueDepart: 'Can you stop bothering me? I told you I have kids and I don''t
+    want to catch any sickness you bear! '
+  reponseInteret: It do understand me. It's really smart, my kids would surely like
+    it.
+  reponseAffection: What a crybaby... You recall me of my parents dog. I miss it.
+  reponseCompassion: 'Sorry but since I have kids I have to think about them foremost.
+    I''ll take some leftovers for you next time ok? '
+  reponseDegout: I told you not to touch me! I can't get sick!
+  reponsePeur: Kyaaa! It hurts! Officer!
+  reponseHaine: 'Oh no you don''t! Looks like I have to discipline you! '
+  reponseBonus: 
+  reponseMalus: 
