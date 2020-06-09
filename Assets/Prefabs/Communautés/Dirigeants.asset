@@ -20,6 +20,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: cfec4536d12f7db4294307d96abbb858, type: 2}
+    - {fileID: 11400000, guid: 6635af4a7309b30448b5beac9c76e886, type: 2}
     journalPhrasesUp:
     - Leaders try to avoid the Monster.
     journalInterview:
@@ -34,6 +35,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: d37d461d8665a094b8db2767a698bd43, type: 2}
+    - {fileID: 11400000, guid: 741b51ad6f230cb41b12105a719539e6, type: 2}
     journalPhrasesUp:
     - Leaders search a way to attack the Monster.
     journalInterview:
@@ -48,6 +50,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: f9b6cd56d316b16468ce93f519eb43b7, type: 2}
+    - {fileID: 11400000, guid: 5f0c50898048ce445a08c54e1561e639, type: 2}
     journalPhrasesUp:
     - Leaders think the Monster is stealing their reputation.
     journalInterview:
@@ -76,6 +79,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: 383153b77bc23654d90b040bfb8747f7, type: 2}
+    - {fileID: 11400000, guid: 3b4df694509ecbb4eadd55c98c6c988a, type: 2}
     journalPhrasesUp:
     - Leaders think the Monster is just an abandoned animal.
     journalInterview:
@@ -90,6 +94,7 @@ MonoBehaviour:
     maxHaut: 6
     eventsPhase2:
     - {fileID: 11400000, guid: 9bfafc29db9a7534889f03a60d81ecc8, type: 2}
+    - {fileID: 11400000, guid: 8723e6e2627ab974098d811c61cf6789, type: 2}
     journalPhrasesUp:
     - Leaders ask peoples to help the Monster.
     journalInterview:
