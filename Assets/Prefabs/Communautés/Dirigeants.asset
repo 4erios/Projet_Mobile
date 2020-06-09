@@ -27,7 +27,7 @@ MonoBehaviour:
     - "\u201Cit\u2019s disgusting! It was crawling along the gutter!\u201D"
     firstState: 1
   agressivite:
-    valeur: 0
+    valeur: -0.3
     seuilHaut: 3
     seuilBas: 0
     maxBas: -3
@@ -42,7 +42,7 @@ MonoBehaviour:
       you know!\u201D"
     firstState: 1
   jalousie:
-    valeur: 0
+    valeur: -0.3
     seuilHaut: 3
     seuilBas: 0
     maxBas: -3
@@ -72,7 +72,7 @@ MonoBehaviour:
       with it\u201D"
     firstState: 1
   acceptation:
-    valeur: 0
+    valeur: 3.3
     seuilHaut: 3
     seuilBas: 0
     maxBas: -6
@@ -85,9 +85,9 @@ MonoBehaviour:
     - MAYOR SAY TO KEEP CALM ABOUT THE "MONSTER" IN TOWN!
     journalInterview:
     - "\u201CThanks to that creature, my business is achieving a new record!\u201D"
-    firstState: 1
+    firstState: 0
   pitie:
-    valeur: 0
+    valeur: 3.3
     seuilHaut: 3
     seuilBas: 0
     maxBas: -6
@@ -99,7 +99,7 @@ MonoBehaviour:
     - A POWERFULL WOMAN CREATE A DONATION FOR "UNUSUAL CHARACTER"
     journalInterview:
     - "\u201Cit looked so harmless with its sweet little eyes!\u201D"
-    firstState: 1
+    firstState: 0
   goodEnding: {fileID: 11400000, guid: 5b692460196e43243aa123b32978be8a, type: 2}
   badEnding: {fileID: 11400000, guid: eeb25e5494f44564cb466aeb0acabb77, type: 2}
   communauteEnnemie: {fileID: 11400000, guid: eb86752a0915205459ec860c38e7d4da, type: 2}

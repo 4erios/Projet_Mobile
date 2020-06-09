@@ -13,34 +13,15 @@ MonoBehaviour:
   m_Name: PersonnageMysterieux
   m_EditorClassIdentifier: 
   presets:
-  - ReactionDepart: 1
+  - ReactionDepart: 0
     interet:
       emot: 0
       doesDamage: 0
     affection:
-      emot: 4
-      doesDamage: 0
-    compassion:
-      emot: 3
-      doesDamage: 0
-    degout:
-      emot: 2
-      doesDamage: 0
-    peur:
       emot: 1
-      doesDamage: 1
-    haine:
-      emot: 5
-      doesDamage: 0
-  - ReactionDepart: 5
-    interet:
-      emot: 5
-      doesDamage: 0
-    affection:
-      emot: 0
       doesDamage: 0
     compassion:
-      emot: 2
+      emot: 5
       doesDamage: 0
     degout:
       emot: 3
@@ -49,5 +30,24 @@ MonoBehaviour:
       emot: 4
       doesDamage: 0
     haine:
+      emot: 2
+      doesDamage: 0
+  - ReactionDepart: 2
+    interet:
+      emot: 0
+      doesDamage: 0
+    affection:
+      emot: 3
+      doesDamage: 0
+    compassion:
+      emot: 2
+      doesDamage: 0
+    degout:
+      emot: 4
+      doesDamage: 0
+    peur:
       emot: 1
-      doesDamage: 1
+      doesDamage: 0
+    haine:
+      emot: 5
+      doesDamage: 0

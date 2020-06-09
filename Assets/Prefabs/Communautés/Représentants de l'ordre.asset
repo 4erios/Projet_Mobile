@@ -73,7 +73,7 @@ MonoBehaviour:
       it\u201D"
     firstState: 1
   acceptation:
-    valeur: 0
+    valeur: 3
     seuilHaut: 3
     seuilBas: 0
     maxBas: -6
@@ -89,7 +89,7 @@ MonoBehaviour:
       order\u201D"
     firstState: 1
   pitie:
-    valeur: -0.6
+    valeur: 2.4
     seuilHaut: 3
     seuilBas: 0
     maxBas: -6

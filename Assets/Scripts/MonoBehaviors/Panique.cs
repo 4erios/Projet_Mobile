@@ -36,19 +36,19 @@ public class Panique : MonoBehaviour
         }
         if(value >= maxValue)
         {
-            return "People are scared, the Monster is here.";
+            return "PEOPLE ARE SCARED, THE MONSTER IS HERE";
         }
         else if (value >= 0.8f * maxValue)
         {
-            return "Keep calm, some peoples are hunting the Monster.";
+            return "KEEP CALM, SOME PEOPLES ARE HUNTING THE MONSTER";
         }
         else if (value >= 0.5f * maxValue)
         {
-            return "A creature in the city ? Some people claim they saw it.";
+            return "A CREATURE IN THE CITY ? SOME PEOPLE CLAIM THEY SAW IT";
         }
         else
         {
-            return "There are some rumors about a creature in the city.";
+            return "THERE ARE SOME RUMORS ABOUT A CREATURE IN THE CITY";
         }
     }
 

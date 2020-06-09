@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mendiants
   m_EditorClassIdentifier: 
   repulsion:
-    valeur: 1.2
+    valeur: 1.3
     seuilHaut: 3
     seuilBas: 0
     maxBas: -3
@@ -41,7 +41,7 @@ MonoBehaviour:
     - "\u201CI saw this thing in the parc, we\u2019re not safe anywhere !\u201D"
     firstState: 1
   jalousie:
-    valeur: -1.2
+    valeur: -1.3
     seuilHaut: 3
     seuilBas: 0
     maxBas: -3
@@ -55,7 +55,7 @@ MonoBehaviour:
     - "\u201Cit looted all trash in the streets we have been settled for months!\u201D"
     firstState: 1
   desir:
-    valeur: -1.2
+    valeur: -1.3
     seuilHaut: 3
     seuilBas: 0
     maxBas: -6
@@ -70,7 +70,7 @@ MonoBehaviour:
     - "\u201CWe feel safe with it, nobody tries to annoy us, with it we get stronger!\u201D"
     firstState: 1
   acceptation:
-    valeur: 0
+    valeur: 3
     seuilHaut: 3
     seuilBas: 0
     maxBas: -6
@@ -85,7 +85,7 @@ MonoBehaviour:
     - "\u201Cit and I share the same food now, we are unified against the society\u201D"
     firstState: 1
   pitie:
-    valeur: 1.2
+    valeur: 4.3
     seuilHaut: 3
     seuilBas: 0
     maxBas: -6
@@ -97,7 +97,7 @@ MonoBehaviour:
     - DESPITE THE BAN OF OFFICERS, MENDIANTS FEED THE "POOR BEAST"
     journalInterview:
     - "\u201CThis poor miserable creature was groveling at my feet\u201D"
-    firstState: 1
+    firstState: 0
   goodEnding: {fileID: 11400000, guid: 6df24435122d18d488503a9008a0e390, type: 2}
   badEnding: {fileID: 11400000, guid: df969f77c3121a74291a8f8f65b28ed3, type: 2}
   communauteEnnemie: {fileID: 11400000, guid: 87436ca911a096b44bd7ce66a1ef9d84, type: 2}
