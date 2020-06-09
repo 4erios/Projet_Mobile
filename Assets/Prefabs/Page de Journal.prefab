@@ -117,8 +117,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 163.2, y: 19.275}
-  m_SizeDelta: {x: 279.7, y: 281.45}
+  m_AnchoredPosition: {x: 163.2, y: 13.2}
+  m_SizeDelta: {x: 279.7, y: 293.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7623647946005321795
 CanvasRenderer:
@@ -148,8 +148,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6862488ee3f7ccf4d855a26213666d5d, type: 3}
-    m_FontSize: 35
-    m_FontStyle: 2
+    m_FontSize: 45
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 250
@@ -159,8 +159,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "An old woman saw the creature last night, she said: \u201Cit looked so
-    harmless with its sweet little eyes!\u201D"
+  m_Text: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 --- !u!1 &578094429456450922
 GameObject:
   m_ObjectHideFlags: 0
