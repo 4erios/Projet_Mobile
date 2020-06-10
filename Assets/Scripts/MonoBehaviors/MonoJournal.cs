@@ -64,7 +64,7 @@ public class MonoJournal : MonoBehaviour
                 manag.RemoveFromJournal();
                 if (endJournal)
                 {
-                    manag.AudioFeedback(feedbackJournal);
+                    //manag.AudioFeedback(feedbackJournal);
                     stopFlick = true;
                     Close();
                 }

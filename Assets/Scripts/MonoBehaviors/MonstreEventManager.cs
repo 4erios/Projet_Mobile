@@ -400,10 +400,10 @@ public class MonstreEventManager : MonoBehaviour
         monstreHp -= dmg;
         if (monstreHp > 0)
         {
-            AudioFeedback(feedbackDegatAudio);
             if(dmg>0)
             {
                 feedbackDegat.SetActive(true);
+                AudioFeedback(feedbackDegatAudio);
             }
             if (blessuresSprites.Count > monstreHp - 1 && blessuresSprites[monstreHp - 1] != null)
             {
@@ -534,6 +534,7 @@ public class MonstreEventManager : MonoBehaviour
             }
             if(!newEvent.personnage.isAlive || !newEvent.personnage.isUnlocked) //Vérifie si le personnage est en vie
             {
+                count--;
                 continue;
             }
             #region Communautés
