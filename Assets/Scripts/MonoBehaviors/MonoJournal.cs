@@ -91,6 +91,7 @@ public class MonoJournal : MonoBehaviour
 
     public void Close()
     {
+        manag.ShowCards();
         animationTransition.GetComponent<Animator>().enabled = true;
         //anim.SetBool("EndJournal", true);
     }

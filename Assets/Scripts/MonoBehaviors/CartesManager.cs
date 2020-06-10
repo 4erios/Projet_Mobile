@@ -295,7 +295,7 @@ public class CartesManager : MonoBehaviour
 
     public void RemoveCard(EmotionMonstre cardToRemove)
     {
-        if (cards.Contains(cardToRemove))
+        if (cards.Contains(cardToRemove) && !removedCard.ContainsKey(cardToRemove))
         {
             removedCard.Add(cardToRemove, 2);
 
@@ -333,6 +333,7 @@ public class CartesManager : MonoBehaviour
         {
             if (cart.emotion == card)
             {
+                Debug.Log("Deblock");
                 cart.blockedCardAnimator.Play("AnimBlocageCarte");
             }
         }

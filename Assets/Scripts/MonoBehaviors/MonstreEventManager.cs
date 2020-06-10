@@ -247,27 +247,6 @@ public class MonstreEventManager : MonoBehaviour
     {
         if (actualEvent == null)
         {
-            #region Mise à jour des cartes retirées
-            List<EmotionMonstre> emotionsToAdd = new List<EmotionMonstre>();
-            List<EmotionMonstre> keys = new List<EmotionMonstre>();
-            foreach (KeyValuePair<EmotionMonstre, int> dict in cardManager.removedCard)
-            {
-                keys.Add(dict.Key);
-            }
-            for (int i = 0; i < cardManager.removedCard.Count; i++)
-            {
-                cardManager.removedCard[keys[i]] -= 1;
-                if (cardManager.removedCard[keys[i]] <= 0)
-                {
-                    emotionsToAdd.Add(keys[i]);
-                }
-            }
-            foreach (EmotionMonstre emot in emotionsToAdd)
-            {
-                cardManager.EndRemoved(emot);
-            }
-            #endregion
-
 
             actualEvent = newEvent;
 
@@ -284,6 +263,26 @@ public class MonstreEventManager : MonoBehaviour
     public void StartEvent() //Lance le nouvel Event (Fonction privée)
     {
         monoDial.ShowAccroche(actualEvent.accroche.texte, actualEvent.dialogue.dialogueDepart, actualEvent.personnage.communaute);
+        #region Mise à jour des cartes retirées
+        List<EmotionMonstre> emotionsToAdd = new List<EmotionMonstre>();
+        List<EmotionMonstre> keys = new List<EmotionMonstre>();
+        foreach (KeyValuePair<EmotionMonstre, int> dict in cardManager.removedCard)
+        {
+            keys.Add(dict.Key);
+        }
+        for (int i = 0; i < cardManager.removedCard.Count; i++)
+        {
+            cardManager.removedCard[keys[i]] -= 1;
+            if (cardManager.removedCard[keys[i]] <= 0)
+            {
+                emotionsToAdd.Add(keys[i]);
+            }
+        }
+        foreach (EmotionMonstre emot in emotionsToAdd)
+        {
+            cardManager.EndRemoved(emot);
+        }
+        #endregion
 
         //Mettre le côté Animation des Cartes
     }
