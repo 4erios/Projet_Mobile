@@ -347,8 +347,11 @@ public class MonstreEventManager : MonoBehaviour
                     q.ValidateQuest();
                 }
             }
+            if(!CartesManager.cards.Contains(actualEvent.carteBonus))
+            {
+                AudioFeedback(bonusCardAudio);
+            }
             cardManager.AddCard(actualEvent.carteBonus);
-            AudioFeedback(bonusCardAudio);
         }
         else if (actualEvent.effetMalus == reponse)
         {
