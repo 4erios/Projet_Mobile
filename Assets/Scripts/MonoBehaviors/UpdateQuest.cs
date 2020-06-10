@@ -40,8 +40,8 @@ public class UpdateQuest : MonoBehaviour
         Debug.Log("Test ??");
         Debug.Log(System.DateTime.Now.Date == new System.DateTime(2020, 6, 8));
 
-        //if (System.DateTime.Now.Day != PlayerPrefs.GetInt("Day"))
-        //{
+        if (System.DateTime.Now.Day != PlayerPrefs.GetInt("Day"))
+        {
             PlayerPrefs.SetInt("Day", System.DateTime.Now.Day);
             if (quetes.Count <= 0 && pool.Count > 0)
             {
@@ -56,11 +56,11 @@ public class UpdateQuest : MonoBehaviour
             questListe = quetes;
             SaveLoadSystem.SaveAllUsedQuest(usedQuest);
             SaveLoadSystem.SaveAllQuest(quetes);
-        //}
-        /*else
+        }
+        else
         {
             questListe = SaveLoadSystem.GetQuestList();
-        }*/
+        }
         if (System.DateTime.Now.Date == new System.DateTime(2020, 6, 8) || System.DateTime.Now.Date == new System.DateTime(2020, 6, 9) || System.DateTime.Now.Date == new System.DateTime(2020, 6, 10) || System.DateTime.Now.Date == new System.DateTime(2020, 6, 11) || System.DateTime.Now.Date == new System.DateTime(2020, 6, 12))
         {
             Debug.Log(questListe.Count);

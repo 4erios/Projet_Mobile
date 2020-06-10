@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: PM_Rencontre
   m_EditorClassIdentifier: 
-  dialogueDepart: 'Finally, I find you. You''re a bit different from what I espected,
+  dialogueDepart: 'Finally, I find you. You''re a bit different from what I expected,
     but it''s alright. '
   reponseInteret: Yes, that's what I was expecting.
   reponseAffection: Hey, calm down. I'm not the one to attack here.

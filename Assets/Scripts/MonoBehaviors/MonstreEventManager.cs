@@ -627,6 +627,7 @@ public class MonstreEventManager : MonoBehaviour
             }
             else if(q.titre == "New Monster")
             {
+                Debug.Log("Quete fin");
                 q.ValidateQuest();
             }
         }
