@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Carnage
   m_EditorClassIdentifier: 
   icone: {fileID: 21300000, guid: 8842ebea26a65704ea45051a176780ce, type: 3}
-  titre: Tranquility
-  texteExplicatif: There's no one left, except you
+  titre: Slaughter
+  texteExplicatif: Kill everybody on your way
