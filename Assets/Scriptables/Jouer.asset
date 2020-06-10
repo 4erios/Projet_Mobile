@@ -15,7 +15,7 @@ MonoBehaviour:
   emotion: 4
   sprite: {fileID: 21300000, guid: 81116602e546425468e0a6de30279fa8, type: 3}
   titre: {fileID: 21300000, guid: d88c16967e03c23409a9256b2ca5da7b, type: 3}
-  animNoire: {fileID: 9100000, guid: 7944e46f337497d41881cee55eaccb32, type: 2}
+  animNoire: {fileID: 9100000, guid: d63b4e9f549d4b04c9f19a7526b51efb, type: 2}
   bonusRole:
   - {fileID: 11400000, guid: 74017e6202a4d42428313d1262045c7f, type: 2}
   - {fileID: 11400000, guid: 83456a35f80fbba46a4250844b3d29fc, type: 2}

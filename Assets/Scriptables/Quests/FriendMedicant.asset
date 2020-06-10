@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74d84b16a9f0ff044b921ee7fd1094ae, type: 3}
   m_Name: FriendMedicant
   m_EditorClassIdentifier: 
-  titre: Friend of Mendicant
-  texteExplicatif: Obtain the good end with mendicant
+  titre: Friend of Beggars
+  texteExplicatif: Obtain the good end with beggars
   killedPerso: {fileID: 0}
   endingWanted: {fileID: 11400000, guid: 6df24435122d18d488503a9008a0e390, type: 2}
   cardWanted: {fileID: 0}
   isValid: 0
   gain: 25
+  validationObj: {fileID: 0}

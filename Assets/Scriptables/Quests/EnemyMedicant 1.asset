@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74d84b16a9f0ff044b921ee7fd1094ae, type: 3}
   m_Name: EnemyMedicant 1
   m_EditorClassIdentifier: 
-  titre: Enemy of Mendicant
-  texteExplicatif: Obtain the bad end with mendicant
+  titre: Enemy of Beggars
+  texteExplicatif: Obtain the bad end with beggars
   killedPerso: {fileID: 0}
   endingWanted: {fileID: 11400000, guid: df969f77c3121a74291a8f8f65b28ed3, type: 2}
   cardWanted: {fileID: 0}
   isValid: 0
   gain: 25
+  validationObj: {fileID: 0}

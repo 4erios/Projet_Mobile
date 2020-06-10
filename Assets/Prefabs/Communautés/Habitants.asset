@@ -22,12 +22,12 @@ MonoBehaviour:
     - {fileID: 11400000, guid: e7b9335b58fdf5d4eaac00639f55520a, type: 2}
     - {fileID: 11400000, guid: 4dbfc0b45950f0045854d1092a1266aa, type: 2}
     journalPhrasesUp:
-    - WORKERS BECAMES SICK AFTER MET THE "MYSTERIOUS CREATURE"
+    - WORKERS BECAME SICK AFTER THEY MET THE "CREATURE"
     journalInterview:
-    - "\u201Cit\u2019s all slimy and sticky, how disgusting!\u201D"
+    - "\u201CIt\u2019s all slimy and sticky, so disgusting!\u201D"
     firstState: 1
   agressivite:
-    valeur: 1.4
+    valeur: 0
     seuilHaut: 3
     seuilBas: 0
     maxBas: -3
@@ -38,11 +38,10 @@ MonoBehaviour:
     journalPhrasesUp:
     - WORKERS STEAL WEAPONS IN FACTORY, TO "PROTECT THEMSELVES"!
     journalInterview:
-    - "\u201CIf I saw that gross stuff again, I\u2019m going to take it out of its
-      skin!\u201D"
+    - "\u201CIf I see that gross thing again, I'll put it six feet under!\u201D"
     firstState: 1
   jalousie:
-    valeur: 1.4
+    valeur: 0
     seuilHaut: 3
     seuilBas: 0
     maxBas: -3
@@ -53,7 +52,7 @@ MonoBehaviour:
     journalPhrasesUp:
     - FOR CITIZENS OF PARIS, LEADERS PREFER A "FOREIGN ANIMAL"
     journalInterview:
-    - "\u201CI envy this strange creature, it is free and nobody comes to annoy it\u201D"
+    - "\u201CI envy this strange creature, it is free and nobody come to annoy it\u201D"
     firstState: 1
   desir:
     valeur: 0
@@ -66,13 +65,13 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 2fdb6433bc0c37442a12c01c4a41b34d, type: 2}
     - {fileID: 11400000, guid: d900e8fa85f1d934fadd8a7dad92f093, type: 2}
     journalPhrasesUp:
-    - SOME PEOPLE MAKE A POSSE TO FIND A "FRIENDLY CREATURE"
+    - SOME PEOPLES CREATED A POSSE TO FIND THE "FRIENDLY CREATURE"
     journalInterview:
-    - "\u201Cit could protect me from dangerous weird guys when I get home late at
+    - "\u201CIt could protect me from dangerous weird guys when I go home late at
       night\u201D"
     firstState: 1
   acceptation:
-    valeur: 1.6
+    valeur: 0
     seuilHaut: 3
     seuilBas: 0
     maxBas: -6
@@ -84,10 +83,10 @@ MonoBehaviour:
     journalPhrasesUp:
     - CHILDRENS WERE FOUND PLAYING WITH A NEW ANIMAL!
     journalInterview:
-    - "\u201Cit makes the city a clean and safe place for ordinary people like us\u201D"
+    - "\u201CIt makes the city a clean and safe place for ordinary people like us\u201D"
     firstState: 1
   pitie:
-    valeur: 1.6
+    valeur: 0
     seuilHaut: 3
     seuilBas: 0
     maxBas: -6
@@ -96,9 +95,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 90911756b58f2d648899f7d6a0cab45c, type: 2}
     - {fileID: 11400000, guid: c68accf089ae3a7428051cb9ff053a9a, type: 2}
     journalPhrasesUp:
-    - THE STARVING CREATURE IS "DEFENSELESS",  SAY A HOUSEWIFE!
+    - THE STARVING CREATURE IS "HARMLESS",  SAID A HOUSEWIFE!
     journalInterview:
-    - "\u201Csometimes I feel the company of this small lonely creature\u201D"
+    - "\u201CSometimes I feel the company of this small and lonely creature\u201D"
     firstState: 1
   goodEnding: {fileID: 11400000, guid: bcb70a9219c152e42956d96becc46dac, type: 2}
   badEnding: {fileID: 11400000, guid: 1ca5ae9b37bcb3f449407ef18dff4d3f, type: 2}

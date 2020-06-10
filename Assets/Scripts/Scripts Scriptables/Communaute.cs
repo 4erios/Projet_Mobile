@@ -7,6 +7,7 @@ public class Representation
 {
     public float valeur, seuilHaut, seuilBas, maxBas, maxHaut;
     public List<Event> eventsPhase2;
+    [TextArea(2, 5)]
     public List<string> journalPhrasesUp, journalInterview;
     public bool firstState = true;
 

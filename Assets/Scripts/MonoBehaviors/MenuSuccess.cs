@@ -46,6 +46,7 @@ public class MenuSuccess : MonoBehaviour
         int j = 0;
 
         int forEnd = unlockedSuccess.Count - 4;
+        Debug.Log(forEnd);
         if(forEnd<0)
         {
             forEnd = 0;
@@ -54,7 +55,8 @@ public class MenuSuccess : MonoBehaviour
         {
             for (int i = unlockedSuccess.Count - 1; i >= forEnd; i--)
             {
-                threeSuccess[j].ShowSuccess(unlockedSuccess[j]);
+                Debug.Log(i);
+                threeSuccess[j].ShowSuccess(unlockedSuccess[i]);
                 j++;
                 if(j>=3)
                 {

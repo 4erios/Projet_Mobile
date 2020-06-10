@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fe92d092829fb644a9e698b1e178b36, type: 3}
-  m_Name: PersonnageMysterieux
+  m_Name: Mysterious Man
   m_EditorClassIdentifier: 
   role: {fileID: 11400000, guid: 4b57380cd4cd6404987627acb8063fea, type: 2}
   communaute: {fileID: 0}
@@ -25,5 +25,5 @@ MonoBehaviour:
   rencontreEvent: {fileID: 11400000, guid: 17469dd5bebb0dd428e2eb7b99cf3096, type: 2}
   dyingSuccess: {fileID: 0}
   cout: 50
-  isUnlocked: 0
+  isUnlocked: 1
   coef: 1

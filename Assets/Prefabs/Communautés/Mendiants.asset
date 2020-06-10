@@ -23,7 +23,7 @@ MonoBehaviour:
     journalPhrasesUp:
     - HOMELESS LEFT SOME DISTRICTS IN PARIS, FEARING THE "SHADOW"
     journalInterview:
-    - "\u201CI saw it creeping around the parc, I fell ill with it around\u201D"
+    - "\u201CI saw it creeping around the parc, I fell sick with it around\u201D"
     firstState: 1
   agressivite:
     valeur: 0
@@ -35,7 +35,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0697c77f5557bf54cb1f77bf37572f2d, type: 2}
     - {fileID: 11400000, guid: 8e5701d379a62a04db118bb360bd77f9, type: 2}
     journalPhrasesUp:
-    - HOMELESS'S DISPARITIONS ARE BECAUSE OF CRAWLING CREATURE!
+    - THE CREATURE CAUSES THE DISPARITION OF MANY BEGGARS!
     journalInterview:
     - "\u201CI saw this thing in the parc, we\u2019re not safe anywhere !\u201D"
     firstState: 1
@@ -49,9 +49,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9ca290caf9777064b82b97c54d2dec95, type: 2}
     - {fileID: 11400000, guid: a7b94d35fc479194cae9da3e9d1d6ae6, type: 2}
     journalPhrasesUp:
-    - POORS BLAME THE INTEREST FOR CREATURE INSTEAD THEY HOMELESS!
+    - POORS BLAME THE CREATURE FOR THEIR CONDITION!
     journalInterview:
-    - "\u201Cit looted all trash in the streets we have been settled for months!\u201D"
+    - "\u201CIt looted all trash in the streets we have been settled for months!\u201D"
     firstState: 1
   desir:
     valeur: 0
@@ -64,9 +64,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 79baef07a94fb694fb5fa8aed847209f, type: 2}
     - {fileID: 11400000, guid: 29c18221b101fde48b115d4177e3c491, type: 2}
     journalPhrasesUp:
-    - FOR VETERANS, "MYSTERIOUS MONSTER" WILL BE THEIR PROTECTOR!
+    - FOR VETERANS, THE "MONSTER" WILL BE THEIR PROTECTOR!
     journalInterview:
-    - "\u201CWe feel safe with it, nobody tries to annoy us, with it we get stronger!\u201D"
+    - "\u201CWe feel safe with it, nobody tries to annoy us. With it we get stronger!\u201D"
     firstState: 1
   acceptation:
     valeur: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
     journalPhrasesUp:
     - HOMELESS DENY EXISTENCE OF A "DANGEROUS CREATURE" IN PARIS
     journalInterview:
-    - "\u201Cit and I share the same food now, we are unified against the society\u201D"
+    - "\u201CIt and I share the same food now, we are unified in those terrible times\u201D"
     firstState: 1
   pitie:
     valeur: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3c1d61ae3c9ad6d4f99b2d6aa7e50ada, type: 2}
     - {fileID: 11400000, guid: 5fd2372b6cc00d1439de4ce04f50c122, type: 2}
     journalPhrasesUp:
-    - DESPITE THE BAN OF OFFICERS, MENDIANTS FEED THE "POOR BEAST"
+    - DESPITE THE WARNING, MENDIANTS FEED THE "POOR BEAST"
     journalInterview:
     - "\u201CThis poor miserable creature was groveling at my feet\u201D"
     firstState: 1
