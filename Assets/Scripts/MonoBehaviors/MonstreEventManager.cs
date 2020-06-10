@@ -353,7 +353,7 @@ public class MonstreEventManager : MonoBehaviour
             }
             cardManager.AddCard(actualEvent.carteBonus);
         }
-        else if (actualEvent.effetMalus == reponse)
+        if (actualEvent.effetMalus == reponse)
         {
             cardManager.RemoveCard(actualEvent.carteMalus);
         }
