@@ -15,14 +15,14 @@ MonoBehaviour:
   dialogueDepart: I heard you've been disturbing the townspeople! People are afraid
     to buy houses around here now! You're making me lose my investments, you freaking
     monster!!
-  reponseInteret: 'You seem.. Sorry? That won''t bring back my money though.. '
+  reponseInteret: You seem... Sorry? That won't bring back my money though.. .
   reponseAffection: 'Hoh? You''re really a special thing, so why do you scare the
     townspeople so much? '
-  reponseCompassion: 'Pfff.. If only it could have done that before I lost so much
-    money.. '
+  reponseCompassion: Pfff... If only it could have done that before I lost so much
+    money.. .
   reponseDegout: 'Don''t touch me! It''s because of you that I''m losing money! '
   reponsePeur: It hurts! It's not you ok? It's not you I won't bother you again I
-    swear! Arggghhhh!
+    swear! Argggghh!
   reponseHaine: 'What? Are you threatening ME? Ahah! It would have been better for
     you to meet an officer I think. I won''t let it pass. '
   reponseBonus: You think it's not your fault? Wait why do I think it's an animal

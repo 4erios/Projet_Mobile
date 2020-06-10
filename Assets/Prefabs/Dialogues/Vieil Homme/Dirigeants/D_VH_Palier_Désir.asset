@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueDepart: "Oh it's you!! I spoke to my wife and she wants a pet. Do you want
     to come to my house? \r\n"
-  reponseInteret: 'You seem pretty interested.. You''re quite smart. '
+  reponseInteret: 'You seem pretty interested... You''re quite smart. '
   reponseAffection: 'That''s cute! My wife will love a pet like you! '
-  reponseCompassion: 'Ohh.. I hope it''s tears of joy! '
+  reponseCompassion: 'Ohhh... I hope it''s tears of joy! '
   reponseDegout: 'No! I won''t take an animal like you, growling at it''s master! '
-  reponsePeur: 'Argh! Why? It hurts! Someone help. Helllpppp! '
+  reponsePeur: 'Argh! Why? It hurts! Someone help. Hellllpp! '
   reponseHaine: So that's how you take my kindness? Whatever, my wife wouldn't have
-    liked you anyway
+    liked you anyway.
   reponseBonus: 
   reponseMalus: 

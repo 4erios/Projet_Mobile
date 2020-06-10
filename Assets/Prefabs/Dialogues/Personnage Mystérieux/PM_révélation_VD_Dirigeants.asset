@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: "PM_r\xE9v\xE9lation_VD_Dirigeants"
   m_EditorClassIdentifier: 
-  dialogueDepart: Do you really enjoy his compagny ? This old businessman is probably
+  dialogueDepart: Do you really enjoy his compagny? This old businessman is probably
     the worst of them.
   reponseInteret: Oh, you can growl. But this man his a lot more monstrous than you.
   reponseAffection: Do you know that he sabotaged a machine to kill workers like
-    my brother, only to sink a compagny and make more money ?
+    my brother, only to sink a compagny and make more money?
   reponseCompassion: You don't seem to know, but how do you think he got all this
-    money ?
-  reponseDegout: Stop it ! I'm not your friend !
+    money?
+  reponseDegout: Stop it! I'm not your friend!
   reponsePeur: Ah. I see that he got his hand on you too.
-  reponseHaine: That's it, run ! But you really think he cares about you ?!
+  reponseHaine: That's it, run! But you really think he cares about you?!
   reponseBonus: 
   reponseMalus: 

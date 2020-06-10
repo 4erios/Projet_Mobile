@@ -16,16 +16,16 @@ MonoBehaviour:
     month, so I think I''ll celebrate it again tomorrow. What a strange animal. A
     new breed maybe? Come here little one, come here. '
   reponseInteret: 'Hey! Don''t be like this. I can give you food. And if you''re
-    a special breed of.. cat? Maybe I''ll give you to  my wife. She didn''t like
+    a special breed of... cat? Maybe I''ll give you to my wife. She didn''t like
     the ones in the pet shop. '
   reponseAffection: 'Hmmm.. It''s pretty affectionate. Next time I''ll show you to
     my wife, maybe she''ll like you. '
-  reponseCompassion: 'What''s this, you''re.. crying? Hmm, your species is pretty
+  reponseCompassion: 'What''s this, you''re... crying? Hmm, your species is pretty
     interesting, here take this treat. I''ll see you next time! '
   reponseDegout: 'Beurk! You''re just a really ugly thing. Don''t get near me I might
     get sick. '
   reponsePeur: 'Argh! What are you doing? Do you even know who I am? Get away from
     me! Do you hear me? GET OFF! '
-  reponseHaine: Tsss! And here I thought I could find a gift for my wife..
+  reponseHaine: Tsss! And here I thought I could find a gift for my wife...
   reponseBonus: 
   reponseMalus: 

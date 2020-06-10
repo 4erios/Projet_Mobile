@@ -15,12 +15,12 @@ MonoBehaviour:
   dialogueDepart: Why did you become like this? You could've been so much better,
     but you decided to act like a beast.
   reponseInteret: So now you try to act nicely?  It's a bit late...
-  reponseAffection: 'Tsk.. Go away, I told you what I had to. '
+  reponseAffection: 'Tsk... Go away, I told you what I had to. '
   reponseCompassion: 'Whatever... You look sad, but if you don''t want help I won''t
     give you any. '
   reponseDegout: 'Don''t get too near! I don''t know your intents. '
-  reponsePeur: 'Ahhhh! Stop! Please Stop!!! '
-  reponseHaine: 'Huh?? What am I hearing? Do you think I''m afraid of you??! '
+  reponsePeur: Ahhh! Stop! Please Stop!!!
+  reponseHaine: 'Huh?? What am I hearing? Do you think I''m afraid of you?! '
   reponseBonus: 'So you''re saying you won''t share any with me too? Looks like we''re
     both alone and irascible. '
   reponseMalus: 

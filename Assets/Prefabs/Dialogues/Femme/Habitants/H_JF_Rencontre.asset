@@ -23,9 +23,9 @@ MonoBehaviour:
     some snacks next time ok? '
   reponseDegout: 'Ugh... Euh I have to go, I''m in a hurry. I''m sure you''re  a
     really nice animal and all... I don''t want to risk getting sick. '
-  reponsePeur: 'Kyaaaa! Good boy. Be nice! Good boy! Please don''t hurt me, I''m
+  reponsePeur: 'Kyyyyaa! Good boy. Be nice! Good boy! Please don''t hurt me, I''m
     going away. '
-  reponseHaine: What's this? You're growling at me? Get out of my way , I already
+  reponseHaine: What's this? You're growling at me? Get out of my way, I already
     have enough on my plate with my jobs and the kids, I'm not gonna be afraid of
     some big stray cat!
   reponseBonus: 

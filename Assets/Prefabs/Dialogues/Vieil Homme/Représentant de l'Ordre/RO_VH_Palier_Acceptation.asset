@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueDepart: "Still searching for friends? Why don't you come with me? I want
     to have some feedbacks on my last poems!\r"
-  reponseInteret: 'Guess you don''t like them then.. Next time maybe? '
+  reponseInteret: 'Guess you don''t like them then... Next time maybe? '
   reponseAffection: 'Nice! Let''s go then! I hope you''ll like them as much as you
     like to cuddle! '
   reponseCompassion: 'Wow! What happened to you? Don''t be sad, this is gonna be

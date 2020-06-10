@@ -15,12 +15,12 @@ MonoBehaviour:
   dialogueDepart: 'Hey! You''re the thing from last time. Leave what you found here,
     it''s mine! '
   reponseInteret: Wow it's pretty smart. It seems like it understand me.
-  reponseAffection: 'Hmmm.. Don''t think I''ll leave you alone because of some cuddles!
+  reponseAffection: 'Hmmm... Don''t think I''ll leave you alone because of some cuddles!
     I''m feeling generous so you can take what you found today. '
   reponseCompassion: I'm not a bully, don't cry. Take what you found, I'll let you
-    off..
-  reponseDegout: 'Tsk.. What kind of mouth is that?! You really are ugly you know? '
-  reponsePeur: Ok I was wrong! It's your food, so please let go !
+    off...
+  reponseDegout: 'Tsk... What kind of mouth is that?! You really are ugly you know? '
+  reponsePeur: Ok I was wrong! It's your food, so please let go!
   reponseHaine: 'Don''t try to look cute, I know the trick! Now leave the food here! '
   reponseBonus: You want to play? If so I'll share some food with you!!
   reponseMalus: 

@@ -12,16 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: "M_VH_Palier_Piti\xE9"
   m_EditorClassIdentifier: 
-  dialogueDepart: 'Are you cold? If you want; I''ll show you a nice place to sleep
+  dialogueDepart: Are you cold? If you want, I'll show you a nice place to sleep
     at. As inhabitants of the streets, we have to help each other out!
-
-    
-
-    
-
-'
-  reponseInteret: 'It''s ok to be warry.. Don''t worry, I won''t hurt you. '
-  reponseAffection: What a nice one.. You should have a home instead of wandering
+  reponseInteret: 'It''s ok to be warry... Don''t worry, I won''t hurt you. '
+  reponseAffection: What a nice one... You should have a home instead of wandering
     the streets like this...
   reponseCompassion: 'Being alone is hard right? Come with me, I''ll keep you compagny. '
   reponseDegout: 'Are you trying to use me?? Out of my way, you''re disgusting. '

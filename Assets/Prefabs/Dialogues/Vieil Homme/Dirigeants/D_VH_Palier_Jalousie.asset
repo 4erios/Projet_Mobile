@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueDepart: "How did you get so popular huh? I don't understand how people
     can appreciate a monster like you, you're disgusting. \r"
-  reponseInteret: Well.. Looks like you won't let me know.
+  reponseInteret: Well... Looks like you won't let me know.
   reponseAffection: 'Ah! I like animals because at least they are honest. '
-  reponseCompassion: Oh so that's why? I'll never understand poor people..
+  reponseCompassion: Oh so that's why? I'll never understand poor people...
   reponseDegout: Can you stop drooling or crying or whatever you're doing? It's disgusting!
   reponsePeur: 'Don''t get near! I don''t know what kind of disease you bear! '
   reponseHaine: 'It hurts! You cursed beast! I''ll destroy you! '

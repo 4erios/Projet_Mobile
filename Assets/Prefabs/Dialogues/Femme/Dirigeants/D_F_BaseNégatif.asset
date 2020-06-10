@@ -15,11 +15,11 @@ MonoBehaviour:
   dialogueDepart: 'I have to hurry back! He''s gonna be back home soon. Get out of
     my way! '
   reponseInteret: 'It''s pretty smart. Running away when I ask it to. '
-  reponseAffection: 'Ooohhh sorry I made you cry, but I have to hurry! '
+  reponseAffection: 'Oooohh sorry I made you cry, but I have to hurry! '
   reponseCompassion: Yes you're cute. I'll get you something next time, I'm in a
     hurry today.
   reponseDegout: 'Out of my way! I can''t get dirty because of you! '
-  reponsePeur: 'Kyyyyaaa! It bit me! Officer! '
+  reponsePeur: 'Kyyyyaa! It bit me! Officer! '
   reponseHaine: 'Out of my way! I don''t have time for this! '
   reponseBonus: Ignoring me?! At least you won't bother me!
   reponseMalus: 
