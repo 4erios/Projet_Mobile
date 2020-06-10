@@ -22,4 +22,4 @@ MonoBehaviour:
   reponsePeur: 'Argh! It hurts! Someone please help me! '
   reponseHaine: 'Oooohh? You wanna do this? Let''s fight then! '
   reponseBonus: If you don't care then you shouldn't stay around here...
-  reponseMalus: 
+  reponseMalus: NULL

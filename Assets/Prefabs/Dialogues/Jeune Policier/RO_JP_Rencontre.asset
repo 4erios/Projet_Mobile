@@ -23,5 +23,5 @@ MonoBehaviour:
     pretty scary like this... '
   reponsePeur: 'Argh! What are you doing?! I''m gonna shoot you! '
   reponseHaine: 'Wow! Don''t try me! I''m armed! '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

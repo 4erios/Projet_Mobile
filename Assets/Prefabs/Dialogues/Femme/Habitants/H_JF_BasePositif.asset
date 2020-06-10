@@ -28,5 +28,5 @@ MonoBehaviour:
   reponseHaine: And here I thought I could show you to a scientist and get some easy
     money. Or at least get my kids a pet since I can't afford one... Next time I'll
     catch you!!
-  reponseBonus: 
+  reponseBonus: NULL
   reponseMalus: 'Hey why are you ignoring me? Was I that mean to you? '

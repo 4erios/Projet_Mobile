@@ -22,4 +22,4 @@ MonoBehaviour:
   reponseHaine: 'Huh?? What am I hearing? Do you think I''m afraid of you?! '
   reponseBonus: 'So you''re saying you won''t share any with me too? Looks like we''re
     both alone and irascible. '
-  reponseMalus: 
+  reponseMalus: NULL

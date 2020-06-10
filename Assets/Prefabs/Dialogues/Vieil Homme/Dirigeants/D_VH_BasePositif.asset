@@ -27,5 +27,5 @@ MonoBehaviour:
   reponsePeur: 'Argh! What are you doing? Do you even know who I am? Get away from
     me! Do you hear me? GET OFF! '
   reponseHaine: Tsss! And here I thought I could find a gift for my wife...
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

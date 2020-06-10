@@ -24,4 +24,4 @@ MonoBehaviour:
     to be taken care of, so I'll show them what happens when they don't do their
     jobs!
   reponseBonus: 'Are you angry? That''s cute! '
-  reponseMalus: 
+  reponseMalus: NULL

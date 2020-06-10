@@ -23,5 +23,5 @@ MonoBehaviour:
   reponseDegout: 'Don''t mind... I don''t think anyone would like to have you. '
   reponsePeur: 'Argh! What did I do? You really don''t want to go to a refuge? '
   reponseHaine: 'And here I was being nice... Freaking animal. '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

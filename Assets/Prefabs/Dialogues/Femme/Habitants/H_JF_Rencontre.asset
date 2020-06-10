@@ -28,5 +28,5 @@ MonoBehaviour:
   reponseHaine: What's this? You're growling at me? Get out of my way, I already
     have enough on my plate with my jobs and the kids, I'm not gonna be afraid of
     some big stray cat!
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

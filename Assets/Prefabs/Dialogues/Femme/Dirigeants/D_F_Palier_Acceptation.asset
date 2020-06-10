@@ -23,5 +23,5 @@ MonoBehaviour:
   reponseDegout: I don't really need any cuddles...
   reponsePeur: 'Ouch! So you think I''m wrong?! '
   reponseHaine: 'I see, you don''t care. Just like my husband... '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

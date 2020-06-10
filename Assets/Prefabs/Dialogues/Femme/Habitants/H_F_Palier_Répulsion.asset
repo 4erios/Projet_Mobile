@@ -22,5 +22,5 @@ MonoBehaviour:
   reponseDegout: I told you not to touch me! I can't get sick!
   reponsePeur: Kyyyyaa! It hurts! Officer!
   reponseHaine: 'Oh no you don''t! Looks like I have to discipline you! '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

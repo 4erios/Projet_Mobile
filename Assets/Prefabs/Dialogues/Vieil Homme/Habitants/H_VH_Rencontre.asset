@@ -22,5 +22,5 @@ MonoBehaviour:
     bad, please don''t get near... '
   reponsePeur: Hey! Stop, you're hurting me!
   reponseHaine: Ahhh... Why did it run? And I felt sorry for it...
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

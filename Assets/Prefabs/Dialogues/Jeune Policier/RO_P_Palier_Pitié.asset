@@ -20,5 +20,5 @@ MonoBehaviour:
   reponsePeur: Ouch! You're attacking a police officer? I'll show you what happen
     then!
   reponseHaine: 'Don''t try this. As an officer I''ll have to retaliate if you attack. '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

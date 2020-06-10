@@ -24,4 +24,4 @@ MonoBehaviour:
   reponsePeur: 'What is this? Don''t come near or I''ll shoot! '
   reponseHaine: 'Go away! If you don''t I''ll shoot you! '
   reponseBonus: Ignoring me? It would be smarter for you to run away!
-  reponseMalus: 
+  reponseMalus: NULL

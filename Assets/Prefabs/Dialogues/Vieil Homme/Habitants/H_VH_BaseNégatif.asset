@@ -20,4 +20,4 @@ MonoBehaviour:
   reponsePeur: 'Don''t get near me with you claw like this. I, I don''t like it! '
   reponseHaine: 'Hey! You''re hurting me! Let go! '
   reponseBonus: 'Oh you''re angry? The way you show it is pretty funny! '
-  reponseMalus: 
+  reponseMalus: NULL

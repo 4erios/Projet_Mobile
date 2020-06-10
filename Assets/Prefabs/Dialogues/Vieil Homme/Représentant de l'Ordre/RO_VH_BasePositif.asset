@@ -21,5 +21,5 @@ MonoBehaviour:
   reponsePeur: 'Argh! Stop! I''m, I''m an officer! '
   reponseHaine: And here you go away...  I better make sure you don't come back here
     next time then...
-  reponseBonus: 
+  reponseBonus: NULL
   reponseMalus: 'Ignoring me? To think I was gentle with you! '

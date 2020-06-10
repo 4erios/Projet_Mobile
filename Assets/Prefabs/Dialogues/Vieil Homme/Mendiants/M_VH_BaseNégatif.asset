@@ -26,4 +26,4 @@ MonoBehaviour:
     Now get out of here! '
   reponseBonus: Ohoh! Are you angry at me? Well since you're funny I'll let you have
     this place tonight!
-  reponseMalus: 
+  reponseMalus: NULL

@@ -22,5 +22,5 @@ MonoBehaviour:
     when I am back. '
   reponsePeur: 'It hurts! Why are you doing this? I just wanted to be nice to you! '
   reponseHaine: I guess I was expecting too much.
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

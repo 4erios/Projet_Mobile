@@ -21,4 +21,4 @@ MonoBehaviour:
   reponsePeur: Argh! It hurts! You're going to the cage!
   reponseHaine: 'Growling at an officer? You chose the wrong target! '
   reponseBonus: Ignoring me? It would be smarter for you to run away!
-  reponseMalus: 
+  reponseMalus: NULL

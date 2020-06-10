@@ -22,5 +22,5 @@ MonoBehaviour:
   reponseDegout: 'Trying to coax me? That won''t work get out! '
   reponsePeur: 'How many eyes do you have? It''s scary. '
   reponseHaine: Did you just try to bite me? You're in for a world of pain!
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

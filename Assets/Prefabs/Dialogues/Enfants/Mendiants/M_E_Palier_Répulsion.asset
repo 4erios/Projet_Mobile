@@ -22,5 +22,5 @@ MonoBehaviour:
   reponseDegout: 
   reponsePeur: 
   reponseHaine: 
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

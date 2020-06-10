@@ -24,5 +24,5 @@ MonoBehaviour:
   reponsePeur: Kyaaaa! Someone help! Officer !
   reponseHaine: 'What are you growling at? Scram! I have look for that idiot husband
     of mine! '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

@@ -23,5 +23,5 @@ MonoBehaviour:
   reponseDegout: Thinking about it, it's a bad idea. I don't want you to hurt her!
   reponsePeur: Ouch! It hurts! I understand, you don't wanna, it's ok!
   reponseHaine: 'And here I though I could count on you... '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

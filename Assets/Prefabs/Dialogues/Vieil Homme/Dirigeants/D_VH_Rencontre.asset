@@ -21,5 +21,5 @@ MonoBehaviour:
   reponseDegout: 'Hey! Don''t drool on me! Those clothes are really expensive! '
   reponsePeur: Don't touch me! You seem pretty dangerous when you're up close !
   reponseHaine: "Arghhh! You, how dare you bite me! \n"
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

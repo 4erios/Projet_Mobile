@@ -23,5 +23,5 @@ MonoBehaviour:
   reponsePeur: 'What''s this. Don''t, don''t touche me! I don''t what kind of sickness
     you could give me and I may not be able to pay my personal doctor next month! '
   reponseHaine: 'Argh! What the hell?? You''re hurting me! Get off you damned thing! '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

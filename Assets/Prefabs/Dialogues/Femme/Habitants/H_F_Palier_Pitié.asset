@@ -23,5 +23,5 @@ MonoBehaviour:
   reponsePeur: Kyyyyaa! It hurts! Officer!
   reponseHaine: That's not a way to treat someone trying to help you! Truly just
     a beast that should be in captivity!
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

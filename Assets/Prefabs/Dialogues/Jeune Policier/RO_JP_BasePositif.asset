@@ -25,4 +25,4 @@ MonoBehaviour:
   reponseBonus: 'Ignoring me? It would be smarter for you to run away!
 
 '
-  reponseMalus: 
+  reponseMalus: NULL

@@ -20,5 +20,5 @@ MonoBehaviour:
   reponseDegout: 'Euh please, don''t do this with the others, they will fear you. '
   reponsePeur: Ahhh! It hurts! Why did you do this??
   reponseHaine: And I though we were friends!
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

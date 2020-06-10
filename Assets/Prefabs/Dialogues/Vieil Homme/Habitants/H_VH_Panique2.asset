@@ -21,5 +21,5 @@ MonoBehaviour:
   reponseDegout: Are you trying to attack me? I'll have to chase you by force then!
   reponsePeur: Ouch! It hurts! Please just go away!
   reponseHaine: What is this? Are you threatening me?? You're in for a world of pain!
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

@@ -20,4 +20,4 @@ MonoBehaviour:
   reponsePeur: 'Argh! It hurts! Are you trying to eat me? I won''t let you! '
   reponseHaine: 'Growling at an officer? You chose the wrong target! '
   reponseBonus: Ignoring me? It would be smarter for you to run away!
-  reponseMalus: 
+  reponseMalus: NULL

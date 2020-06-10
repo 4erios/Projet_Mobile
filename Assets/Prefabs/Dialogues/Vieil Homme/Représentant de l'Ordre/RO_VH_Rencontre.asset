@@ -24,5 +24,5 @@ MonoBehaviour:
   reponsePeur: 'What are you?! Don''t touch me with those things! '
   reponseHaine: 'Hey! I''m a police officer, do you think you can just bite me like
     this?! '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

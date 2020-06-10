@@ -23,5 +23,5 @@ MonoBehaviour:
   reponseDegout: Oh I see... So that's why no one gave you any food...
   reponsePeur: 'Ah! Don''t bite me! It hurts you cursed beast! '
   reponseHaine: So that's you how treat kindness... You truly are just a beast...
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

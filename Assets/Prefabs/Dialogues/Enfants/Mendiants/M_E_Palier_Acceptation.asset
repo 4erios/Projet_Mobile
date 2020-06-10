@@ -22,5 +22,5 @@ MonoBehaviour:
   reponsePeur: Hey that hurts! Why did you bite me?! I won't be your friend if you
     attack people like this!
   reponseHaine: So that's what you take as friendship... You're truly hateful!
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

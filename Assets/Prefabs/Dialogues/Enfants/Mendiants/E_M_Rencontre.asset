@@ -22,5 +22,5 @@ MonoBehaviour:
   reponseDegout: 'Are those tentacles? You''re really ugly! '
   reponsePeur: "A\xEFe! Let go! I won't bother you again! "
   reponseHaine: 'Looks like even animals wants me to be alone now! '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

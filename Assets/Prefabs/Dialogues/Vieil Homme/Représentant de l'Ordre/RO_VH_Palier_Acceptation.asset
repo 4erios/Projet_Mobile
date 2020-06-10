@@ -23,5 +23,5 @@ MonoBehaviour:
   reponsePeur: 'Hey! Why did you try to bite me? What did I do? '
   reponseHaine: 'Why are you acting like this? I just wanted some compagny for tonight
     patrol... '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

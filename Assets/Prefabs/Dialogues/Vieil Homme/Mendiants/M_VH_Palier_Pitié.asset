@@ -21,5 +21,5 @@ MonoBehaviour:
   reponseDegout: 'Are you trying to use me?? Out of my way, you''re disgusting. '
   reponsePeur: 'It hurts! Please let me go! '
   reponseHaine: 'I try to help you and that''s how you react? Go away then! '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

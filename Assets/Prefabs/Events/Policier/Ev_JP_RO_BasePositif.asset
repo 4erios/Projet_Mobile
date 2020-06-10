@@ -16,7 +16,7 @@ MonoBehaviour:
   accroche: {fileID: 11400000, guid: 67cbb1e3f4f68564786ac16226b86f69, type: 2}
   dialogue: {fileID: 11400000, guid: 3906d39c41c50ba41b31ab65cb477aa8, type: 2}
   lieux: 3
-  effetBonus: {fileID: 11400000, guid: 9b1123b42eb05304985469ca4a08d7be, type: 2}
+  effetBonus: {fileID: 0}
   carteBonus: {fileID: 0}
   effetMalus: {fileID: 11400000, guid: a599995b897f0f842b51181d77d3060d, type: 2}
   carteMalus: {fileID: 11400000, guid: a599995b897f0f842b51181d77d3060d, type: 2}

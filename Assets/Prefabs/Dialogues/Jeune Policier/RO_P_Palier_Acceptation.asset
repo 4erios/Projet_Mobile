@@ -22,5 +22,5 @@ MonoBehaviour:
   reponseDegout: 'Hey! I just told you not to cause problems! '
   reponsePeur: 'Ouch! Did you bite me? I''m gonna have to put you in cage! '
   reponseHaine: That's it, don't care about me! Ungrateful beast!
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

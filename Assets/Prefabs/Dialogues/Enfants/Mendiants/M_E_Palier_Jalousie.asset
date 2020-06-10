@@ -22,5 +22,5 @@ MonoBehaviour:
   reponsePeur: Ouch! It hurts! I'll leave you alone but never do this again!
   reponseHaine: You were trying to go with rich people because it was more convenient
     but now that I found you want some affection? Just go away, I hate you!
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

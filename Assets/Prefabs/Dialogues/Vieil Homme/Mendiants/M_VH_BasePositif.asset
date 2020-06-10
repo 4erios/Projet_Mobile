@@ -26,5 +26,5 @@ MonoBehaviour:
 '
   reponseHaine: Aaaahh... And here I thought you accepted me... Seems like you only
     needed me because I gave you food...
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

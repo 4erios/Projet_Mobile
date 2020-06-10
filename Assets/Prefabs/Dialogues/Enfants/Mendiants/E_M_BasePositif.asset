@@ -21,5 +21,5 @@ MonoBehaviour:
   reponseDegout: 'Those are my only clothes, don''t drool on them! '
   reponsePeur: Aaaahh! It hurts! Leave me alone!
   reponseHaine: Hmpf! At least leave the food if you're going to run away...
-  reponseBonus: 
+  reponseBonus: NULL
   reponseMalus: You're ignoring me? You're mean!

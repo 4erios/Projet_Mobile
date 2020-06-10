@@ -22,5 +22,5 @@ MonoBehaviour:
   reponsePeur: Arghhh! Someone stop it, please!
   reponseHaine: You're crying now?? Do you think that will help you? Get out of my
     sight before I hurt you!
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

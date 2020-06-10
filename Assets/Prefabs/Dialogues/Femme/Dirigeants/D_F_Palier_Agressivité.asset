@@ -24,5 +24,5 @@ MonoBehaviour:
   reponsePeur: 'Kyyyyaa! Help! Someone help! '
   reponseHaine: I have a date, don't make me repeat myself and get out of the way!
     Else I'll have to tame you a bit!
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

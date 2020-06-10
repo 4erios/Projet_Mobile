@@ -22,5 +22,5 @@ MonoBehaviour:
     about my proposal.
   reponsePeur: Kya! Why did you bite me?! I didn't have any ill intent at all!
   reponseHaine: And there you go! So being nice won't work with you...
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

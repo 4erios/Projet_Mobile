@@ -18,7 +18,7 @@ MonoBehaviour:
   lieux: 1
   effetBonus: {fileID: 11400000, guid: 5a4e14a6f092ed54e96f9562b80b1d4c, type: 2}
   carteBonus: {fileID: 11400000, guid: a599995b897f0f842b51181d77d3060d, type: 2}
-  effetMalus: {fileID: 11400000, guid: 9b1123b42eb05304985469ca4a08d7be, type: 2}
+  effetMalus: {fileID: 0}
   carteMalus: {fileID: 0}
   preset: 0
   killPersonnage: 6

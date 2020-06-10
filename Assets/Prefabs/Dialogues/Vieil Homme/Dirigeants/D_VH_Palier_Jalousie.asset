@@ -20,5 +20,5 @@ MonoBehaviour:
   reponseDegout: Can you stop drooling or crying or whatever you're doing? It's disgusting!
   reponsePeur: 'Don''t get near! I don''t know what kind of disease you bear! '
   reponseHaine: 'It hurts! You cursed beast! I''ll destroy you! '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

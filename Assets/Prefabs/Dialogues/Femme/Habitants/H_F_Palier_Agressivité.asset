@@ -22,5 +22,5 @@ MonoBehaviour:
   reponsePeur: 'Kyyyyaa! Someone save me! Please, I don''t want to leave my children
     alone! '
   reponseHaine: 'Oh no you don''t! Looks like I have to discipline you! '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

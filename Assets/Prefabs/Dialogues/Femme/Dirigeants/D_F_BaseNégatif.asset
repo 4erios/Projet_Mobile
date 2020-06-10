@@ -22,4 +22,4 @@ MonoBehaviour:
   reponsePeur: 'Kyyyyaa! It bit me! Officer! '
   reponseHaine: 'Out of my way! I don''t have time for this! '
   reponseBonus: Ignoring me?! At least you won't bother me!
-  reponseMalus: 
+  reponseMalus: NULL

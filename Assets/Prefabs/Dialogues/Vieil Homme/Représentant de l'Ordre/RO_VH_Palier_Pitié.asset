@@ -24,5 +24,5 @@ MonoBehaviour:
     will like you if you do this...
   reponsePeur: 'Hey! Stop! You''re hurting me! '
   reponseHaine: Don't mind me then! It's not like I was trying to be nice to you...
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

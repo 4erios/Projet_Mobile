@@ -87,6 +87,7 @@ public class MonstreEventManager : MonoBehaviour
 
         foreach(string nom in persoDebloques)
         {
+            Debug.Log("Unlock");
             foreach(Personnage perso in allPersos)
             {
                 if(nom == perso.name)
@@ -171,10 +172,13 @@ public class MonstreEventManager : MonoBehaviour
         for(int i = start; i < 5; i++) //Voir pour rajouter les Règles de Choix des Events en début de Partie
         {
             Event newEvent = eventsPool[Random.Range(0, eventsPool.Count)];
-            while (futurEvents.Contains(newEvent) || persoEventFuturs.Contains(newEvent.personnage) && !newEvent.personnage.isUnlocked)
+            while (futurEvents.Contains(newEvent) || persoEventFuturs.Contains(newEvent.personnage) || !newEvent.personnage.isUnlocked)
             {
+                Debug.Log(newEvent.personnage.isUnlocked);
                 newEvent = eventsPool[Random.Range(0, eventsPool.Count)];
+                Debug.Log(newEvent.personnage);
             }
+            Debug.Log(newEvent.personnage);
             futurEvents.Add(newEvent);
         }
 
@@ -295,13 +299,13 @@ public class MonstreEventManager : MonoBehaviour
         PresetRole rolePreset = actualEvent.personnage.role.presets[actualEvent.preset];
         int damage = 0;
         Reactions emot = rolePreset.GetReact(reponse.emotion, out damage);
-        if (reponse.bonusRole.Contains(actualEvent.personnage.role)) //Pour la réponse Bonus
+        if (reponse.bonusRole.Contains(actualEvent.personnage.role) && actualEvent.dialogue.reponseBonus != "NULL") //Pour la réponse Bonus
         {
             ChangeSpritePerso(emot,true);
             monoDial.ShowDialogue(actualEvent.dialogue.reponseBonus, true, actualEvent.personnage.communaute);
             ChangeScoreCommu(actualEvent.personnage.communaute, emot, 1);
         }
-        else if (reponse.malusRole.Contains(actualEvent.personnage.role)) //Pour la réponse Malus
+        else if (reponse.malusRole.Contains(actualEvent.personnage.role) && actualEvent.dialogue.reponseMalus != "NULL") //Pour la réponse Malus
         {
             ChangeSpritePerso(emot,true);
             monoDial.ShowDialogue(actualEvent.dialogue.reponseMalus, true, actualEvent.personnage.communaute);

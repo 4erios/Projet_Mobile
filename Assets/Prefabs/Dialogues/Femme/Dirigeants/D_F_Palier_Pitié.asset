@@ -21,5 +21,5 @@ MonoBehaviour:
   reponseDegout: 'Hey! You''re drooling on my coat, it''s disgusting! '
   reponsePeur: 'Kyyaaa! Officer! A beast is trying to attack me! '
   reponseHaine: 'So even animals don''t care about me now... '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

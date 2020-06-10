@@ -22,5 +22,5 @@ MonoBehaviour:
   reponseDegout: Hey! What are you trying to do? You're going into the cage!
   reponsePeur: It hurts! I'm gonna have to use force now!
   reponseHaine: 'Hey! I told you what would happen if you did this! '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

@@ -22,5 +22,5 @@ MonoBehaviour:
   reponseDegout: 'It''s slippery? What are you made of? It''s strange! '
   reponsePeur: Ouch! It hurts! I'll leave you alone but never do this again!
   reponseHaine: 'And here I thought we could make a great team... Just go away then! '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

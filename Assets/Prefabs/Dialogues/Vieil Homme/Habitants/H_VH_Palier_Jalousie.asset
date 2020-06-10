@@ -22,5 +22,5 @@ MonoBehaviour:
   reponsePeur: Wait what are you trying to do? Don't get near, you're scary!
   reponseHaine: Argh! I told you to leave me alone, why did you bite me?? I'll show
     you what happen to bad cats!
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

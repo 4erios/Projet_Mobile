@@ -21,4 +21,4 @@ MonoBehaviour:
   reponsePeur: Eh! Why are you biting me?! Do you have rage?!
   reponseHaine: 'Don''t run away! Did I do something wrong? '
   reponseBonus: 'You''re ignoring me? Why? I did something wrong? '
-  reponseMalus: 
+  reponseMalus: NULL

@@ -20,5 +20,5 @@ MonoBehaviour:
   reponseDegout: 'Don''t try this. You disgust me. '
   reponsePeur: What are you trying to do? Don't get near!
   reponseHaine: 'Argh! You bit me?? '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

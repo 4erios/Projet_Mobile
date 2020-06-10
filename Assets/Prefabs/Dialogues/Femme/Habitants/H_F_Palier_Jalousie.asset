@@ -22,5 +22,5 @@ MonoBehaviour:
     me!
   reponseHaine: 'Don''t try to intimidate me! It''ll take you more than this to do
     so! '
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

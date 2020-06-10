@@ -22,5 +22,5 @@ MonoBehaviour:
     there. '
   reponsePeur: Argh! Why are you doing this?
   reponseHaine: So you hate me... I see...
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

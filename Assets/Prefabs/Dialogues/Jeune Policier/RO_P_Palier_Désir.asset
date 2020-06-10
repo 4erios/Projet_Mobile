@@ -22,5 +22,5 @@ MonoBehaviour:
   reponsePeur: 'Ouch! Did you bite me? I''m gonna have to put you in cage! '
   reponseHaine: So you don't care? I've always done it alone, you wouldn't change
     anything anyway!
-  reponseBonus: 
-  reponseMalus: 
+  reponseBonus: NULL
+  reponseMalus: NULL

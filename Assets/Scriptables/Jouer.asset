@@ -18,4 +18,7 @@ MonoBehaviour:
   animNoire: {fileID: 9100000, guid: 7944e46f337497d41881cee55eaccb32, type: 2}
   bonusRole:
   - {fileID: 11400000, guid: 74017e6202a4d42428313d1262045c7f, type: 2}
-  malusRole: []
+  - {fileID: 11400000, guid: 83456a35f80fbba46a4250844b3d29fc, type: 2}
+  malusRole:
+  - {fileID: 11400000, guid: fb1c96b7b8c4aec43a83e231b73e2336, type: 2}
+  - {fileID: 11400000, guid: 2788d1aae58a362438c6441d96ca6ed8, type: 2}
