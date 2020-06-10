@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueDepart: "Oh it's you! Are you lonely? If you want to, we can go to my brother's
     home, I'm sure he'll be happy to meet you!\r"
-  reponseInteret: Wow.. You're truly special, please don't do that before the kids,
+  reponseInteret: Wow... You're truly special, please don't do that before the kids,
     you'll scare them.
   reponseAffection: 'Looks like you want to, so let''s go! '
   reponseCompassion: 'I know, it''s nice when the people around you are kind right? '
   reponseDegout: 'Wow, calm down! You have way too many teeth for me to bring you
     there. '
   reponsePeur: Argh! Why are you doing this?
-  reponseHaine: So you hate me... I see..
+  reponseHaine: So you hate me... I see...
   reponseBonus: 
   reponseMalus: 

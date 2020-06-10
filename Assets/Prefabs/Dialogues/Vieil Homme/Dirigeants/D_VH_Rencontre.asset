@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: D_VH_Rencontre
   m_EditorClassIdentifier: 
-  dialogueDepart: 'I shouldn''t drink this much.. What''s a wild animal doing here,
+  dialogueDepart: 'I shouldn''t drink this much... What''s a wild animal doing here,
     I remember filling a complaint to the mayor last time! '
   reponseInteret: 'Looks like it got scared. I seemed pretty strange. '
   reponseAffection: 'Hey hey... Leave this old man alone, I won''t hurt you. '
-  reponseCompassion: 'Guess you''re sad too.. Well, I''m feeling generous so I won''t
+  reponseCompassion: 'Guess you''re sad too... Well, I''m feeling generous so I won''t
     fill another complaint. '
   reponseDegout: 'Hey! Don''t drool on me! Those clothes are really expensive! '
   reponsePeur: Don't touch me! You seem pretty dangerous when you're up close !
-  reponseHaine: "Arghh! You, how dare you bite me! \n"
+  reponseHaine: "Arghhh! You, how dare you bite me! \n"
   reponseBonus: 
   reponseMalus: 

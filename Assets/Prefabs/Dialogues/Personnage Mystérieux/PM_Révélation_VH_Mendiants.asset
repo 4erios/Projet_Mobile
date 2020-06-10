@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: "PM_R\xE9v\xE9lation_VH_Mendiants"
   m_EditorClassIdentifier: 
-  dialogueDepart: You really befriend those guys ? This old man maybe seems like
-    an ordinary worker, but I can promise he's not.
+  dialogueDepart: You really befriend those guys? This old man maybe seems like an
+    ordinary worker, but I can promise he's not.
   reponseInteret: If you think I'm the ennemy, you should know that he killed several
     people while working.
   reponseAffection: Come on. Don't tell me you don't know that he killed his mother
-    while working ? An that she wasn't the only victim.
+    while working? An that she wasn't the only victim.
   reponseCompassion: As I though, you're not that naive. But do you know how people
-    he killed with this work accident ?
-  reponseDegout: Why ? Why are you like this ?
-  reponsePeur: I'm not the one you should attack ! He did things you wouldn't even
-    see in your nightmare !
-  reponseHaine: I see you don't want to here the truth ! You're too afraid !
+    he killed with this work accident?
+  reponseDegout: Why? Why are you like this?
+  reponsePeur: I'm not the one you should attack! He did things you wouldn't even
+    see in your nightmare!
+  reponseHaine: I see you don't want to here the truth! You're too afraid!
   reponseBonus: 
   reponseMalus: 

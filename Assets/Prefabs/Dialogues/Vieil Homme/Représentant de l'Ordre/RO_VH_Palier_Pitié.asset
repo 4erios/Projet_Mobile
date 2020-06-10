@@ -16,13 +16,13 @@ MonoBehaviour:
     If so I'll keep you compagny for a bit. \r"
   reponseInteret: Hey Im still a police officer you know? Don't go around attacking
     people like me, you'll get into trouble...
-  reponseAffection: 'You want to cuddle.. That''s nice! Wanna hear some poetry? I
-    wrote it myself! '
-  reponseCompassion: 'You really were lonely.. You shouldn''t go around here, it''s
+  reponseAffection: 'You want to cuddle... That''s nice! Wanna hear some poetry?
+    I wrote it myself! '
+  reponseCompassion: 'You really were lonely... You shouldn''t go around here, it''s
     not really a nice place for you. '
-  reponseDegout: 'Hey it''s scary when you do this.. You really should stop, no one
-    will like you if you do this.. '
+  reponseDegout: Hey it's scary when you do this... You really should stop, no one
+    will like you if you do this...
   reponsePeur: 'Hey! Stop! You''re hurting me! '
-  reponseHaine: 'Don''t mind me then! It''s not like I was trying to be nice to you.. '
+  reponseHaine: Don't mind me then! It's not like I was trying to be nice to you...
   reponseBonus: 
   reponseMalus: 

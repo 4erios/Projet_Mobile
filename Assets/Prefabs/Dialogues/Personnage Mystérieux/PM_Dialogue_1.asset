@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: PM_Dialogue_1
   m_EditorClassIdentifier: 
-  dialogueDepart: So, how are you doing tonight ?
-  reponseInteret: They're not very kind with you, are they ?
+  dialogueDepart: So, how are you doing tonight?
+  reponseInteret: They're not very kind with you, are they?
   reponseAffection: This one. That's the good attitude.
-  reponseCompassion: Still afraid ? I hope this will change over time.
-  reponseDegout: What the... Why are you doing this ?
-  reponsePeur: Oh come on, don't touch me !
-  reponseHaine: Really ? You're pathetic.
+  reponseCompassion: Still afraid? I hope this will change over time.
+  reponseDegout: What the... Why are you doing this?
+  reponsePeur: Oh come on, don't touch me!
+  reponseHaine: Really? You're pathetic.
   reponseBonus: 
   reponseMalus: 

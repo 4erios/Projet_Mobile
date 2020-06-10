@@ -20,10 +20,10 @@ MonoBehaviour:
     happen in the town.
   reponseCompassion: You know what, that's ok. Maybe you didn't know that there were
     no justice in this town.
-  reponseDegout: Don't come near me ! Why did I thougt you could understand.
-  reponsePeur: Ah ! You really think you could caught me ? I was a fool to believe
+  reponseDegout: Don't come near me! Why did I thougt you could understand.
+  reponsePeur: Ah! You really think you could caught me? I was a fool to believe
     you could help me.
-  reponseHaine: You're going to warn the others ? Do you really think they can find
-    me ?
+  reponseHaine: You're going to warn the others? Do you really think they can find
+    me?
   reponseBonus: 
   reponseMalus: 

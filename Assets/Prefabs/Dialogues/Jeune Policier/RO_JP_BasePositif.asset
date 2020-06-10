@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: RO_JP_BasePositif
   m_EditorClassIdentifier: 
-  dialogueDepart: 'The wild cats again... I''ll have to ask my wife if I can give
-    them our waste next time, I don''t want to end up shooting them for nothing.. '
-  reponseInteret: Ah! I made it flee..
-  reponseAffection: Hmmm? What happened to you? You look ill.. I'm sorry I don't
+  dialogueDepart: The wild cats again... I'll have to ask my wife if I can give them
+    our waste next time, I don't want to end up shooting them for nothing...
+  reponseInteret: Ah! I made it flee...
+  reponseAffection: Hmmm? What happened to you? You look ill... I'm sorry I don't
     have anything for you.
-  reponseCompassion: 'Oooh.. I don''t have anything for you to eat, but next time
+  reponseCompassion: 'Oooohh... I don''t have anything for you to eat, but next time
     I''ll bring you something ok? '
   reponseDegout: 'Beurk!  It looks sick. I shouldn''t get near. '
   reponsePeur: 'Urgh! I''m, I''m a policeman. I''ll shoot you! '

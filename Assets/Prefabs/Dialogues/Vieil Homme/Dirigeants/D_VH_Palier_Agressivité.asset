@@ -12,17 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: "D_VH_Palier_Agressivit\xE9"
   m_EditorClassIdentifier: 
-  dialogueDepart: "Aaaahhh!! You! Why do you think this street prices go down?? It's
+  dialogueDepart: "Aaaahh!! You! Why do you think this street prices go down?? It's
     because of you? Because you're just a monster disturbing people life and ruining
     my business!!\r"
-  reponseInteret: 'You seem.. Sorry? That won''t bring back my money though.. '
-  reponseAffection: 'Hoh? You''re really a special thing, maybe I could use your
-    help. '
-  reponseCompassion: 'Pfff.. If only it could have done that before I lost so much
-    money.. '
+  reponseInteret: You seem... Sorry? That won't bring back my money though...
+  reponseAffection: 'Oh? You''re really a special thing, maybe I could use your help. '
+  reponseCompassion: Pfff... If only it could have done that before I lost so much
+    money...
   reponseDegout: 'Don''t touch me! It''s because of you that I''m losing money! AHHH! '
   reponsePeur: It hurts! It's not you ok? It's not you I won't bother you again I
-    swear! Arggghhhh!
+    swear! Argggghh!
   reponseHaine: 'What? Are you threatening ME? Ahah! It would have been better for
     you to meet an officer I think. I won''t let it pass. '
   reponseBonus: You think it's not your fault? Wait why do I think it's an animal

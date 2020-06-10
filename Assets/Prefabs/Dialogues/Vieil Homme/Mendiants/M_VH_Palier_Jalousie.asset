@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: M_VH_Palier_Jalousie
   m_EditorClassIdentifier: 
-  dialogueDepart: "Hmph.. So you think those people are better than people like me?
-    I was stupid to think an animal would understand me...  \r"
-  reponseInteret: 'Hmmphh.. Guess I''ll see you again when they abandon you.. '
+  dialogueDepart: "Hmph... So you think those people are better than people like
+    me? I was stupid to think an animal would understand me...  \r"
+  reponseInteret: Hmphhh... Guess I'll see you again when they abandon you...
   reponseAffection: Ah! I prefer when you act like this!
-  reponseCompassion: 'Aaaah.. Guess you weren''t that happy like this.. '
+  reponseCompassion: Aaaahh... Guess you weren't that happy like this...
   reponseDegout: 'Don''t try this. You disgust me. '
   reponsePeur: What are you trying to do? Don't get near!
   reponseHaine: 'Argh! You bit me?? '

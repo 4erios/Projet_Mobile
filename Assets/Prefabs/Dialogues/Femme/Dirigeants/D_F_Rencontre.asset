@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: D_F_Rencontre
   m_EditorClassIdentifier: 
-  dialogueDepart: 'Where is he? He always come back drunk from this road.. This pain
-    of a husband.. And the best part, now I even get to be bothered by wild animals! '
+  dialogueDepart: 'Where is he? He always come back drunk from this road... This
+    pain of a husband... And the best part, now I even get to be bothered by wild
+    animals! '
   reponseInteret: 'It was a pretty strange one. Maybe it''s a new species? '
   reponseAffection: 'Oh poor thing. Sorry I said mean things to you. Come here I''ll
     cuddle you for a bit. '
-  reponseCompassion: 'How can something so.. unique live on the streets? Maybe I
-    should adopt you.. '
+  reponseCompassion: How can something so... unique live on the streets? Maybe I
+    should adopt you...
   reponseDegout: 'Hey don''t touch me, you''re dirty! '
   reponsePeur: Kyaaaa! Someone help! Officer !
   reponseHaine: 'What are you growling at? Scram! I have look for that idiot husband

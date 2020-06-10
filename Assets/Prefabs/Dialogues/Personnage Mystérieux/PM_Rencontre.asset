@@ -19,8 +19,7 @@ MonoBehaviour:
   reponseCompassion: I see you're as afraid of them that I was. That's a good start.
   reponseDegout: Well, those documents whould be outdated. I can't get anything out
     of you.
-  reponsePeur: You're... You're like them ?
-  reponseHaine: And you're supposed to be a monster ? Get out, I'll find another
-    way.
+  reponsePeur: You're... You're like them?
+  reponseHaine: And you're supposed to be a monster? Get out, I'll find another way.
   reponseBonus: 
   reponseMalus: 

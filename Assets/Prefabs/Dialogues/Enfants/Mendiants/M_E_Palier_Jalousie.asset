@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: M_E_Palier_Jalousie
   m_EditorClassIdentifier: 
-  dialogueDepart: 'I see.. Those people sure look better than we do right? Go to
+  dialogueDepart: 'I see... Those people sure look better than we do right? Go to
     them then! '
   reponseInteret: 'At least you show it when you don''t like someone. '
   reponseAffection: Was I too mean? Sorry I didn't want to hurt you...

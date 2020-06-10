@@ -12,20 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: "M_VH_Palier_R\xE9pulsion"
   m_EditorClassIdentifier: 
-  dialogueDepart: 'Wow! What are you doing here? We people of the streets are not
+  dialogueDepart: Wow! What are you doing here? We people of the streets are not
     like you, so let us live in peace please!
-
-    
-
-    
-
-'
   reponseInteret: At least you act true to yourself now...
-  reponseAffection: 'Hmph.. At least you leave us in peace.. '
-  reponseCompassion: 'Maybe you are like us.. At least you don''t seem to have any
+  reponseAffection: Hmph... At least you leave us in peace...
+  reponseCompassion: 'Maybe you are like us... At least you don''t seem to have any
     ill will. '
   reponseDegout: Don't touch me! You're not qualified to do so!
-  reponsePeur: Argghh! Someone stop it, please!
+  reponsePeur: Arghhh! Someone stop it, please!
   reponseHaine: You're crying now?? Do you think that will help you? Get out of my
     sight before I hurt you!
   reponseBonus: 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88a13372cc74714dae0e143c4d855fd, type: 3}
   m_Name: "D_F_Palier_Piti\xE9"
   m_EditorClassIdentifier: 
-  dialogueDepart: 'You again! I see you''re still alone.. I wouldn''t be like you
+  dialogueDepart: 'You again! I see you''re still alone... I wouldn''t be like you
     if my husband wasn''t such a jerk... '
   reponseInteret: 'You think he is a jerk too? Thank you, you''re a kind little one. '
   reponseAffection: 'Thank you for trying to comfort me. '
